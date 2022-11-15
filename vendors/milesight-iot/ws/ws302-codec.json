@@ -7,7 +7,7 @@
             "name": "Battery",
             "value": "100",
             "unit": "%",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 98,
             "bacnet_unit_type": "UNITS_PERCENT"
         },
@@ -16,7 +16,7 @@
             "name": "Frequency Weight",
             "value": "1",
             "unit": "",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -25,7 +25,7 @@
             "name": "Time Weight",
             "value": "1",
             "unit": "",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -34,7 +34,7 @@
             "name": "A-weighted, sound level",
             "value": "57.5",
             "unit": "db(a)",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 232,
             "bacnet_unit_type": "UNITS_DECIBELS_A"
         },
@@ -43,7 +43,7 @@
             "name": "A-weighted, equivalent continuous sound level",
             "value": "47.4",
             "unit": "dB(a)",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 232,
             "bacnet_unit_type": "UNITS_DECIBELS_A"
         },
@@ -52,7 +52,7 @@
             "name": "A-weighted, maximum, sound level",
             "value": "61.8",
             "unit": "dB(a)",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 232,
             "bacnet_unit_type": "UNITS_DECIBELS_A"
         },
@@ -61,7 +61,7 @@
             "name": "LoRaWAN Class Type",
             "value": "0",
             "unit": "",
-            "bacnet_type": "binary_input",
+            "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         }

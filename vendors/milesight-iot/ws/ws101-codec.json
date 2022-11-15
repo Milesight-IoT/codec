@@ -7,7 +7,7 @@
             "name": "Battery",
             "value": "92",
             "unit": "%",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 98,
             "bacnet_unit_type": "UNITS_PERCENT"
         },
@@ -16,7 +16,7 @@
             "name": "Button",
             "value": "3",
             "unit": "",
-            "bacnet_type": "multistate_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         }
