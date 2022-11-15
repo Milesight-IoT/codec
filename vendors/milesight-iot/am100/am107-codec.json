@@ -7,7 +7,7 @@
             "name": "Battery",
             "value": "100",
             "unit": "%",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 98,
             "bacnet_unit_type": "UNITS_PERCENT"
         },
@@ -16,7 +16,7 @@
             "name": "Temperature",
             "value": "25.4",
             "unit": "°C",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
         },
@@ -25,7 +25,7 @@
             "name": "Humidity",
             "value": "64",
             "unit": "%",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 29,
             "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
         },
@@ -34,7 +34,7 @@
             "name": "PIR Trigger",
             "value": "2",
             "unit": "",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -43,7 +43,7 @@
             "name": "Activity",
             "value": "0",
             "unit": "",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -52,7 +52,7 @@
             "name": "Illumination",
             "value": "49",
             "unit": "lx",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 37,
             "bacnet_unit_type": "UNITS_LUXES"
         },
@@ -61,7 +61,7 @@
             "name": "Infrared and Visible",
             "value": "194",
             "unit": "",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -70,7 +70,7 @@
             "name": "Infrared",
             "value": "27",
             "unit": "",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -79,7 +79,7 @@
             "name": "CO2",
             "value": "601",
             "unit": "ppm",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 96,
             "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
         },
@@ -88,7 +88,7 @@
             "name": "TVOC",
             "value": "7",
             "unit": "ppb",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 97,
             "bacnet_unit_type": "UNITS_PARTS_PER_BILLION"
         },
@@ -97,7 +97,7 @@
             "name": "Barometric Pressure",
             "value": "1004.7",
             "unit": "hPa",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 133,
             "bacnet_unit_type": "UNITS_HECTOPASCALS"
         }

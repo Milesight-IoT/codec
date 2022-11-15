@@ -7,7 +7,7 @@
             "name": "Switch 1",
             "value": "1",
             "unit": "",
-            "bacnet_type": "binary_input",
+            "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -16,7 +16,7 @@
             "name": "Switch 1",
             "value": "1",
             "unit": "",
-            "bacnet_type": "binary_input",
+            "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -25,7 +25,7 @@
             "name": "Voltage",
             "value": "222.6",
             "unit": "V",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 5,
             "bacnet_unit_type": "UNITS_VOLTS"
         },
@@ -34,7 +34,7 @@
             "name": "Power",
             "value": "1",
             "unit": "W",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 47,
             "bacnet_unit_type": "UNITS_WATTS"
         },
@@ -43,7 +43,7 @@
             "name": "Power Factor",
             "value": "0",
             "unit": "100",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 15,
             "bacnet_unit_type": "UNITS_POWER_FACTOR"
         },
@@ -52,7 +52,7 @@
             "name": "Power Consumption",
             "value": "1",
             "unit": "Wh",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 18,
             "bacnet_unit_type": "UNITS_WATT_HOURS"
         },
@@ -61,7 +61,7 @@
             "name": "Current",
             "value": "2",
             "unit": "mA",
-            "bacnet_type": "analog_input",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 2,
             "bacnet_unit_type": "UNITS_MILLIAMPERES"
         }
