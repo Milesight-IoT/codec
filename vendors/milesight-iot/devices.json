@@ -1,0 +1,82 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "am103",
+            "name": "AM103 & AM103L",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am100",
+            "sn": "6725",
+            "deveui": "24e124725",
+            "codec": "vendors/milesight-iot/am100/am103-codec.json",
+            "decoder_script": "vendors/milesight-iot/am100/am100-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am100/am100-encoder.js"
+        },
+        {
+            "id": "am104",
+            "name": "AM104",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am100",
+            "sn": "6127",
+            "deveui": "24e124127",
+            "codec": "vendors/milesight-iot/am100/am104-codec.json",
+            "decoder_script": "vendors/milesight-iot/am100/am100-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am100/am100-encoder.js"
+        },
+        {
+            "id": "am107",
+            "name": "AM107",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am100",
+            "sn": "6128",
+            "deveui": "24e124128",
+            "codec": "vendors/milesight-iot/am100/am107-codec.json",
+            "decoder_script": "vendors/milesight-iot/am100/am100-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am100/am100-encoder.js"
+        },
+        {
+            "id": "am307",
+            "name": "AM307",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am300",
+            "sn": "6707",
+            "deveui": "24e124707",
+            "codec": "vendors/milesight-iot/am300/am307-codec.json",
+            "decoder_script": "vendors/milesight-iot/am300/am300-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am300/am300-encoder.js"
+        },
+        {
+            "id": "am308",
+            "name": "AM308",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am300",
+            "sn": "6707",
+            "deveui": "24e124707",
+            "codec": "vendors/milesight-iot/am300/am308-codec.json",
+            "decoder_script": "vendors/milesight-iot/am300/am300-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am300/am300-encoder.js"
+        },
+        {
+            "id": "am319_hcho",
+            "name": "AM319-HCHO",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am300",
+            "sn": "6710",
+            "deveui": "24e124710",
+            "codec": "vendors/milesight-iot/am300/am319-hcho-codec.json",
+            "decoder_script": "vendors/milesight-iot/am300/am300-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am300/am300-encoder.js"
+        },
+        {
+            "id": "am319_o3",
+            "name": "AM319-O3",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am300",
+            "sn": "6710",
+            "deveui": "24e124710",
+            "codec": "vendors/milesight-iot/am300/am319-o3-codec.json",
+            "decoder_script": "vendors/milesight-iot/am300/am300-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am300/am300-encoder.js"
+        }
+    ]
+}
