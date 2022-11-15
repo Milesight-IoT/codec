@@ -1,0 +1,33 @@
+{
+    "version": "1.0.0",
+    "bytes": "01755C030001040000",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "92",
+            "unit": "%",
+            "bacnet_type": "analog_input",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "pir_trigger",
+            "name": "PIR Trigger",
+            "value": "1",
+            "unit": "",
+            "bacnet_type": "binary_input",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "daylight",
+            "name": "Day Light",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "multistate_input",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}
