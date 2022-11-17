@@ -79,6 +79,17 @@
             "encoder_script": "vendors/milesight-iot/am300/am300-encoder.js"
         },
         {
+            "id": "em300_th",
+            "name": "EM300-TH",
+            "description": "Temperature & Humidity Sensor",
+            "catalog": "em300",
+            "sn": "6136",
+            "deveui": "24e124136",
+            "codec": "vendors/milesight-iot/em300/em300-th-codec.json",
+            "decoder_script": "vendors/milesight-iot/em300/em300-th-decoder.js",
+            "encoder_script": "vendors/milesight-iot/em300/em300-th-encoder.js"
+        },
+        {
             "id": "ws101",
             "name": "WS101",
             "description": "Smart Button",
