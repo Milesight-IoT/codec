@@ -79,6 +79,17 @@
             "encoder_script": "vendors/milesight-iot/am300/am300-encoder.js"
         },
         {
+            "id": "am319_hcho_ir",
+            "name": "AM319-HCHO-IR",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am300",
+            "sn": "6710",
+            "deveui": "24e124710",
+            "codec": "vendors/milesight-iot/am300/am319-hcho-codec.json",
+            "decoder_script": "vendors/milesight-iot/am300/am300-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am300/am300-encoder.js"
+        },
+        {
             "id": "em300_th",
             "name": "EM300-TH",
             "description": "Temperature & Humidity Sensor",
