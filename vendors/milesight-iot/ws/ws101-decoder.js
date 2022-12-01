@@ -21,7 +21,19 @@ function Decode(fPort, bytes) {
         }
         // BUTTON PRESS STATE
         else if (channel_id === 0xff && channel_type === 0x2e) {
+            var ts = new Date().getTime();
             decoded.button = bytes[i];
+            switch (decoded.button) {
+                case 1:
+                    decoded.button_single_press_time = ts;
+                    break;
+                case 2:
+                    decoded.button_long_press_time = ts;
+                    break;
+                case 3:
+                    decoded.button_double_press_time = ts;
+                    break;
+            }
             i += 1;
         } else {
             break;
