@@ -64,6 +64,60 @@
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "button_1_ts",
+            "name": "Button 1 Press Timestamp",
+            "value": "16409979003000",
+            "unit": "ms",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS"
+        },
+        {
+            "id": "button_2_ts",
+            "name": "Button 2 Press Timestamp",
+            "value": "16409979003000",
+            "unit": "ms",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS"
+        },
+        {
+            "id": "button_3_ts",
+            "name": "Button 3 Press Timestamp",
+            "value": "16409979003000",
+            "unit": "ms",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS"
+        },
+        {
+            "id": "button_4_ts",
+            "name": "Button 4 Press Timestamp",
+            "value": "16409979003000",
+            "unit": "ms",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS"
+        },
+        {
+            "id": "button_5_ts",
+            "name": "Button 5 Press Timestamp",
+            "value": "16409979003000",
+            "unit": "ms",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS"
+        },
+        {
+            "id": "button_6_ts",
+            "name": "Button 6 Press Timestamp",
+            "value": "16409979003000",
+            "unit": "ms",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS"
         }
     ]
 }
