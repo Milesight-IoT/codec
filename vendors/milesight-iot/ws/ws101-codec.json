@@ -21,28 +21,28 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "button_single_press_time",
-            "name": "Button Single Press Trigger Time",
+            "id": "button_single_ts",
+            "name": "Button Single Press Timestamp",
             "value": "1640997900",
-            "unit": "s",
+            "unit": "ms",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 159,
             "bacnet_unit_type": "UNITS_MILLISECONDS"
         },
         {
-            "id": "button_long_press_time",
-            "name": "Button Long Press Trigger Time",
+            "id": "button_long_ts",
+            "name": "Button Long Press Timestamp",
             "value": "1640997900",
-            "unit": "s",
+            "unit": "ms",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 159,
             "bacnet_unit_type": "UNITS_MILLISECONDS"
         },
         {
-            "id": "button_double_press_time",
-            "name": "Button Double Press Trigger Time",
+            "id": "button_double_ts",
+            "name": "Button Double Press Timestamp",
             "value": "16409979003",
-            "unit": "s",
+            "unit": "ms",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 159,
             "bacnet_unit_type": "UNITS_MILLISECONDS"
