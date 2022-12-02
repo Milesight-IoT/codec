@@ -24,7 +24,9 @@ function Decode(fPort, bytes) {
         else if (channel_id === 0xff && channel_type === 0x34) {
             var id = bytes[i];
             var channel_name = "button_" + id;
+            var channel_name_ts = "button_" + id + "_ts";
             decoded[channel_name] = 1;
+            decoded[channel_name_ts] = new Date().getTime();
             i += 3;
         } else {
             break;

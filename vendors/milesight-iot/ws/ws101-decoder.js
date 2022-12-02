@@ -25,13 +25,13 @@ function Decode(fPort, bytes) {
             decoded.button = bytes[i];
             switch (decoded.button) {
                 case 1:
-                    decoded.button_single_press_time = ts;
+                    decoded.button_single_ts = ts;
                     break;
                 case 2:
-                    decoded.button_long_press_time = ts;
+                    decoded.button_long_ts = ts;
                     break;
                 case 3:
-                    decoded.button_double_press_time = ts;
+                    decoded.button_double_ts = ts;
                     break;
             }
             i += 1;
