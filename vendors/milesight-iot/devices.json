@@ -288,6 +288,17 @@
             "encoder_script": "vendors/milesight-iot/ws/ws51x-encoder.js"
         },
         {
+            "id": "ws522",
+            "name": "WS522",
+            "description": "Portable Socket",
+            "catalog": "ws",
+            "sn": "6148",
+            "deveui": "24e124148",
+            "codec": "vendors/milesight-iot/ws/ws523-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws/ws52x-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ws/ws52x-encoder.js"
+        },
+        {
             "id": "ws523",
             "name": "WS523",
             "description": "Portable Socket",
