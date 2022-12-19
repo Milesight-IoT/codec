@@ -21,17 +21,17 @@ function Decode(fPort, bytes) {
         }
         // BUTTON PRESS STATE
         else if (channel_id === 0xff && channel_type === 0x2e) {
-            var ts = new Date().getTime();
+            var msg_id = getRandomIntInclusive(100000, 999999);
             decoded.button = bytes[i];
             switch (decoded.button) {
                 case 1:
-                    decoded.button_single_msgid = ts;
+                    decoded.button_single_msgid = msg_id;
                     break;
                 case 2:
-                    decoded.button_long_msgid = ts;
+                    decoded.button_long_msgid = msg_id;
                     break;
                 case 3:
-                    decoded.button_double_msgid = ts;
+                    decoded.button_double_msgid = msg_id;
                     break;
             }
             i += 1;
@@ -41,4 +41,10 @@ function Decode(fPort, bytes) {
     }
 
     return decoded;
+}
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }

@@ -25,8 +25,9 @@ function Decode(fPort, bytes) {
             var id = bytes[i];
             var channel_name = "button_" + id;
             var channel_name_msgid = "button_" + id + "_msgid";
+            var msg_id = getRandomIntInclusive(100000, 999999);
             decoded[channel_name] = 1;
-            decoded[channel_name_msgid] = new Date().getTime();
+            decoded[channel_name_msgid] = msg_id;
             i += 3;
         } else {
             break;
@@ -34,4 +35,10 @@ function Decode(fPort, bytes) {
     }
 
     return decoded;
+}
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
