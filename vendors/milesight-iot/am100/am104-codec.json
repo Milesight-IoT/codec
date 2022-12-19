@@ -42,7 +42,7 @@
             "id": "illumination",
             "name": "Illumination",
             "value": "49",
-            "unit": "lx",
+            "unit": "lux",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 37,
             "bacnet_unit_type": "UNITS_LUXES"
