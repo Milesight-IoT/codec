@@ -24,7 +24,7 @@ function Decode(fPort, bytes) {
         }
         // POWER FACTOR
         else if (channel_id === 0x05 && channel_type === 0x81) {
-            decoded.power_factor = bytes[i];
+            decoded.power_factor = bytes[i] / 100;
             i += 1;
         }
         // POWER CONSUMPTION
@@ -37,9 +37,9 @@ function Decode(fPort, bytes) {
             decoded.current = readUInt16LE(bytes.slice(i, i + 2));
             i += 2;
         }
-        // SWITCH STATE
+        // SOCKET STATUS
         else if (channel_id === 0x08 && channel_type == 0x70) {
-            decoded.switch = bytes[i] & 1;
+            decoded.socket_status = bytes[i] & 1;
             i += 1;
         } else {
             break;

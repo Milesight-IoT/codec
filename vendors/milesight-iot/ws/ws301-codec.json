@@ -12,8 +12,8 @@
             "bacnet_unit_type": "UNITS_PERCENT"
         },
         {
-            "id": "opened",
-            "name": "Open/Close State",
+            "id": "magnet_status",
+            "name": "Magnent Status",
             "value": "1",
             "unit": "",
             "bacnet_type": "binary_input_object",
@@ -21,8 +21,8 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "removed",
-            "name": "Device Install State",
+            "id": "tamper_status",
+            "name": "Tamper Status",
             "value": "0",
             "unit": "",
             "bacnet_type": "binary_input_object",

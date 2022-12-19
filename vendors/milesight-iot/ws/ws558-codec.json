@@ -12,8 +12,8 @@
             "bacnet_unit_type": "UNITS_VOLTS"
         },
         {
-            "id": "power",
-            "name": "Power",
+            "id": "active_power",
+            "name": "Active Power",
             "value": "1",
             "unit": "W",
             "bacnet_type": "analog_input_object",
@@ -23,7 +23,7 @@
         {
             "id": "power_factor",
             "name": "Power Factor",
-            "value": "100",
+            "value": "",
             "unit": "",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 15,

@@ -16,14 +16,14 @@ function Decode(fPort, bytes) {
             decoded.battery = bytes[i];
             i += 1;
         }
-        // DOOR / WINDOW STATE (0: close 1: open)
+        // MAGNET STATUS (0: Close 1: Open)
         else if (channel_id === 0x03 && channel_type === 0x00) {
-            decoded.opened = bytes[i];
+            decoded.magnet_status = bytes[i];
             i += 1;
         }
-        // INSTALL STATE (0: install 1: removed)
+        // TAMPER STATUS (0: Install 1: Removed)
         else if (channel_id === 0x04 && channel_type === 0x00) {
-            decoded.removed = bytes[i];
+            decoded.tamper_status = bytes[i];
             i += 1;
         } else {
             break;

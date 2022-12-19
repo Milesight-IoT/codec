@@ -22,7 +22,7 @@
         },
         {
             "id": "time_weight",
-            "name": "Time Weight",
+            "name": "Time Weighting",
             "value": "1",
             "unit": "",
             "bacnet_type": "analog_input_object",
@@ -31,7 +31,7 @@
         },
         {
             "id": "la",
-            "name": "A-weighted, sound level",
+            "name": "LA",
             "value": "57.5",
             "unit": "db(a)",
             "bacnet_type": "analog_input_object",
@@ -40,7 +40,7 @@
         },
         {
             "id": "laeq",
-            "name": "A-weighted, equivalent continuous sound level",
+            "name": "LAeq",
             "value": "47.4",
             "unit": "dB(a)",
             "bacnet_type": "analog_input_object",
@@ -49,7 +49,7 @@
         },
         {
             "id": "lafmax",
-            "name": "A-weighted, maximum, sound level",
+            "name": "LAFmax",
             "value": "61.8",
             "unit": "dB(a)",
             "bacnet_type": "analog_input_object",
@@ -58,7 +58,7 @@
         },
         {
             "id": "class_type",
-            "name": "LoRaWAN Class Type",
+            "name": "Class Type",
             "value": "0",
             "unit": "",
             "bacnet_type": "binary_input_object",

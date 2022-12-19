@@ -24,6 +24,8 @@ function Decode(fPort, bytes) {
             decoded.switch_2 = ((bytes[i] >> 1) & 1);
             decoded.switch_2_change = ((bytes[i] >> 5) & 1);
 
+            decoded.switch_3 = ((bytes[i] >> 2) & 1);
+            decoded.switch_3_change = ((bytes[i] >> 6) & 1);
             i += 1;
         }
         // VOLTAGE
@@ -33,12 +35,12 @@ function Decode(fPort, bytes) {
         }
         // ACTIVE POWER
         else if (channel_id === 0x04 && channel_type === 0x80) {
-            decoded.power = readUInt32LE(bytes.slice(i, i + 4));
+            decoded.active_power = readUInt32LE(bytes.slice(i, i + 4));
             i += 4;
         }
         // POWER FACTOR
         else if (channel_id === 0x05 && channel_type === 0x81) {
-            decoded.power_factor = bytes[i];
+            decoded.power_factor = bytes[i] / 100;
             i += 1;
         }
         // POWER CONSUMPTION

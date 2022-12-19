@@ -185,7 +185,7 @@
             "sn": "6146",
             "deveui": "24e124146",
             "codec": "vendors/milesight-iot/ws/ws502-v1-codec.json",
-            "decoder_script": "vendors/milesight-iot/ws/ws501-v1-decoder.js",
+            "decoder_script": "vendors/milesight-iot/ws/ws502-v1-decoder.js",
             "encoder_script": "vendors/milesight-iot/ws/ws50x-v1-encoder.js"
         },
         {
@@ -196,7 +196,7 @@
             "sn": "6147",
             "deveui": "24e124147",
             "codec": "vendors/milesight-iot/ws/ws503-v1-codec.json",
-            "decoder_script": "vendors/milesight-iot/ws/ws501-v1-decoder.js",
+            "decoder_script": "vendors/milesight-iot/ws/ws503-v1-decoder.js",
             "encoder_script": "vendors/milesight-iot/ws/ws50x-v1-encoder.js"
         },
         {
@@ -228,8 +228,8 @@
             "catalog": "ws",
             "sn": "6777",
             "deveui": "24e124777",
-            "codec": "vendors/milesight-iot/ws/ws502-v2-electrical-codec.json",
-            "decoder_script": "vendors/milesight-iot/ws/ws502-v2-electrical-decoder.js",
+            "codec": "vendors/milesight-iot/ws/ws501-v2-electrical-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws/ws501-v2-electrical-decoder.js",
             "encoder_script": "vendors/milesight-iot/ws/ws50x-v2-electrical-encoder.js"
         },
         {

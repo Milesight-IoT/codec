@@ -16,14 +16,14 @@ function Decode(fPort, bytes) {
             decoded.battery = bytes[i];
             i += 1;
         }
-        // PIR
+        // PIR (0: Not Triggered, 1: Trigger)
         else if (channel_id === 0x03 && channel_type === 0x00) {
             decoded.pir_trigger = bytes[i];
             i += 1;
         }
-        // DAYLIGHT
+        // LIGHT STATUS (0: Light State, 1: Dark State)
         else if (channel_id === 0x04 && channel_type === 0x00) {
-            decoded.daylight = bytes[i];
+            decoded.light_status = bytes[i];
             i += 1;
         } else {
             break;

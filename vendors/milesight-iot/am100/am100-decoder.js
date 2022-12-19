@@ -35,9 +35,8 @@ function Decode(fPort, bytes) {
             decoded.activity = readUInt16LE(bytes.slice(i, i + 2));
             i += 2;
         }
-        // PIR TRIGGER
         else if (channel_id === 0x0A && channel_type === 0x6A) {
-            decoded.pir_trigger = readUInt16LE(bytes.slice(i, i + 2));
+            decoded.activity = readUInt16LE(bytes.slice(i, i + 2));
             i += 2;
         }
         // LIGHT

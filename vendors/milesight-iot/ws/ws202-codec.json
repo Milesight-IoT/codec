@@ -21,8 +21,8 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "daylight",
-            "name": "Day Light",
+            "id": "light_status",
+            "name": "Light Status",
             "value": "0",
             "unit": "",
             "bacnet_type": "analog_input_object",
