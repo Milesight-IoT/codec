@@ -13,7 +13,7 @@
         },
         {
             "id": "switch_1_change",
-            "name": "Switch 1",
+            "name": "Changing Status of Switch 1",
             "value": "1",
             "unit": "",
             "bacnet_type": "binary_input_object",

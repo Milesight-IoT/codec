@@ -13,7 +13,7 @@
         },
         {
             "id": "power",
-            "name": "Power",
+            "name": "Active Power",
             "value": "0",
             "unit": "W",
             "bacnet_type": "analog_input_object",
@@ -23,7 +23,7 @@
         {
             "id": "power_factor",
             "name": "Power Factor",
-            "value": "100",
+            "value": "",
             "unit": "",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 15,
@@ -48,8 +48,8 @@
             "bacnet_unit_type": "UNITS_MILLIAMPERES"
         },
         {
-            "id": "switch",
-            "name": "Power Switch State",
+            "id": "socket_status",
+            "name": "Socket Status",
             "value": "1",
             "unit": "",
             "bacnet_type": "binary_input_object",

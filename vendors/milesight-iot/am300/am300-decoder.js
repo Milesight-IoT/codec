@@ -33,7 +33,7 @@ function Decode(fPort, bytes) {
         }
         // PIR TRIGGER
         else if (channel_id === 0x05 && channel_type === 0x00) {
-            decoded.pir_trigger = bytes[i];
+            decoded.pir = bytes[i];
             i += 1;
         }
         // LIGHT
@@ -48,7 +48,7 @@ function Decode(fPort, bytes) {
         }
         // TVOC
         else if (channel_id === 0x08 && channel_type === 0x7D) {
-            decoded.tvoc = readUInt16LE(bytes.slice(i, i + 2));
+            decoded.tvoc = readUInt16LE(bytes.slice(i, i + 2)) / 100;
             i += 2;
         }
         // PRESSURE
@@ -76,9 +76,9 @@ function Decode(fPort, bytes) {
             decoded.o3 = readUInt16LE(bytes.slice(i, i + 2)) / 100;
             i += 2;
         }
-        // BEEP
+        // BUZZER (0: disable, 1: beeping)
         else if (channel_id === 0x0E && channel_type === 0x01) {
-            decoded.beep = bytes[i];
+            decoded.buzzer_status = bytes[i];
             i += 1;
         } else {
             break;

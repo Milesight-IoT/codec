@@ -23,9 +23,6 @@ function Decode(fPort, bytes) {
 
             decoded.switch_2 = ((bytes[i] >> 1) & 1);
             decoded.switch_2_change = ((bytes[i] >> 5) & 1);
-
-            decoded.switch_3 = ((bytes[i] >> 2) & 1);
-            decoded.switch_3_change = ((bytes[i] >> 6) & 1);
             i += 1;
         } else {
             break;

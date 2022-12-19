@@ -30,11 +30,11 @@
             "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
         },
         {
-            "id": "pir_trigger",
-            "name": "PIR Trigger",
+            "id": "pir",
+            "name": "PIR",
             "value": "0",
             "unit": "",
-            "bacnet_type": "analog_input_object",
+            "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -43,7 +43,7 @@
             "name": "Light Level",
             "value": "0",
             "unit": "",
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -59,11 +59,11 @@
         {
             "id": "tvoc",
             "name": "TVOC",
-            "value": "7",
-            "unit": "ppb",
+            "value": "",
+            "unit": "",
             "bacnet_type": "analog_input_object",
-            "bacnet_unit_type_id": 97,
-            "bacnet_unit_type": "UNITS_PARTS_PER_BILLION"
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
             "id": "pressure",
@@ -102,7 +102,7 @@
             "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
         },
         {
-            "id": "beep",
+            "id": "buzzer_status",
             "name": "Buzzer Status",
             "value": "0",
             "unit": "",
