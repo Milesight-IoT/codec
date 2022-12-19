@@ -33,7 +33,7 @@ function Decode(fPort, bytes) {
         }
         // PIR TRIGGER
         else if (channel_id === 0x05 && channel_type === 0x00) {
-            decoded.pir = bytes[i];
+            decoded.pir_trigger = bytes[i];
             i += 1;
         }
         // LIGHT

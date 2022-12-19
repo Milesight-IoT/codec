@@ -48,8 +48,8 @@
             "bacnet_unit_type": "UNITS_LUXES"
         },
         {
-            "id": "infrared_and_visible",
-            "name": "Infrared and Visible",
+            "id": "visible_and_infrared",
+            "name": "Visible and Infrared",
             "value": "194",
             "unit": "",
             "bacnet_type": "analog_input_object",

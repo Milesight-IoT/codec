@@ -12,7 +12,7 @@
             "bacnet_unit_type": "UNITS_VOLTS"
         },
         {
-            "id": "power",
+            "id": "active_power",
             "name": "Active Power",
             "value": "0",
             "unit": "W",
