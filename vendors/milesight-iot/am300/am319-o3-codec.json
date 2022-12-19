@@ -30,8 +30,8 @@
             "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
         },
         {
-            "id": "pir",
-            "name": "PIR",
+            "id": "pir_trigger",
+            "name": "PIR Trigger",
             "value": "0",
             "unit": "",
             "bacnet_type": "binary_input_object",
