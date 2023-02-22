@@ -42,7 +42,7 @@ function Decode(fPort, bytes) {
         // LIGHT
         else if (channel_id === 0x06 && channel_type === 0x65) {
             decoded.illumination = readUInt16LE(bytes.slice(i, i + 2));
-            decoded.infrared_and_visible = readUInt16LE(bytes.slice(i + 2, i + 4));
+            decoded.visible_and_infrared = readUInt16LE(bytes.slice(i + 2, i + 4));
             decoded.infrared = readUInt16LE(bytes.slice(i + 4, i + 6));
             i += 6;
         }
