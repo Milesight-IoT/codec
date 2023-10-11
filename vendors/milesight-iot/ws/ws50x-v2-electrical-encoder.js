@@ -1,7 +1,7 @@
 /**
- * Payload Encoder for Chirpstack and Milesight network server
+ * Payload Encoder for Milesight Network Server
  *
- * Copyright 2022 Milesight IoT
+ * Copyright 2023 Milesight IoT
  *
  * @product WS50x physical switch with electrical parameters
  * @params
