@@ -6,6 +6,10 @@
  * @product WS501 v1
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
@@ -20,7 +24,6 @@ function Decode(fPort, bytes) {
             // bit mask  change   state
             decoded.switch_1 = bytes[i] & 1;
             decoded.switch_1_change = (bytes[i] >> 4) & 1;
-
             i += 1;
         } else {
             break;

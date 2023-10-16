@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0",
+    "bytes": "017564039450000000",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "illumination",
+            "name": "Illumination",
+            "value": "80",
+            "unit": "lx",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 37,
+            "bacnet_unit_type": "UNITS_LUXES"
+        }
+    ]
+}

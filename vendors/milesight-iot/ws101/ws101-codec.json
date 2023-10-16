@@ -16,7 +16,12 @@
             "name": "Button",
             "value": "3",
             "unit": "",
-            "bacnet_type": "analog_input_object",
+            "values": [
+                { "value": "0", "name": "Single" },
+                { "value": "1", "name": "Long" },
+                { "value": "2", "name": "Double" }
+            ],
+            "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },

@@ -1,0 +1,71 @@
+{
+    "version": "1.0.0",
+    "bytes": "",
+    "object": [
+        {
+            "id": "gas_status",
+            "name": "GAS Status",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Normal" },
+                { "value": 1, "name": "Abnormal" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "valve_status",
+            "name": "Valve Status",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Closed" },
+                { "value": 1, "name": "Opened" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "relay",
+            "name": "Relay",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Closed" },
+                { "value": 1, "name": "Opened" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "remain_time",
+            "name": "Remain Time",
+            "value": "",
+            "unit": "s",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 73,
+            "bacnet_unit_type": "UNITS_SECONDS"
+        },
+        {
+            "id": "alarm",
+            "name": "Alarm",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Power Down" },
+                { "value": 1, "name": "Power On" },
+                { "value": 2, "name": "Sensor Failure" },
+                { "value": 3, "name": "Sensor Recover" },
+                { "value": 4, "name": "Sensor About to Fail" },
+                { "value": 5, "name": "Sensor Failed" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

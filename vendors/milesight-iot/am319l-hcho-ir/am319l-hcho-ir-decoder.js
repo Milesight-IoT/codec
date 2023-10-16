@@ -6,6 +6,10 @@
  * @product AM319L-HCHO-IR
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
@@ -28,7 +32,7 @@ function Decode(fPort, bytes) {
             decoded.humidity = bytes[i] / 2;
             i += 1;
         }
-        // PIR TRIGGER
+        // PIR
         else if (channel_id === 0x05 && channel_type === 0x00) {
             decoded.pir_trigger = bytes[i];
             i += 1;
@@ -68,10 +72,29 @@ function Decode(fPort, bytes) {
             decoded.pm10 = readUInt16LE(bytes.slice(i, i + 2));
             i += 2;
         }
-        // BUZZER (0: disable, 1: beeping)
+        // BUZZER STATUS
         else if (channel_id === 0x0e && channel_type === 0x01) {
             decoded.buzzer_status = bytes[i];
             i += 1;
+        }
+        // HISTORY
+        else if (channel_id === 0x20 && channel_type === 0xce) {
+            var data = {};
+            data.timestamp = readUInt32LE(bytes.slice(i, i + 4));
+            data.temperature = readInt16LE(bytes.slice(i + 4, i + 6)) / 10;
+            data.humidity = readUInt16LE(bytes.slice(i + 6, i + 8)) / 2;
+            data.pir_trigger = bytes[i + 8];
+            data.light_level = bytes[i + 9];
+            data.co2 = readUInt16LE(bytes.slice(i + 10, i + 12));
+            data.tvoc = readUInt16LE(bytes.slice(i + 12, i + 14));
+            data.pressure = readUInt16LE(bytes.slice(i + 14, i + 16)) / 10;
+            data.pm2_5 = readUInt16LE(bytes.slice(i + 16, i + 18));
+            data.pm10 = readUInt16LE(bytes.slice(i + 18, i + 20));
+            data.hcho = readUInt16LE(bytes.slice(i + 20, i + 22)) / 100;
+            i += 22;
+
+            decoded.history = decoded.history || [];
+            decoded.history.push(data);
         } else {
             break;
         }

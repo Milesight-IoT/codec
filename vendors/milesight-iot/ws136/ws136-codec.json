@@ -16,6 +16,10 @@
             "name": "Button 1",
             "value": "1",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Released" },
+                { "value": 1, "name": "Pressed" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -25,6 +29,10 @@
             "name": "Button 2",
             "value": "1",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Released" },
+                { "value": 1, "name": "Pressed" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -34,6 +42,10 @@
             "name": "Button 3",
             "value": "1",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Released" },
+                { "value": 1, "name": "Pressed" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -43,6 +55,10 @@
             "name": "Button 4",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Released" },
+                { "value": 1, "name": "Pressed" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -52,6 +68,10 @@
             "name": "Button 5",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Released" },
+                { "value": 1, "name": "Pressed" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -61,6 +81,10 @@
             "name": "Button 6",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Released" },
+                { "value": 1, "name": "Pressed" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"

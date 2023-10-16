@@ -6,9 +6,13 @@
  * @product WS156
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
-    for (var i = 0; i < bytes.length;) {
+    for (var i = 0; i < bytes.length; ) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
@@ -20,11 +24,11 @@ function Decode(fPort, bytes) {
         // BUTTON PRESS STATE
         else if (channel_id === 0xff && channel_type === 0x34) {
             var id = bytes[i];
-            var channel_name = "button_" + id;
-            var channel_name_msgid = "button_" + id + "_msgid";
+            var btn_chn_name = "button_" + id;
+            var btn_chn_name_msgid = "button_" + id + "_msgid";
             var msg_id = getRandomIntInclusive(100000, 999999);
-            decoded[channel_name] = 1;
-            decoded[channel_name_msgid] = msg_id;
+            decoded[btn_chn_name] = 1;
+            decoded[btn_chn_name_msgid] = msg_id;
             i += 3;
         } else {
             break;

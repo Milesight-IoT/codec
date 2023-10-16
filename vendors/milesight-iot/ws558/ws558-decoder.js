@@ -6,11 +6,16 @@
  * @product WS558
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
+
         // VOLTAGE
         if (channel_id === 0x03 && channel_type === 0x74) {
             decoded.voltage = readUInt16LE(bytes.slice(i, i + 2)) / 10;
@@ -41,8 +46,8 @@ function Decode(fPort, bytes) {
             var switchFlags = bytes[i + 1];
 
             for (var idx = 0; idx < 8; idx++) {
-                var switchTag = "switch_" + (idx + 1);
-                decoded[switchTag] = (switchFlags >> idx) & 1;
+                var chn_name = "switch_" + (idx + 1);
+                decoded[chn_name] = (switchFlags >> idx) & 1;
             }
 
             i += 2;
@@ -57,12 +62,12 @@ function Decode(fPort, bytes) {
 /* ******************************************
  * bytes to number
  ********************************************/
-function readUInt8LE(bytes) {
+function readUInt8(bytes) {
     return bytes & 0xff;
 }
 
-function readInt8LE(bytes) {
-    var ref = readUInt8LE(bytes);
+function readInt8(bytes) {
+    var ref = readUInt8(bytes);
     return ref > 0x7f ? ref - 0x100 : ref;
 }
 
@@ -78,7 +83,7 @@ function readInt16LE(bytes) {
 
 function readUInt32LE(bytes) {
     var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
-    return value & 0xffffffff;
+    return (value & 0xffffffff) >>> 0;
 }
 
 function readInt32LE(bytes) {

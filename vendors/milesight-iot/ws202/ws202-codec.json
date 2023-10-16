@@ -16,6 +16,10 @@
             "name": "PIR Trigger",
             "value": "1",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Idle" },
+                { "value": 1, "name": "Trigger" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -25,7 +29,11 @@
             "name": "Light Status",
             "value": "0",
             "unit": "",
-            "bacnet_type": "analog_input_object",
+            "values": [
+                { "value": 0, "name": "Dark" },
+                { "value": 1, "name": "Light" }
+            ],
+            "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         }
