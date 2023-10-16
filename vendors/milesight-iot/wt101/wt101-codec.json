@@ -1,0 +1,115 @@
+{
+    "version": "1.0.0",
+    "bytes": "01756104672C0103670A01059264099000000B900000",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "97",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "temperature",
+            "name": "Ambient Temperature",
+            "value": "26.6",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "temperature_target",
+            "name": "Temperature Target",
+            "value": "30",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "valve_opening",
+            "name": "Valve Opening",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "install_status",
+            "name": "Install Status",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Installed" },
+                { "value": 1, "name": "Uninstalled" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "window_detection",
+            "name": "Window Detection",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Normal" },
+                { "value": 1, "name": "Open" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "motor_calibration_result",
+            "name": "Motor Storke Calibration Result",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Success" },
+                { "value": 1, "name": "Fail: Out of Range" },
+                { "value": 2, "name": "Fail: Uninstalled" },
+                { "value": 3, "name": "Calibration Cleared" },
+                { "value": 4, "name": "Temperature Control Disable" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "motor_storke",
+            "name": "Motor Storke",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "freeze_protection",
+            "name": "Freeze Protection",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "motor_position",
+            "name": "Motor Position",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

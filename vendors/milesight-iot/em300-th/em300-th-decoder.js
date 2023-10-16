@@ -6,6 +6,10 @@
  * @product EM300-TH
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length;) {

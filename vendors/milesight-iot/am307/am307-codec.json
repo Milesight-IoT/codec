@@ -34,6 +34,10 @@
             "name": "PIR Trigger",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Idle" },
+                { "value": 1, "name": "Trigger" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -43,6 +47,14 @@
             "name": "Light Level",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "0" },
+                { "value": 1, "name": "1" },
+                { "value": 2, "name": "2" },
+                { "value": 3, "name": "3" },
+                { "value": 4, "name": "4" },
+                { "value": 5, "name": "5" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -79,6 +91,10 @@
             "name": "Buzzer Status",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"

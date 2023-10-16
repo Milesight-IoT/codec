@@ -3,9 +3,13 @@
  *
  * Copyright 2023 Milesight IoT
  *
- * @product WS502 physical switch with electrical parameters
+ * @product WS502 v2 physical switch with electrical parameters
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
@@ -23,7 +27,6 @@ function Decode(fPort, bytes) {
 
             decoded.switch_2 = (bytes[i] >> 1) & 1;
             decoded.switch_2_change = (bytes[i] >> 5) & 1;
-
             i += 1;
         }
         // VOLTAGE
@@ -70,7 +73,7 @@ function readInt16LE(bytes) {
 
 function readUInt32LE(bytes) {
     var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
-    return value & 0xffffffff;
+    return (value & 0xffffffff) >>> 0;
 }
 
 function readInt32LE(bytes) {

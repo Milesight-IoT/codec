@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0",
+    "bytes": "01756403770200",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "water_level",
+            "name": "Water Level",
+            "value": "2",
+            "unit": "cm",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 118,
+            "bacnet_unit_type": "UNITS_CENTIMETERS"
+        }
+    ]
+}

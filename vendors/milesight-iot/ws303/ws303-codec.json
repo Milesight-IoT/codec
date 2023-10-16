@@ -1,0 +1,28 @@
+{
+    "version": "1.0.0",
+    "bytes": "017564030001",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "leakage_status",
+            "name": "Leakage Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Normal" },
+                { "value": 1, "name": "Leak" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

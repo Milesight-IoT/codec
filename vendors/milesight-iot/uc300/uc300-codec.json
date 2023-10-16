@@ -1,0 +1,345 @@
+{
+    "version": "1.0.0",
+    "bytes": "",
+    "object": [
+        {
+            "id": "gpio_input_1",
+            "name": "GPIO Input (Channel 1)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_input_2",
+            "name": "GPIO Input (Channel 2)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_input_3",
+            "name": "GPIO Input (Channel 3)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_input_4",
+            "name": "GPIO Input (Channel 4)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_output_1",
+            "name": "GPIO Output (Channel 1)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_output_2",
+            "name": "GPIO Output (Channel 2)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_counter_1",
+            "name": "GPIO Counter (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_counter_2",
+            "name": "GPIO Counter (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_counter_3",
+            "name": "GPIO Counter (Channel 3)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_counter_4",
+            "name": "GPIO Counter (Channel 4)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pt100_1",
+            "name": "PT100 (Channel 1)",
+            "value": "26.3",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "pt100_1_max",
+            "name": "PT100 Max (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pt100_1_min",
+            "name": "PT100 Min (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pt100_1_avg",
+            "name": "PT100 Avg (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pt100_2",
+            "name": "PT100 (Channel 2)",
+            "value": "26.3",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "pt100_2_max",
+            "name": "PT100 Max (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pt100_2_min",
+            "name": "PT100 Min (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pt100_2_avg",
+            "name": "PT100 Avg (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1",
+            "name": "ADC 1",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1_max",
+            "name": "ADC Max (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1_min",
+            "name": "ADC Min (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1_avg",
+            "name": "ADC Avg (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2",
+            "name": "ADC 2",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2_max",
+            "name": "ADC Max (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2_min",
+            "name": "ADC Min (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2_avg",
+            "name": "ADC Avg (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_1",
+            "name": "ADV 1",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_1_max",
+            "name": "ADV Max (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_1_min",
+            "name": "ADV Min (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_1_avg",
+            "name": "ADV Avg (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_2",
+            "name": "ADV 2",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_2_max",
+            "name": "ADV Max (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_2_min",
+            "name": "ADV Min (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adv_2_avg",
+            "name": "ADV Avg (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "text",
+            "name": "Text",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "characterstring_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

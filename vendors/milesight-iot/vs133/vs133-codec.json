@@ -1,0 +1,258 @@
+{
+    "version": "1.0.0",
+    "bytes": "03D24800000004D2C800000006D20000000007D20000000009D2000000000AD2000000000CD2B41400000DD28D1A0000",
+    "object": [
+        {
+            "id": "line_1_total_in",
+            "name": "Line 1 Total In",
+            "value": "72",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_1_total_out",
+            "name": "Line 1 Total Out",
+            "value": "200",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_1_period_in",
+            "name": "Line 1 Period In",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_1_period_out",
+            "name": "Line 1 Period Out",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_2_total_in",
+            "name": "Line 2 Total In",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_2_total_out",
+            "name": "Line 2 Total Out",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_2_period_in",
+            "name": "Line 2 Period In",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_2_period_out",
+            "name": "Line 2 Period Out",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_3_total_in",
+            "name": "Line 3 Total In",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_3_total_out",
+            "name": "Line 3 Total Out",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_3_period_in",
+            "name": "Line 3 Period In",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_3_period_out",
+            "name": "Line 3 Period Out",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_4_total_in",
+            "name": "Line 4 Total In",
+            "value": "5300",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_4_total_out",
+            "name": "Line 4 Total Out",
+            "value": "6797",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_4_period_in",
+            "name": "Line 4 Period In",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "line_4_period_out",
+            "name": "Line 4 Period Out",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_1_count",
+            "name": "Region 1 Count",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_2_count",
+            "name": "Region 2 Count",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_3_count",
+            "name": "Region 3 Count",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_4_count",
+            "name": "Region 4 Count",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_1_avg_dwell",
+            "name": "Region 1 Average Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_1_max_dwell",
+            "name": "Region 1 Maximum Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_2_avg_dwell",
+            "name": "Region 2 Average Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_2_max_dwell",
+            "name": "Region 2 Maximum Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_3_avg_dwell",
+            "name": "Region 3 Average Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_3_max_dwell",
+            "name": "Region 3 Maximum Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_4_avg_dwell",
+            "name": "Region 4 Average Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "region_4_max_dwell",
+            "name": "Region 4 Maximum Dwell",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

@@ -1,0 +1,162 @@
+{
+    "version": "1.0.0",
+    "bytes": "",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "gpio_input_1",
+            "name": "GPIO Input (Channel 1)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_input_2",
+            "name": "GPIO Input (Channel 2)",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Low" },
+                { "value": 1, "name": "High" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_counter_1",
+            "name": "GPIO Counter (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "gpio_counter_2",
+            "name": "GPIO Counter (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sid12",
+            "name": "SID-12",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1",
+            "name": "ADC (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1_max",
+            "name": "ADC Max (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1_min",
+            "name": "ADC Min (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1_avg",
+            "name": "ADC Avg (Channel 1)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_1_alarm",
+            "name": "ADC Alarm (Channel 1)",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 1, "name": "Threshold Alarm" },
+                { "value": 2, "name": "Value Change Alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2",
+            "name": "ADC (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2_max",
+            "name": "ADC Max (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2_min",
+            "name": "ADC Min (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "adc_2_avg",
+            "name": "ADC Avg (Channel 2)",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sid12",
+            "name": "SID-12",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

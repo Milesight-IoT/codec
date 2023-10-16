@@ -6,6 +6,10 @@
  * @product WS503 v1
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
@@ -26,7 +30,6 @@ function Decode(fPort, bytes) {
 
             decoded.switch_3 = (bytes[i] >> 2) & 1;
             decoded.switch_3_change = (bytes[i] >> 6) & 1;
-
             i += 1;
         } else {
             break;

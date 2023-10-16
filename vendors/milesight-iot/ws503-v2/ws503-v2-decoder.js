@@ -3,9 +3,13 @@
  *
  * Copyright 2023 Milesight IoT
  *
- * @product WS503 physical switch
+ * @product WS503 v2 physical switch
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
@@ -26,7 +30,6 @@ function Decode(fPort, bytes) {
 
             decoded.switch_3 = (bytes[i] >> 2) & 1;
             decoded.switch_3_change = (bytes[i] >> 6) & 1;
-
             i += 1;
         } else {
             break;
@@ -48,7 +51,7 @@ function readInt16LE(bytes) {
 
 function readUInt32LE(bytes) {
     var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
-    return value & 0xffffffff;
+    return (value & 0xffffffff) >>> 0;
 }
 
 function readInt32LE(bytes) {

@@ -1,0 +1,33 @@
+{
+    "version": "1.0.0",
+    "bytes": "01755c03673401046865",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "92",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "30.8",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "humidity",
+            "name": "Humidity",
+            "value": "50.5",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 29,
+            "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
+        }
+    ]
+}

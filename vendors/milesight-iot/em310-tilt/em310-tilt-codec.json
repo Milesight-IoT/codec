@@ -1,0 +1,81 @@
+{
+    "version": "1.0.0",
+    "bytes": "01755C",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "92",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "angle_x",
+            "name": "Angle X",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "angle_y",
+            "name": "Angle Y",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "angle_z",
+            "name": "Angle Z",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "threshold_x",
+            "name": "Threshold X",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Normal" },
+                { "value": 1, "name": "Triggered" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "threshold_y",
+            "name": "Threshold Y",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Normal" },
+                { "value": 1, "name": "Triggered" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "threshold_z",
+            "name": "Threshold Z",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Normal" },
+                { "value": 1, "name": "Triggered" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

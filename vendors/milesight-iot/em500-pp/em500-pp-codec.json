@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0",
+    "bytes": "017564037B0A00",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "pressure",
+            "name": "Pressure",
+            "value": "10",
+            "unit": "kPa",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 54,
+            "bacnet_unit_type": "UNITS_KILOPASCALS"
+        }
+    ]
+}

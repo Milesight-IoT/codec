@@ -1,0 +1,101 @@
+{
+    "version": "1.0.0",
+    "bytes": "01756403670C0184CC011108110185CCE803E90301",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "26.8",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "total_in",
+            "name": "Total In",
+            "value": "4353",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "total_out",
+            "name": "Total Out",
+            "value": "4360",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "period_in",
+            "name": "Period In",
+            "value": "100",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "period_out",
+            "name": "Period Out",
+            "value": "1001",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_alarm",
+            "name": "Temperature Alarm",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Threshold Alarm Release" },
+                { "value": 1, "name": "Threshold Alarm" },
+                { "value": 3, "name": "High Temperature Alarm" },
+                { "value": 2, "name": "High Temperature Alarm Release" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "total_count_alarm",
+            "name": "Total Count Alarm",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Threshold Alarm Release" },
+                { "value": 1, "name": "Threshold Alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "period_count_alarm",
+            "name": "Period Count Alarm",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Threshold Alarm Release" },
+                { "value": 1, "name": "Threshold Alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

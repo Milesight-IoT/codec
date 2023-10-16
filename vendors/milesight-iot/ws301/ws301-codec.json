@@ -16,15 +16,23 @@
             "name": "Magnent Status",
             "value": "1",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Normal" },
+                { "value": 1, "name": "Abnormal" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "tamper_status",
-            "name": "Tamper Status",
+            "id": "install_status",
+            "name": "Install Status",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Installed" },
+                { "value": 1, "name": "Uninstalled" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"

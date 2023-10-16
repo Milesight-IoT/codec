@@ -6,11 +6,16 @@
  * @product AM107
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
+
         // BATTERY
         if (channel_id === 0x01 && channel_type === 0x75) {
             decoded.battery = bytes[i];
@@ -27,11 +32,8 @@ function Decode(fPort, bytes) {
             decoded.humidity = bytes[i] / 2;
             i += 1;
         }
-        // PIR ACTIVITY
+        // PIR
         else if (channel_id === 0x05 && channel_type === 0x6a) {
-            decoded.activity = readUInt16LE(bytes.slice(i, i + 2));
-            i += 2;
-        } else if (channel_id === 0x0a && channel_type === 0x6a) {
             decoded.activity = readUInt16LE(bytes.slice(i, i + 2));
             i += 2;
         }

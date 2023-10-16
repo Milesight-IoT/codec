@@ -6,6 +6,10 @@
  * @product WS513
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
@@ -58,5 +62,5 @@ function readUInt16LE(bytes) {
 
 function readUInt32LE(bytes) {
     var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
-    return value & 0xffffffff;
+    return (value & 0xffffffff) >>> 0;
 }

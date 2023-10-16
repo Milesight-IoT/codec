@@ -3,7 +3,7 @@
  *
  * Copyright 2023 Milesight IoT
  *
- * @product WS502 physical switch with electrical parameters
+ * @product WS501 v2 physical switch with electrical parameters
  */
 function Encode(fPort, obj) {
     var encoded = [];

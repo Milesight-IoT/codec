@@ -1,0 +1,51 @@
+{
+    "version": "1.0.0",
+    "bytes": "01756402671C01036864047D0000057D0100",
+    "object": [
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "28.4",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "humidity",
+            "name": "Humidity",
+            "value": "50",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 29,
+            "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
+        },
+        {
+            "id": "nh3",
+            "name": "NH3",
+            "value": "0",
+            "unit": "ppm",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "h2s",
+            "name": "H2S",
+            "value": "0.01",
+            "unit": "ppm",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        }
+    ]
+}

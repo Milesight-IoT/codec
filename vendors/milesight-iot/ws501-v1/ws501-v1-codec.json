@@ -7,6 +7,10 @@
             "name": "Switch 1",
             "value": "1",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -16,6 +20,10 @@
             "name": "Changing Status of Switch 1",
             "value": "0",
             "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"

@@ -6,11 +6,16 @@
  * @product AM102
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
+
         // BATTERY
         if (channel_id === 0x01 && channel_type === 0x75) {
             decoded.battery = bytes[i];
@@ -26,6 +31,17 @@ function Decode(fPort, bytes) {
         else if (channel_id === 0x04 && channel_type === 0x68) {
             decoded.humidity = bytes[i] / 2;
             i += 1;
+        }
+        // HISTORY
+        else if (channel_id === 0x20 && channel_type === 0xce) {
+            var data = {};
+            data.timestamp = readUInt32LE(bytes.slice(i, i + 4));
+            data.temperature = readInt16LE(bytes.slice(i + 4, i + 6)) / 10;
+            data.humidity = bytes[i + 6] / 2;
+            i += 7;
+
+            decoded.history = decoded.history || [];
+            decoded.history.push(data);
         } else {
             break;
         }
@@ -45,4 +61,14 @@ function readUInt16LE(bytes) {
 function readInt16LE(bytes) {
     var ref = readUInt16LE(bytes);
     return ref > 0x7fff ? ref - 0x10000 : ref;
+}
+
+function readUInt32LE(bytes) {
+    var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
+    return (value & 0xffffffff) >>> 0;
+}
+
+function readInt32LE(bytes) {
+    var ref = readUInt32LE(bytes);
+    return ref > 0x7fffffff ? ref - 0x100000000 : ref;
 }

@@ -6,6 +6,10 @@
  * @product AM307L
  */
 function Decode(fPort, bytes) {
+    return milesight(bytes);
+}
+
+function milesight(bytes) {
     var decoded = {};
 
     for (var i = 0; i < bytes.length; ) {
@@ -28,7 +32,7 @@ function Decode(fPort, bytes) {
             decoded.humidity = bytes[i] / 2;
             i += 1;
         }
-        // PIR TRIGGER
+        // PIR
         else if (channel_id === 0x05 && channel_type === 0x00) {
             decoded.pir_trigger = bytes[i];
             i += 1;
@@ -53,10 +57,26 @@ function Decode(fPort, bytes) {
             decoded.pressure = readUInt16LE(bytes.slice(i, i + 2)) / 10;
             i += 2;
         }
-        // BUZZER (0: disable, 1: beeping)
+        // BUZZER STATUS
         else if (channel_id === 0x0e && channel_type === 0x01) {
             decoded.buzzer_status = bytes[i];
             i += 1;
+        }
+        // HISTORY
+        else if (channel_id === 0x20 && channel_type === 0xce) {
+            var data = {};
+            data.timestamp = readUInt32LE(bytes.slice(i, i + 4));
+            data.temperature = readInt16LE(bytes.slice(i + 4, i + 6)) / 10;
+            data.humidity = readUInt16LE(bytes.slice(i + 6, i + 8)) / 2;
+            data.pir_trigger = bytes[i + 8];
+            data.light_level = bytes[i + 9];
+            data.co2 = readUInt16LE(bytes.slice(i + 10, i + 12));
+            data.tvoc = readUInt16LE(bytes.slice(i + 12, i + 14)) / 100;
+            data.pressure = readUInt16LE(bytes.slice(i + 14, i + 16)) / 10;
+            i += 16;
+
+            decoded.history = decoded.history || [];
+            decoded.history.push(data);
         } else {
             break;
         }
@@ -76,4 +96,14 @@ function readUInt16LE(bytes) {
 function readInt16LE(bytes) {
     var ref = readUInt16LE(bytes);
     return ref > 0x7fff ? ref - 0x10000 : ref;
+}
+
+function readUInt32LE(bytes) {
+    var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
+    return (value & 0xffffffff) >>> 0;
+}
+
+function readInt32LE(bytes) {
+    var ref = readUInt32LE(bytes);
+    return ref > 0x7fffffff ? ref - 0x100000000 : ref;
 }
