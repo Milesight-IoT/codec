@@ -3,6 +3,70 @@
     "bytes": "01756403670701",
     "object": [
         {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
             "id": "battery",
             "name": "Battery",
             "value": "100",
@@ -12,8 +76,8 @@
             "bacnet_unit_type": "UNITS_PERCENT"
         },
         {
-            "id": "temperature_chn1",
-            "name": "Temperature (Channel 1)",
+            "id": "temperature",
+            "name": "Temperature",
             "value": "26.3",
             "unit": "°C",
             "bacnet_type": "analog_input_object",
@@ -21,21 +85,21 @@
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
         },
         {
-            "id": "magnet_chn1",
-            "name": "Magnent (Channel 1)",
+            "id": "magnet",
+            "name": "Magnent",
             "value": "1",
             "unit": "",
             "values": [
-                { "value": 0, "name": "Closed" },
-                { "value": 1, "name": "Opened" }
+                { "value": 0, "name": "Close" },
+                { "value": 1, "name": "Open" }
             ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "temperature_alarm_chn1",
-            "name": "Temperature Alarm (Channel 1)",
+            "id": "temperature_alarm",
+            "name": "Temperature Alarm",
             "value": "",
             "unit": "",
             "values": [
@@ -48,31 +112,13 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "temperature_change_chn1",
-            "name": "Temperature Change (Channel 1)",
+            "id": "temperature_change",
+            "name": "Temperature Change",
             "value": "",
             "unit": "°C",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
-        },
-        {
-            "id": "report_event_chn1",
-            "name": "Report Event (Channel 1)",
-            "value": "1",
-            "unit": "",
-            "values": [
-                { "value": 0, "name": "" },
-                { "value": 1, "name": "Threshold Alarm" },
-                { "value": 2, "name": "Threshold Alarm Release" },
-                { "value": 3, "name": "Mutation Alarm" },
-                { "value": 4, "name": "PT100 Periodic Report" },
-                { "value": 5, "name": "Magnent Trigger" },
-                { "value": 6, "name": "Magnent Periodic Report" }
-            ],
-            "bacnet_type": "multistate_value_object",
-            "bacnet_unit_type_id": 95,
-            "bacnet_unit_type": "UNITS_NO_UNITS"
         }
     ]
 }

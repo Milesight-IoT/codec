@@ -15,38 +15,45 @@ function milesight(bytes) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
-        // POWER STATE
-        if (channel_id === 0xff && channel_type === 0x0b) {
-            decoded.power = 1;
-            i += 1;
-        }
         // IPSO VERSION
-        else if (channel_id === 0xff && channel_type === 0x01) {
+        if (channel_id === 0xff && channel_type === 0x01) {
             decoded.ipso_version = readProtocolVersion(bytes[i]);
             i += 1;
-        }
-        // PRODUCT SERIAL NUMBER
-        else if (channel_id === 0xff && channel_type === 0x16) {
-            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
-            i += 8;
         }
         // HARDWARE VERSION
         else if (channel_id === 0xff && channel_type === 0x09) {
             decoded.hardware_version = readHardwareVersion(bytes.slice(i, i + 2));
             i += 2;
         }
-        // SOFTWARE VERSION
+        // FIRMWARE VERSION
         else if (channel_id === 0xff && channel_type === 0x0a) {
-            decoded.software_version = readSoftwareVersion(bytes.slice(i, i + 2));
+            decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 2));
             i += 2;
         }
-        // METRICS DATA REPORT
+        // DEVICE STATUS
+        else if (channel_id === 0xff && channel_type === 0x0b) {
+            decoded.device_status = 1;
+            i += 1;
+        }
+        // LORAWAN CLASS TYPE
+        else if (channel_id === 0xff && channel_type === 0x0f) {
+            decoded.lorawan_class = bytes[i];
+            i += 1;
+        }
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x16) {
+            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
+            i += 8;
+        }
+        // MODBUS
         else if (channel_id === 0xff && channel_type === 0x19) {
             var modbus_chn_id = bytes[i++] + 1;
             var data_length = bytes[i++];
             var data_type = bytes[i++];
+            var sign = (data_type >>> 7) & 0x01;
+            var type = data_type & 0x7f; // 0b01111111
             var modbus_chn_name = "modbus_chn_" + modbus_chn_id;
-            switch (data_type) {
+            switch (type) {
                 case 0:
                     decoded[modbus_chn_name] = bytes[i];
                     i += 1;
@@ -57,7 +64,7 @@ function milesight(bytes) {
                     break;
                 case 2:
                 case 3:
-                    decoded[modbus_chn_name] = readUInt16LE(bytes.slice(i, i + 2));
+                    decoded[modbus_chn_name] = sign ? readInt16LE(bytes.slice(i, i + 2)) : readUInt16LE(bytes.slice(i, i + 2));
                     i += 2;
                     break;
                 case 4:
@@ -66,7 +73,7 @@ function milesight(bytes) {
                 case 9:
                 case 10:
                 case 11:
-                    decoded[modbus_chn_name] = readUInt32LE(bytes.slice(i, i + 4));
+                    decoded[modbus_chn_name] = sign ? readInt32LE(bytes.slice(i, i + 4)) : readUInt32LE(bytes.slice(i, i + 4));
                     i += 4;
                     break;
                 case 5:
@@ -80,7 +87,7 @@ function milesight(bytes) {
         else if (channel_id === 0xff && channel_type === 0x15) {
             var modbus_chn_id = bytes[i] + 1;
             var modbus_chn_name = "modbus_chn_" + modbus_chn_id + "_error";
-            decoded[modbus_chn_name] = true;
+            decoded[modbus_chn_name] = 1;
             i += 1;
         } else {
             break;
@@ -89,9 +96,6 @@ function milesight(bytes) {
     return decoded;
 }
 
-/* ******************************************
- * bytes to number
- ********************************************/
 function readUInt8(bytes) {
     return bytes & 0xff;
 }
@@ -144,7 +148,7 @@ function readHardwareVersion(bytes) {
     return "v" + major + "." + minor;
 }
 
-function readSoftwareVersion(bytes) {
+function readFirmwareVersion(bytes) {
     var major = bytes[0] & 0xff;
     var minor = bytes[1] & 0xff;
     return "v" + major + "." + minor;

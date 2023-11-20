@@ -16,21 +16,53 @@ function milesight(bytes) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
+        // IPSO VERSION
+        if (channel_id === 0xff && channel_type === 0x01) {
+            decoded.ipso_version = readProtocolVersion(bytes[i]);
+            i += 1;
+        }
+        // HARDWARE VERSION
+        else if (channel_id === 0xff && channel_type === 0x09) {
+            decoded.hardware_version = readHardwareVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
+        // FIRMWARE VERSION
+        else if (channel_id === 0xff && channel_type === 0x0a) {
+            decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
+        // DEVICE STATUS
+        else if (channel_id === 0xff && channel_type === 0x0b) {
+            decoded.device_status = 1;
+            i += 1;
+        }
+        // LORAWAN CLASS TYPE
+        else if (channel_id === 0xff && channel_type === 0x0f) {
+            decoded.lorawan_class = bytes[i];
+            i += 1;
+        }
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x16) {
+            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
+            i += 8;
+        }
         // BATTERY
-        if (channel_id === 0x01 && channel_type === 0x75) {
+        else if (channel_id === 0x01 && channel_type === 0x75) {
             decoded.battery = bytes[i];
             i += 1;
         }
         // GPIO
         else if (channel_id === 0x05 && channel_type === 0x00) {
             decoded.gpio = bytes[i];
+            decoded.gpio_type = 0;
             i += 1;
         }
         // WATER
-        else if (channel_id === 0x06 && channel_type === 0xe1) {
+        else if (channel_id === 0x05 && channel_type === 0xe1) {
             decoded.water_conv = readUInt16LE(bytes.slice(i, i + 2)) / 10;
-            decoded.pluse_conv = readUInt16LE(bytes.slice(i + 2, i + 4)) / 10;
+            decoded.pulse_conv = readUInt16LE(bytes.slice(i + 2, i + 4)) / 10;
             decoded.water = readFloatLE(bytes.slice(i + 4, i + 8));
+            decoded.gpio_type = 1;
             i += 8;
         }
         // GPIO ALARM
@@ -40,9 +72,9 @@ function milesight(bytes) {
             i += 2;
         }
         // WATER ALARM
-        else if (channel_id === 0x86 && channel_type === 0xe1) {
+        else if (channel_id === 0x85 && channel_type === 0xe1) {
             decoded.water_conv = readUInt16LE(bytes.slice(i, i + 2)) / 10;
-            decoded.pluse_conv = readUInt16LE(bytes.slice(i + 2, i + 4)) / 10;
+            decoded.pulse_conv = readUInt16LE(bytes.slice(i + 2, i + 4)) / 10;
             decoded.water = readFloatLE(bytes.slice(i + 4, i + 8));
             decoded.water_alarm = bytes[i + 8];
             i += 9;
@@ -60,7 +92,7 @@ function milesight(bytes) {
             } else if (mode === 2) {
                 data.gpio_type = mode;
                 data.water_conv = readUInt16LE(bytes.slice(i + 10, i + 12)) / 10;
-                data.pluse_conv = readUInt16LE(bytes.slice(i + 12, i + 14)) / 10;
+                data.pulse_conv = readUInt16LE(bytes.slice(i + 12, i + 14)) / 10;
                 data.water = readFloatLE(bytes.slice(i + 14, i + 18));
             }
             i += 18;
@@ -75,9 +107,6 @@ function milesight(bytes) {
     return decoded;
 }
 
-/* ******************************************
- * bytes to number
- ********************************************/
 function readUInt16LE(bytes) {
     var value = (bytes[1] << 8) + bytes[0];
     return value & 0xffff;
@@ -104,6 +133,32 @@ function readFloatLE(bytes) {
 
     var v = Number(f.toFixed(2));
     return v;
+}
+
+function readProtocolVersion(bytes) {
+    var major = (bytes & 0xf0) >> 4;
+    var minor = bytes & 0x0f;
+    return "v" + major + "." + minor;
+}
+
+function readHardwareVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = (bytes[1] & 0xff) >> 4;
+    return "v" + major + "." + minor;
+}
+
+function readFirmwareVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = bytes[1] & 0xff;
+    return "v" + major + "." + minor;
+}
+
+function readSerialNumber(bytes) {
+    var temp = [];
+    for (var idx = 0; idx < bytes.length; idx++) {
+        temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));
+    }
+    return temp.join("");
 }
 
 function readGPIOStatus(bytes) {

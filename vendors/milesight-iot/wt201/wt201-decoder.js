@@ -16,20 +16,10 @@ function milesight(bytes) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
-        // POWER STATE
-        if (channel_id === 0xff && channel_type === 0x0b) {
-            decoded.power = 1;
-            i += 1;
-        }
         // IPSO VERSION
-        else if (channel_id === 0xff && channel_type === 0x01) {
+        if (channel_id === 0xff && channel_type === 0x01) {
             decoded.ipso_version = readProtocolVersion(bytes[i]);
             i += 1;
-        }
-        // PRODUCT SERIAL NUMBER
-        else if (channel_id === 0xff && channel_type === 0x16) {
-            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
-            i += 8;
         }
         // HARDWARE VERSION
         else if (channel_id === 0xff && channel_type === 0x09) {
@@ -40,6 +30,21 @@ function milesight(bytes) {
         else if (channel_id === 0xff && channel_type === 0x0a) {
             decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 2));
             i += 2;
+        }
+        // DEVICE STATUS
+        else if (channel_id === 0xff && channel_type === 0x0b) {
+            decoded.device_status = 1;
+            i += 1;
+        }
+        // LORAWAN CLASS TYPE
+        else if (channel_id === 0xff && channel_type === 0x0f) {
+            decoded.lorawan_class = bytes[i];
+            i += 1;
+        }
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x16) {
+            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
+            i += 8;
         }
         // TEMPERATURE
         else if (channel_id === 0x03 && channel_type === 0x67) {
@@ -81,7 +86,7 @@ function milesight(bytes) {
             var schedule = {};
             schedule.type = bytes[i];
             schedule.index = bytes[i + 1] + 1;
-            schedule.plan_enable = [bytes[i + 2]];
+            schedule.plan_enable = bytes[i + 2];
             schedule.week_recycle = readWeekRecycleSettings(bytes[i + 3]);
             var time_mins = readUInt16LE(bytes.slice(i + 4, i + 6));
             schedule.time = Math.floor(time_mins / 60) + ":" + ("0" + (time_mins % 60)).slice(-2);
@@ -462,26 +467,26 @@ function readTemperatureCtlStatusEnable(heat_mode, cool_mode) {
 function readWeekRecycleSettings(type) {
     // bit1: "mon", bit2: "tues", bit3: "wed", bit4: "thur", bit5: "fri", bit6: "sat", bit7: "sun"
     var week_enable = [];
-    if ((type >>> 0) & 0x01) {
-        week_enable.push("mon");
-    }
     if ((type >>> 1) & 0x01) {
-        week_enable.push("tues");
+        week_enable.push("Mon.");
     }
     if ((type >>> 2) & 0x01) {
-        week_enable.push("wed");
+        week_enable.push("Tues.");
     }
     if ((type >>> 3) & 0x01) {
-        week_enable.push("thur");
+        week_enable.push("Wed.");
     }
     if ((type >>> 4) & 0x01) {
-        week_enable.push("fri");
+        week_enable.push("Thur.");
     }
     if ((type >>> 5) & 0x01) {
-        week_enable.push("sat");
+        week_enable.push("Fri.");
     }
     if ((type >>> 6) & 0x01) {
-        week_enable.push("sun");
+        week_enable.push("Sat.");
+    }
+    if ((type >>> 7) & 0x01) {
+        week_enable.push("Sun.");
     }
     return week_enable;
 }

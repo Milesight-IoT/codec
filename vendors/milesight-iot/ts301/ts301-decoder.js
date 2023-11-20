@@ -16,55 +16,62 @@ function milesight(bytes) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
+        // IPSO VERSION
+        if (channel_id === 0xff && channel_type === 0x01) {
+            decoded.ipso_version = readProtocolVersion(bytes[i]);
+            i += 1;
+        }
+        // HARDWARE VERSION
+        else if (channel_id === 0xff && channel_type === 0x09) {
+            decoded.hardware_version = readHardwareVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
+        // FIRMWARE VERSION
+        else if (channel_id === 0xff && channel_type === 0x0a) {
+            decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
+        // DEVICE STATUS
+        else if (channel_id === 0xff && channel_type === 0x0b) {
+            decoded.device_status = 1;
+            i += 1;
+        }
+        // LORAWAN CLASS TYPE
+        else if (channel_id === 0xff && channel_type === 0x0f) {
+            decoded.lorawan_class = bytes[i];
+            i += 1;
+        }
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x16) {
+            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
+            i += 8;
+        }
         // BATTERY
-        if (channel_id === 0x01 && channel_type === 0x75) {
+        else if (channel_id === 0x01 && channel_type === 0x75) {
             decoded.battery = bytes[i];
             i += 1;
         }
-        // TEMPERATURE (CHANNEL 1)
+        // TEMPERATURE
         else if (channel_id === 0x03 && channel_type === 0x67) {
-            decoded.temperature_chn1 = readInt16LE(bytes.slice(i, i + 2)) / 10;
+            decoded.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
             i += 2;
         }
-        // MAGNET STATUS (CHANNEL 1)
+        // MAGNET STATUS
         else if (channel_id === 0x03 && channel_type === 0x00) {
-            decoded.magnet_chn1 = bytes[i];
+            decoded.magnet = bytes[i];
             i += 1;
         }
-        // TEMPERATURE (CHANNEL 2)
-        else if (channel_id === 0x04 && channel_type === 0x67) {
-            decoded.temperature_chn2 = readInt16LE(bytes.slice(i, i + 2)) / 10;
-            i += 2;
-        }
-        // MAGNET STATUS (CHANNEL 2)
-        else if (channel_id === 0x04 && channel_type === 0x00) {
-            decoded.magnet_chn2 = bytes[i];
-            i += 1;
-        }
-        // TEMPERATURE ALARM (CHANNEL 1)
+        // TEMPERATURE ALARM
         else if (channel_id === 0x83 && channel_type === 0x67) {
-            decoded.temperature_chn1 = readInt16LE(bytes.slice(i, i + 2)) / 10;
-            decoded.temperature_alarm_chn1 = bytes[i + 2];
+            decoded.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
+            decoded.temperature_alarm = bytes[i + 2];
             i += 3;
         }
-        // TEMPERATURE ALARM (CHANNEL 2)
-        else if (channel_id === 0x84 && channel_type === 0x67) {
-            decoded.temperature_chn2 = readInt16LE(bytes.slice(i, i + 2)) / 10;
-            decoded.temperature_alarm_chn2 = bytes[i + 2];
-            i += 3;
-        }
-        // TEMPERATURE ALARM (CHANNEL 1)
+        // TEMPERATURE ALARM
         else if (channel_id === 0x93 && channel_type === 0xd7) {
-            decoded.temperature_chn1 = readInt16LE(bytes.slice(i, i + 2)) / 10;
-            decoded.temperature_change_chn1 = readInt16LE(bytes.slice(i + 2, i + 4)) / 100;
-            decoded.temperature_alarm_chn1 = bytes[i + 4];
-            i += 5;
-        }
-        // TEMPERATURE ALARM (CHANNEL 2)
-        else if (channel_id === 0x94 && channel_type === 0xd7) {
-            decoded.temperature_chn2 = readInt16LE(bytes.slice(i, i + 2)) / 10;
-            decoded.temperature_change_chn2 = readInt16LE(bytes.slice(i + 2, i + 4)) / 100;
-            decoded.temperature_alarm_chn2 = bytes[i + 4];
+            decoded.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
+            decoded.temperature_change = readInt16LE(bytes.slice(i + 2, i + 4)) / 100;
+            decoded.temperature_alarm = bytes[i + 4];
             i += 5;
         }
         // HISTORY
@@ -81,36 +88,18 @@ function milesight(bytes) {
                 case 0x02:
                 case 0x03:
                 case 0x04:
-                    data.temperature_chn1 = readInt16LE(bytes.slice(i, i + 2)) / 10;
-                    data.report_event_chn1 = chn1_event;
+                    data.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
+                    data.report_event = chn1_event;
                     break;
                 case 0x05:
                 case 0x06:
-                    data.magnet_chn1 = readInt16LE(bytes.slice(i, i + 2));
-                    data.report_event_chn1 = chn1_event;
+                    data.magnet = readInt16LE(bytes.slice(i, i + 2));
+                    data.report_event = chn1_event;
                     break;
                 default:
                     break;
             }
-            i += 2;
-
-            switch (chn2_event) {
-                case 0x01:
-                case 0x02:
-                case 0x03:
-                case 0x04:
-                    data.temperature_chn2 = readInt16LE(bytes.slice(i, i + 2)) / 10;
-                    data.report_event_chn2 = chn2_event;
-                    break;
-                case 0x05:
-                case 0x06:
-                    data.magnet_chn2 = readInt16LE(bytes.slice(i, i + 2));
-                    data.report_event_chn2 = chn2_event;
-                    break;
-                default:
-                    break;
-            }
-            i += 2;
+            i += 4;
 
             decoded.history = decoded.history || [];
             decoded.history.push(data);
@@ -135,6 +124,32 @@ function readInt16LE(bytes) {
 function readUInt32LE(bytes) {
     var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
     return (value & 0xffffffff) >>> 0;
+}
+
+function readProtocolVersion(bytes) {
+    var major = (bytes & 0xf0) >> 4;
+    var minor = bytes & 0x0f;
+    return "v" + major + "." + minor;
+}
+
+function readHardwareVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = (bytes[1] & 0xff) >> 4;
+    return "v" + major + "." + minor;
+}
+
+function readFirmwareVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = bytes[1] & 0xff;
+    return "v" + major + "." + minor;
+}
+
+function readSerialNumber(bytes) {
+    var temp = [];
+    for (var idx = 0; idx < bytes.length; idx++) {
+        temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));
+    }
+    return temp.join("");
 }
 
 function readAlarmType(type) {

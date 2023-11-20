@@ -195,6 +195,30 @@
             "encoder_script": "vendors/milesight-iot/at101/at101-encoder.js"
         },
         {
+            "id": "ct101",
+            "name": "CT101",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6746",
+            "deveui": "24e124746",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct101/ct101-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct101/ct101-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct101/ct101-encoder.js"
+        },
+        {
+            "id": "ct103",
+            "name": "CT103",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6746",
+            "deveui": "24e124746",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct101/ct101-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct101/ct101-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct101/ct101-encoder.js"
+        },
+        {
             "id": "ds3604",
             "name": "DS3604",
             "description": "Smart Eink Display",
@@ -615,8 +639,8 @@
             "encoder_script": "vendors/milesight-iot/uc50x/uc50x-encoder.js"
         },
         {
-            "id": "uc511",
-            "name": "UC511",
+            "id": "uc511_di",
+            "name": "UC511-DI",
             "description": "Solenoid Valve Controller",
             "catalog": "uc500",
             "sn": "6460",
@@ -627,8 +651,8 @@
             "encoder_script": "vendors/milesight-iot/uc51x/uc51x-encoder.js"
         },
         {
-            "id": "uc512",
-            "name": "UC512",
+            "id": "uc512_di",
+            "name": "UC512-DI",
             "description": "Solenoid Valve Controller",
             "catalog": "uc500",
             "sn": "6460",
@@ -745,6 +769,18 @@
             "codec": "vendors/milesight-iot/vs350/vs350-codec.json",
             "decoder_script": "vendors/milesight-iot/vs350/vs350-decoder.js",
             "encoder_script": "vendors/milesight-iot/vs350/vs350-encoder.js"
+        },
+        {
+            "id": "vs351",
+            "name": "VS351",
+            "description": "Mini AI Thermopile People Counter",
+            "catalog": "vs",
+            "sn": "6799",
+            "deveui": "24e124799",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/vs351/vs351-codec.json",
+            "decoder_script": "vendors/milesight-iot/vs351/vs351-decoder.js",
+            "encoder_script": "vendors/milesight-iot/vs351/vs351-encoder.js"
         },
         {
             "id": "ws101",
@@ -892,7 +928,7 @@
         },
         {
             "id": "ws501_3w_w11",
-            "name": "WS501",
+            "name": "WS501(3-Wire)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6771",
@@ -904,7 +940,7 @@
         },
         {
             "id": "ws502_3w_w11",
-            "name": "WS502",
+            "name": "WS502(3-Wire)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6771",
@@ -916,7 +952,7 @@
         },
         {
             "id": "ws501_3w_w12",
-            "name": "WS501",
+            "name": "WS501(3-Wire)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6777",
@@ -928,19 +964,19 @@
         },
         {
             "id": "ws501_2w_w11",
-            "name": "WS501",
+            "name": "WS501(2-Wire)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6782",
             "deveui": "24e124782",
-            "device_profile": ["ClassC-OTAA"],
+            "device_profile": ["ClassC-OTAA", "ClassB-OTAA", "ClassCB-OTAA"],
             "codec": "vendors/milesight-iot/ws501-v2/ws501-v2-codec.json",
             "decoder_script": "vendors/milesight-iot/ws501-v2/ws501-v2-decoder.js",
             "encoder_script": "vendors/milesight-iot/ws501-v2/ws501-v2-encoder.js"
         },
         {
             "id": "ws502_2w_w11",
-            "name": "WS502",
+            "name": "WS502(2-Wire)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6782",
@@ -952,7 +988,7 @@
         },
         {
             "id": "ws503_2w_w11",
-            "name": "WS503",
+            "name": "WS503(2-Wire)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6782",

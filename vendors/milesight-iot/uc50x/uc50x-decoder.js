@@ -20,8 +20,38 @@ function milesight(bytes) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
+        // IPSO VERSION
+        if (channel_id === 0xff && channel_type === 0x01) {
+            decoded.ipso_version = readProtocolVersion(bytes[i]);
+            i += 1;
+        }
+        // HARDWARE VERSION
+        else if (channel_id === 0xff && channel_type === 0x09) {
+            decoded.hardware_version = readHardwareVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
+        // FIRMWARE VERSION
+        else if (channel_id === 0xff && channel_type === 0x0a) {
+            decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
+        // DEVICE STATUS
+        else if (channel_id === 0xff && channel_type === 0x0b) {
+            decoded.device_status = 1;
+            i += 1;
+        }
+        // LORAWAN CLASS TYPE
+        else if (channel_id === 0xff && channel_type === 0x0f) {
+            decoded.lorawan_class = bytes[i];
+            i += 1;
+        }
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x08) {
+            decoded.sn = readSerialNumber(bytes.slice(i, i + 6));
+            i += 6;
+        }
         // BATTERY
-        if (channel_id === 0x01 && channel_type === 0x75) {
+        else if (channel_id === 0x01 && channel_type === 0x75) {
             decoded.battery = bytes[i];
             i += 1;
         }
@@ -109,20 +139,18 @@ function milesight(bytes) {
         else if (channel_id === 0xff && channel_type === 0x15) {
             var modbus_error_chn_id = bytes[i] - 6;
             var modbus_chn_name = "modbus_chn_" + modbus_error_chn_id + "_alarm";
-            decoded[modbus_chn_name] = "read error";
+            decoded[modbus_chn_name] = 1;
             i += 1;
         }
         // ADC ALARM (UC50x v3)
         else if (includes(adc_alarm_chns, channel_id) && channel_type === 0xe2) {
             var adc_chn_name = "adc_" + (channel_id - adc_alarm_chns[0] + 1);
-            decoded[adc_chn_name] = decoded[adc_chn_name] || {};
-            decoded[adc_chn_name].cur = readFloat16LE(bytes.slice(i, i + 2));
-            decoded[adc_chn_name].min = readFloat16LE(bytes.slice(i + 2, i + 4));
-            decoded[adc_chn_name].max = readFloat16LE(bytes.slice(i + 4, i + 6));
-            decoded[adc_chn_name].avg = readFloat16LE(bytes.slice(i + 6, i + 8));
-            i += 8;
-
-            decoded[adc_chn_name + "_alarm"] = bytes[i++];
+            decoded[adc_chn_name] = readFloat16LE(bytes.slice(i, i + 2));
+            decoded[adc_chn_name + "_min"] = readFloat16LE(bytes.slice(i + 2, i + 4));
+            decoded[adc_chn_name + "_max"] = readFloat16LE(bytes.slice(i + 4, i + 6));
+            decoded[adc_chn_name + "_avg"] = readFloat16LE(bytes.slice(i + 6, i + 8));
+            decoded[adc_chn_name + "_alarm"] = bytes[i + 8];
+            i += 9;
         }
         // HISTORY (GPIO / ADC)
         else if (channel_id === 0x20 && channel_type === 0xdc) {
@@ -189,9 +217,6 @@ function milesight(bytes) {
     return decoded;
 }
 
-/* ******************************************
- * bytes to number
- ********************************************/
 function numToBits(num, bit_count) {
     var bits = [];
     for (var i = 0; i < bit_count; i++) {
@@ -247,6 +272,42 @@ function readFloatLE(bytes) {
     return f;
 }
 
+function includes(datas, value) {
+    var size = datas.length;
+    for (var i = 0; i < size; i++) {
+        if (datas[i] == value) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function readProtocolVersion(bytes) {
+    var major = (bytes & 0xf0) >> 4;
+    var minor = bytes & 0x0f;
+    return "v" + major + "." + minor;
+}
+
+function readHardwareVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = (bytes[1] & 0xff) >> 4;
+    return "v" + major + "." + minor;
+}
+
+function readFirmwareVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = bytes[1] & 0xff;
+    return "v" + major + "." + minor;
+}
+
+function readSerialNumber(bytes) {
+    var temp = [];
+    for (var idx = 0; idx < bytes.length; idx++) {
+        temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));
+    }
+    return temp.join("");
+}
+
 function readString(bytes) {
     var str = "";
     for (var i = 0; i < bytes.length; i++) {
@@ -256,16 +317,6 @@ function readString(bytes) {
         str += String.fromCharCode(bytes[i]);
     }
     return str;
-}
-
-function includes(datas, value) {
-    var size = datas.length;
-    for (var i = 0; i < size; i++) {
-        if (datas[i] == value) {
-            return true;
-        }
-    }
-    return false;
 }
 
 function readGPIOType(type) {
