@@ -22,20 +22,10 @@ function milesight(bytes) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
-        // PROTOCOL VESION
+        // IPSO VERSION
         if (channel_id === 0xff && channel_type === 0x01) {
-            decoded.protocol_version = bytes[i];
+            decoded.ipso_version = readProtocolVersion(bytes[i]);
             i += 1;
-        }
-        // POWER ON
-        else if (channel_id === 0xff && channel_type === 0x0b) {
-            decoded.power = 1;
-            i += 1;
-        }
-        // SERIAL NUMBER
-        else if (channel_id === 0xff && channel_type === 0x16) {
-            decoded.sn = readString(bytes.slice(i, i + 8));
-            i += 8;
         }
         // HARDWARE VERSION
         else if (channel_id === 0xff && channel_type === 0x09) {
@@ -46,6 +36,21 @@ function milesight(bytes) {
         else if (channel_id === 0xff && channel_type === 0x0a) {
             decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 2));
             i += 2;
+        }
+        // DEVICE STATUS
+        else if (channel_id === 0xff && channel_type === 0x0b) {
+            decoded.device_status = 1;
+            i += 1;
+        }
+        // LORAWAN CLASS TYPE
+        else if (channel_id === 0xff && channel_type === 0x0f) {
+            decoded.lorawan_class = bytes[i];
+            i += 1;
+        }
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x16) {
+            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
+            i += 8;
         }
         // GPIO INPUT
         else if (includes(gpio_in_chns, channel_id) && channel_type === 0x00) {
@@ -139,7 +144,7 @@ function milesight(bytes) {
         else if (channel_id === 0xff && channel_type === 0x15) {
             var modbus_chn_id = bytes[i] + 1;
             var modbus_chn_name = "modbus_chn_" + modbus_chn_id + "_alarm";
-            decoded[modbus_chn_name] = "read error";
+            decoded[modbus_chn_name] = 1;
             i += 1;
         }
         // ANALOG CURRENT STATISTICS
@@ -297,9 +302,6 @@ function milesight(bytes) {
     return decoded;
 }
 
-/* ******************************************
- * bytes to number
- ********************************************/
 function numToBits(num, bit_count) {
     var bits = [];
     for (var i = 0; i < bit_count; i++) {
@@ -379,6 +381,12 @@ function includes(datas, value) {
     return false;
 }
 
+function readProtocolVersion(bytes) {
+    var major = (bytes & 0xf0) >> 4;
+    var minor = bytes & 0x0f;
+    return "v" + major + "." + minor;
+}
+
 function readHardwareVersion(bytes) {
     var major = bytes[0] & 0xff;
     var minor = (bytes[1] & 0xff) >> 4;
@@ -391,8 +399,7 @@ function readFirmwareVersion(bytes) {
     return "v" + major + "." + minor;
 }
 
-// bytes to string
-function readString(bytes) {
+function readSerialNumber(bytes) {
     var temp = [];
     for (var idx = 0; idx < bytes.length; idx++) {
         temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));

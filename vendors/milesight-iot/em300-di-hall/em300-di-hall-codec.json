@@ -3,6 +3,70 @@
     "bytes": "01756403670B0104687206E10A000A0000000000",
     "object": [
         {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
             "id": "battery",
             "name": "Battery",
             "value": "100",
@@ -87,24 +151,6 @@
                 { "value": 2, "name": "Water Outage Timeout Alarm Release" },
                 { "value": 3, "name": "Water Flow Timeout Alarm" },
                 { "value": 4, "name": "Water Flow Timeout Alarm Release" }
-            ],
-            "bacnet_type": "multistate_value_object",
-            "bacnet_unit_type_id": 95,
-            "bacnet_unit_type": "UNITS_NO_UNITS"
-        },
-        {
-            "id": "alarm",
-            "name": "Alarm",
-            "value": "",
-            "unit": "",
-            "values": [
-                { "value": 0, "name": "None" },
-                { "value": 1, "name": "Water Outage Timeout Alarm" },
-                { "value": 2, "name": "Water Outage Timeout Alarm Release" },
-                { "value": 3, "name": "Water Flow Timeout Alarm" },
-                { "value": 4, "name": "Water Flow Timeout Alarm Release" },
-                { "value": 5, "name": "GPIO Alarm" },
-                { "value": 6, "name": "GPIO Alarm Release" }
             ],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,

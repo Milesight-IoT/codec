@@ -1,6 +1,6 @@
 {
-    "date": "2023-11-10",
-    "version": "1.1.0",
+    "date": "2023-12-07",
+    "version": "1.1.1",
     "vendors": "vendors.json",
     "link": "https://github.com/Milesight-IoT/codec/archive/refs/heads/dev.zip"
 }

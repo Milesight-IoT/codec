@@ -3,6 +3,70 @@
     "bytes": "01755CFF34012150FF34021150FF3403C150",
     "object": [
         {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
             "id": "battery",
             "name": "Battery",
             "value": "92",
@@ -53,7 +117,7 @@
         {
             "id": "button_4",
             "name": "Button 4",
-            "value": "0",
+            "value": "",
             "unit": "",
             "values": [
                 { "value": 0, "name": "Released" },
@@ -66,7 +130,7 @@
         {
             "id": "button_5",
             "name": "Button 5",
-            "value": "0",
+            "value": "",
             "unit": "",
             "values": [
                 { "value": 0, "name": "Released" },
@@ -79,7 +143,7 @@
         {
             "id": "button_6",
             "name": "Button 6",
-            "value": "0",
+            "value": "",
             "unit": "",
             "values": [
                 { "value": 0, "name": "Released" },
@@ -138,6 +202,60 @@
             "id": "button_6_msgid",
             "name": "Button 6 Press Message Id",
             "value": "946458",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "button_1_d2d",
+            "name": "Button 1 D2D Command",
+            "value": "20513",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "button_2_d2d",
+            "name": "Button 2 D2D Command",
+            "value": "20497",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "button_3_d2d",
+            "name": "Button 3 D2D Command",
+            "value": "20673",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "button_4_d2d",
+            "name": "Button 4 D2D Command",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "button_5_d2d",
+            "name": "Button 5 D2D Command",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "button_6_d2d",
+            "name": "Button 6 D2D Command",
+            "value": "",
             "unit": "",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,

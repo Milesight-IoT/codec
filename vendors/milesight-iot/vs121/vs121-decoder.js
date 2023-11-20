@@ -16,25 +16,35 @@ function milesight(bytes) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
-        // PROTOCOL VESION
+        // IPSO VERSION
         if (channel_id === 0xff && channel_type === 0x01) {
-            decoded.protocol_version = bytes[i];
+            decoded.ipso_version = readProtocolVersion(bytes[i]);
             i += 1;
-        }
-        // SERIAL NUMBER
-        else if (channel_id === 0xff && channel_type === 0x08) {
-            decoded.sn = readString(bytes.slice(i, i + 6));
-            i += 6;
         }
         // HARDWARE VERSION
         else if (channel_id === 0xff && channel_type === 0x09) {
-            decoded.hardware_version = readVersion(bytes.slice(i, i + 2));
+            decoded.hardware_version = readHardwareVersion(bytes.slice(i, i + 2));
             i += 2;
         }
         // FIRMWARE VERSION
         else if (channel_id === 0xff && channel_type === 0x1f) {
-            decoded.firmware_version = readVersion(bytes.slice(i, i + 4));
+            decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 4));
             i += 4;
+        }
+        // DEVICE STATUS
+        else if (channel_id === 0xff && channel_type === 0x0b) {
+            decoded.device_status = 1;
+            i += 1;
+        }
+        // LORAWAN CLASS TYPE
+        else if (channel_id === 0xff && channel_type === 0x0f) {
+            decoded.lorawan_class = bytes[i];
+            i += 1;
+        }
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x08) {
+            decoded.sn = readSerialNumber(bytes.slice(i, i + 6));
+            i += 6;
         }
         // PEOPLE COUNTER
         else if (channel_id === 0x04 && channel_type === 0xc9) {
@@ -120,7 +130,6 @@ function milesight(bytes) {
 
     return decoded;
 }
-
 // bytes to number
 function readUInt16BE(bytes) {
     var value = (bytes[0] << 8) + bytes[1];
@@ -137,8 +146,19 @@ function readUInt16LE(bytes) {
     return value & 0xffff;
 }
 
-// bytes to version
-function readVersion(bytes) {
+function readProtocolVersion(bytes) {
+    var major = (bytes & 0xf0) >> 4;
+    var minor = bytes & 0x0f;
+    return "v" + major + "." + minor;
+}
+
+function readHardwareVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = (bytes[1] & 0xff) >> 4;
+    return "v" + major + "." + minor;
+}
+
+function readFirmwareVersion(bytes) {
     var temp = [];
     for (var idx = 0; idx < bytes.length; idx++) {
         temp.push((bytes[idx] & 0xff).toString(10));
@@ -146,8 +166,7 @@ function readVersion(bytes) {
     return temp.join(".");
 }
 
-// bytes to string
-function readString(bytes) {
+function readSerialNumber(bytes) {
     var temp = [];
     for (var idx = 0; idx < bytes.length; idx++) {
         temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));
