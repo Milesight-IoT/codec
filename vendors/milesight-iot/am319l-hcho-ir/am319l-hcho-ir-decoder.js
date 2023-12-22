@@ -99,12 +99,12 @@ function milesight(bytes) {
         }
         // PM2.5
         else if (channel_id === 0x0b && channel_type === 0x7d) {
-            decoded.pm2_5 = readUInt16LE(bytes.slice(i, i + 2)) / 100;
+            decoded.pm2_5 = readUInt16LE(bytes.slice(i, i + 2));
             i += 2;
         }
         // PM10
         else if (channel_id === 0x0c && channel_type === 0x7d) {
-            decoded.pm10 = readUInt16LE(bytes.slice(i, i + 2)) / 100;
+            decoded.pm10 = readUInt16LE(bytes.slice(i, i + 2));
             i += 2;
         }
         // BUZZER STATUS
@@ -123,8 +123,8 @@ function milesight(bytes) {
             data.co2 = readUInt16LE(bytes.slice(i + 10, i + 12));
             data.tvoc = readUInt16LE(bytes.slice(i + 12, i + 14));
             data.pressure = readUInt16LE(bytes.slice(i + 14, i + 16)) / 10;
-            data.pm2_5 = readUInt16LE(bytes.slice(i + 16, i + 18)) / 100;
-            data.pm10 = readUInt16LE(bytes.slice(i + 18, i + 20)) / 100;
+            data.pm2_5 = readUInt16LE(bytes.slice(i + 16, i + 18));
+            data.pm10 = readUInt16LE(bytes.slice(i + 18, i + 20));
             data.hcho = readUInt16LE(bytes.slice(i + 20, i + 22)) / 100;
             i += 22;
 
