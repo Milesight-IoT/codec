@@ -111,7 +111,15 @@
             "name": "Light Level",
             "value": "1",
             "unit": "",
-            "bacnet_type": "analog_input_object",
+            "values": [
+                { "value": 0, "name": "0" },
+                { "value": 1, "name": "1" },
+                { "value": 2, "name": "2" },
+                { "value": 3, "name": "3" },
+                { "value": 4, "name": "4" },
+                { "value": 5, "name": "5" }
+            ],
+            "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },

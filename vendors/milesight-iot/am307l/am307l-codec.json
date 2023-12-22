@@ -112,12 +112,14 @@
             "value": "0",
             "unit": "",
             "values": [
-                { "id": "0", "name": "Dark" },
-                { "id": "1", "name": "Dim" },
-                { "id": "2", "name": "Normal" },
-                { "id": "3", "name": "Bright" }
+                { "value": 0, "name": "0" },
+                { "value": 1, "name": "1" },
+                { "value": 2, "name": "2" },
+                { "value": 3, "name": "3" },
+                { "value": 4, "name": "4" },
+                { "value": 5, "name": "5" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },

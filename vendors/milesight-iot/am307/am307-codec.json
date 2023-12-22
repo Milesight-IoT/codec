@@ -119,7 +119,7 @@
                 { "value": 4, "name": "4" },
                 { "value": 5, "name": "5" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
