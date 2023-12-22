@@ -183,8 +183,8 @@
             "value": "",
             "unit": "",
             "values": [
-                { "value": 0, "name": "On Cool" },
-                { "value": 1, "name": "On Heat" }
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
             ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
@@ -196,8 +196,8 @@
             "value": "",
             "unit": "",
             "values": [
-                { "value": 0, "name": "Off" },
-                { "value": 1, "name": "On" }
+                { "value": 0, "name": "On Cool" },
+                { "value": 1, "name": "On Heat" }
             ],
             "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
