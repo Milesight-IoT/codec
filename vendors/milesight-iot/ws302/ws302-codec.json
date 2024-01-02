@@ -119,21 +119,6 @@
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 232,
             "bacnet_unit_type": "UNITS_DECIBELS_A"
-        },
-        {
-            "id": "class_type",
-            "name": "Class Type",
-            "value": "0",
-            "unit": "",
-            "values": [
-                { "value": 0, "name": "ClassA" },
-                { "value": 1, "name": "ClassB" },
-                { "value": 2, "name": "ClassC" },
-                { "value": 3, "name": "ClassC to ClassB" }
-            ],
-            "bacnet_type": "multistate_value_object",
-            "bacnet_unit_type_id": 95,
-            "bacnet_unit_type": "UNITS_NO_UNITS"
         }
     ]
 }
