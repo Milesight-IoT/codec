@@ -81,9 +81,9 @@
             "value": "3",
             "unit": "",
             "values": [
-                { "value": "0", "name": "Single" },
-                { "value": "1", "name": "Long" },
-                { "value": "2", "name": "Double" }
+                { "value": "1", "name": "Single" },
+                { "value": "2", "name": "Long" },
+                { "value": "3", "name": "Double" }
             ],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
