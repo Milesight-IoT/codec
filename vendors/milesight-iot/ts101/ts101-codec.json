@@ -99,7 +99,7 @@
             "value": "",
             "unit": "",
             "values": [
-                { "value": 0, "name": "Normal" },
+                { "value": 0, "name": "Threshold Alarm Release" },
                 { "value": 1, "name": "Threshold Alarm" },
                 { "value": 2, "name": "Mutation Alarm" }
             ],
