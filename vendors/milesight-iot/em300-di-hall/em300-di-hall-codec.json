@@ -121,8 +121,8 @@
             "value": "",
             "unit": "",
             "values": [
-                { "value": 0, "name": "GPIO" },
-                { "value": 1, "name": "Counter" }
+                { "value": 1, "name": "GPIO" },
+                { "value": 2, "name": "Counter" }
             ],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
