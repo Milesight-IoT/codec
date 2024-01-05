@@ -1,0 +1,194 @@
+{
+    "version": "1.0.0",
+    "bytes": "0175640367FF000468790584BA0406734F270792010008777B0001",
+    "object": [
+        {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "25.5",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "humidity",
+            "name": "Humidity",
+            "value": "60.5",
+            "unit": "%r.h.",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 29,
+            "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
+        },
+        {
+            "id": "wind_direction",
+            "name": "Wind Direction",
+            "value": "121",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "wind_speed",
+            "name": "Wind Speed",
+            "value": "0.1",
+            "unit": "m/s",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 74,
+            "bacnet_unit_type": "UNITS_METERS_PER_SECOND"
+        },
+        {
+            "id": "rainfall_total",
+            "name": "Rainfall Total",
+            "value": "1.23",
+            "unit": "mm",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 30,
+            "bacnet_unit_type": "UNITS_MILLIMETERS"
+        },
+        {
+            "id": "rainfall_counter",
+            "name": "Rainfall Counter",
+            "value": "1",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pressure",
+            "name": "Barometric Pressure",
+            "value": "1006.3",
+            "unit": "hPa",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 133,
+            "bacnet_unit_type": "UNITS_HECTOPASCALS"
+        },
+        {
+            "id": "temperature_alarm",
+            "name": "Temperature Alarm",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Threshold Alarm Release" },
+                { "value": 1, "name": "Threshold Alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pressure_alarm",
+            "name": "Pressure Alarm",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Threshold Alarm Release" },
+                { "value": 1, "name": "Threshold Alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "wind_speed_alarm",
+            "name": "Wind Speed Alarm",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Threshold Alarm Release" },
+                { "value": 1, "name": "Threshold Alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "rainfall_alarm",
+            "name": "Rainfall Alarm",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Threshold Alarm Release" },
+                { "value": 1, "name": "Threshold Alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

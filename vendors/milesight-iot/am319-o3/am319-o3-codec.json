@@ -1,0 +1,194 @@
+{
+    "version": "1.0.0",
+    "bytes": "03670A0104685805000106CB01077DFF02087DE3000973FE270B7D07000C7D0800017562",
+    "object": [
+        {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "98",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "26.6",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "humidity",
+            "name": "Humidity",
+            "value": "44",
+            "unit": "%r.h.",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 29,
+            "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
+        },
+        {
+            "id": "pir",
+            "name": "PIR",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Idle" },
+                { "value": 1, "name": "Trigger" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "light_level",
+            "name": "Light Level",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "0" },
+                { "value": 1, "name": "1" },
+                { "value": 2, "name": "2" },
+                { "value": 3, "name": "3" },
+                { "value": 4, "name": "4" },
+                { "value": 5, "name": "5" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "tvoc",
+            "name": "TVOC",
+            "value": "2.27",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "co2",
+            "name": "CO2",
+            "value": "1255",
+            "unit": "ppm",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "pressure",
+            "name": "Barometric Pressure",
+            "value": "1023.8",
+            "unit": "hPa",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 133,
+            "bacnet_unit_type": "UNITS_HECTOPASCALS"
+        },
+        {
+            "id": "pm2_5",
+            "name": "PM2.5",
+            "value": "7",
+            "unit": "µg/m3",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 219,
+            "bacnet_unit_type": "UNITS_MICROGRAMS_PER_CUBIC_METER"
+        },
+        {
+            "id": "pm10",
+            "name": "PM10",
+            "value": "8",
+            "unit": "µg/m3",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 219,
+            "bacnet_unit_type": "UNITS_MICROGRAMS_PER_CUBIC_METER"
+        },
+        {
+            "id": "o3",
+            "name": "O3",
+            "value": "",
+            "unit": "ppm",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "buzzer_status",
+            "name": "Buzzer Status",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

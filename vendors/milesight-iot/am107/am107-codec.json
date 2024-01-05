@@ -1,0 +1,264 @@
+{
+    "version": "1.0.0",
+    "bytes": "0175640367fe000468800a6a0200077d5902",
+    "object": [
+        {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "battery",
+            "name": "Battery",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "25.4",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "humidity",
+            "name": "Humidity",
+            "value": "64",
+            "unit": "%r.h.",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 29,
+            "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
+        },
+        {
+            "id": "activity",
+            "name": "Activity",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pir",
+            "name": "PIR",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Idle" },
+                { "value": 1, "name": "Trigger" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "illumination",
+            "name": "Illumination",
+            "value": "49",
+            "unit": "lux",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 37,
+            "bacnet_unit_type": "UNITS_LUXES"
+        },
+        {
+            "id": "visible_and_infrared",
+            "name": "Visible and Infrared",
+            "value": "194",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "infrared",
+            "name": "Infrared",
+            "value": "27",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "co2",
+            "name": "CO2",
+            "value": "601",
+            "unit": "ppm",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "tvoc",
+            "name": "TVOC",
+            "value": "7",
+            "unit": "ppb",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 97,
+            "bacnet_unit_type": "UNITS_PARTS_PER_BILLION"
+        },
+        {
+            "id": "pressure",
+            "name": "Barometric Pressure",
+            "value": "1004.7",
+            "unit": "hPa",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 133,
+            "bacnet_unit_type": "UNITS_HECTOPASCALS"
+        },
+        {
+            "id": "temperature_enable",
+            "name": "Temperature Enable",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "unit": "",
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "humidity_enable",
+            "name": "Humidity Enable",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "unit": "",
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pir_enable",
+            "name": "PIR Enable",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "unit": "",
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "illumination_enable",
+            "name": "Illumination Enable",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "unit": "",
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "co2_enable",
+            "name": "CO2 Enable",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "unit": "",
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "tvoc_enable",
+            "name": "TVOC Enable",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "unit": "",
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "pressure_enable",
+            "name": "Barometric Pressure Enable",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "unit": "",
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}
