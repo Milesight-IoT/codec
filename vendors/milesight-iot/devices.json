@@ -928,7 +928,7 @@
         },
         {
             "id": "ws501_3w_w11",
-            "name": "WS501(3-Wire)",
+            "name": "WS501(3W-EU)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6771",
@@ -940,7 +940,7 @@
         },
         {
             "id": "ws502_3w_w11",
-            "name": "WS502(3-Wire)",
+            "name": "WS502(3W-EU)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6771",
@@ -952,7 +952,7 @@
         },
         {
             "id": "ws501_3w_w12",
-            "name": "WS501(3-Wire)",
+            "name": "WS501(3W-US)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6777",
@@ -964,7 +964,7 @@
         },
         {
             "id": "ws501_2w_w11",
-            "name": "WS501(2-Wire)",
+            "name": "WS501(2W-EU/CN)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6782",
@@ -976,7 +976,7 @@
         },
         {
             "id": "ws502_2w_w11",
-            "name": "WS502(2-Wire)",
+            "name": "WS502(2W-EU/CN)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6782",
@@ -988,7 +988,7 @@
         },
         {
             "id": "ws503_2w_w11",
-            "name": "WS503(2-Wire)",
+            "name": "WS503(2W-EU/CN)",
             "description": "Wall Switch",
             "catalog": "ws",
             "sn": "6782",
