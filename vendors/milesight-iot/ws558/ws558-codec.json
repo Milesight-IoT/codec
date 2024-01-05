@@ -1,0 +1,219 @@
+{
+    "version": "1.0.0",
+    "bytes": "0831000105816407C902000374B208068301000000048001000000",
+    "object": [
+        {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "voltage",
+            "name": "Voltage",
+            "value": "222.6",
+            "unit": "V",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 5,
+            "bacnet_unit_type": "UNITS_VOLTS"
+        },
+        {
+            "id": "active_power",
+            "name": "Active Power",
+            "value": "1",
+            "unit": "W",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 47,
+            "bacnet_unit_type": "UNITS_WATTS"
+        },
+        {
+            "id": "power_factor",
+            "name": "Power Factor",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "power_consumption",
+            "name": "Power Consumption",
+            "value": "1",
+            "unit": "Wh",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 18,
+            "bacnet_unit_type": "UNITS_WATT_HOURS"
+        },
+        {
+            "id": "current",
+            "name": "Current",
+            "value": "2",
+            "unit": "mA",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 2,
+            "bacnet_unit_type": "UNITS_MILLIAMPERES"
+        },
+        {
+            "id": "switch_1",
+            "name": "Switch 1",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switch_2",
+            "name": "Switch 2",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switch_3",
+            "name": "Switch 3",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switch_4",
+            "name": "Switch 4",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switch_5",
+            "name": "Switch 5",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switch_6",
+            "name": "Switch 6",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switch_7",
+            "name": "Switch 7",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switch_8",
+            "name": "Switch 8",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

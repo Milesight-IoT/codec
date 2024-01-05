@@ -1,0 +1,229 @@
+{
+    "version": "1.0.0",
+    "bytes": "036702010467A60005E70006E80007BC00",
+    "object": [
+        {
+            "id": "ipso_version",
+            "name": "IPSO Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "hardware_version",
+            "name": "Hardware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "ClassA" },
+                { "value": 1, "name": "ClassB" },
+                { "value": 2, "name": "ClassC" },
+                { "value": 3, "name": "ClassCtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sn",
+            "name": "SN",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature",
+            "name": "Ambient Temperature",
+            "value": "26.6",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "temperature_target",
+            "name": "Temperature Target",
+            "value": "30",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "temperature_ctl_mode",
+            "name": "Temperature Control Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Heat" },
+                { "value": 1, "name": "Emergency Heat" },
+                { "value": 2, "name": "Cool" },
+                { "value": 3, "name": "Auto" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_ctl_status",
+            "name": "Temperature Control Status",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Standby" },
+                { "value": 1, "name": "Stage-1 Heat" },
+                { "value": 2, "name": "Stage-2 Heat" },
+                { "value": 3, "name": "Stage-3 Heat" },
+                { "value": 4, "name": "Stage-4 Heat" },
+                { "value": 5, "name": "Emergency Heat" },
+                { "value": 6, "name": "Stage-1 Cool" },
+                { "value": 7, "name": "Stage-2 Cool" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "fan_mode",
+            "name": "Fan Control Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Auto" },
+                { "value": 1, "name": "Alway On" },
+                { "value": 2, "name": "Circulate" },
+                { "value": 3, "name": "Disable" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "fan_status",
+            "name": "Fan Control Status",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "High Speed" },
+                { "value": 2, "name": "Low Speed" },
+                { "value": 3, "name": "On" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "plan_event",
+            "name": "Plan Event",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Not Executed" },
+                { "value": 1, "name": "Wake" },
+                { "value": 2, "name": "Away" },
+                { "value": 3, "name": "Home" },
+                { "value": 4, "name": "Sleep" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "plan_enable",
+            "name": "Plan Enable",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "system_status",
+            "name": "System Status",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "ob_mode",
+            "name": "O/B Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "On Cool" },
+                { "value": 1, "name": "On Heat" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+
+        {
+            "id": "temperature_alarm",
+            "name": "Temperature Alarm",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 1, "name": "Emergency Heating Timeout Alarm" },
+                { "value": 2, "name": "Auxiliary Heating Timeout Alarm" },
+                { "value": 3, "name": "Persistent Low Temperature Alarm" },
+                { "value": 4, "name": "Persistent Low Temperature Alarm Release" },
+                { "value": 5, "name": "Persistent High Temperature Alarm" },
+                { "value": 6, "name": "Persistent High Temperature Alarm Release" },
+                { "value": 7, "name": "Freeze Protection Alarm" },
+                { "value": 8, "name": "Freeze Protection Alarm Release" },
+                { "value": 9, "name": "Threshold Alarm" },
+                { "value": 10, "name": "Threshold Alarm Release" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}
