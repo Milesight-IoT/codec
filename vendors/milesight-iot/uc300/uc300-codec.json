@@ -127,7 +127,7 @@
                 { "value": 0, "name": "Low" },
                 { "value": 1, "name": "High" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -140,7 +140,7 @@
                 { "value": 0, "name": "Low" },
                 { "value": 1, "name": "High" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -692,6 +692,126 @@
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "reboot",
+            "name": "Reboot",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_status",
+            "name": "Report Status",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_interval",
+            "name": "Report Interval",
+            "value": "",
+            "unit": "s",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 73,
+            "bacnet_unit_type": "UNITS_SECONDS"
+        },
+        {
+            "id": "collection_interval",
+            "name": "Collection Interval",
+            "value": "",
+            "unit": "s",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 73,
+            "bacnet_unit_type": "UNITS_SECONDS"
+        },
+        {
+            "id": "timestamp",
+            "name": "Timestamp",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "timezone",
+            "name": "Timezone",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sync_time",
+            "name": "Sync Time",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sniffer_config.channel_id",
+            "name": "Sniffer Config Channel ID",
+            "value": "",
+            "values": [
+                { "value": 0, "name": "all" },
+                { "value": 1, "name": "gpio_input_1" },
+                { "value": 2, "name": "gpio_input_2" },
+                { "value": 3, "name": "gpio_input_3" },
+                { "value": 4, "name": "gpio_input_4" },
+                { "value": 5, "name": "gpio_output_1" },
+                { "value": 6, "name": "gpio_output_2" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["sniffer_config.sniffer_interval"]
+        },
+        {
+            "id": "sniffer_config.sniffer_interval",
+            "name": "Sniffer Config Interval",
+            "value": "",
+            "unit": "ms",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS",
+            "reference": ["sniffer_config.channel_id"]
+        },
+        {
+            "id": "gpio_output_2_time",
+            "name": "GPIO Output (Channel 2) Time",
+            "value": "",
+            "unit": "ms",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS",
+            "reference": ["gpio_output_2"]
+        },
+        {
+            "id": "gpio_output_1_time",
+            "name": "GPIO Output (Channel 1) Time",
+            "value": "",
+            "unit": "ms",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 159,
+            "bacnet_unit_type": "UNITS_MILLISECONDS",
+            "reference": ["gpio_output_1"]
         }
     ]
 }

@@ -77,7 +77,7 @@
         },
         {
             "id": "temperature_target",
-            "name": "Temperature Target",
+            "name": "Target Temperature",
             "value": "30",
             "unit": "°C",
             "bacnet_type": "analog_input_object",
@@ -85,7 +85,7 @@
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
         },
         {
-            "id": "temperature_ctl_mode",
+            "id": "temperature_control_mode",
             "name": "Temperature Control Mode",
             "value": "",
             "unit": "",
@@ -100,7 +100,7 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "temperature_ctl_status",
+            "id": "temperature_control_status",
             "name": "Temperature Control Status",
             "value": "",
             "unit": "",
@@ -199,11 +199,10 @@
                 { "value": 0, "name": "On Cool" },
                 { "value": 1, "name": "On Heat" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
-
         {
             "id": "temperature_alarm",
             "name": "Temperature Alarm",
@@ -222,6 +221,493 @@
                 { "value": 10, "name": "Threshold Alarm Release" }
             ],
             "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "reboot",
+            "name": "Reboot",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_status",
+            "name": "Report Status",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Plan" },
+                { "value": 1, "name": "Periodic" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_interval",
+            "name": "Report Interval",
+            "value": "20",
+            "unit": "min",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES"
+        },
+        {
+            "id": "collection_interval",
+            "name": "Collection Interval",
+            "value": "60",
+            "unit": "s",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 73,
+            "bacnet_unit_type": "UNITS_SECONDS"
+        },
+        {
+            "id": "sync_time",
+            "name": "Sync Time",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "timezone",
+            "name": "Timezone",
+            "value": "8",
+            "unit": "",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_unit",
+            "name": "Temperature Unit",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "°C" },
+                { "value": 1, "name": "°F" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_control.enable",
+            "name": "Temperature Control Enable",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_control.mode",
+            "name": "Temperature Control Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Heat" },
+                { "value": 1, "name": "Emergency Heat" },
+                { "value": 2, "name": "Cool" },
+                { "value": 3, "name": "Auto" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_control.temperature", "temperature_unit"]
+        },
+        {
+            "id": "temperature_control.temperature",
+            "name": "Temperature Control Temperature",
+            "value": "30",
+            "unit": "",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_control.mode", "temperature_unit"]
+        },
+        {
+            "id": "temperature_calibration.enable",
+            "name": "Temperature Calibration Enable",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_calibration.temperature"]
+        },
+        {
+            "id": "temperature_calibration.temperature",
+            "name": "Temperature Calibration Temperature",
+            "value": "30",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["temperature_calibration.enable"]
+        },
+        {
+            "id": "temperature_tolerance.temperature_error",
+            "name": "Temperature Tolerance (Temperature Error)",
+            "value": "1",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["temperature_tolerance.auto_control_temperature_error"]
+        },
+        {
+            "id": "temperature_tolerance.auto_control_temperature_error",
+            "name": "Temperature Tolerance (Auto Control Temperature Error)",
+            "value": "1",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["temperature_tolerance.temperature_error"]
+        },
+        {
+            "id": "temperature_level_up_condition.type",
+            "name": "Temperature Level Up Condition Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Heat" },
+                { "value": 1, "name": "Cool" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_level_up_condition.time", "temperature_level_up_condition.temperature_error"]
+        },
+        {
+            "id": "temperature_level_up_condition.time",
+            "name": "Temperature Level Up Condition Time",
+            "value": "30",
+            "unit": "min",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES",
+            "reference": ["temperature_level_up_condition.type", "temperature_level_up_condition.temperature_error"]
+        },
+        {
+            "id": "temperature_level_up_condition.temperature_error",
+            "name": "Temperature Level Up Condition Temperature Error",
+            "value": "1",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["temperature_level_up_condition.type", "temperature_level_up_condition.time"]
+        },
+        {
+            "id": "outside_temperature_control_config.enable",
+            "name": "Outside Temperature Control Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["outside_temperature_control_config.timeout"]
+        },
+        {
+            "id": "outside_temperature_control_config.timeout",
+            "name": "Outside Temperature Control Timeout",
+            "value": "30",
+            "unit": "min",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES",
+            "reference": ["outside_temperature_control_config.enable"]
+        },
+        {
+            "id": "outside_temperature",
+            "name": "Outside Temperature",
+            "value": "26.6",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "plan",
+            "name": "Plan",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Wake" },
+                { "value": 1, "name": "Away" },
+                { "value": 2, "name": "Home" },
+                { "value": 3, "name": "Sleep" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "plan_config.type",
+            "name": "Plan Config Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Wake" },
+                { "value": 1, "name": "Away" },
+                { "value": 2, "name": "Home" },
+                { "value": 3, "name": "Sleep" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["plan_config.temperature_control_mode", "plan_config.fan_mode", "plan_config.temperature_target", "plan_config.temperature_error", "temperature_unit"]
+        },
+        {
+            "id": "plan_config.temperature_control_mode",
+            "name": "Plan Config Temperature Control Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Heat" },
+                { "value": 1, "name": "Emergency Heat" },
+                { "value": 2, "name": "Cool" },
+                { "value": 3, "name": "Auto" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["plan_config.type", "plan_config.fan_mode", "plan_config.temperature_target", "plan_config.temperature_error", "temperature_unit"]
+        },
+        {
+            "id": "plan_config.fan_mode",
+            "name": "Plan Config Fan Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Auto" },
+                { "value": 1, "name": "Alway On" },
+                { "value": 2, "name": "Circulate" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["plan_config.type", "plan_config.temperature_control_mode", "plan_config.temperature_target", "plan_config.temperature_error", "temperature_unit"]
+        },
+        {
+            "id": "plan_config.temperature_target",
+            "name": "Plan Config Temperature Target",
+            "value": "30",
+            "unit": "",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["plan_config.type", "plan_config.temperature_control_mode", "plan_config.fan_mode", "plan_config.temperature_error", "temperature_unit"]
+        },
+        {
+            "id": "plan_config.temperature_error",
+            "name": "Plan Config Temperature Error",
+            "value": "",
+            "unit": "",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["plan_config.type", "plan_config.temperature_control_mode", "plan_config.fan_mode", "plan_config.temperature_target", "temperature_unit"]
+        },
+        {
+            "id": "freeze_protection_config.enable",
+            "name": "Freeze Protection Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["freeze_protection_config.temperature"]
+        },
+        {
+            "id": "freeze_protection_config.temperature",
+            "name": "Freeze Protection Temperature",
+            "value": "5",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["freeze_protection_config.enable"]
+        },
+        {
+            "id": "card_config.enable",
+            "name": "Card Config Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["card_config.action_type", "card_config.in_plan_type", "card_config.out_plan_type", "card_config.invert"]
+        },
+        {
+            "id": "card_config.action_type",
+            "name": "Card Config Action Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Power" },
+                { "value": 1, "name": "Plan" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["card_config.enable", "card_config.in_plan_type", "card_config.out_plan_type", "card_config.invert"]
+        },
+        {
+            "id": "card_config.in_plan_type",
+            "name": "Card Config In Plan Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Wake" },
+                { "value": 1, "name": "Away" },
+                { "value": 2, "name": "Home" },
+                { "value": 3, "name": "Sleep" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["card_config.enable", "card_config.action_type", "card_config.out_plan_type", "card_config.invert"]
+        },
+        {
+            "id": "card_config.out_plan_type",
+            "name": "Card Config Out Plan Type",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Wake" },
+                { "value": 1, "name": "Away" },
+                { "value": 2, "name": "Home" },
+                { "value": 3, "name": "Sleep" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["card_config.enable", "card_config.action_type", "card_config.in_plan_type", "card_config.invert"]
+        },
+        {
+            "id": "card_config.invert",
+            "name": "Card Config Invert",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["card_config.enable", "card_config.action_type", "card_config.in_plan_type", "card_config.out_plan_type"]
+        },
+        {
+            "id": "child_lock_config.power_button",
+            "name": "Child Lock Power Button",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "child_lock_config.up_button",
+            "name": "Child Lock Up Button",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "child_lock_config.down_button",
+            "name": "Child Lock Down Button",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "child_lock_config.fan_button",
+            "name": "Child Lock Fan Button",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "child_lock_config.mode_button",
+            "name": "Child Lock Mode Button",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "child_lock_config.reset_button",
+            "name": "Child Lock Reset Button",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         }

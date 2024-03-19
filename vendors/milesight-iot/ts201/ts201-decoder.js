@@ -3,7 +3,7 @@
  *
  * Copyright 2024 Milesight IoT
  *
- * @product WT101
+ * @product TS201
  */
 function Decode(fPort, bytes) {
     return milesight(bytes);
@@ -46,6 +46,11 @@ function milesight(bytes) {
             decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
             i += 8;
         }
+        // TSL VERSION
+        else if (channel_id === 0xff && channel_type === 0xff) {
+            decoded.tsl_version = readTslVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
         // BATTERY
         else if (channel_id === 0x01 && channel_type === 0x75) {
             decoded.battery = bytes[i];
@@ -56,45 +61,56 @@ function milesight(bytes) {
             decoded.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
             i += 2;
         }
-        // TEMPERATURE TARGET
-        else if (channel_id === 0x04 && channel_type === 0x67) {
-            decoded.temperature_target = readInt16LE(bytes.slice(i, i + 2)) / 10;
-            i += 2;
+        // TEMPERATURE THRESHOLD ALARM
+        else if (channel_id === 0x83 && channel_type === 0x67) {
+            var data = {};
+            data.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
+            data.temperature_alarm = bytes[i + 2];
+            i += 3;
+
+            decoded.temperature = data.temperature;
+            decoded.event = decoded.event || [];
+            decoded.event.push(data);
         }
-        // VALVE OPENING
-        else if (channel_id === 0x05 && channel_type === 0x92) {
-            decoded.valve_opening = readUInt8(bytes[i]);
+        // TEMPERATURE MUTATION ALARM
+        else if (channel_id === 0x93 && channel_type === 0x67) {
+            var data = {};
+            data.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
+            data.temperature_mutation = readInt16LE(bytes.slice(i + 2, i + 4)) / 10;
+            data.temperature_alarm = bytes[i + 4];
+            i += 5;
+
+            decoded.temperature = data.temperature;
+            decoded.event = decoded.event || [];
+            decoded.event.push(data);
+        }
+        // TEMPERATURE ERROR
+        else if (channel_id === 0xb3 && channel_type === 0x67) {
+            var data = {};
+            data.temperature_error = bytes[i];
             i += 1;
+
+            decoded.event = decoded.event || [];
+            decoded.event.push(data);
         }
-        // TAMPER STATUS
-        else if (channel_id === 0x06 && channel_type === 0x00) {
-            decoded.tamper_status = bytes[i];
-            i += 1;
-        }
-        // WINDOW DETECTION
-        else if (channel_id === 0x07 && channel_type === 0x00) {
-            decoded.window_detection = bytes[i];
-            i += 1;
-        }
-        // MOTOR STORKE CALIBRATION RESULT
-        else if (channel_id === 0x08 && channel_type === 0xe5) {
-            decoded.motor_calibration_result = bytes[i];
-            i += 1;
-        }
-        // MOTOR STROKE
-        else if (channel_id === 0x09 && channel_type === 0x90) {
-            decoded.motor_storke = readUInt16LE(bytes.slice(i, i + 2));
-            i += 2;
-        }
-        // FREEZE PROTECTION
-        else if (channel_id === 0x0a && channel_type === 0x00) {
-            decoded.freeze_protection = bytes[i];
-            i += 1;
-        }
-        // MOTOR CURRENT POSTION
-        else if (channel_id === 0x0b && channel_type === 0x90) {
-            decoded.motor_position = readUInt16LE(bytes.slice(i, i + 2));
-            i += 2;
+        // HISTORY DATA
+        else if (channel_id === 0x20 && channel_type === 0xce) {
+            var timestamp = readUInt32LE(bytes.slice(i, i + 4));
+            var event = bytes[i + 4];
+            var temperature = readInt16LE(bytes.slice(i + 5, i + 7)) / 10;
+            i += 7;
+
+            var read_status = (event >>> 4) & 0x0f;
+            var event_type = event & 0x0f;
+
+            var data = {};
+            data.timestamp = timestamp;
+            data.read_status = read_status;
+            data.event_type = event_type;
+            data.temperature = temperature;
+
+            decoded.history = decoded.history || [];
+            decoded.history.push(data);
         }
         // DOWNLINK RESPONSE
         else if (channel_id === 0xfe) {
@@ -128,6 +144,25 @@ function readInt16LE(bytes) {
     return ref > 0x7fff ? ref - 0x10000 : ref;
 }
 
+function readUInt32LE(bytes) {
+    var value = (bytes[3] << 24) + (bytes[2] << 16) + (bytes[1] << 8) + bytes[0];
+    return (value & 0xffffffff) >>> 0;
+}
+
+function readInt32LE(bytes) {
+    var ref = readUInt32LE(bytes);
+    return ref > 0x7fffffff ? ref - 0x100000000 : ref;
+}
+
+function readFloatLE(bytes) {
+    var bits = (bytes[3] << 24) | (bytes[2] << 16) | (bytes[1] << 8) | bytes[0];
+    var sign = bits >>> 31 === 0 ? 1.0 : -1.0;
+    var e = (bits >>> 23) & 0xff;
+    var m = e === 0 ? (bits & 0x7fffff) << 1 : (bits & 0x7fffff) | 0x800000;
+    var f = sign * m * Math.pow(2, e - 150);
+    return f;
+}
+
 function readProtocolVersion(bytes) {
     var major = (bytes & 0xf0) >> 4;
     var minor = bytes & 0x0f;
@@ -146,6 +181,12 @@ function readFirmwareVersion(bytes) {
     return "v" + major + "." + minor;
 }
 
+function readTslVersion(bytes) {
+    var major = bytes[0] & 0xff;
+    var minor = bytes[1] & 0xff;
+    return "v" + major + "." + minor;
+}
+
 function readSerialNumber(bytes) {
     var temp = [];
     for (var idx = 0; idx < bytes.length; idx++) {
@@ -153,20 +194,90 @@ function readSerialNumber(bytes) {
     }
     return temp.join("");
 }
-function readMotorCalibration(type) {
+
+function readLoRaWANType(type) {
     switch (type) {
         case 0x00:
-            return "success";
+            return "ClassA";
         case 0x01:
-            return "fail: out of range";
+            return "ClassB";
         case 0x02:
-            return "fail: uninstalled";
+            return "ClassC";
         case 0x03:
-            return "calibration cleared";
-        case 0x04:
-            return "temperature control disabled";
+            return "ClassCtoB";
         default:
-            return "unknown";
+            return "Unknown";
+    }
+}
+
+function readAlarmType(type) {
+    switch (type) {
+        case 0x00:
+            return "Threshold Alarm Release";
+        case 0x01:
+            return "Threshold Alarm";
+        case 0x02:
+            return "Mutation Alarm";
+        default:
+            return "Unknown";
+    }
+}
+
+function readErrorType(type) {
+    switch (type) {
+        case 0x00:
+            return "Read Error";
+        case 0x01:
+            return "Overload";
+        default:
+            return "Unknown";
+    }
+}
+
+function readHistoryEvent(type) {
+    switch (type) {
+        case 0x00:
+            return "Time Update";
+        case 0x01:
+            return "Periodic";
+        case 0x02:
+            return "Alarm(Threshold or Mutation)";
+        case 0x03:
+            return "Alarm Release";
+        case 0x04:
+            return "Read Error";
+        case 0x05:
+            return "Overload";
+        default:
+            return "Unknown";
+    }
+}
+
+function readStatus(type) {
+    switch (type) {
+        case 0x00:
+            return "Success";
+        case 0x01:
+            return "Read Error";
+        case 0x02:
+            return "Overload";
+        default:
+            return "Unknown";
+    }
+}
+
+function readType(type) {
+    switch (type) {
+        case 0x00:
+            return "";
+        case 0x01:
+            return "Periodic";
+        case 0x02:
+            return "Alarm(Threshold or Mutation)";
+        case 0x03:
+            return "Alarm Release";
+        default:
+            return "Unknown";
     }
 }
 
@@ -174,10 +285,6 @@ function handle_downlink_response(channel_type, bytes, offset) {
     var decoded = {};
 
     switch (channel_type) {
-        case 0x17: // timezone
-            decoded.timezone = readInt16LE(bytes.slice(offset, offset + 2)) / 10;
-            offset += 2;
-            break;
         case 0x4a: // sync_time
             decoded.sync_time = 1;
             offset += 1;
@@ -187,67 +294,11 @@ function handle_downlink_response(channel_type, bytes, offset) {
             decoded.report_interval = readUInt16LE(bytes.slice(offset + 1, offset + 3));
             offset += 3;
             break;
-        case 0xb3: // temperature_control(enable)
-            decoded.temperature_control = decoded.temperature_control || {};
-            decoded.temperature_control.enable = bytes[offset];
-            offset += 1;
+        case 0x02: // collection_interval
+            decoded.collection_interval = readUInt16LE(bytes.slice(offset, offset + 2));
+            offset += 2;
             break;
-        case 0xae: // temperature_control(mode)
-            decoded.temperature_control = decoded.temperature_control || {};
-            decoded.temperature_control.mode = bytes[offset];
-            offset += 1;
-            break;
-        case 0xab: // temperature_calibration(enable, temperature)
-            decoded.temperature_calibration = {};
-            decoded.temperature_calibration.enable = bytes[offset];
-            if (decoded.temperature_calibration.enable === 1) {
-                decoded.temperature_calibration.temperature = readInt16LE(bytes.slice(offset + 1, offset + 3)) / 10;
-            }
-            offset += 3;
-            break;
-        case 0xb1: // temperature_target, temperature_error
-            decoded.temperature_target = readInt8(bytes[offset]);
-            decoded.temperature_error = readUInt16LE(bytes.slice(offset + 1, offset + 3)) / 10;
-            offset += 3;
-            break;
-        case 0xac: // valve_control_algorithm
-            decoded.valve_control_algorithm = readUInt8(bytes[offset]);
-            offset += 1;
-            break;
-        case 0xb0: // freeze_protection_config(enable, temperature)
-            decoded.freeze_protection_config = decoded.freeze_protection_config || {};
-            decoded.freeze_protection_config.enable = readUInt8(bytes[offset]);
-            if (decoded.freeze_protection_config.enable === 1) {
-                decoded.freeze_protection_config.temperature = readInt16LE(bytes.slice(offset + 1, offset + 3)) / 10;
-            }
-            offset += 3;
-            break;
-        case 0xaf: // open_window_detection(enable, rate, time)
-            decoded.open_window_detection = decoded.open_window_detection || {};
-            decoded.open_window_detection.enable = readUInt8(bytes[offset]);
-            if (decoded.open_window_detection.enable === 1) {
-                decoded.open_window_detection.temperautre_theshold = readInt8(bytes[offset + 1]) / 10;
-                decoded.open_window_detection.time = readUInt16LE(bytes.slice(offset + 2, offset + 4));
-            }
-            offset += 4;
-            break;
-        case 0x57: // restore_open_window_detection
-            decoded.restore_open_window_detection = 1;
-            offset += 1;
-            break;
-        case 0xb4: // valve_opening
-            decoded.valve_opening = readUInt8(bytes[offset]);
-            offset += 1;
-            break;
-        case 0xad: // valve_calibration
-            decoded.valve_calibration = 1;
-            offset += 1;
-            break;
-        case 0x25: // child_lock_config
-            decoded.child_lock_config = decoded.child_lock_config || {};
-            decoded.child_lock_config.enable = readUInt8(bytes[offset]);
-            offset += 1;
-            break;
+
         default:
             throw new Error("unknown downlink response");
     }

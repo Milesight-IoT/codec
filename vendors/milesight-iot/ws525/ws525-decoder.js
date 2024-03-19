@@ -3,7 +3,7 @@
  *
  * Copyright 2024 Milesight IoT
  *
- * @product WS52x
+ * @product WS525
  */
 function Decode(fPort, bytes) {
     return milesight(bytes);
@@ -73,8 +73,14 @@ function milesight(bytes) {
         }
         // SOCKET STATUS
         else if (channel_id === 0x08 && channel_type == 0x70) {
-            decoded.socket_status = bytes[i] & 1;
+            decoded.socket_status = bytes[i] & 0x01;
             i += 1;
+        }
+        // DOWNLINK RESPONSE
+        else if (channel_id === 0xfe) {
+            result = handle_downlink_response(channel_type, bytes, i);
+            decoded = Object.assign(decoded, result.data);
+            i = result.offset;
         } else {
             break;
         }
@@ -116,4 +122,94 @@ function readSerialNumber(bytes) {
         temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));
     }
     return temp.join("");
+}
+
+function handle_downlink_response(channel_type, bytes, offset) {
+    var decoded = {};
+
+    switch (channel_type) {
+        case 0x03: // report_interval
+            decoded.report_interval = readUInt16LE(bytes.slice(offset, offset + 2));
+            offset += 2;
+            break;
+        case 0x22: // delay_time
+            // skip 1 byte
+            decoded.delay_time = readUInt16LE(bytes.slice(offset + 1, offset + 3));
+            decoded.socket_status = bytes[offset + 3] & 0x01;
+            offset += 4;
+            break;
+        case 0x23: // cancel_delay
+            decoded.cancel_delay = 1;
+            offset += 2;
+            break;
+        case 0x24: // current_threshold
+            decoded.current_threshold = {};
+            decoded.current_threshold.enable = bytes[offset];
+            decoded.current_threshold.threshold = bytes[offset + 1];
+            offset += 2;
+            break;
+        case 0x25: // child_lock_config
+            decoded.child_lock_config = {};
+            var lock_config = readUInt16LE(bytes.slice(offset, offset + 2));
+            decoded.child_lock_config.enable = (lock_config >>> 15) & 0x01;
+            decoded.child_lock_config.lock_time = lock_config & 0x7fff;
+            break;
+        case 0x26: // power_consumption_enable
+            decoded.power_consumption_enable = bytes[offset];
+            offset += 1;
+            break;
+        case 0x27: // reset_power_consumption
+            decoded.reset_power_consumption = 1;
+            offset += 1;
+            break;
+        case 0x2f: // led_enable
+            decoded.led_enable = bytes[offset];
+            offset += 1;
+            break;
+        case 0x30: // overcurrent_protection
+            decoded.overcurrent_protection = {};
+            decoded.overcurrent_protection.enable = bytes[offset];
+            decoded.overcurrent_protection.trip_current = bytes[offset + 1];
+            offset += 2;
+            break;
+        default:
+            throw new Error("unknown downlink response");
+    }
+
+    return { data: decoded, offset: offset };
+}
+
+if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+        enumerable: false,
+        configurable: true,
+        writable: true,
+        value: function (target) {
+            "use strict";
+            if (target == null) {
+                // TypeError if undefined or null
+                throw new TypeError("Cannot convert first argument to object");
+            }
+
+            var to = Object(target);
+            for (var i = 1; i < arguments.length; i++) {
+                var nextSource = arguments[i];
+                if (nextSource == null) {
+                    // Skip over if undefined or null
+                    continue;
+                }
+                nextSource = Object(nextSource);
+
+                var keysArray = Object.keys(Object(nextSource));
+                for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+                    var nextKey = keysArray[nextIndex];
+                    var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+                    if (desc !== undefined && desc.enumerable) {
+                        to[nextKey] = nextSource[nextKey];
+                    }
+                }
+            }
+            return to;
+        },
+    });
 }

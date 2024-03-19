@@ -1,0 +1,99 @@
+{
+    "version": "1.0.0",
+    "bytes": "036702010467A60005E70006E80007BC00",
+    "object": [
+        {
+            "id": "thermostat_status",
+            "name": "Thermostat Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Off" },
+                { "value": 1, "name": "On" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "btn_lock_enable",
+            "name": "Button Lock Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "mode",
+            "name": "Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Cool" },
+                { "value": 1, "name": "Heat" },
+                { "value": 2, "name": "Fan" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "26.6",
+            "unit": "°C",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "temperature_target",
+            "name": "Temperature Target",
+            "value": "30",
+            "unit": "°C",
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "card",
+            "name": "Card",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Remove" },
+                { "value": 1, "name": "Insert" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "control_mode",
+            "name": "Control Mode",
+            "value": "",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Auto" },
+                { "value": 1, "name": "Manual" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "server_temperature",
+            "name": "Server Temperature",
+            "value": "26.6",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        }
+    ]
+}

@@ -174,6 +174,252 @@
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "reboot",
+            "name": "Reboot",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "sync_time",
+            "name": "Sync Time",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_status",
+            "name": "Report Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "timezone",
+            "name": "Timezone",
+            "value": "8",
+            "unit": "",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_interval",
+            "name": "Report Interval",
+            "value": "10",
+            "unit": "min",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES"
+        },
+        {
+            "id": "temperature_calibration.enable",
+            "name": "Temperature Calibration Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_calibration.temperature"]
+        },
+        {
+            "id": "temperature_calibration.temperature",
+            "name": "Temperature Calibration Temperature",
+            "value": "0",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["temperature_calibration.enable"]
+        },
+        {
+            "id": "temperature_control.enable",
+            "name": "Temperature Control Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_control.mode",
+            "name": "Temperature Control Mode",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Auto" },
+                { "value": 1, "name": "Manual" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_target",
+            "name": "Temperature Target",
+            "value": "30",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["temperature_error"]
+        },
+        {
+            "id": "temperature_error",
+            "name": "Temperature Error",
+            "value": "0",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["temperature_target"]
+        },
+        {
+            "id": "open_window_detection.enable",
+            "name": "Open Window Detection Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["open_window_detection.temperautre_theshold", "open_window_detection.time"]
+        },
+        {
+            "id": "open_window_detection.temperautre_theshold",
+            "name": "Open Window Detection Temperature Theshold",
+            "value": "0",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["open_window_detection.enable", "open_window_detection.time"]
+        },
+        {
+            "id": "open_window_detection.time",
+            "name": "Open Window Detection Time",
+            "value": "0",
+            "unit": "min",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES",
+            "reference": ["open_window_detection.enable", "open_window_detection.rate"]
+        },
+        {
+            "id": "restore_open_window_detection_status",
+            "name": "Restore Open Window Detection Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "valve_opening",
+            "name": "Valve Opening",
+            "value": "100",
+            "unit": "%",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "valve_calibration",
+            "name": "Valve Calibration",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "valve_control_algorithm",
+            "name": "Valve Control Algorithm",
+            "value": "0",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "rate" },
+                { "value": 1, "name": "pid" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "freeze_protection_config.enable",
+            "name": "Freeze Protection Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["freeze_protection_config.temperature"]
+        },
+        {
+            "id": "freeze_protection_config.temperature",
+            "name": "Freeze Protection Temperature",
+            "value": "0",
+            "unit": "°C",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+            "reference": ["freeze_protection_config.enable"]
+        },
+        {
+            "id": "child_lock_config.enable",
+            "name": "Child Lock Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
         }
     ]
 }

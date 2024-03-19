@@ -292,6 +292,12 @@ function milesight(bytes) {
             decoded.history = decoded.history || [];
             decoded.history.push(data);
         }
+        // DOWNLINK RESPONSE
+        else if (channel_id === 0xfe) {
+            result = handle_downlink_response(channel_type, bytes, i);
+            decoded = Object.assign(decoded, result.data);
+            i = result.offset;
+        }
         // TEXT
         else {
             decoded.text = readAscii(bytes.slice(i - 2, bytes.length));
@@ -405,4 +411,83 @@ function readSerialNumber(bytes) {
         temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));
     }
     return temp.join("");
+}
+
+function handle_downlink_response(channel_type, bytes, offset) {
+    var decoded = {};
+
+    switch (channel_type) {
+        case 0x4a: // sync_time
+            decoded.sync_time = 1;
+            offset += 1;
+            break;
+        case 0x03: // report_interval
+            decoded.report_interval = readUInt16LE(bytes.slice(offset, offset + 2));
+            offset += 2;
+            break;
+        case 0x02: // collection_interval
+            decoded.collection_interval = readUInt16LE(bytes.slice(offset, offset + 2));
+            offset += 2;
+            break;
+        case 0x17: // timezone
+            decoded.timezone = readInt16LE(bytes.slice(offset, offset + 2)) / 10;
+            offset += 2;
+            break;
+        case 0x11: // timestamp
+            decoded.timestamp = readUInt32LE(bytes.slice(offset, offset + 4));
+            offset += 4;
+            break;
+        case 0x91: // sniffer_config
+            decoded.sniffer_config = decoded.sniffer_config || {};
+            decoded.sniffer_config.channel_id = bytes[offset];
+            decoded.sniffer_config.sniffer_interval = readUInt32LE(bytes.slice(offset + 1, offset + 5));
+            offset += 5;
+            break;
+        case 0x93:
+            var channel_id = bytes[offset];
+            var channel_name = "gpio_output_" + channel_id;
+            decoded[channel_name] = bytes[offset + 1];
+            decoded[channel_name + "_time"] = readUInt32LE(bytes.slice(offset + 2, offset + 6));
+            offset += 6;
+            break;
+        default:
+            throw new Error("unknown downlink response");
+    }
+
+    return { data: decoded, offset: offset };
+}
+
+if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+        enumerable: false,
+        configurable: true,
+        writable: true,
+        value: function (target) {
+            "use strict";
+            if (target == null) {
+                // TypeError if undefined or null
+                throw new TypeError("Cannot convert first argument to object");
+            }
+
+            var to = Object(target);
+            for (var i = 1; i < arguments.length; i++) {
+                var nextSource = arguments[i];
+                if (nextSource == null) {
+                    // Skip over if undefined or null
+                    continue;
+                }
+                nextSource = Object(nextSource);
+
+                var keysArray = Object.keys(Object(nextSource));
+                for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+                    var nextKey = keysArray[nextIndex];
+                    var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+                    if (desc !== undefined && desc.enumerable) {
+                        to[nextKey] = nextSource[nextKey];
+                    }
+                }
+            }
+            return to;
+        },
+    });
 }
