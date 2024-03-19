@@ -531,6 +531,18 @@
             "encoder_script": "vendors/milesight-iot/ts101/ts101-encoder.js"
         },
         {
+            "id": "ts201",
+            "name": "TS201",
+            "description": "Temperature Sensor",
+            "catalog": "ts",
+            "sn": "6809",
+            "deveui": "24e124809",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ts201/ts201-codec.json",
+            "decoder_script": "vendors/milesight-iot/ts201/ts201-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ts201/ts201-encoder.js"
+        },
+        {
             "id": "ts301",
             "name": "TS301",
             "description": "Temperature Sensor",
@@ -1093,6 +1105,18 @@
             "codec": "vendors/milesight-iot/wt201/wt201-codec.json",
             "decoder_script": "vendors/milesight-iot/wt201/wt201-decoder.js",
             "encoder_script": "vendors/milesight-iot/wt201/wt201-encoder.js"
+        },
+        {
+            "id": "wt301",
+            "name": "WT301",
+            "description": "Smart Fan Coil Thermostat",
+            "catalog": "wt",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/wt301/wt301-codec.json",
+            "decoder_script": "vendors/milesight-iot/wt301/wt301-decoder.js",
+            "encoder_script": "vendors/milesight-iot/wt301/wt301-encoder.js"
         },
         {
             "id": "wts305",

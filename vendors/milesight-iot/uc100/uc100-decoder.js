@@ -11,6 +11,7 @@ function Decode(fPort, bytes) {
 
 function milesight(bytes) {
     var decoded = {};
+
     for (i = 0; i < bytes.length; ) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
@@ -89,8 +90,144 @@ function milesight(bytes) {
             var modbus_chn_name = "modbus_chn_" + modbus_chn_id + "_error";
             decoded[modbus_chn_name] = 1;
             i += 1;
-        } else {
-            break;
+        }
+        // MODBUS ALARM (v1.7+)
+        else if (channel_id === 0xff && channel_type === 0xee) {
+            var chn_def = bytes[i++];
+            var data_length = bytes[i++];
+            var data_def = bytes[i++];
+
+            var modbus_chn_id = (chn_def & 0x1f) + 1;
+            var modbus_alarm = readModbusAlarmType(chn_def >>> 6);
+            var sign = (data_def >>> 7) & 0x01;
+            var data_type = data_def & 0x7f;
+
+            var modbus_chn_name = "modbus_chn_" + modbus_chn_id;
+            decoded[modbus_chn_name + "_alarm"] = modbus_alarm;
+            switch (data_type) {
+                case 0: // MB_REG_COIL
+                case 1: // MB_REG_DISCRETE
+                    decoded[modbus_chn_name] = bytes[i];
+                    i += 1;
+                    break;
+                case 2: // MB_REG_INPUT_AB
+                case 3: // MB_REG_INPUT_BA
+                case 14: // MB_REG_HOLD_INT16_AB
+                case 15: // MB_REG_HOLD_INT16_BA
+                    decoded[modbus_chn_name] = sign ? readInt16LE(bytes.slice(i, i + 2)) : readUInt16LE(bytes.slice(i, i + 2));
+                    i += 2;
+                    break;
+                case 4: // MB_REG_INPUT_INT32_ABCD
+                case 5: // MB_REG_INPUT_INT32_BADC
+                case 6: // MB_REG_INPUT_INT32_CDAB
+                case 7: // MB_REG_INPUT_INT32_DCBA
+                case 16: // MB_REG_HOLD_INT32_ABCD
+                case 17: // MB_REG_HOLD_INT32_BADC
+                case 18: // MB_REG_HOLD_INT32_CDAB
+                case 19: // MB_REG_HOLD_INT32_DCBA
+                case 8: // MB_REG_INPUT_INT32_AB
+                case 9: // MB_REG_INPUT_INT32_CD
+                case 20: // MB_REG_HOLD_INT32_AB
+                case 21: // MB_REG_HOLD_INT32_CD
+                    decoded[modbus_chn_name] = sign ? readInt32LE(bytes.slice(i, i + 4)) : readUInt32LE(bytes.slice(i, i + 4));
+                    i += 4;
+                    break;
+                case 10: // MB_REG_INPUT_FLOAT_ABCD
+                case 11: // MB_REG_INPUT_FLOAT_BADC
+                case 12: // MB_REG_INPUT_FLOAT_CDAB
+                case 13: // MB_REG_INPUT_FLOAT_DCBA
+                case 22: // MB_REG_HOLD_FLOAT_ABCD
+                case 23: // MB_REG_HOLD_FLOAT_BADC
+                case 24: // MB_REG_HOLD_FLOAT_CDAB
+                case 25: // MB_REG_HOLD_FLOAT_DCBA
+                    decoded[modbus_chn_name] = readFloatLE(bytes.slice(i, i + 4));
+                    i += 4;
+                    break;
+            }
+        }
+        // MODBUS HISTORY (v1.7+)
+        else if (channel_id === 0x20 && channel_type === 0xce) {
+            var timestamp = readUInt32LE(bytes.slice(i, i + 4));
+            var chn_id = bytes[i + 4] + 1;
+            var data_def = bytes[i + 5];
+            var sign = (data_def >>> 7) & 0x01;
+            var data_type = (data_def >> 2) & 0x1f;
+            var read_status = (data_def >>> 1) & 0x01;
+            i += 6;
+
+            var data = {};
+            data.timestamp = timestamp;
+            var modbus_chn_name = "modbus_chn_" + chn_id;
+            // READ FAILED
+            if (read_status === 0) {
+                data[modbus_chn_name + "_alarm"] = "read error";
+            } else {
+                switch (data_type) {
+                    case 0: // MB_REG_COIL
+                    case 1: // MB_REG_DISCRETE
+                        data[modbus_chn_name] = bytes[i];
+                        i += 4;
+                        break;
+                    case 2: // MB_REG_INPUT_AB
+                    case 3: // MB_REG_INPUT_BA
+                    case 14: // MB_REG_HOLD_INT16_AB
+                    case 15: // MB_REG_HOLD_INT16_BA
+                    case 4: // MB_REG_INPUT_INT32_ABCD
+                    case 5: // MB_REG_INPUT_INT32_BADC
+                    case 6: // MB_REG_INPUT_INT32_CDAB
+                    case 7: // MB_REG_INPUT_INT32_DCBA
+                    case 16: // MB_REG_HOLD_INT32_ABCD
+                    case 17: // MB_REG_HOLD_INT32_BADC
+                    case 18: // MB_REG_HOLD_INT32_CDAB
+                    case 19: // MB_REG_HOLD_INT32_DCBA
+                    case 8: // MB_REG_INPUT_INT32_AB
+                    case 9: // MB_REG_INPUT_INT32_CD
+                    case 20: // MB_REG_HOLD_INT32_AB
+                    case 21: // MB_REG_HOLD_INT32_CD
+                        data[modbus_chn_name] = sign ? readInt32LE(bytes.slice(i, i + 4)) : readUInt32LE(bytes.slice(i, i + 4));
+                        i += 4;
+                        break;
+                    case 10: // MB_REG_INPUT_FLOAT_ABCD
+                    case 11: // MB_REG_INPUT_FLOAT_BADC
+                    case 12: // MB_REG_INPUT_FLOAT_CDAB
+                    case 13: // MB_REG_INPUT_FLOAT_DCBA
+                    case 22: // MB_REG_HOLD_FLOAT_ABCD
+                    case 23: // MB_REG_HOLD_FLOAT_BADC
+                    case 24: // MB_REG_HOLD_FLOAT_CDAB
+                    case 25: // MB_REG_HOLD_FLOAT_DCBA
+                        data[modbus_chn_name] = readFloatLE(bytes.slice(i, i + 4));
+                        i += 4;
+                        break;
+                }
+            }
+
+            decoded.history = decoded.history || [];
+            decoded.history.push(data);
+        }
+        // CUSTOM MESSAGE HISTORY (v1.7+)
+        else if (channel_id === 0x20 && channel_type === 0xcd) {
+            var timestamp = readUInt32LE(bytes.slice(i, i + 4));
+            var msg_length = bytes[i + 4];
+            var msg = readAscii(bytes.slice(i + 5, i + 5 + msg_length));
+            i += 5 + msg_length;
+
+            var data = {};
+            data.timestamp = timestamp;
+            data.custom_message = msg;
+
+            decoded.history = decoded.history || [];
+            decoded.history.push(data);
+        }
+        // DOWNLINK RESPONSE
+        else if (channel_id === 0xfe) {
+            result = handle_downlink_response(channel_type, bytes, i);
+            decoded = Object.assign(decoded, result.data);
+            i = result.offset;
+        }
+        // CUSTOM MESSAGE
+        else {
+            decoded.custom_message = readAscii(bytes.slice(i - 2, bytes.length));
+            i = bytes.length;
         }
     }
     return decoded;
@@ -160,4 +297,113 @@ function readSerialNumber(bytes) {
         temp.push(("0" + (bytes[idx] & 0xff).toString(16)).slice(-2));
     }
     return temp.join("");
+}
+
+function readAscii(bytes) {
+    var str = "";
+    for (var i = 0; i < bytes.length; i++) {
+        str += String.fromCharCode(bytes[i]);
+    }
+    return str;
+}
+
+function readModbusAlarmType(type) {
+    switch (type) {
+        case 0x00:
+            return "Normal";
+        case 0x01:
+            return "Threshold Alarm";
+        case 0x02:
+            return "Threshold Release Alarm";
+        case 0x03:
+            return "Mutation Alarm";
+        default:
+            return "Unknown";
+    }
+}
+
+function fromUtf8Bytes(bytes) {
+    return decodeURIComponent(
+        bytes
+            .map(function (ch) {
+                return "%" + (ch < 16 ? "0" : "") + ch.toString(16);
+            })
+            .join("")
+    );
+}
+
+function handle_downlink_response(channel_type, bytes, offset) {
+    var decoded = {};
+
+    switch (channel_type) {
+        case 0x03: // report interval
+            decoded.report_interval = readUInt16LE(bytes.slice(offset, offset + 2));
+            offset += 2;
+            break;
+        case 0xef: // modbus_config
+            var action = bytes[offset];
+            if (action === 0x00) {
+                decoded.modbus_config = { action: 0, channel_id: bytes[offset + 1] };
+                offset += 2;
+            } else if (action === 0x01) {
+                decoded.modbus_config = {
+                    action: 1,
+                    channel_id: bytes[offset + 1],
+                    slave_id: bytes[offset + 2],
+                    address: bytes[offset + 3],
+                    type: bytes[offset + 4],
+                    sign: (bytes[offset + 5] >>> 4) & 0x01,
+                    quantity: bytes[offset + 5] & 0x0f,
+                };
+                offset += 6;
+            } else if (action === 0x02) {
+                var name_length = bytes[offset + 2];
+                decoded.modbus_config = {
+                    action: 2,
+                    channel_id: bytes[offset + 1],
+                    name: fromUtf8Bytes(bytes.slice(offset + 3, offset + 3 + name_length)),
+                };
+                offset += 3 + name_length;
+            }
+            break;
+        default:
+            throw new Error("unknown downlink response");
+    }
+
+    return { data: decoded, offset: offset };
+}
+
+if (!Object.assign) {
+    Object.defineProperty(Object, "assign", {
+        enumerable: false,
+        configurable: true,
+        writable: true,
+        value: function (target) {
+            "use strict";
+            if (target == null) {
+                // TypeError if undefined or null
+                throw new TypeError("Cannot convert first argument to object");
+            }
+
+            var to = Object(target);
+            for (var i = 1; i < arguments.length; i++) {
+                var nextSource = arguments[i];
+                if (nextSource == null) {
+                    // Skip over if undefined or null
+                    continue;
+                }
+                nextSource = Object(nextSource);
+
+                var keysArray = Object.keys(Object(nextSource));
+                for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+                    var nextKey = keysArray[nextIndex];
+                    var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+                    if (desc !== undefined && desc.enumerable) {
+                        to[nextKey] = nextSource[nextKey];
+                    }
+                }
+            }
+            return to;
+        },
+    });
 }

@@ -120,7 +120,149 @@
                 { "value": 0, "name": "Off" },
                 { "value": 1, "name": "On" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_status",
+            "name": "Report Status",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_attribute",
+            "name": "Report Attribute",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "No" },
+                { "value": 1, "name": "Yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "cancel_delay",
+            "name": "Cancel Delay",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "analog_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "overcurrent_protection.enable",
+            "name": "Overcurrent Protection Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["overcurrent_protection.trip_current"]
+        },
+        {
+            "id": "overcurrent_protection.trip_current",
+            "name": "Overcurrent Protection Trip Current",
+            "value": "10",
+            "unit": "A",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 3,
+            "bacnet_unit_type": "UNITS_AMPERES",
+            "reference": ["overcurrent_protection.enable"]
+        },
+        {
+            "id": "current_threshold.enable",
+            "name": "Current Threshold Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["current_threshold.threshold"]
+        },
+        {
+            "id": "current_threshold.threshold",
+            "name": "Current Threshold",
+            "value": "10",
+            "unit": "A",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 3,
+            "bacnet_unit_type": "UNITS_AMPERES",
+            "reference": ["current_threshold.enable"]
+        },
+        {
+            "id": "child_lock_config.enable",
+            "name": "Child Lock Config Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["child_lock_config.lock_time"]
+        },
+        {
+            "id": "child_lock_config.lock_time",
+            "name": "Child Lock Config Lock Time",
+            "value": "10",
+            "unit": "min",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES",
+            "reference": ["child_lock_config.enable"]
+        },
+        {
+            "id": "power_consumption_enable",
+            "name": "Power Consumption Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "reset_power_consumption",
+            "name": "Reset Power Consumption",
+            "value": "0",
+            "unit": "",
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "led_enable",
+            "name": "LED Enable",
+            "value": "1",
+            "unit": "",
+            "values": [
+                { "value": 0, "name": "Disable" },
+                { "value": 1, "name": "Enable" }
+            ],
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         }
