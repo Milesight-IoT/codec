@@ -167,7 +167,7 @@ function milesightDeviceEncoder(payload) {
 
 /**
  * reboot device
- * @param {number} reboot
+ * @param {number} reboot values: (0: "no", 1: "yes")
  * @example { "reboot": 1 }
  */
 function reboot(reboot) {
@@ -202,12 +202,15 @@ function reportStatus(report_status) {
 
 /**
  * set report interval
- * @param {number} report_interval unit: minute
+ * @param {number} report_interval unit: minute, range: [1, 1440]
  * @example { "report_interval": 20 }
  */
 function setReportInterval(report_interval) {
     if (typeof report_interval !== "number") {
         throw new Error("report_interval must be a number");
+    }
+    if (report_interval < 1 || report_interval > 1440) {
+        throw new Error("report_interval must be in range [1, 1440]");
     }
 
     var buffer = new Buffer(5);
@@ -220,12 +223,15 @@ function setReportInterval(report_interval) {
 
 /**
  * set collection interval
- * @param {number} collection_interval unit: second
+ * @param {number} collection_interval unit: second, range: [10, 60]
  * @example { "collection_interval": 300 }
  */
 function setCollectionInterval(collection_interval) {
     if (typeof collection_interval !== "number") {
         throw new Error("collection_interval must be a number");
+    }
+    if (collection_interval < 10 || collection_interval > 60) {
+        throw new Error("collection_interval must be in range [10, 60]");
     }
 
     var buffer = new Buffer(4);
@@ -497,7 +503,7 @@ function setTemperatureControlMode(temperature_control_mode) {
 /**
  * set outside temperature control
  * @param {number} enable
- * @param {number} timeout, unit: minute
+ * @param {number} timeout, unit: minute, range: [3, 60]
  * @example { "outside_temperature_control_config": { "enable": 1, "timeout": 10 } }
  */
 function setOutsideTemperatureControl(enable, timeout) {
@@ -507,6 +513,9 @@ function setOutsideTemperatureControl(enable, timeout) {
     }
     if (enable && typeof timeout !== "number") {
         throw new Error("outside_temperature_control_config.timeout must be a number");
+    }
+    if (enable && (timeout < 3 || timeout > 60)) {
+        throw new Error("outside_temperature_control_config.timeout must be in range [3, 60]");
     }
 
     var buffer = new Buffer(4);
@@ -547,6 +556,15 @@ function setHumidityRange(min, max) {
     if (typeof max !== "number") {
         throw new Error("humidity_range.max must be a number");
     }
+    if (min < 0 || min > 100) {
+        throw new Error("humidity_range.min must be in range [0, 100]");
+    }
+    if (max < 0 || max > 100) {
+        throw new Error("humidity_range.max must be in range [0, 100]");
+    }
+    if (min > max) {
+        throw new Error("humidity_range.min must be less than humidity_range.max");
+    }
 
     var buffer = new Buffer(4);
     buffer.writeUInt8(0xf9);
@@ -559,7 +577,7 @@ function setHumidityRange(min, max) {
 /**
  * set temperature dehumidify
  * @param {number} enable values: (0: disable, 1: enable)
- * @param {*} temperature_tolerance unit: celsius
+ * @param {*} temperature_tolerance unit: celsius, range: [0.1, 5]
  * @example { "temperature_dehumidify": { "enable": 1, "temperature_tolerance": 1 } }
  */
 function setTemperatureDehumidify(enable, temperature_tolerance) {
@@ -574,6 +592,9 @@ function setTemperatureDehumidify(enable, temperature_tolerance) {
         }
         if (typeof temperature_tolerance !== "number") {
             throw new Error("temperature_dehumidify.temperature_tolerance must be a number");
+        }
+        if (temperature_tolerance !== 0xff && (temperature_tolerance < 0.1 || temperature_tolerance > 5)) {
+            throw new Error("temperature_dehumidify.temperature_tolerance must be in range [0.1, 5]");
         }
     }
 
@@ -598,6 +619,9 @@ function setFanDehumidify(enable, execute_time) {
     }
     if (enable && typeof execute_time !== "number") {
         throw new Error("fan_dehumidify.execute_time must be a number");
+    }
+    if (enable && (execute_time < 5 || execute_time > 55)) {
+        throw new Error("fan_dehumidify.execute_time must be in range [5, 55]");
     }
 
     var buffer = new Buffer(4);
@@ -661,6 +685,9 @@ function setFanModeWithDelay(fan_delay_enable, fan_delay_time) {
     }
     if (fan_delay_enable && typeof fan_delay_time !== "number") {
         throw new Error("fan_delay_time must be a number");
+    }
+    if (fan_delay_enable && (fan_delay_time < 5 || fan_delay_time > 55)) {
+        throw new Error("fan_delay_time must be in range [5, 55]");
     }
 
     var buffer = new Buffer(4);
