@@ -131,7 +131,7 @@
         },
         {
             "id": "motor_calibration_result",
-            "name": "Motor Storke Calibration Result",
+            "name": "Motor Stroke Calibration Result",
             "value": "",
             "unit": "",
             "values": [
@@ -146,8 +146,8 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "motor_storke",
-            "name": "Motor Storke",
+            "id": "motor_stroke",
+            "name": "Motor Stroke",
             "value": "0",
             "unit": "",
             "bacnet_type": "analog_input_object",

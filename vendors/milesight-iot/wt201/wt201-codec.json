@@ -766,7 +766,10 @@
                 { "value": 0, "name": "Normal" },
                 { "value": 1, "name": "Without Plan" },
                 { "value": 2, "name": "Off" }
-            ]
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
         }
     ]
 }

@@ -38,7 +38,7 @@
                 { "value": 1, "name": "Heat" },
                 { "value": 2, "name": "Fan" }
             ],
-            "bacnet_type": "binary_value_object",
+            "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -56,7 +56,7 @@
             "name": "Temperature Target",
             "value": "30",
             "unit": "°C",
-            "bacnet_type": "binary_value_object",
+            "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
         },
