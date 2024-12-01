@@ -7,6 +7,10 @@
             "name": "IPSO Version",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 6,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -16,6 +20,10 @@
             "name": "Hardware Version",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 6,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -25,6 +33,10 @@
             "name": "Firmware Version",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 6,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -34,6 +46,9 @@
             "name": "Device Status",
             "value": "1",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Off" },
                 { "value": 1, "name": "On" }
@@ -47,6 +62,9 @@
             "name": "LoRaWAN Class Type",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "ClassA" },
                 { "value": 1, "name": "ClassB" },
@@ -62,6 +80,10 @@
             "name": "SN",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 16,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -71,6 +93,9 @@
             "name": "Battery",
             "value": "92",
             "unit": "%",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 98,
             "bacnet_unit_type": "UNITS_PERCENT"
@@ -80,6 +105,9 @@
             "name": "Temperature",
             "value": "30.8",
             "unit": "°C",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
@@ -89,6 +117,9 @@
             "name": "Humidity",
             "value": "50.5",
             "unit": "%r.h.",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 29,
             "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
@@ -98,6 +129,9 @@
             "name": "Magnet Status",
             "value": "1",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Close" },
                 { "value": 1, "name": "Open" }

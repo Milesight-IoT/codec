@@ -1,7 +1,7 @@
 /**
- * Payload Encoder for Milesight Network Server
+ * Payload Encoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product EM320-TH
  */

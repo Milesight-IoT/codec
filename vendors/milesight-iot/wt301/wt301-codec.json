@@ -7,6 +7,9 @@
             "name": "Thermostat Status",
             "value": "1",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Off" },
                 { "value": 1, "name": "On" }
@@ -20,6 +23,9 @@
             "name": "Button Lock Enable",
             "value": "1",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Disable" },
                 { "value": 1, "name": "Enable" }
@@ -33,6 +39,9 @@
             "name": "Mode",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Cool" },
                 { "value": 1, "name": "Heat" },
@@ -47,15 +56,21 @@
             "name": "Temperature",
             "value": "26.6",
             "unit": "°C",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
         },
         {
-            "id": "temperature_target",
-            "name": "Temperature Target",
+            "id": "target_temperature",
+            "name": "Target Temperature",
             "value": "30",
             "unit": "°C",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
@@ -65,6 +80,9 @@
             "name": "Card Mode",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Remove" },
                 { "value": 1, "name": "Insert" }
@@ -78,6 +96,9 @@
             "name": "Control Mode",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Auto" },
                 { "value": 1, "name": "Manual" }
@@ -91,6 +112,9 @@
             "name": "Server Temperature",
             "value": "26.6",
             "unit": "°C",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"

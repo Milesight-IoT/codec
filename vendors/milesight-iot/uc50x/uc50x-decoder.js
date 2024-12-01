@@ -1,7 +1,7 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product UC50x
  */
@@ -272,10 +272,10 @@ function readFloatLE(bytes) {
     return f;
 }
 
-function includes(datas, value) {
-    var size = datas.length;
+function includes(data, value) {
+    var size = data.length;
     for (var i = 0; i < size; i++) {
-        if (datas[i] == value) {
+        if (data[i] == value) {
             return true;
         }
     }

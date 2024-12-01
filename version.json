@@ -1,6 +1,6 @@
 {
-    "date": "2024-07-26",
-    "version": "1.2.2",
+    "date": "2025-01-03",
+    "version": "1.3.5",
     "vendors": "vendors.json",
-    "link": "https://github.com/Milesight-IoT/codec/archive/refs/heads/release.zip"
+    "link": "https://github.com/Milesight-IoT/codec/archive/refs/heads/feat/modbus.zip"
 }

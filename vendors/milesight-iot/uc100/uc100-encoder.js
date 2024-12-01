@@ -1,7 +1,7 @@
 /**
- * Payload Encoder for Milesight Network Server
+ * Payload Encoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product UC100
  */
@@ -181,7 +181,7 @@ function utf8ToBytes(str) {
             bytes.push(0x80 | ((charCode >> 6) & 0x3f));
             bytes.push(0x80 | (charCode & 0x3f));
         } else {
-            charcode = 0x10000 + (((charcode & 0x3ff) << 10) | (str.charCodeAt(i) & 0x3ff));
+            charCode = 0x10000 + (((charCode & 0x3ff) << 10) | (str.charCodeAt(i) & 0x3ff));
             bytes.push(0xf0 | (charCode >> 18));
             bytes.push(0x80 | ((charCode >> 12) & 0x3f));
             bytes.push(0x80 | ((charCode >> 6) & 0x3f));

@@ -1,7 +1,7 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product WTS305 / WTS505 / WTS506
  */
@@ -48,7 +48,7 @@ function milesight(bytes) {
         }
         // BATTERY
         else if (channel_id === 0x01 && channel_type === 0x75) {
-            decoded.battery = bytes[i];
+            decoded.battery = readUInt8(bytes[i]);
             i += 1;
         }
         // TEMPERATURE
@@ -80,13 +80,13 @@ function milesight(bytes) {
         // RAINFALL TOTAL
         else if (channel_id === 0x08 && channel_type === 0x77) {
             decoded.rainfall_total = readUInt16LE(bytes.slice(i, i + 2)) / 100;
-            decoded.rainfall_counter = bytes[i + 2];
+            decoded.rainfall_counter = readUInt8(bytes[i + 2]);
             i += 3;
         }
         // RAINFALL TOTAL (v3)
         else if (channel_id === 0x08 && channel_type === 0xec) {
             decoded.rainfall_total = readUInt32LE(bytes.slice(i, i + 4)) / 100;
-            decoded.rainfall_counter = bytes[i + 4];
+            decoded.rainfall_counter = readUInt8(bytes[i + 4]);
             i += 5;
         }
         // TEMPERATURE ALARM
@@ -151,6 +151,15 @@ function milesight(bytes) {
     return decoded;
 }
 
+function readUInt8(bytes) {
+    return bytes & 0xff;
+}
+
+function readInt8(bytes) {
+    var ref = readUInt8(bytes);
+    return ref > 0x7f ? ref - 0x100 : ref;
+}
+
 function readUInt16LE(bytes) {
     var value = (bytes[1] << 8) + bytes[0];
     return value & 0xffff;
@@ -204,6 +213,6 @@ function readAlarmType(type) {
         case 1:
             return "threshold alarm";
         default:
-            return "unkown";
+            return "unknown";
     }
 }

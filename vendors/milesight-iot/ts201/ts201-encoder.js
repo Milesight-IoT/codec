@@ -1,7 +1,7 @@
 /**
- * Payload Encoder for Milesight Network Server
+ * Payload Encoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product TS201
  */
@@ -43,8 +43,8 @@ function milesightDeviceEncoder(payload) {
     if ("retransmit_interval" in payload) {
         encoded = encoded.concat(setRetransmitInterval(payload.retransmit_interval));
     }
-    if ("stop_transimit" in payload) {
-        encoded = encoded.concat(stopTransimit(payload.stop_transimit));
+    if ("stop_transmit" in payload) {
+        encoded = encoded.concat(stopTransmit(payload.stop_transmit));
     }
 
     return encoded;
@@ -240,15 +240,15 @@ function setRetransmitInterval(retransmit_interval) {
 }
 
 /**
- * @param {boolean} stop_transimit
+ * @param {boolean} stop_transmit
  */
-function stopTransimit(stop_transimit) {
-    var stop_transimit_values = [0, 1];
-    if (!stop_transimit_values.indexOf(stop_transimit)) {
-        throw new Error("stop_transimit must be one of " + stop_transimit_values.join(", "));
+function stopTransmit(stop_transmit) {
+    var stop_transmit_values = [0, 1];
+    if (!stop_transmit_values.indexOf(stop_transmit)) {
+        throw new Error("stop_transmit must be one of " + stop_transmit_values.join(", "));
     }
 
-    if (stop_transimit === 0) {
+    if (stop_transmit === 0) {
         return [];
     }
     return [0xff, 0x6d, 0xff];

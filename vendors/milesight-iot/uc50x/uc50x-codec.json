@@ -7,6 +7,10 @@
             "name": "IPSO Version",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 6,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -16,6 +20,10 @@
             "name": "Hardware Version",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 6,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -25,6 +33,10 @@
             "name": "Firmware Version",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 6,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -34,6 +46,9 @@
             "name": "Device Status",
             "value": "1",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Off" },
                 { "value": 1, "name": "On" }
@@ -47,6 +62,9 @@
             "name": "LoRaWAN Class Type",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "ClassA" },
                 { "value": 1, "name": "ClassB" },
@@ -62,6 +80,10 @@
             "name": "SN",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 16,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -71,6 +93,9 @@
             "name": "Battery",
             "value": "",
             "unit": "%",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 98,
             "bacnet_unit_type": "UNITS_PERCENT"
@@ -80,6 +105,9 @@
             "name": "GPIO Input (Channel 1)",
             "value": "0",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Low" },
                 { "value": 1, "name": "High" }
@@ -93,6 +121,9 @@
             "name": "GPIO Input (Channel 2)",
             "value": "0",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Low" },
                 { "value": 1, "name": "High" }
@@ -106,6 +137,9 @@
             "name": "GPIO Counter (Channel 1)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -115,6 +149,9 @@
             "name": "GPIO Counter (Channel 2)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -124,6 +161,9 @@
             "name": "GPIO Output (Channel 1)",
             "value": "0",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Low" },
                 { "value": 1, "name": "High" }
@@ -137,6 +177,9 @@
             "name": "GPIO Output (Channel 2)",
             "value": "0",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "Low" },
                 { "value": 1, "name": "High" }
@@ -150,6 +193,9 @@
             "name": "ADC (Channel 1)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -159,6 +205,9 @@
             "name": "ADC Max (Channel 1)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -168,6 +217,9 @@
             "name": "ADC Min (Channel 1)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -177,6 +229,9 @@
             "name": "ADC Avg (Channel 1)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -186,6 +241,9 @@
             "name": "ADC Alarm (Channel 1)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 1, "name": "Threshold Alarm" },
                 { "value": 2, "name": "Value Change Alarm" }
@@ -199,6 +257,9 @@
             "name": "ADC (Channel 2)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -208,6 +269,9 @@
             "name": "ADC Max (Channel 2)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -217,6 +281,9 @@
             "name": "ADC Min (Channel 2)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -226,6 +293,9 @@
             "name": "ADC Avg (Channel 2)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -235,6 +305,9 @@
             "name": "ADC Alarm (Channel 2)",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
             "values": [
                 { "value": 1, "name": "Threshold Alarm" },
                 { "value": 2, "name": "Value Change Alarm" }
@@ -248,6 +321,10 @@
             "name": "SID-12",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 255,
             "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -257,6 +334,9 @@
             "name": "Modbus Channel 1",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -266,6 +346,9 @@
             "name": "Modbus Channel 2",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -275,6 +358,9 @@
             "name": "Modbus Channel 3",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -284,6 +370,9 @@
             "name": "Modbus Channel 4",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -293,6 +382,9 @@
             "name": "Modbus Channel 5",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -302,6 +394,9 @@
             "name": "Modbus Channel 6",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -311,6 +406,9 @@
             "name": "Modbus Channel 7",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -320,6 +418,9 @@
             "name": "Modbus Channel 8",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -329,6 +430,9 @@
             "name": "Modbus Channel 9",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -338,6 +442,9 @@
             "name": "Modbus Channel 10",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -347,6 +454,9 @@
             "name": "Modbus Channel 11",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -356,6 +466,9 @@
             "name": "Modbus Channel 12",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -365,6 +478,9 @@
             "name": "Modbus Channel 13",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -374,6 +490,9 @@
             "name": "Modbus Channel 14",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -383,6 +502,9 @@
             "name": "Modbus Channel 15",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -392,6 +514,9 @@
             "name": "Modbus Channel 16",
             "value": "",
             "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"

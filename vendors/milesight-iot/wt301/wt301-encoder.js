@@ -1,33 +1,32 @@
 /**
- * Payload Encoder for Milesight Network Server
+ * Payload Encoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product WT301
  */
+// Chirpstack v4
+function encodeDownlink(input) {
+    var encoded = milesightDeviceEncode(input.data);
+    return { bytes: encoded };
+}
 
 // Chirpstack v3
 function Encode(fPort, obj) {
-    var encoded = milesightDeviceEncoder(obj);
-    return encoded;
-}
-
-// Chirpstack v4
-function encodeDownlink(input) {
-    var encoded = milesightDeviceEncoder(input.data);
+    var encoded = milesightDeviceEncode(obj);
     return encoded;
 }
 
 // The Things Network
 function Encoder(obj, port) {
-    return milesightDeviceEncoder(obj);
+    return milesightDeviceEncode(obj);
 }
 
-function milesightDeviceEncoder(payload) {
+function milesightDeviceEncode(payload) {
     var encoded = [];
 
-    if ("thermostat_status" in payload && "btn_lock_enable" in payload && "mode" in payload && "fan_speed" in payload && "temperature_target" in payload && "control_mode" in payload && "server_temperature" in payload) {
-        encoded = encoded.concat(setAll(payload.thermostat_status, payload.btn_lock_enable, payload.mode, payload.fan_speed, payload.temperature_target, payload.control_mode, payload.server_temperature));
+    if ("thermostat_status" in payload && "btn_lock_enable" in payload && "mode" in payload && "fan_speed" in payload && "target_temperature" in payload && "control_mode" in payload && "server_temperature" in payload) {
+        encoded = encoded.concat(setAll(payload.thermostat_status, payload.btn_lock_enable, payload.mode, payload.fan_speed, payload.target_temperature, payload.control_mode, payload.server_temperature));
     } else {
         if ("thermostat_status" in payload) {
             encoded = encoded.concat(setThermostatStatus(payload.thermostat_status));
@@ -41,8 +40,8 @@ function milesightDeviceEncoder(payload) {
         if ("fan_speed" in payload) {
             encoded = encoded.concat(setFanSpeed(payload.fan_speed));
         }
-        if ("temperature_target" in payload) {
-            encoded = encoded.concat(setTargetTemperature(payload.temperature_target));
+        if ("target_temperature" in payload) {
+            encoded = encoded.concat(setTargetTemperature(payload.target_temperature));
         }
         if ("control_mode" in payload) {
             encoded = encoded.concat(setControlMode(payload.control_mode));
@@ -168,7 +167,7 @@ function setFanSpeed(fan_speed) {
 
 /**
  * @param {number} temperature temperature * 2
- * @example {"temperature_target": 20}
+ * @example {"target_temperature": 20}
  */
 function setTargetTemperature(temperature) {
     if (typeof temperature !== "number") {
@@ -230,12 +229,12 @@ function setServerTemperature(server_temperature) {
  * @param {number} btn_lock_enable values: (0: "disable", 1: "enable")
  * @param {number} mode values: (0: "cool", 1: "heat", 2: "fan")
  * @param {number} fan_speed values: (0: "auto", 1: "high", 2: "medium", 3: "low")
- * @param {number} temperature_target temperature * 2
+ * @param {number} target_temperature temperature * 2
  * @param {number} control_mode values: (0: "auto", 1: "manual")
  * @param {number} server_temperature temperature * 2
- * @example {"thermostat_status": 1, "btn_lock_enable": 1, "mode": 0, "fan_speed": 0, "temperature_target": 20, "control_mode": 0, "server_temperature": 20}
+ * @example {"thermostat_status": 1, "btn_lock_enable": 1, "mode": 0, "fan_speed": 0, "target_temperature": 20, "control_mode": 0, "server_temperature": 20}
  */
-function setAll(thermostat_status, btn_lock_enable, mode, fan_speed, temperature_target, control_mode, server_temperature) {
+function setAll(thermostat_status, btn_lock_enable, mode, fan_speed, target_temperature, control_mode, server_temperature) {
     var thermostat_status_values = [0, 1];
     var btn_lock_enable_values = [0, 1];
     var mode_values = [0, 1, 2];
@@ -267,7 +266,7 @@ function setAll(thermostat_status, btn_lock_enable, mode, fan_speed, temperature
     buffer.writeUInt8(btn_lock_enable_values.indexOf(btn_lock_enable));
     buffer.writeUInt8(mode_values.indexOf(mode));
     buffer.writeUInt8(fan_speed_values.indexOf(fan_speed));
-    buffer.writeUInt8(temperature_target * 2);
+    buffer.writeUInt8(target_temperature * 2);
     buffer.writeUInt8(control_mode_values.indexOf(control_mode));
     buffer.writeUInt8(server_temperature * 2);
     buffer.writeUInt8(buffer.checksum());

@@ -1,7 +1,7 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product WS201
  */
@@ -48,7 +48,7 @@ function milesight(bytes) {
         }
         // BATTERY
         else if (channel_id === 0x01 && channel_type === 0x75) {
-            decoded.battery = bytes[i];
+            decoded.battery = readUInt8(bytes[i]);
             i += 1;
         }
         // DISTANCE
@@ -58,7 +58,7 @@ function milesight(bytes) {
         }
         // REMAINING AMOUNT
         else if (channel_id === 0x04 && channel_type === 0xd6) {
-            decoded.remaining = bytes[i];
+            decoded.remaining = readUInt8(bytes[i]);
             i += 1;
         } else {
             break;
@@ -66,6 +66,15 @@ function milesight(bytes) {
     }
 
     return decoded;
+}
+
+function readUInt8(bytes) {
+    return bytes & 0xff;
+}
+
+function readInt8(bytes) {
+    var ref = readUInt8(bytes);
+    return ref > 0x7f ? ref - 0x100 : ref;
 }
 
 function readUInt16LE(bytes) {

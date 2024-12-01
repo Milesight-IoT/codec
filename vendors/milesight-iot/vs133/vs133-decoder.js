@@ -1,7 +1,7 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product VS133
  */
@@ -105,10 +105,10 @@ function readUInt32LE(bytes) {
     return (value & 0xffffffff) >>> 0;
 }
 
-function includes(datas, value) {
-    var size = datas.length;
+function includes(data, value) {
+    var size = data.length;
     for (var i = 0; i < size; i++) {
-        if (datas[i] == value) {
+        if (data[i] == value) {
             return true;
         }
     }

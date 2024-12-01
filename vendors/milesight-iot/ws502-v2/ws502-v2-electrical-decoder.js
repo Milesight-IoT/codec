@@ -1,7 +1,7 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product WS502 v2 physical switch with electrical parameters
  */
@@ -71,7 +71,7 @@ function milesight(bytes) {
         }
         // POWER FACTOR
         else if (channel_id === 0x05 && channel_type === 0x81) {
-            decoded.power_factor = bytes[i] / 100;
+            decoded.power_factor = readUInt8(bytes[i]);
             i += 1;
         }
         // POWER CONSUMPTION

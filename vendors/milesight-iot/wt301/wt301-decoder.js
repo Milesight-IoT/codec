@@ -1,21 +1,33 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product WT301
  */
-function Decode(fPort, bytes) {
-    return milesight(bytes);
+// Chirpstack v4
+function decodeUplink(input) {
+    var decoded = milesightDeviceDecode(input.bytes);
+    return { data: decoded };
 }
 
-function milesight(bytes) {
+// Chirpstack v3
+function Decode(fPort, bytes) {
+    return milesightDeviceDecode(bytes);
+}
+
+// The Things Network
+function Decoder(bytes, port) {
+    return milesightDeviceDecode(bytes);
+}
+
+function milesightDeviceDecode(bytes) {
     var decoded = {};
     var i = 0;
     var head = bytes[i];
     var command = ["", "control", "request"][bytes[i + 1]];
     var data_length = readInt16BE(bytes.slice(i + 2, i + 4));
-    var type = ["thermostat_status", "btn_lock_enable", "mode", "fan_speed", "temperature", "temperature_target", "card", "control_mode", "server_temperature", "all"][bytes[i + 4]];
+    var type = ["thermostat_status", "btn_lock_enable", "mode", "fan_speed", "temperature", "target_temperature", "card", "control_mode", "server_temperature", "all"][bytes[i + 4]];
     var raw = bytes.slice(i + 5, i + 5 + data_length);
     var crc = bytes[i + 5 + data_length];
 
@@ -37,7 +49,7 @@ function milesight(bytes) {
             decoded.temperature = bytes[i + 5] / 2;
             break;
         case 0x06:
-            decoded.temperature_target = bytes[i + 5] / 2;
+            decoded.target_temperature = bytes[i + 5] / 2;
             break;
         case 0x07:
             decoded.card_mode = bytes[i + 5];
@@ -54,7 +66,7 @@ function milesight(bytes) {
             decoded.mode = bytes[i + 7];
             decoded.fan_speed = bytes[i + 8];
             decoded.temperature = bytes[i + 9] / 2;
-            decoded.temperature_target = bytes[i + 10] / 2;
+            decoded.target_temperature = bytes[i + 10] / 2;
             decoded.card_mode = bytes[i + 11];
             decoded.control_mode = bytes[i + 12];
             decoded.server_temperature = bytes[i + 13] / 2;

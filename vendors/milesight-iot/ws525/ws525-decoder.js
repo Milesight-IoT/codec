@@ -1,7 +1,7 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product WS525
  */
@@ -58,7 +58,7 @@ function milesight(bytes) {
         }
         // POWER FACTOR
         else if (channel_id === 0x05 && channel_type === 0x81) {
-            decoded.power_factor = bytes[i] / 100;
+            decoded.power_factor = readUInt8(bytes[i]);
             i += 1;
         }
         // POWER CONSUMPTION
@@ -86,6 +86,15 @@ function milesight(bytes) {
         }
     }
     return decoded;
+}
+
+function readUInt8(bytes) {
+    return bytes & 0xff;
+}
+
+function readInt8(bytes) {
+    var ref = readUInt8(bytes);
+    return ref > 0x7f ? ref - 0x100 : ref;
 }
 
 function readUInt16LE(bytes) {

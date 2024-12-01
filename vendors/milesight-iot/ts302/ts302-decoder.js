@@ -1,7 +1,7 @@
 /**
- * Payload Decoder for Milesight Network Server
+ * Payload Decoder
  *
- * Copyright 2024 Milesight IoT
+ * Copyright 2025 Milesight IoT
  *
  * @product TS302
  */
@@ -201,6 +201,6 @@ function readAlarmType(type) {
         case 2:
             return "mutation";
         default:
-            return "unkown";
+            return "unknown";
     }
 }
