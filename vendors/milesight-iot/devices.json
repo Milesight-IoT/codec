@@ -581,7 +581,7 @@
         {
             "id": "uc11_t1",
             "name": "UC11-T1",
-            "description": "Temperature & Humidity Sensorr",
+            "description": "Temperature & Humidity Sensor",
             "catalog": "uc11",
             "sn": "6410",
             "deveui": "24e124410",
@@ -673,6 +673,16 @@
             "codec": "vendors/milesight-iot/uc51x/uc51x-codec.json",
             "decoder_script": "vendors/milesight-iot/uc51x/uc51x-decoder.js",
             "encoder_script": "vendors/milesight-iot/uc51x/uc51x-encoder.js"
+        },
+        {
+            "id": "uc521",
+            "catalog": "uc52x",
+            "sn": "6832",
+            "deveui": "24e124832",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/uc52x/uc52x-codec.json",
+            "decoder_script": "vendors/milesight-iot/uc52x/uc52x-decoder.js",
+            "encoder_script": "vendors/milesight-iot/uc52x/uc52x-encoder.js"
         },
         {
             "id": "uc100",

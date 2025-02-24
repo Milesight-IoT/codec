@@ -243,7 +243,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y2", "wires.gh", "wires.ob", "wires.w1", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.y2", "wires.gl"]
@@ -260,7 +260,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.ob", "wires.w1", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.y2", "wires.gl"]
@@ -277,7 +277,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.w1", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.y2", "wires.gl"]
@@ -294,7 +294,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.y2", "wires.gl"]
@@ -311,7 +311,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.w1", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.y2", "wires.gl"]
@@ -328,7 +328,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.w1", "wires.e", "wires.pek", "wires.w2", "wires.aux", "wires.y2", "wires.gl"]
@@ -345,7 +345,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.w1", "wires.e", "wires.di", "wires.w2", "wires.aux", "wires.y2", "wires.gl"]
@@ -362,7 +362,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.w1", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.y2", "wires.gl"]
@@ -379,7 +379,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.w1", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.gl"]
@@ -396,7 +396,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.w1", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.y2"]
@@ -464,7 +464,7 @@
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_input_object",
+            "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
             "reference": ["wires_relay.y1", "wires_relay.y2_gl", "wires_relay.w2_aux", "wires_relay.e", "wires_relay.g", "wires_relay.ob"]
@@ -1385,7 +1385,7 @@
             "access_mode": "RW",
             "data_type": "NUMBER",
             "value_type": "FLOAT",
-            "bacnet_type": "analog_input_object",
+            "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
         },

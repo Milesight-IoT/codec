@@ -71,7 +71,7 @@
             "access_mode": "RW",
             "data_type": "NUMBER",
             "value_type": "FLOAT",
-            "bacnet_type": "analog_input_object",
+            "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 62,
             "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
         },
