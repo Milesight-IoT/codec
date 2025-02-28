@@ -91,6 +91,10 @@ function milesight(bytes) {
     return decoded;
 }
 
+function readUInt8(bytes) {
+    return bytes & 0xff;
+}
+
 function readUInt16LE(bytes) {
     var value = (bytes[1] << 8) + bytes[0];
     return value & 0xffff;
