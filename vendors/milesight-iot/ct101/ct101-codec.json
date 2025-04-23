@@ -42,36 +42,15 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "device_status",
-            "name": "Device Status",
-            "value": "1",
-            "unit": "",
-            "access_mode": "R",
-            "data_type": "BOOL",
-            "value_type": "UINT8",
-            "values": [
-                { "value": 0, "name": "Off" },
-                { "value": 1, "name": "On" }
-            ],
-            "bacnet_type": "binary_input_object",
-            "bacnet_unit_type_id": 95,
-            "bacnet_unit_type": "UNITS_NO_UNITS"
-        },
-        {
-            "id": "lorawan_class",
-            "name": "LoRaWAN Class Type",
+            "id": "tsl_version",
+            "name": "TSL Version",
             "value": "",
             "unit": "",
             "access_mode": "R",
-            "data_type": "ENUM",
-            "value_type": "UINT8",
-            "values": [
-                { "value": 0, "name": "ClassA" },
-                { "value": 1, "name": "ClassB" },
-                { "value": 2, "name": "ClassC" },
-                { "value": 3, "name": "ClassCtoB" }
-            ],
-            "bacnet_type": "multistate_value_object",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 6,
+            "bacnet_type": "character_string_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -85,6 +64,56 @@
             "value_type": "STRING",
             "max_length": 16,
             "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lorawan_class",
+            "name": "LoRaWAN Class Type",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "Class A" },
+                { "value": 1, "name": "Class B" },
+                { "value": 2, "name": "Class C" },
+                { "value": 3, "name": "Class CtoB" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "reset_event",
+            "name": "Reset Event",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "normal" },
+                { "value": 1, "name": "reset" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "device_status",
+            "name": "Device Status",
+            "value": "1",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "off" },
+                { "value": 1, "name": "on" }
+            ],
+            "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
@@ -111,6 +140,23 @@
             "bacnet_type": "analog_input_object",
             "bacnet_unit_type_id": 3,
             "bacnet_unit_type": "UNITS_AMPERES"
+        },
+        {
+            "id": "current_sensor_status",
+            "name": "Current Sensor Status",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "normal" },
+                { "value": 1, "name": "over range alarm" },
+                { "value": 2, "name": "read failed" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
             "id": "current_max",
@@ -141,23 +187,270 @@
             "name": "Current Alarm",
             "value": "",
             "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 1, "name": "current threshold alarm" },
+                { "value": 2, "name": "current threshold alarm release" },
+                { "value": 4, "name": "current over range alarm" },
+                { "value": 5, "name": "current threshold alarm, current over range alarm" },
+                { "value": 6, "name": "current threshold alarm release, current over range alarm" },
+                { "value": 8, "name": "current over range alarm release" },
+                { "value": 9, "name": "current threshold alarm, current over range alarm release" },
+                { "value": 10, "name": "current threshold alarm release, current over range alarm release" },
+                { "value": 65535, "name": "read error" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "INT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "temperature_sensor_status",
+            "name": "Temperature Sensor Status",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "normal" },
+                { "value": 1, "name": "over range alarm" },
+                { "value": 2, "name": "read failed" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_alarm",
+            "name": "Temperature Alarm",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "temperature threshold alarm release" },
+                { "value": 1, "name": "temperature threshold alarm" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "reboot",
+            "name": "Reboot",
+            "value": "",
+            "unit": "",
+            "access_mode": "W",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "no" },
+                { "value": 1, "name": "yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "report_interval",
+            "name": "Report Interval",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES"
+        },
+        {
+            "id": "report_status",
+            "name": "Report Status",
+            "value": "",
+            "unit": "",
+            "access_mode": "W",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "no" },
+                { "value": 1, "name": "yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "clear_current_cumulative",
+            "name": "Clear Current Cumulative",
+            "value": "",
+            "unit": "",
+            "access_mode": "W",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "no" },
+                { "value": 1, "name": "yes" }
+            ],
+            "bacnet_type": "binary_output_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "current_threshold_alarm_config.condition",
+            "name": "Current Threshold Alarm Config (Condition)",
+            "value": "",
+            "unit": "",
             "access_mode": "RW",
             "data_type": "ENUM",
             "value_type": "UINT8",
             "values": [
-                { "value": 1, "name": "Threshold Alarm" },
-                { "value": 2, "name": "Threshold Alarm Release" },
-                { "value": 4, "name": "Over Range Alarm" },
-                { "value": 5, "name": "Threshold Alarm, Over Range Alarm" },
-                { "value": 6, "name": "Threshold Alarm Release, Over Range Alarm" },
-                { "value": 8, "name": "Over Range Alarm Release" },
-                { "value": 9, "name": "Threshold Alarm, Over Range Alarm Release" },
-                { "value": 10, "name": "Threshold Alarm Release, Over Range Alarm Release" },
-                { "value": 65535, "name": "Read Error" }
+                { "value": 0, "name": "disable" },
+                { "value": 1, "name": "below" },
+                { "value": 2, "name": "above" },
+                { "value": 3, "name": "between" },
+                { "value": 4, "name": "outside" }
             ],
-            "bacnet_type": "multistate_input_object",
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["current_threshold_alarm_config.condition", "current_threshold_alarm_config.min_threshold", "current_threshold_alarm_config.max_threshold", "current_threshold_alarm_config.alarm_interval", "current_threshold_alarm_config.alarm_counts"]
+        },
+        {
+            "id": "current_threshold_alarm_config.min_threshold",
+            "name": "Current Threshold Alarm Config (Min Threshold)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["current_threshold_alarm_config.condition", "current_threshold_alarm_config.max_threshold", "current_threshold_alarm_config.min_threshold", "current_threshold_alarm_config.alarm_interval", "current_threshold_alarm_config.alarm_counts"]
+        },
+        {
+            "id": "current_threshold_alarm_config.max_threshold",
+            "name": "Current Threshold Alarm Config (Max Threshold)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["current_threshold_alarm_config.condition", "current_threshold_alarm_config.min_threshold", "current_threshold_alarm_config.max_threshold", "current_threshold_alarm_config.alarm_interval", "current_threshold_alarm_config.alarm_counts"]
+        },
+        {
+            "id": "current_threshold_alarm_config.alarm_interval",
+            "name": "Current Threshold Alarm Config (Alarm Interval)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["current_threshold_alarm_config.condition", "current_threshold_alarm_config.min_threshold", "current_threshold_alarm_config.max_threshold", "current_threshold_alarm_config.alarm_interval", "current_threshold_alarm_config.alarm_counts"]
+        },
+        {
+            "id": "current_threshold_alarm_config.alarm_counts",
+            "name": "Current Threshold Alarm Config (Alarm Counts)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["current_threshold_alarm_config.condition", "current_threshold_alarm_config.min_threshold", "current_threshold_alarm_config.max_threshold", "current_threshold_alarm_config.alarm_interval", "current_threshold_alarm_config.alarm_counts"]
+        },
+        {
+            "id": "temperature_threshold_alarm_config.condition",
+            "name": "Temperature Threshold Alarm Config (Condition)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "disable" },
+                { "value": 1, "name": "below" },
+                { "value": 2, "name": "above" },
+                { "value": 3, "name": "between" },
+                { "value": 4, "name": "outside" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_threshold_alarm_config.condition", "temperature_threshold_alarm_config.min_threshold", "temperature_threshold_alarm_config.max_threshold"]
+        },
+        {
+            "id": "temperature_threshold_alarm_config.min_threshold",
+            "name": "Temperature Threshold Alarm Config (Min Threshold)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_threshold_alarm_config.condition", "temperature_threshold_alarm_config.min_threshold", "temperature_threshold_alarm_config.max_threshold"]
+        },
+        {
+            "id": "temperature_threshold_alarm_config.max_threshold",
+            "name": "Temperature Threshold Alarm Config (Max Threshold)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["temperature_threshold_alarm_config.condition", "temperature_threshold_alarm_config.min_threshold", "temperature_threshold_alarm_config.max_threshold"]
+        },
+        {
+            "id": "alarm_report_counts",
+            "name": "Alarm Report Counts",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "alarm_report_interval",
+            "name": "Alarm Report Interval",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 72,
+            "bacnet_unit_type": "UNITS_MINUTES"
         }
     ]
 }

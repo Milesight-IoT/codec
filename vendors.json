@@ -5,7 +5,7 @@
             "name": "Milesight IoT",
             "logo": "vendors/milesight-iot/logo.png",
             "website": "https://www.milesight-iot.com",
-            "description": "Better Inside, More in Sight",
+            "description": "Make Sensing Matter",
             "oui": "24e124",
             "devices": "vendors/milesight-iot/devices.json"
         }

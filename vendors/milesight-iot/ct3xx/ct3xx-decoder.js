@@ -1,9 +1,10 @@
+
 /**
  * Payload Decoder
  *
  * Copyright 2025 Milesight IoT
  *
- * @product CT101 / CT103 / CT105
+ * @product CT303 / CT305 / CT310
  */
 var RAW_VALUE = 0x01;
 
@@ -22,6 +23,10 @@ function Decode(fPort, bytes) {
 function Decoder(bytes, port) {
     return milesightDeviceDecode(bytes);
 }
+
+var current_total_chns = [0x03, 0x05, 0x07];
+var current_chns = [0x04, 0x06, 0x08];
+var current_alarm_chns = [0x84, 0x86, 0x88];
 
 function milesightDeviceDecode(bytes) {
     var decoded = {};
@@ -70,17 +75,19 @@ function milesightDeviceDecode(bytes) {
             i += 1;
         }
         // TOTAL CURRENT
-        else if (channel_id === 0x03 && channel_type === 0x97) {
-            decoded.total_current = readUInt32LE(bytes.slice(i, i + 4)) / 100;
+        else if (includes(current_total_chns, channel_id) && channel_type === 0x97) {
+            var current_total_chn_name = "current_chn" + (current_total_chns.indexOf(channel_id) + 1) + "_total";
+            decoded[current_total_chn_name] = readUInt32LE(bytes.slice(i, i + 4)) / 100;
             i += 4;
         }
         // CURRENT
-        else if (channel_id === 0x04 && channel_type === 0x98) {
+        else if (includes(current_chns, channel_id) && channel_type === 0x99) {
+            var current_alarm_chn_name = "current_chn" + (current_chns.indexOf(channel_id) + 1);
             var current_value = readUInt16LE(bytes.slice(i, i + 2));
             if (current_value === 0xffff) {
-                decoded.current_sensor_status = readSensorStatus(2);
+                decoded[current_alarm_chn_name + "_sensor_status"] = readSensorStatus(2);
             } else {
-                decoded.current = current_value / 100;
+                decoded[current_alarm_chn_name] = current_value / 10;
             }
             i += 2;
         }
@@ -97,11 +104,12 @@ function milesightDeviceDecode(bytes) {
             i += 2;
         }
         // CURRENT ALARM
-        else if (channel_id === 0x84 && channel_type === 0x98) {
-            decoded.current_max = readUInt16LE(bytes.slice(i, i + 2)) / 100;
-            decoded.current_min = readUInt16LE(bytes.slice(i + 2, i + 4)) / 100;
-            decoded.current = readUInt16LE(bytes.slice(i + 4, i + 6)) / 100;
-            decoded.current_alarm = readCurrentAlarm(bytes[i + 6]);
+        else if (includes(current_alarm_chns, channel_id) && channel_type === 0x99) {
+            var current_alarm_chn_name = "current_chn" + (current_alarm_chns.indexOf(channel_id) + 1);
+            decoded[current_alarm_chn_name + "_max"] = readUInt16LE(bytes.slice(i, i + 2)) / 10;
+            decoded[current_alarm_chn_name + "_min"] = readUInt16LE(bytes.slice(i + 2, i + 4)) / 10;
+            decoded[current_alarm_chn_name] = readUInt16LE(bytes.slice(i + 4, i + 6)) / 10;
+            decoded[current_alarm_chn_name + "_alarm"] = readCurrentAlarm(bytes[i + 6]);
             i += 7;
         }
         // TEMPERATURE ALARM
@@ -135,13 +143,14 @@ function handle_downlink_response(channel_type, bytes, offset) {
         case 0x06:
             var value = readUInt8(bytes[offset]);
             var channel_value = (value >>> 3) & 0x07;
-            if (channel_value === 0x01) {
-                decoded.current_threshold_alarm_config = {};
-                decoded.current_threshold_alarm_config.condition = readConditionType(value & 0x07);
-                decoded.current_threshold_alarm_config.min_threshold = readUInt16LE(bytes.slice(offset + 1, offset + 3));
-                decoded.current_threshold_alarm_config.max_threshold = readUInt16LE(bytes.slice(offset + 3, offset + 5));
-                decoded.current_threshold_alarm_config.alarm_interval = readUInt16LE(bytes.slice(offset + 5, offset + 7));
-                decoded.current_threshold_alarm_config.alarm_counts = readUInt16LE(bytes.slice(offset + 7, offset + 9));
+            if (channel_value === 0x01 || channel_value === 0x02 || channel_value === 0x03) {
+                var current_threshold_alarm_config_name = "current_chn" + (channel_value) + "_threshold_alarm_config";
+                decoded[current_threshold_alarm_config_name] = {};
+                decoded[current_threshold_alarm_config_name].condition = readConditionType(value & 0x07);
+                decoded[current_threshold_alarm_config_name].min_threshold = readUInt16LE(bytes.slice(offset + 1, offset + 3));
+                decoded[current_threshold_alarm_config_name].max_threshold = readUInt16LE(bytes.slice(offset + 3, offset + 5));
+                decoded[current_threshold_alarm_config_name].alarm_interval = readUInt16LE(bytes.slice(offset + 5, offset + 7));
+                decoded[current_threshold_alarm_config_name].alarm_counts = readUInt16LE(bytes.slice(offset + 7, offset + 9));
             } else if (channel_value === 0x04) {
                 decoded.temperature_threshold_alarm_config = {};
                 decoded.temperature_threshold_alarm_config.condition = readConditionType(value & 0x07);
@@ -151,7 +160,9 @@ function handle_downlink_response(channel_type, bytes, offset) {
             offset += 9;
             break;
         case 0x27:
-            decoded.clear_current_cumulative = readYesNoStatus(1);
+            var index = readUInt8(bytes[offset]);
+            var clear_current_cumulative_name = "clear_current_chn" + index + "_cumulative";
+            decoded[clear_current_cumulative_name] = readYesNoStatus(1);
             offset += 1;
             break;
         case 0x8e:
@@ -242,14 +253,14 @@ function readCurrentAlarm(value) {
     return event;
 }
 
+function readConditionType(value) {
+    var condition_map = { 0: "disable", 1: "below", 2: "above", 3: "between", 4: "outside" };
+    return getValue(condition_map, value);
+}
+
 function readTemperatureAlarm(type) {
     var alarm_map = { 0: "temperature threshold alarm release", 1: "temperature threshold alarm" };
     return getValue(alarm_map, type);
-}
-
-function readConditionType(type) {
-    var condition_map = { 0: "disable", 1: "below", 2: "above", 3: "between", 4: "outside" };
-    return getValue(condition_map, type);
 }
 
 function readUInt8(bytes) {
@@ -288,6 +299,16 @@ function readFloatLE(bytes) {
     var m = e === 0 ? (bits & 0x7fffff) << 1 : (bits & 0x7fffff) | 0x800000;
     var f = sign * m * Math.pow(2, e - 150);
     return f;
+}
+
+function includes(items, value) {
+    var size = items.length;
+    for (var i = 0; i < size; i++) {
+        if (items[i] == value) {
+            return true;
+        }
+    }
+    return false;
 }
 
 function getValue(map, key) {

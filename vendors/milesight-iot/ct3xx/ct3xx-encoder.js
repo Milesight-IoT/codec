@@ -3,7 +3,7 @@
  *
  * Copyright 2025 Milesight IoT
  *
- * @product CT101 / CT103 / CT105
+ * @product CT303 / CT305 / CT310
  */
 var RAW_VALUE = 0x01;
 
@@ -35,8 +35,14 @@ function milesightDeviceEncode(payload) {
     if ("report_status" in payload) {
         encoded = encoded.concat(reportStatus(payload.report_status));
     }
-    if ("clear_current_cumulative" in payload) {
-        encoded = encoded.concat(clearCurrentCumulativeValue(payload.clear_current_cumulative));
+    if ("clear_current_chn1_cumulative" in payload) {
+        encoded = encoded.concat(clearCurrentCumulativeValue(1, payload.clear_current_chn1_cumulative));
+    }
+    if ("clear_current_chn2_cumulative" in payload) {
+        encoded = encoded.concat(clearCurrentCumulativeValue(2, payload.clear_current_chn2_cumulative));
+    }
+    if ("clear_current_chn3_cumulative" in payload) {
+        encoded = encoded.concat(clearCurrentCumulativeValue(3, payload.clear_current_chn3_cumulative));
     }
     if ("alarm_report_counts" in payload) {
         encoded = encoded.concat(alarmReportCounts(payload.alarm_report_counts));
@@ -44,8 +50,14 @@ function milesightDeviceEncode(payload) {
     if ("alarm_report_interval" in payload) {
         encoded = encoded.concat(alarmReportInterval(payload.alarm_report_interval));
     }
-    if ("current_threshold_alarm_config" in payload) {
-        encoded = encoded.concat(setCurrentThresholdAlarmConfig(payload.current_threshold_alarm_config));
+    if ("current_chn1_threshold_alarm_config" in payload) {
+        encoded = encoded.concat(setCurrentThresholdAlarmConfig(1, payload.current_chn1_threshold_alarm_config));
+    }
+    if ("current_chn2_threshold_alarm_config" in payload) {
+        encoded = encoded.concat(setCurrentThresholdAlarmConfig(2, payload.current_chn2_threshold_alarm_config));
+    }
+    if ("current_chn3_threshold_alarm_config" in payload) {
+        encoded = encoded.concat(setCurrentThresholdAlarmConfig(3, payload.current_chn3_threshold_alarm_config));
     }
     if ("temperature_threshold_alarm_config" in payload) {
         encoded = encoded.concat(setTemperatureThresholdAlarmConfig(payload.temperature_threshold_alarm_config));
@@ -74,15 +86,12 @@ function reboot(reboot) {
 
 /**
  * set report interval
- * @param {number} report_interval unit: minute, range: [1, 1440]
+ * @param {number} report_interval unit: minute
  * @example { "report_interval": 20 }
  */
 function setReportInterval(report_interval) {
     if (typeof report_interval !== "number") {
         throw new Error("report_interval must be a number");
-    }
-    if (report_interval < 1 || report_interval > 1440) {
-        throw new Error("report_interval must be between 1 and 1440");
     }
 
     var buffer = new Buffer(5);
@@ -113,33 +122,35 @@ function reportStatus(report_status) {
 
 /**
  * clear current cumulative value
+ * @param {number} index
  * @param {number} clear_current_cumulative values: (0: no, 1: yes)
- * @example { "clear_current_cumulative": 1 }
+ * @example { "clear_current_chn1_cumulative": 1 }
  */
-function clearCurrentCumulativeValue(clear_current_cumulative) {
+function clearCurrentCumulativeValue(index, clear_current_cumulative) {
     var yes_no_map = { 0: "no", 1: "yes" };
     var yes_no_values = getValues(yes_no_map);
     if (yes_no_values.indexOf(clear_current_cumulative) === -1) {
-        throw new Error("clear_current_cumulative must be one of " + yes_no_values.join(", "));
+        throw new Error("clear_current_chn" + index + "_cumulative must be one of " + yes_no_values.join(", "));
     }
 
     if (getValue(yes_no_map, clear_current_cumulative) === 0) {
         return [];
     }
-    return [0xff, 0x27, 0x01];
+    return [0xff, 0x27, index];
 }
 
 /**
  * set current threshold alarm config
+ * @param {number} index
  * @param {object} current_threshold_alarm_config
  * @param {number} current_threshold_alarm_config.condition values: (0: disable, 1: below, 2: above, 3: between, 4: outside)
  * @param {number} current_threshold_alarm_config.min_threshold unit: A
  * @param {number} current_threshold_alarm_config.max_threshold unit: A
  * @param {number} current_threshold_alarm_config.alarm_interval unit: minute
  * @param {number} current_threshold_alarm_config.alarm_counts
- * @example { "current_threshold_alarm_config": { "condition": 1, "min_threshold": 100, "max_threshold": 200 } }
+ * @example { "current_chn1_threshold_alarm_config": { "condition": 1, "min_threshold": 100, "max_threshold": 200 } }
  */
-function setCurrentThresholdAlarmConfig(current_threshold_alarm_config) {
+function setCurrentThresholdAlarmConfig(index, current_threshold_alarm_config) {
     var condition = current_threshold_alarm_config.condition;
     var min_threshold = current_threshold_alarm_config.min_threshold;
     var max_threshold = current_threshold_alarm_config.max_threshold;
@@ -149,11 +160,11 @@ function setCurrentThresholdAlarmConfig(current_threshold_alarm_config) {
     var condition_map = { 0: "disable", 1: "below", 2: "above", 3: "between", 4: "outside" };
     var condition_values = getValues(condition_map);
     if (condition_values.indexOf(condition) === -1) {
-        throw new Error("current_threshold_alarm_config.condition must be one of " + condition_values.join(", "));
+        throw new Error("current_chn" + index + "_threshold_alarm_config.condition must be one of " + condition_values.join(", "));
     }
 
     var data = 0x00;
-    data |= 0x01 << 3; // phrase A
+    data |= index << 3; // phrase A/B/C
     data |= getValue(condition_map, condition) << 0;
 
     var buffer = new Buffer(11);
