@@ -221,9 +221,6 @@ function setRetransmitEnable(retransmit_enable) {
  * @param {number} retransmit_interval unit: seconds
  */
 function setRetransmitInterval(retransmit_interval) {
-    if (typeof type !== "number") {
-        throw new Error("type must be a number");
-    }
     if (typeof retransmit_interval !== "number") {
         throw new Error("retransmit_interval must be a number");
     }
