@@ -1221,6 +1221,18 @@
             "encoder_script": "vendors/milesight-iot/wt201/wt201-encoder.js"
         },
         {
+            "id": "wt201_v2",
+            "name": "WT201 V2",
+            "description": "Smart Radiator Thermostat",
+            "catalog": "wt",
+            "sn": "6408",
+            "deveui": "24e124408",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/wt201-v2/wt201-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/wt201-v2/wt201-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/wt201-v2/wt201-v2-encoder.js"
+        },
+        {
             "id": "wt301",
             "name": "WT301",
             "description": "Smart Fan Coil Thermostat",
