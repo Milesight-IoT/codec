@@ -604,9 +604,9 @@
             "sn": "6433",
             "deveui": "24e124433",
             "device_profile": ["ClassA-OTAA"],
-            "codec": "vendors/milesight-iot/ts201_v2/ts201_v2-codec.json",
-            "decoder_script": "vendors/milesight-iot/ts201_v2/ts201_v2-decoder.js",
-            "encoder_script": "vendors/milesight-iot/ts201_v2/ts201_v2-encoder.js"
+            "codec": "vendors/milesight-iot/ts201-v2/ts201-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ts201-v2/ts201-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ts201-v2/ts201-v2-encoder.js"
         },
         {
             "id": "ts301",
