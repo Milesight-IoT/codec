@@ -409,17 +409,16 @@
             "name": "Wires Relay (W1)",
             "value": "",
             "unit": "",
-            "access_mode": "RW",
+            "access_mode": "R",
             "data_type": "BOOL",
             "value_type": "UINT8",
             "values": [
                 { "value": 0, "name": "off" },
                 { "value": 1, "name": "on" }
             ],
-            "bacnet_type": "binary_value_object",
+            "bacnet_type": "binary_input_object",
             "bacnet_unit_type_id": 95,
-            "bacnet_unit_type": "UNITS_NO_UNITS",
-            "reference": ["wires_relay.y1", "wires_relay.y2_gl", "wires_relay.w2_aux", "wires_relay.e", "wires_relay.g", "wires_relay.ob"]
+            "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
             "id": "wires_relay.w2_aux",
