@@ -201,8 +201,8 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "fetch_history_data",
-            "name": "Fetch History Data",
+            "id": "fetch_history",
+            "name": "Fetch History",
             "value": "",
             "unit": "",
             "access_mode": "W",
@@ -212,8 +212,8 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "fetch_history_data.start_time",
-            "name": "Fetch History Data Start Time",
+            "id": "fetch_history.start_time",
+            "name": "Fetch History (Start Time)",
             "value": "",
             "unit": "s",
             "access_mode": "W",
@@ -222,11 +222,11 @@
             "bacnet_type": "analog_output_object",
             "bacnet_unit_type_id": 73,
             "bacnet_unit_type": "UNITS_SECONDS",
-            "reference": ["fetch_history_data.end_time"]
+            "reference": ["fetch_history.end_time"]
         },
         {
-            "id": "fetch_history_data.end_time",
-            "name": "Fetch History Data End Time",
+            "id": "fetch_history.end_time",
+            "name": "Fetch History (End Time)",
             "value": "",
             "unit": "s",
             "access_mode": "W",
@@ -235,11 +235,11 @@
             "bacnet_type": "analog_output_object",
             "bacnet_unit_type_id": 73,
             "bacnet_unit_type": "UNITS_SECONDS",
-            "reference": ["fetch_history_data.start_time"]
+            "reference": ["fetch_history.start_time"]
         },
         {
-            "id": "clear_history_data",
-            "name": "Clear History Data",
+            "id": "clear_history",
+            "name": "Clear History",
             "value": "",
             "unit": "",
             "access_mode": "W",
@@ -282,8 +282,8 @@
             "bacnet_unit_type": "UNITS_SECONDS"
         },
         {
-            "id": "stop_retransmit",
-            "name": "Stop Retransmit",
+            "id": "stop_transmit",
+            "name": "Stop Transmit",
             "value": "",
             "unit": "",
             "access_mode": "W",
