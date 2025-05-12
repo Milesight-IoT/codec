@@ -1025,7 +1025,7 @@
             "bacnet_unit_type": "UNITS_SECONDS"
         },
         {
-            "id": "fetch_history_data.start_time",
+            "id": "fetch_history.start_time",
             "name": "Fetch History Data (Start Time)",
             "value": "",
             "unit": "",
@@ -1035,10 +1035,10 @@
             "bacnet_type": "analog_output_object",
             "bacnet_unit_type_id": 73,
             "bacnet_unit_type": "UNITS_SECONDS",
-            "reference": ["fetch_history_data.end_time"]
+            "reference": ["fetch_history.end_time"]
         },
         {
-            "id": "fetch_history_data.end_time",
+            "id": "fetch_history.end_time",
             "name": "Fetch History Data (End Time)",
             "value": "",
             "unit": "",
@@ -1048,7 +1048,7 @@
             "bacnet_type": "analog_output_object",
             "bacnet_unit_type_id": 73,
             "bacnet_unit_type": "UNITS_SECONDS",
-            "reference": ["fetch_history_data.start_time"]
+            "reference": ["fetch_history.start_time"]
         },
         {
             "id": "stop_transmit",
