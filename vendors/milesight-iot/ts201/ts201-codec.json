@@ -271,8 +271,8 @@
             "bacnet_unit_type": "UNITS_SECONDS"
         },
         {
-            "id": "stop_retransmit",
-            "name": "Stop Retransmit",
+            "id": "stop_transmit",
+            "name": "Stop Transmit",
             "value": "",
             "unit": "",
             "access_mode": "W",
