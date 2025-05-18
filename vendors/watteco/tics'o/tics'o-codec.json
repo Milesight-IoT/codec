@@ -1,0 +1,79 @@
+{
+    "version": "1.0.0",
+    "bytes": "110a00540000411300000001038000200f00000000000100000230",
+    "object": [
+        {
+            "id": "ISOUSC",
+            "name": "Subscribed Current",
+            "value": "15",
+            "unit": "A",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 3,
+            "bacnet_unit_type": "UNITS_AMPERES"
+        },
+        {
+            "id": "IINST1",
+            "name": "Instantaneous Current Phase 1",
+            "value": "0",
+            "unit": "A",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 3,
+            "bacnet_unit_type": "UNITS_AMPERES"
+        },
+        {
+            "id": "IINST2",
+            "name": "Instantaneous Current Phase 2",
+            "value": "0",
+            "unit": "A",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 3,
+            "bacnet_unit_type": "UNITS_AMPERES"
+        },
+        {
+            "id": "IINST3",
+            "name": "Instantaneous Current Phase 3",
+            "value": "1",
+            "unit": "A",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 3,
+            "bacnet_unit_type": "UNITS_AMPERES"
+        },
+        {
+            "id": "PAPP",
+            "name": "Apparent Power",
+            "value": "560",
+            "unit": "VA",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 8,
+            "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+        },
+        {
+            "id": "_TICFrameType",
+            "name": "TIC Frame Type",
+            "value": "CBE/Historique",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 20,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

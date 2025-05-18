@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "tics'o",
+            "name": "TICS'O",
+            "description": "Transforms ENEDIS meter into LoRaWAN",
+            "catalog": "tics'o",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/watteco/tics'o/tics'o-codec.json",
+            "decoder_script": "vendors/watteco/tics'o/tics'o-decoder.js",
+            "encoder_script": "vendors/watteco/tics'o/tics'o-encoder.js"
+        }
+    ]
+}
