@@ -8,6 +8,15 @@
             "description": "Make Sensing Matter",
             "oui": "24e124",
             "devices": "vendors/milesight-iot/devices.json"
+        },
+        {
+            "id": "watteco",
+            "name": "Watteco",
+            "logo": "",
+            "website": "",
+            "description": "",
+            "oui": "",
+            "devices": "vendors/watteco/devices.json"
         }
     ]
 }
