@@ -259,19 +259,19 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
-            "id": "plan_event",
-            "name": "Plan Event",
+            "id": "plan_type",
+            "name": "Plan Type",
             "value": "",
             "unit": "",
-            "access_mode": "R",
+            "access_mode": "RW",
             "data_type": "ENUM",
             "value_type": "UINT8",
             "values": [
-                { "value": 0, "name": "not executed" },
-                { "value": 1, "name": "wake" },
-                { "value": 2, "name": "away" },
-                { "value": 3, "name": "home" },
-                { "value": 4, "name": "sleep" }
+                { "value": 0, "name": "wake" },
+                { "value": 1, "name": "away" },
+                { "value": 2, "name": "home" },
+                { "value": 3, "name": "sleep" },
+                { "value": 255, "name": "not executed" }
             ],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
@@ -1280,24 +1280,6 @@
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 72,
             "bacnet_unit_type": "UNITS_MINUTES"
-        },
-        {
-            "id": "plan_mode",
-            "name": "Plan Mode",
-            "value": "",
-            "unit": "",
-            "access_mode": "RW",
-            "data_type": "ENUM",
-            "value_type": "UINT8",
-            "values": [
-                { "value": 1, "name": "wake" },
-                { "value": 2, "name": "away" },
-                { "value": 3, "name": "home" },
-                { "value": 4, "name": "sleep" }
-            ],
-            "bacnet_type": "multistate_value_object",
-            "bacnet_unit_type_id": 95,
-            "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
             "id": "card_config.enable",

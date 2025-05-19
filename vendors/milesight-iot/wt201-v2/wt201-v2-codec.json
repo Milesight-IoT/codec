@@ -1332,7 +1332,8 @@
                 { "value": 3, "name": "sleep" },
                 { "value": 4, "name": "occupied" },
                 { "value": 5, "name": "vacant" },
-                { "value": 6, "name": "eco" }
+                { "value": 6, "name": "eco" },
+                { "value": 255, "name": "not executed" }
             ],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
