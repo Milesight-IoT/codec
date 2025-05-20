@@ -248,6 +248,9 @@ function handle_downlink_response(channel_type, bytes, offset) {
                 }
             }
             offset += 2;
+
+            // ODM
+            decoded.child_locks = decoded.child_lock_config.power_button;
             break;
         case 0x28:
             var report_status_map = { 0: "plan", 1: "periodic", 2: "target_temperature_range" };
@@ -326,8 +329,11 @@ function handle_downlink_response(channel_type, bytes, offset) {
             decoded.temperature_level_up_condition = {};
             decoded.temperature_level_up_condition.type = readTemperatureLevelUpCondition(readUInt8(bytes[offset]));
             decoded.temperature_level_up_condition.time = readUInt8(bytes[offset + 1]);
-            decoded.temperature_level_up_condition.temperature_control_tolerance = readInt16LE(bytes.slice(offset + 2, offset + 4)) / 10;
+            decoded.temperature_level_up_condition.temperature_delta = readInt16LE(bytes.slice(offset + 2, offset + 4)) / 10;
             offset += 4;
+
+            // ODM
+            decoded.inter_stage_timer = decoded.temperature_level_up_condition.time;
             break;
         case 0xba:
             var enable_value = bytes[offset];
@@ -369,6 +375,9 @@ function handle_downlink_response(channel_type, bytes, offset) {
         case 0xc2:
             decoded.plan_type = readPlanType(readUInt8(bytes[offset]));
             offset += 1;
+
+            // ODM
+            decoded.occupancy_state = decoded.plan_type;
             break;
         case 0xc4:
             decoded.temperature_source_config = {};
@@ -528,11 +537,15 @@ function handle_downlink_response_ext(code, channel_type, bytes, offset) {
             offset += 1;
             break;
         case 0x42:
-            decoded.target_temperature_range = {};
-            decoded.target_temperature_range.temperature_control_mode = readTemperatureControlMode(readUInt8(bytes[offset]));
-            decoded.target_temperature_range.min = readInt16LE(bytes.slice(offset + 1, offset + 3)) / 10;
-            decoded.target_temperature_range.max = readInt16LE(bytes.slice(offset + 3, offset + 5)) / 10;
+            decoded.target_temperature_range_config = {};
+            decoded.target_temperature_range_config.temperature_control_mode = readTemperatureControlMode(readUInt8(bytes[offset]));
+            decoded.target_temperature_range_config.min = readInt16LE(bytes.slice(offset + 1, offset + 3)) / 10;
+            decoded.target_temperature_range_config.max = readInt16LE(bytes.slice(offset + 3, offset + 5)) / 10;
             offset += 5;
+
+            // ODM
+            var base_temperature = 20;
+            decoded.user_adjust_setpoint = decoded.target_temperature_range_config.max - base_temperature;
             break;
         case 0x43:
             decoded.temperature_level_up_down_delta = {};
@@ -599,6 +612,24 @@ function handle_downlink_response_ext(code, channel_type, bytes, offset) {
             decoded.single_temperature_plan_config = decoded.single_temperature_plan_config || [];
             decoded.single_temperature_plan_config.push(single_temperature_plan_config);
             offset += 7;
+
+            // ODM
+            if (single_temperature_plan_config.play_type === 4 && single_temperature_plan_config.temperature_control_mode === 2) {
+                decoded.occupied_cooling_setpoint = single_temperature_plan_config.target_temperature;
+                decoded.fan_mode = single_temperature_plan_config.fan_mode;
+            }
+            if (single_temperature_plan_config.play_type === 4 && single_temperature_plan_config.temperature_control_mode === 0) {
+                decoded.occupied_heating_setpoint = single_temperature_plan_config.target_temperature;
+                decoded.fan_mode = single_temperature_plan_config.fan_mode;
+            }
+            if (single_temperature_plan_config.play_type === 5 && single_temperature_plan_config.temperature_control_mode === 2) {
+                decoded.unoccupied_cooling_setpoint = single_temperature_plan_config.target_temperature;
+                decoded.fan_mode = single_temperature_plan_config.fan_mode;
+            }
+            if (single_temperature_plan_config.play_type === 5 && single_temperature_plan_config.temperature_control_mode === 0) {
+                decoded.unoccupied_heating_setpoint = single_temperature_plan_config.target_temperature;
+                decoded.fan_mode = single_temperature_plan_config.fan_mode;
+            }
             break;
         case 0x5d:
             var forbidden_control_bit_offset = { heat_enable: 0, em_heat_enable: 1, cool_enable: 2, auto_enable: 3 };

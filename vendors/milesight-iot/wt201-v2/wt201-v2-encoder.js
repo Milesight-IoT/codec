@@ -30,6 +30,194 @@ function Encoder(obj, port) {
 function milesightDeviceEncode(payload) {
     var encoded = [];
 
+    if ("occupied_cooling_setpoint" in payload && "fan_mode" in payload) {
+        var ocs_payload = {
+            plan_type: 4,
+            // dual_temperature_plan_config: [
+            //     {
+            //         type: 4,                     // occupied
+            //         temperature_control_mode: 2, // cooling
+            //         fan_mode: 0,                 // auto
+            //         cool_target_temperature: payload.occupied_cooling_setpoint,
+            //         cool_temperature_tolerance: 0
+            //     },
+            // ],
+            single_temperature_plan_config: [
+                {
+                    play_type: 4,                // occupied
+                    temperature_control_mode: 2, // cooling
+                    fan_mode: payload.fan_mode,  // auto
+                    target_temperature: payload.occupied_cooling_setpoint,
+                    target_temperature_tolerance: 1.3,
+                    temperature_control_tolerance: 0.5
+                },
+            ]
+        };
+        encoded = encoded.concat(setPlanType(ocs_payload.plan_type));
+        // encoded = encoded.concat(setPlanConfigWithDualTemperature(ocs_payload.dual_temperature_plan_config[0]));
+        encoded = encoded.concat(setPlanConfigWithSingleTemperature(ocs_payload.single_temperature_plan_config[0]));
+    }
+    if ("occupied_heating_setpoint" in payload && "fan_mode" in payload) {
+        var ohs_payload = {
+            plan_type: 4,
+            // dual_temperature_plan_config: [
+            //     {
+            //         type: 4,                     // occupied
+            //         temperature_control_mode: 0, // heating
+            //         fan_mode: 0,                 // auto
+            //         heat_target_temperature: payload.occupied_heating_setpoint,
+            //         heat_temperature_tolerance: 0
+            //     },
+            // ],
+            single_temperature_plan_config: [
+                {
+                    play_type: 4,                // occupied
+                    temperature_control_mode: 0, // heating
+                    fan_mode: payload.fan_mode,  // auto
+                    target_temperature: payload.occupied_heating_setpoint,
+                    target_temperature_tolerance: 1.3,
+                    temperature_control_tolerance: 0.5
+                },
+            ]
+        };
+        encoded = encoded.concat(setPlanType(ohs_payload.plan_type));
+        // encoded = encoded.concat(setPlanConfigWithDualTemperature(ohs_payload.dual_temperature_plan_config[0]));
+        encoded = encoded.concat(setPlanConfigWithSingleTemperature(ohs_payload.single_temperature_plan_config[0]));
+    }
+    if ("unoccupied_cooling_setpoint" in payload && "fan_mode" in payload) {
+        var ucs_payload = {
+            plan_type: 5,
+            // dual_temperature_plan_config: [
+            //     {
+            //         type: 5,                     // vacant
+            //         temperature_control_mode: 2, // cooling
+            //         fan_mode: 0,                 // auto
+            //         cool_target_temperature: payload.unoccupied_cooling_setpoint,
+            //         cool_temperature_tolerance: 0,
+            //         heat_target_temperature: payload.unoccupied_cooling_setpoint,
+            //         heat_temperature_tolerance: 0
+            //     },
+            // ],
+            single_temperature_plan_config: [
+                {
+                    play_type: 5,                // vacant
+                    temperature_control_mode: 2, // cooling
+                    fan_mode: payload.fan_mode,  // auto
+                    target_temperature: payload.unoccupied_cooling_setpoint,
+                    target_temperature_tolerance: 1.3,
+                    temperature_control_tolerance: 0.5
+                },
+            ]
+        };
+        encoded = encoded.concat(setPlanType(ucs_payload.plan_type));
+        // encoded = encoded.concat(setPlanConfigWithDualTemperature(ucs_payload.dual_temperature_plan_config[0]));
+        encoded = encoded.concat(setPlanConfigWithSingleTemperature(ucs_payload.single_temperature_plan_config[0]));
+    }
+    if ("unoccupied_heating_setpoint" in payload && "fan_mode" in payload) {
+        var uhs_payload = {
+            plan_type: 5,
+            // dual_temperature_plan_config: [
+            //     {
+            //         type: 5,                     // vacant
+            //         temperature_control_mode: 0, // heating
+            //         fan_mode: 0,                 // auto
+            //         cool_target_temperature: payload.unoccupied_heating_setpoint,
+            //         cool_temperature_tolerance: 0,
+            //         heat_target_temperature: payload.unoccupied_heating_setpoint,
+            //         heat_temperature_tolerance: 0,
+            //     },
+            // ],
+            single_temperature_plan_config: [
+                {
+                    play_type: 5,                // vacant
+                    temperature_control_mode: 0, // heating
+                    fan_mode: payload.fan_mode,  // auto
+                    target_temperature: payload.unoccupied_heating_setpoint,
+                    target_temperature_tolerance: 1.3,
+                    temperature_control_tolerance: 0.5
+                },
+            ]
+        };
+        encoded = encoded.concat(setPlanType(uhs_payload.plan_type));
+        // encoded = encoded.concat(setPlanConfigWithDualTemperature(uhs_payload.dual_temperature_plan_config[0]));
+        encoded = encoded.concat(setPlanConfigWithSingleTemperature(uhs_payload.single_temperature_plan_config[0]));
+    }
+    if ("tolerance" in payload) {
+        // TODO
+    }
+    if ("inter_stage_timer" in payload) {
+        var ist_payload = {
+            temperature_level_up_condition: {
+                type: 0, // TODO: heating or cooling ?
+                time: payload.inter_stage_timer,
+                temperature_delta: 1 // TODO:
+            }
+        }
+        encoded = encoded.concat(setTemperatureLevelUpCondition(ist_payload.temperature_level_up_condition));
+    }
+    if ("user_adjust_setpoint" in payload) {
+        var base_temperature = 20; // TODO:
+        var uas_payload = {
+            target_temperature_range_config: {
+                type: 0, // TODO: heating or cooling ?
+                min: base_temperature - payload.user_adjust_setpoint,
+                max: base_temperature + payload.user_adjust_setpoint
+            }
+        }
+        encoded = encoded.concat(setTargetTemperatureRangeConfig(uas_payload.target_temperature_range_config));
+    }
+    if ("child_locks" in payload) {
+        // TODO:
+        var cl_payload = {
+            child_lock_config: {
+                power_button: payload.child_locks,
+                up_button: payload.child_locks,
+                down_button: payload.child_locks,
+                fan_button: payload.child_locks,
+                mode_button: payload.child_locks,
+                reset_button: 0
+            }
+        }
+        encoded = encoded.concat(setChildLock(cl_payload.child_lock_config));
+    }
+    if ("occupancy_state" in payload) {
+        // TODO: Off ?
+        var os_payload = {
+            plan_type: payload.occupancy_state
+        }
+        encoded = encoded.concat(setPlanType(os_payload.plan_type));
+    }
+    // alias: temperature_control_mode
+    // if ("control_mode" in payload) {
+    //     encoded = encoded.concat(setTemperatureControlMode(payload.control_mode));
+    // }
+    // if ("fan_mode" in payload) {
+    //     encoded = encoded.concat(setFanMode(payload.fan_mode));
+    // }
+    // alias: ob_mode
+    // if ("ob_state" in payload) {
+    //     encoded = encoded.concat(setOBMode(payload.ob_state));
+    // }
+    if ("control_state" in payload) {
+        // TODO: ?
+    }
+    // if ("temperature" in payload) {
+    //     encoded = encoded.concat(setOutsideTemperature(payload.temperature));
+    // }
+    // if ("humidity" in payload) {
+    //     encoded = encoded.concat(setHumidity(payload.humidity));
+    // }
+    if ("wires" in payload) {
+        // TODO: ?
+        var w_payload = {
+            wires: { y1: 1, gh: 1, ob: 1, w1: 1, e: 1, di: 1, pek: 1, w2: 1, aux: 1, y2: 1, gl: 1 },
+            ob_mode: 0
+        }
+        encoded = encoded.concat(setWires(w_payload.wires, payload.ob_state));
+    }
+
+    /* ----- default settings --------- */
+
     if ("reboot" in payload) {
         encoded = encoded.concat(reboot(payload.reboot));
     }
@@ -608,13 +796,13 @@ function setTargetTemperatureRangeConfig(target_temperature_range_config) {
  * @param {object} temperature_level_up_condition
  * @param {number} temperature_level_up_condition.type values: (0: heat, 1: cool)
  * @param {number} temperature_level_up_condition.time unit: minute
- * @param {number} temperature_level_up_condition.temperature_control_tolerance unit: celsius
- * @example { "temperature_level_up_condition": { "type": 0, "time": 10, "temperature_control_tolerance": 1 } }
+ * @param {number} temperature_level_up_condition.temperature_delta unit: celsius
+ * @example { "temperature_level_up_condition": { "type": 0, "time": 10, "temperature_delta": 1 } }
  */
 function setTemperatureLevelUpCondition(temperature_level_up_condition) {
     var type = temperature_level_up_condition.type;
     var time = temperature_level_up_condition.time;
-    var temperature_control_tolerance = temperature_level_up_condition.temperature_control_tolerance;
+    var temperature_delta = temperature_level_up_condition.temperature_delta;
 
     var temperature_level_up_condition_type_map = { 0: "heat", 1: "cool" };
     var temperature_level_up_condition_type_values = getValues(temperature_level_up_condition_type_map);
@@ -624,8 +812,8 @@ function setTemperatureLevelUpCondition(temperature_level_up_condition) {
     if (typeof time !== "number") {
         throw new Error("temperature_level_up_condition.time must be a number");
     }
-    if (typeof temperature_control_tolerance !== "number") {
-        throw new Error("temperature_level_up_condition.temperature_control_tolerance must be a number");
+    if (typeof temperature_delta !== "number") {
+        throw new Error("temperature_level_up_condition.temperature_delta must be a number");
     }
 
     var buffer = new Buffer(5);
@@ -633,7 +821,7 @@ function setTemperatureLevelUpCondition(temperature_level_up_condition) {
     buffer.writeUInt8(0xb9);
     buffer.writeUInt8(getValue(temperature_level_up_condition_type_map, type));
     buffer.writeUInt8(time);
-    buffer.writeUInt8(temperature_control_tolerance * 10);
+    buffer.writeUInt8(temperature_delta * 10);
     return buffer.toBytes();
 }
 
@@ -1810,14 +1998,14 @@ function setTemperatureControlForbiddenConfig(temperature_control_forbidden_conf
 
 /**
  * set plan config (target temperature dual)
- * @param {object} dual_plan_config
- * @param {number} dual_plan_config.type values: (0: wake, 1: away, 2: home, 3: sleep, 4: occupied, 5: vacant, 6: eco)
- * @param {number} dual_plan_config.temperature_control_mode values: (0: heat, 1: em heat, 2: cool, 3: auto)
- * @param {number} dual_plan_config.fan_mode values: (0: auto, 1: on, 2: circulate)
- * @param {number} dual_plan_config.heat_target_temperature
- * @param {number} dual_plan_config.heat_temperature_tolerance
- * @param {number} dual_plan_config.cool_target_temperature
- * @param {number} dual_plan_config.cool_temperature_tolerance
+ * @param {object} dual_temperature_plan_config
+ * @param {number} dual_temperature_plan_config.type values: (0: wake, 1: away, 2: home, 3: sleep, 4: occupied, 5: vacant, 6: eco)
+ * @param {number} dual_temperature_plan_config.temperature_control_mode values: (0: heat, 1: em heat, 2: cool, 3: auto)
+ * @param {number} dual_temperature_plan_config.fan_mode values: (0: auto, 1: on, 2: circulate)
+ * @param {number} dual_temperature_plan_config.heat_target_temperature
+ * @param {number} dual_temperature_plan_config.heat_temperature_tolerance
+ * @param {number} dual_temperature_plan_config.cool_target_temperature
+ * @param {number} dual_temperature_plan_config.cool_temperature_tolerance
  * @example { "dual_temperature_plan_config": [{ "type": 0, "temperature_control_mode": 2, "fan_mode": 0, "heat_target_temperature": 20, "heat_temperature_tolerance": 1, "cool_target_temperature": 20, "cool_temperature_tolerance": 1 }]}
  */
 function setPlanConfigWithDualTemperature(dual_temperature_plan_config) {
