@@ -145,7 +145,6 @@
             "decoder_script": "vendors/milesight-iot/am319-hcho-ir/am319-hcho-ir-decoder.js",
             "encoder_script": "vendors/milesight-iot/am319-hcho-ir/am319-hcho-ir-encoder.js"
         },
-
         {
             "id": "am319_o3",
             "name": "AM319-O3",
@@ -463,6 +462,18 @@
             "codec": "vendors/milesight-iot/em400-udl/em400-udl-codec.json",
             "decoder_script": "vendors/milesight-iot/em400-udl/em400-udl-decoder.js",
             "encoder_script": "vendors/milesight-iot/em400-udl/em400-udl-encoder.js"
+        },
+        {
+            "id": "em410_rdl",
+            "name": "EM410-RDL",
+            "description": "Radar Distance/Level Sensor",
+            "catalog": "em400",
+            "sn": "6862",
+            "deveui": "24e124862",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/em410-rdl/em410-rdl-codec.json",
+            "decoder_script": "vendors/milesight-iot/em410-rdl/em410-rdl-decoder.js",
+            "encoder_script": "vendors/milesight-iot/em410-rdl/em410-rdl-encoder.js"
         },
         {
             "id": "em500_co2",
