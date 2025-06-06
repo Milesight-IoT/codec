@@ -245,7 +245,7 @@ function handle_downlink_response(channel_type, bytes, offset) {
                 decoded.batch_read_rules = {};
                 var data = readUInt16LE(bytes.slice(offset + 1, offset + 3));
                 for (var key in rule_bit_offset) {
-                    decoded.batch_read_rules[key] = readYesNo((data >>> rule_bit_offset[key]) & 0x01);
+                    decoded.batch_read_rules[key] = readYesNoStatus((data >>> rule_bit_offset[key]) & 0x01);
                 }
             }
             // batch enable rules
@@ -261,7 +261,7 @@ function handle_downlink_response(channel_type, bytes, offset) {
                 decoded.batch_remove_rules = {};
                 var data = readUInt16LE(bytes.slice(offset + 1, offset + 3));
                 for (var key in rule_bit_offset) {
-                    decoded.batch_remove_rules[key] = readYesNo((data >>> rule_bit_offset[key]) & 0x01);
+                    decoded.batch_remove_rules[key] = readYesNoStatus((data >>> rule_bit_offset[key]) & 0x01);
                 }
             }
             // enable single rule
@@ -274,7 +274,7 @@ function handle_downlink_response(channel_type, bytes, offset) {
             else if (type === 4) {
                 var rule_index = readUInt8(bytes[offset + 1]);
                 var rule_x_name = "rule_" + rule_index + "_remove";
-                decoded[rule_x_name] = readYesNo(bytes[offset + 2]);
+                decoded[rule_x_name] = readYesNoStatus(bytes[offset + 2]);
             }
             offset += 3;
             break;
@@ -282,7 +282,7 @@ function handle_downlink_response(channel_type, bytes, offset) {
             var rule_index = readUInt8(bytes[offset]);
             var rule_index_name = "rule_" + rule_index;
             decoded.query_rule_config = decoded.query_rule_config || {};
-            decoded.query_rule_config[rule_index_name] = readYesNo(1);
+            decoded.query_rule_config[rule_index_name] = readYesNoStatus(1);
             offset += 1;
             break;
         case 0x4d:
@@ -305,7 +305,7 @@ function handle_downlink_response(channel_type, bytes, offset) {
             var valve_index = readUInt8(bytes[offset]);
             var valve_index_name = "clear_valve_" + valve_index + "_pulse";
             // ignore the next byte
-            decoded[valve_index_name] = readYesNo(1);
+            decoded[valve_index_name] = readYesNoStatus(1);
             offset += 2;
             break;
         case 0x4f:
@@ -458,6 +458,11 @@ function readGpioStatus(status) {
 
 function readEnableStatus(status) {
     var status_map = { 0: "disable", 1: "enable" };
+    return getValue(status_map, status);
+}
+
+function readYesNoStatus(status) {
+    var status_map = { 0: "no", 1: "yes" };
     return getValue(status_map, status);
 }
 

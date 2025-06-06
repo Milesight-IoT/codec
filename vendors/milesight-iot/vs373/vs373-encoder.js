@@ -102,24 +102,24 @@ function milesightDeviceEncode(payload) {
         encoded = encoded.concat(setConfirmMode(payload.confirm_mode_enable));
     }
     if ("adr_enable" in payload) {
-        encoded = encoded.concat(setAdrEnable(payload.adr_enable));
+        encoded = encoded.concat(setADREnable(payload.adr_enable));
     }
     if ("d2d_key" in payload) {
-        encoded = encoded.concat(setD2dKey(payload.d2d_key));
+        encoded = encoded.concat(setD2DKey(payload.d2d_key));
     }
     if ("d2d_enable" in payload) {
-        encoded = encoded.concat(setD2dEnable(payload.d2d_enable));
+        encoded = encoded.concat(setD2DEnable(payload.d2d_enable));
     }
     if ("d2d_master_config" in payload) {
         for (var i = 0; i < payload.d2d_master_config.length; i++) {
             var config = payload.d2d_master_config[i];
-            encoded = encoded.concat(setD2dMasterConfig(config));
+            encoded = encoded.concat(setD2DMasterConfig(config));
         }
     }
     if ("d2d_slave_config" in payload) {
         for (var i = 0; i < payload.d2d_slave_config.length; i++) {
             var config = payload.d2d_slave_config[i];
-            encoded = encoded.concat(setD2dSlaveConfig(config));
+            encoded = encoded.concat(setD2DSlaveConfig(config));
         }
     }
     if ("timestamp" in payload) {
@@ -713,7 +713,7 @@ function setConfirmMode(confirm_mode_enable) {
  * @param {number} adr_enable values: (0: disable, 1: enable)
  * @example { "adr_enable": 1 }
  */
-function setADR(adr_enable) {
+function setADREnable(adr_enable) {
     var enable_map = { 0: "disable", 1: "enable" };
     var enable_values = getValues(enable_map);
     if (enable_values.indexOf(adr_enable) === -1) {

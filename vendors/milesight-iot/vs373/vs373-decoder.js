@@ -316,6 +316,11 @@ function hasResultFlag(code) {
     return code === 0xf8;
 }
 
+function readResultStatus(status) {
+    var status_map = { 0: "success", 1: "forbidden", 2: "invalid parameter" };
+    return getValue(status_map, status);
+}
+
 function readProtocolVersion(bytes) {
     var major = (bytes & 0xf0) >> 4;
     var minor = bytes & 0x0f;
