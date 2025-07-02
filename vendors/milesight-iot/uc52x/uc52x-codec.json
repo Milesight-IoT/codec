@@ -1283,7 +1283,7 @@
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 54,
             "bacnet_unit_type": "UNITS_KILOPASCALS",
-            "reference": ["pressure_1_calibration.enable"]
+            "reference": ["pressure_1_calibration_config.enable"]
         },
         {
             "id": "pressure_2_calibration_config.enable",

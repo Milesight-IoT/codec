@@ -512,7 +512,7 @@
             "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
-            "reference": ["distance_mutation_alarm_config.enable", "distance_mutation_alarm_config.condition", "distance_mutation_alarm_config.alarm_release_enable", "distance_mutation_alarm_config.mutation"]
+            "reference": ["distance_mutation_alarm_config.enable", "distance_mutation_alarm_config.alarm_release_enable", "distance_mutation_alarm_config.mutation"]
         },
         {
             "id": "distance_mutation_alarm_config.alarm_release_enable",
@@ -529,7 +529,7 @@
             "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
-            "reference": ["distance_mutation_alarm_config.enable", "distance_mutation_alarm_config.condition", "distance_mutation_alarm_config.alarm_release_enable", "distance_mutation_alarm_config.mutation"]
+            "reference": ["distance_mutation_alarm_config.enable", "distance_mutation_alarm_config.alarm_release_enable", "distance_mutation_alarm_config.mutation"]
         },
         {
             "id": "distance_mutation_alarm_config.mutation",
@@ -542,7 +542,7 @@
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 30,
             "bacnet_unit_type": "UNITS_MILLIMETERS",
-            "reference": ["distance_mutation_alarm_config.enable", "distance_mutation_alarm_config.condition", "distance_mutation_alarm_config.alarm_release_enable", "distance_mutation_alarm_config.mutation"]
+            "reference": ["distance_mutation_alarm_config.enable", "distance_mutation_alarm_config.alarm_release_enable", "distance_mutation_alarm_config.mutation"]
         },
         {
             "id": "tank_mode_distance_mutation_alarm_config.enable",
@@ -559,7 +559,7 @@
             "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
-            "reference": ["tank_mode_distance_mutation_alarm_config.enable", "tank_mode_distance_mutation_alarm_config.condition", "tank_mode_distance_mutation_alarm_config.alarm_release_enable", "tank_mode_distance_mutation_alarm_config.mutation"]
+            "reference": ["tank_mode_distance_mutation_alarm_config.enable", "tank_mode_distance_mutation_alarm_config.alarm_release_enable", "tank_mode_distance_mutation_alarm_config.mutation"]
         },
         {
             "id": "tank_mode_distance_mutation_alarm_config.alarm_release_enable",
@@ -576,7 +576,7 @@
             "bacnet_type": "binary_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
-            "reference": ["tank_mode_distance_mutation_alarm_config.enable", "tank_mode_distance_mutation_alarm_config.condition", "tank_mode_distance_mutation_alarm_config.alarm_release_enable", "tank_mode_distance_mutation_alarm_config.mutation"]
+            "reference": ["tank_mode_distance_mutation_alarm_config.enable", "tank_mode_distance_mutation_alarm_config.alarm_release_enable", "tank_mode_distance_mutation_alarm_config.mutation"]
         },
         {
             "id": "tank_mode_distance_mutation_alarm_config.mutation",
@@ -589,7 +589,7 @@
             "bacnet_type": "analog_value_object",
             "bacnet_unit_type_id": 30,
             "bacnet_unit_type": "UNITS_MILLIMETERS",
-            "reference": ["tank_mode_distance_mutation_alarm_config.enable", "tank_mode_distance_mutation_alarm_config.condition", "tank_mode_distance_mutation_alarm_config.alarm_release_enable", "tank_mode_distance_mutation_alarm_config.mutation"]
+            "reference": ["tank_mode_distance_mutation_alarm_config.enable", "tank_mode_distance_mutation_alarm_config.alarm_release_enable", "tank_mode_distance_mutation_alarm_config.mutation"]
         },
         {
             "id": "alarm_counts",

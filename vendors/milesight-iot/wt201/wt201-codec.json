@@ -950,7 +950,7 @@
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS",
-            "reference": ["temperature_control_mode", "temperature_target"]
+            "reference": ["temperature_control_mode", "target_temperature"]
         },
         {
             "id": "temperature_calibration.enable",
@@ -1730,6 +1730,23 @@
         {
             "id": "wires.pek",
             "name": "Wires (PEK)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "off" },
+                { "value": 1, "name": "on" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["wires.y1", "wires.gh", "wires.ob", "wires.w1", "wires.e", "wires.di", "wires.pek", "wires.w2", "wires.aux", "wires.y2", "wires.gl", "ob_mode"]
+        },
+        {
+            "id": "wires.w2",
+            "name": "Wires (W2)",
             "value": "",
             "unit": "",
             "access_mode": "RW",
