@@ -1,6 +1,6 @@
 {
-    "date": "2025-07-02",
-    "version": "1.4.15",
+    "date": "2025-07-07",
+    "version": "1.4.15.1",
     "vendors": "vendors.json",
-    "link": "https://github.com/Milesight-IoT/codec/archive/refs/heads/release.zip"
+    "link": "https://github.com/Milesight-IoT/codec/archive/refs/heads/feat/wt30x.zip"
 }

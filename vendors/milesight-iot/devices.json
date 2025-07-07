@@ -1256,6 +1256,30 @@
             "encoder_script": "vendors/milesight-iot/wt301/wt301-encoder.js"
         },
         {
+            "id": "wt303",
+            "name": "WT303",
+            "description": "Smart Fan Coil Thermostat",
+            "catalog": "wt",
+            "sn": "6406",
+            "deveui": "24e124406",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/wt303/wt303-codec.json",
+            "decoder_script": "vendors/milesight-iot/wt303/wt303-decoder.js",
+            "encoder_script": "vendors/milesight-iot/wt303/wt303-encoder.js"
+        },
+        {
+            "id": "wt304",
+            "name": "WT304",
+            "description": "Smart Fan Coil Thermostat",
+            "catalog": "wt",
+            "sn": "6406",
+            "deveui": "24e124406",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/wt304/wt304-codec.json",
+            "decoder_script": "vendors/milesight-iot/wt304/wt304-decoder.js",
+            "encoder_script": "vendors/milesight-iot/wt304/wt304-encoder.js"
+        },
+        {
             "id": "wts305",
             "name": "WTS305",
             "description": "Weather Station",
