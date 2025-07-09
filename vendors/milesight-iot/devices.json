@@ -584,6 +584,18 @@
             "encoder_script": "vendors/milesight-iot/gs301/gs301-encoder.js"
         },
         {
+            "id": "gs601",
+            "name": "GS601",
+            "description": "Vape Detector",
+            "catalog": "gs",
+            "sn": "6850",
+            "deveui": "24e124850",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/gs601/gs601-codec.json",
+            "decoder_script": "vendors/milesight-iot/gs601/gs601-decoder.js",
+            "encoder_script": "vendors/milesight-iot/gs601/gs601-encoder.js"
+        },
+        {
             "id": "ts101",
             "name": "TS101",
             "description": "Insertion Temperature Sensor",
