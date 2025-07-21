@@ -8,6 +8,15 @@
             "description": "Make Sensing Matter",
             "oui": "24e124",
             "devices": "vendors/milesight-iot/devices.json"
+        },
+        {
+            "id": "the-real-vutility",
+            "name": "The Real VUtility",
+            "logo": "",
+            "website": "",
+            "description": "",
+            "oui": "",
+            "devices": "vendors/the-real-vutility/devices.json"
         }
     ]
 }

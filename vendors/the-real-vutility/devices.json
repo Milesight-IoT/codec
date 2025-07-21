@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "hotdrop",
+            "name": "HotDrop",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/the-real-vutility/hotdrop/hotdrop-codec.json",
+            "decoder_script": "vendors/the-real-vutility/hotdrop/hotdrop-decoder.js",
+            "encoder_script": "vendors/the-real-vutility/hotdrop/hotdrop-encoder.js"
+        }
+    ]
+}
