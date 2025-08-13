@@ -1743,7 +1743,7 @@
         },
         {
             "id": "window_opening_detection_settings.enable",
-            "name": "Window Opening Detection Settings (Enable)",
+            "name": "Window Open Detection (Enable)",
             "value": "",
             "unit": "",
             "access_mode": "RW",
@@ -1759,7 +1759,7 @@
         },
         {
             "id": "window_opening_detection_settings.type",
-            "name": "Window Opening Detection Settings (Type)",
+            "name": "Window Open Detection (Type)",
             "value": "",
             "unit": "",
             "access_mode": "RW",
@@ -1775,7 +1775,7 @@
         },
         {
             "id": "window_opening_detection_settings.temperature_detection.delta_temperature",
-            "name": "Window Opening Detection Settings (Temperature Detection (Delta Temperature))",
+            "name": "Window Open Detection (Temperature Detection (Delta))",
             "value": "",
             "unit": "°C",
             "access_mode": "RW",
@@ -1788,7 +1788,7 @@
         },
         {
             "id": "window_opening_detection_settings.temperature_detection.duration",
-            "name": "Window Opening Detection Settings (Temperature Detection (Duration))",
+            "name": "Window Open Detection (Temperature Detection (Duration))",
             "value": "",
             "unit": "min",
             "access_mode": "RW",
@@ -1801,7 +1801,7 @@
         },
         {
             "id": "window_opening_detection_settings.magnet_detection.duration",
-            "name": "Window Opening Detection Settings (Magnet Detection (Duration))",
+            "name": "Window Open Detection (Magnet Detection (Duration))",
             "value": "",
             "unit": "min",
             "access_mode": "RW",

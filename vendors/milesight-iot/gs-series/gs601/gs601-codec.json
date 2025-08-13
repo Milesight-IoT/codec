@@ -750,7 +750,7 @@
         {
             "id": "temperature_alarm_settings.enable",
             "name": "Temperature Threshold Alarm",
-            "value": 0,
+            "value": "0",
             "unit": "",
             "access_mode": "RW",
             "data_type": "BOOL",
