@@ -664,7 +664,7 @@
         },
         {
             "id": "temperature_chn1_mutation_alarm_config.enable",
-            "name": "Temperature Channel 1 Mutation Alarm Config (Enable)",
+            "name": "Temperature Channel 1 Mutation Alarm (Enable)",
             "value": "",
             "unit": "",
             "access_mode": "RW",
@@ -681,7 +681,7 @@
         },
         {
             "id": "temperature_chn1_mutation_alarm_config.alarm_release_enable",
-            "name": "Temperature Channel 1 Mutation Alarm Config (Alarm Release Enable)",
+            "name": "Temperature Channel 1 Mutation Alarm (Alarm Release Enable)",
             "value": "",
             "unit": "",
             "access_mode": "RW",
@@ -698,7 +698,7 @@
         },
         {
             "id": "temperature_chn1_mutation_alarm_config.mutation",
-            "name": "Temperature Channel 1 Mutation Alarm Config (Mutation)",
+            "name": "Temperature Channel 1 Mutation Alarm (Mutation)",
             "value": "",
             "unit": "°C",
             "access_mode": "RW",
@@ -711,7 +711,7 @@
         },
         {
             "id": "temperature_chn2_mutation_alarm_config.enable",
-            "name": "Temperature Channel 2 Mutation Alarm Config (Enable)",
+            "name": "Temperature Channel 2 Mutation Alarm (Enable)",
             "value": "",
             "unit": "",
             "access_mode": "RW",
@@ -728,7 +728,7 @@
         },
         {
             "id": "temperature_chn2_mutation_alarm_config.alarm_release_enable",
-            "name": "Temperature Channel 2 Mutation Alarm Config (Alarm Release Enable)",
+            "name": "Temperature Channel 2 Mutation Alarm (Alarm Release Enable)",
             "value": "",
             "unit": "",
             "access_mode": "RW",
@@ -745,7 +745,7 @@
         },
         {
             "id": "temperature_chn2_mutation_alarm_config.mutation",
-            "name": "Temperature Channel 2 Mutation Alarm Config (Mutation)",
+            "name": "Temperature Channel 2 Mutation Alarm (Mutation)",
             "value": "",
             "unit": "°C",
             "access_mode": "RW",
