@@ -1447,6 +1447,19 @@
             "codec": "vendors/milesight-iot/wts-series/wts506/wts506-codec.json",
             "decoder_script": "vendors/milesight-iot/wts-series/wts506/wts506-decoder.js",
             "encoder_script": "vendors/milesight-iot/wts-series/wts506/wts506-encoder.js"
+        },
+        {
+            "id": "wt401",
+            "name": "WT401",
+            "description": "Wireless Smart Thermostat",
+            "catalog": "wt",
+            "sn": "6409",
+            "pn": ["000"],
+            "deveui": "24e124409",
+            "device_profile": ["ClassA-OTAA", "ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/wt-series/wt401/wt401-codec.json",
+            "decoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-decoder.js",
+            "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js"
         }
     ]
 }
