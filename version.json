@@ -1,6 +1,6 @@
 {
-    "date": "2025-10-23",
-    "version": "1.5.16",
+    "date": "2025-12-05",
+    "version": "1.5.17",
     "vendors": "vendors.json",
     "link": "https://github.com/Milesight-IoT/codec/archive/refs/heads/release.zip"
 }
