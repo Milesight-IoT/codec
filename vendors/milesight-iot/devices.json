@@ -645,7 +645,8 @@
             "device_profile": ["ClassC-OTAA"],
             "codec": "vendors/milesight-iot/gs-series/gs601/gs601-codec.json",
             "decoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-decoder.js",
-            "encoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-encoder.js"
+            "encoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-encoder.js",
+            "ipso_version": "v2"
         },
         {
             "id": "ts101",
@@ -1405,7 +1406,8 @@
             "device_profile": ["ClassC-OTAA"],
             "codec": "vendors/milesight-iot/wt-series/wt303/wt303-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt303/wt303-decoder.js",
-            "encoder_script": "vendors/milesight-iot/wt-series/wt303/wt303-encoder.js"
+            "encoder_script": "vendors/milesight-iot/wt-series/wt303/wt303-encoder.js",
+            "ipso_version": "v2"
         },
         {
             "id": "wt304",
@@ -1418,7 +1420,8 @@
             "device_profile": ["ClassC-OTAA"],
             "codec": "vendors/milesight-iot/wt-series/wt304/wt304-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt304/wt304-decoder.js",
-            "encoder_script": "vendors/milesight-iot/wt-series/wt304/wt304-encoder.js"
+            "encoder_script": "vendors/milesight-iot/wt-series/wt304/wt304-encoder.js",
+            "ipso_version": "v2"
         },
         {
             "id": "wts305",
@@ -1470,7 +1473,8 @@
             "device_profile": ["ClassA-OTAA", "ClassC-OTAA"],
             "codec": "vendors/milesight-iot/wt-series/wt401/wt401-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-decoder.js",
-            "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js"
+            "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js",
+            "ipso_version": "v2"
         }
     ]
 }
