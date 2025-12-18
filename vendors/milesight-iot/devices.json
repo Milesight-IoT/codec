@@ -645,8 +645,7 @@
             "device_profile": ["ClassC-OTAA"],
             "codec": "vendors/milesight-iot/gs-series/gs601/gs601-codec.json",
             "decoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-decoder.js",
-            "encoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-encoder.js",
-            "ipso_version": "v2"
+            "encoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-encoder.js"            
         },
         {
             "id": "ts101",
@@ -1473,8 +1472,7 @@
             "device_profile": ["ClassA-OTAA", "ClassC-OTAA"],
             "codec": "vendors/milesight-iot/wt-series/wt401/wt401-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-decoder.js",
-            "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js",
-            "ipso_version": "v2"
+            "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js"            
         }
     ]
 }
