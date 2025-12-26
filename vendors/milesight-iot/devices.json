@@ -700,6 +700,19 @@
             "encoder_script": "vendors/milesight-iot/ts-series/ts301/ts301-encoder.js"
         },
         {
+            "id": "ts301_v2",
+            "name": "TS301 V2",
+            "description": "Temperature Sensor",
+            "catalog": "ts",
+            "sn": "6508",
+            "pn": ["000"],
+            "deveui": "24e124508",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ts-series/ts301-v2/ts301-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ts-series/ts301-v2/ts301-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ts-series/ts301-v2/ts301-v2-encoder.js"
+        },
+        {
             "id": "ts302",
             "name": "TS302",
             "description": "Temperature Sensor",
@@ -711,6 +724,19 @@
             "codec": "vendors/milesight-iot/ts-series/ts302/ts302-codec.json",
             "decoder_script": "vendors/milesight-iot/ts-series/ts302/ts302-decoder.js",
             "encoder_script": "vendors/milesight-iot/ts-series/ts302/ts302-encoder.js"
+        },
+        {
+            "id": "ts302_v2",
+            "name": "TS302 V2",
+            "description": "Temperature Sensor",
+            "catalog": "ts",
+            "sn": "6508",
+            "pn": ["001"],
+            "deveui": "24e124508",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ts-series/ts302-v2/ts302-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ts-series/ts302-v2/ts302-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ts-series/ts302-v2/ts302-v2-encoder.js"
         },
         {
             "id": "uc11_n1",
