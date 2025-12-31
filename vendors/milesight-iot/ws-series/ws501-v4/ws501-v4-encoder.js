@@ -232,11 +232,14 @@ function setButtonLockConfig(button_lock_config) {
  * Button Status Control
  * @param {object} button_status_control
  * @param {number} button_status_control.button_status1 values: (0: "off", 1: "on")
- * @example { "button_status_control": { "button_status1": 1 } }
+ * @param {number} button_status_control.button_status1_change values: (0: "no", 1: "yes")
+ * @example { "button_status_control": { "button_status1": 1, "button_status1_change": 1 } }
  */
 function setSwitchControl(button_status_control) {
     var status_map = {0: "off", 1: "on"};
     var status_values = getValues(status_map);
+    var status_change_map = {0: "no", 1: "yes"};
+    var status_change_values = getValues(status_change_map);
 
     var data = 0x00;
     var switch_bit_offset = { button_status1: 0 };
@@ -245,8 +248,11 @@ function setSwitchControl(button_status_control) {
             if (status_values.indexOf(button_status_control[key]) === -1) {
                 throw new Error("button_status_control." + key + " must be one of: " + status_values.join(", "));
             }
+            if (status_change_values.indexOf(button_status_control[key + '_change']) === -1) {
+                throw new Error("button_status_control." + key + "_change must be one of: " + status_change_values.join(", "));
+            }
 
-            data |= 1 << (switch_bit_offset[key] + 4);
+            data |= getValue(status_change_map, button_status_control[key + '_change']) << (switch_bit_offset[key] + 4);
             data |= getValue(status_map, button_status_control[key]) << switch_bit_offset[key];
         }
     }
