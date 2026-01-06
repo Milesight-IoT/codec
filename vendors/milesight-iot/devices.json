@@ -221,6 +221,19 @@
             "encoder_script": "vendors/milesight-iot/ct-series/ct101/ct101-encoder.js"
         },
         {
+            "id": "ct101_v2",
+            "name": "CT101 V2",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6751",
+            "pn": ["000"],
+            "deveui": "24e124751",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct-series/ct101-v2/ct101-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct-series/ct101-v2/ct101-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct-series/ct101-v2/ct101-v2-encoder.js"
+        },
+        {
             "id": "ct103",
             "name": "CT103",
             "description": "Smart Current Transformer",
@@ -232,6 +245,19 @@
             "codec": "vendors/milesight-iot/ct-series/ct103/ct103-codec.json",
             "decoder_script": "vendors/milesight-iot/ct-series/ct103/ct103-decoder.js",
             "encoder_script": "vendors/milesight-iot/ct-series/ct103/ct103-encoder.js"
+        },
+        {
+            "id": "ct103_v2",
+            "name": "CT103 V2",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6751",
+            "pn": ["001"],
+            "deveui": "24e124751",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct-series/ct103-v2/ct103-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct-series/ct103-v2/ct103-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct-series/ct103-v2/ct103-v2-encoder.js"
         },
         {
             "id": "ct105",
@@ -247,6 +273,19 @@
             "encoder_script": "vendors/milesight-iot/ct-series/ct105/ct105-encoder.js"
         },
         {
+            "id": "ct105_v2",
+            "name": "CT105 V2",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6751",
+            "pn": ["004"],
+            "deveui": "24e124751",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct-series/ct105-v2/ct105-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct-series/ct105-v2/ct105-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct-series/ct105-v2/ct105-v2-encoder.js"
+        },
+        {
             "id": "ct303",
             "name": "CT303",
             "description": "Smart Current Transformer",
@@ -258,6 +297,19 @@
             "codec": "vendors/milesight-iot/ct-series/ct303/ct303-codec.json",
             "decoder_script": "vendors/milesight-iot/ct-series/ct303/ct303-decoder.js",
             "encoder_script": "vendors/milesight-iot/ct-series/ct303/ct303-encoder.js"
+        },
+        {
+            "id": "ct303_v2",
+            "name": "CT303 V2",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6751",
+            "pn": ["005"],
+            "deveui": "24e124751",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct-series/ct303-v2/ct303-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct-series/ct303-v2/ct303-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct-series/ct303-v2/ct303-v2-encoder.js"
         },
         {
             "id": "ct305",
@@ -273,6 +325,19 @@
             "encoder_script": "vendors/milesight-iot/ct-series/ct305/ct305-encoder.js"
         },
         {
+            "id": "ct305_v2",
+            "name": "CT305 V2",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6751",
+            "pn": ["002"],
+            "deveui": "24e124751",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct-series/ct305-v2/ct305-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct-series/ct305-v2/ct305-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct-series/ct305-v2/ct305-v2-encoder.js"
+        },
+        {
             "id": "ct310",
             "name": "CT310",
             "description": "Smart Current Transformer",
@@ -284,6 +349,19 @@
             "codec": "vendors/milesight-iot/ct-series/ct310/ct310-codec.json",
             "decoder_script": "vendors/milesight-iot/ct-series/ct310/ct310-decoder.js",
             "encoder_script": "vendors/milesight-iot/ct-series/ct310/ct310-encoder.js"
+        },
+        {
+            "id": "ct310_v2",
+            "name": "CT310 V2",
+            "description": "Smart Current Transformer",
+            "catalog": "ct",
+            "sn": "6751",
+            "pn": ["003"],
+            "deveui": "24e124751",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ct-series/ct310-v2/ct310-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/ct-series/ct310-v2/ct310-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ct-series/ct310-v2/ct310-v2-encoder.js"
         },
         {
             "id": "ds3604",
@@ -1196,6 +1274,18 @@
             "encoder_script": "vendors/milesight-iot/ws-series/ws501/ws501-encoder.js"
         },
         {
+            "id": "ws501_v4",
+            "name": "WS501 V4",
+            "description": "Wall Switch",
+            "catalog": "ws",
+            "sn": "6607",
+            "deveui": "24e124607",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/ws-series/ws501-v4/ws501-v4-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws-series/ws501-v4/ws501-v4-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ws-series/ws501-v4/ws501-v4-encoder.js"
+        },
+        {
             "id": "ws502",
             "name": "WS502",
             "description": "Wall Switch",
@@ -1208,6 +1298,18 @@
             "encoder_script": "vendors/milesight-iot/ws-series/ws502/ws502-encoder.js"
         },
         {
+            "id": "ws502_v4",
+            "name": "WS502 V4",
+            "description": "Wall Switch",
+            "catalog": "ws",
+            "sn": "6640",
+            "deveui": "24e124640",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/ws-series/ws502-v4/ws502-v4-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws-series/ws502-v4/ws502-v4-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ws-series/ws502-v4/ws502-v4-encoder.js"
+        },
+        {
             "id": "ws503",
             "name": "WS503",
             "description": "Wall Switch",
@@ -1218,6 +1320,18 @@
             "codec": "vendors/milesight-iot/ws-series/ws503/ws503-codec.json",
             "decoder_script": "vendors/milesight-iot/ws-series/ws503/ws503-decoder.js",
             "encoder_script": "vendors/milesight-iot/ws-series/ws503/ws503-encoder.js"
+        },
+        {
+            "id": "ws503_v4",
+            "name": "WS503 V4",
+            "description": "Wall Switch",
+            "catalog": "ws",
+            "sn": "6641",
+            "deveui": "24e124641",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/ws-series/ws503-v4/ws503-v4-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws-series/ws503-v4/ws503-v4-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ws-series/ws503-v4/ws503-v4-encoder.js"
         },
         {
             "id": "ws501_3w_w11",

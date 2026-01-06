@@ -100,6 +100,19 @@ function milesightDeviceDecode(bytes) {
             i += 2;
         }
 
+        // firmware_version v2
+        // POWER CONSUMPTION 
+        else if (channel_id === 0x10 && channel_type === 0x63) {
+            decoded.ch1_sumkwh = readUInt32LE(bytes.slice(i, i + 4)) / 100;
+            i += 4;
+        }
+        // BATTERY
+        else if (channel_id === 0x13 && channel_type === 0x75) {
+            decoded.low_voltage_alarm = {};
+            decoded.low_voltage_alarm.alarm_type = readLowVoltageAlarm(bytes[i]);
+            i += 1;
+        }
+        
         // CURRENT ALARM
         else if (channel_id === 0x84 && channel_type === 0x98) {
             decoded.current_max = readUInt16LE(bytes.slice(i, i + 2)) / 100;
@@ -143,8 +156,8 @@ function handle_downlink_response(channel_type, bytes, offset) {
                 decoded.current_alarm_config.condition = readConditionType(value & 0x07);
                 decoded.current_alarm_config.threshold_min = readUInt16LE(bytes.slice(offset + 1, offset + 3));
                 decoded.current_alarm_config.threshold_max = readUInt16LE(bytes.slice(offset + 3, offset + 5));
-                decoded.current_alarm_config.alarm_interval = readUInt16LE(bytes.slice(offset + 5, offset + 7));
-                decoded.current_alarm_config.alarm_counts = readUInt16LE(bytes.slice(offset + 7, offset + 9));
+                decoded.current_alarm_config.alarm_counts = readUInt16LE(bytes.slice(offset + 5, offset + 7));
+                decoded.current_alarm_config.alarm_interval = readUInt16LE(bytes.slice(offset + 7, offset + 9));
             } else if (channel_value === 0x04) {
                 decoded.temperature_alarm_config = {};
                 decoded.temperature_alarm_config.condition = readConditionType(value & 0x07);
@@ -173,6 +186,18 @@ function handle_downlink_response(channel_type, bytes, offset) {
         case 0xf2:
             decoded.alarm_report_counts = readUInt16LE(bytes.slice(offset, offset + 2));
             offset += 2;
+            break;
+        case 0xce: 
+            decoded.voltage = readUInt16LE(bytes.slice(offset, offset + 2)) / 100;
+            offset += 2;
+            break;
+        case 0xcf: 
+            decoded.power_factor = readUInt8(bytes[offset]) / 100;
+            offset += 1;
+            break;
+        case 0xd0: 
+            decoded.reporting_type = readReportingType(bytes[offset]);
+            offset += 1;
             break;
         default:
             throw new Error("unknown downlink response");
@@ -243,6 +268,11 @@ function readSensorStatus(status) {
     return getValue(status_map, status);
 }
 
+function readLowVoltageAlarm(status) {
+    var status_map = { 1: "low voltage alarm" };
+    return getValue(status_map, status);
+}
+
 function readCurrentAlarm(value) {
     var alarm_bit_offset = { current_threshold_alarm: 0, current_threshold_alarm_release: 1, current_over_range_alarm: 2, current_over_range_alarm_release: 3 };
 
@@ -261,6 +291,11 @@ function readTemperatureAlarm(type) {
 function readConditionType(type) {
     var condition_map = { 0: "disable", 1: "below", 2: "above", 3: "between", 4: "outside" };
     return getValue(condition_map, type);
+}
+
+function readReportingType(type) {
+    var reporting_map = { 0: "cumulative Ah", 1: "cumulative Kwh" };
+    return getValue(reporting_map, type);
 }
 
 /* eslint-disable */
