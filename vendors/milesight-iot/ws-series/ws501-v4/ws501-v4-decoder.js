@@ -188,11 +188,17 @@ function handle_downlink_response(channel_type, bytes, offset) {
             break;
         case 0x29:
             var data = readUInt8(bytes[offset]);
+            var button_bit_offset = { button1: 0 };
             var switch_bit_offset = { button_status1: 0 };
-            decoded.button_status_control = {};
-            for (var key in switch_bit_offset) {
-                decoded.button_status_control[key] = readOnOffStatus((data >>> (switch_bit_offset[key])) & 0x01);
-                decoded.button_status_control[key + '_change'] = readYesNoStatus((data >>> (switch_bit_offset[key] + 4)) & 0x01);
+            var mask = data >> 4 & 0x07;
+            var object_name = mask ? "button_status_control" : "button_status";
+            var offset_map = mask ? switch_bit_offset : button_bit_offset;
+            decoded[object_name] = {};
+            for (var key in offset_map) {
+                decoded[object_name][key] = readOnOffStatus((data >>> (offset_map[key])) & 0x01);
+                if (mask) {
+                    decoded[object_name][key + '_change'] = readYesNoStatus((data >>> (offset_map[key] + 4)) & 0x01);
+                }
             }
             offset += 1;
             break;
