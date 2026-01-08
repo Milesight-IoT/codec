@@ -250,10 +250,11 @@ function setSwitchControl(button_status_control) {
             if (status_values.indexOf(button_status_control[key]) === -1) {
                 throw new Error("button_status_control." + key + " must be one of: " + status_values.join(", "));
             }
+
             if (status_change_values.indexOf(button_status_control[key + '_change']) === -1) {
                 throw new Error("button_status_control." + key + "_change must be one of: " + status_change_values.join(", "));
             }
-            
+
             data |= getValue(status_change_map, button_status_control[key + '_change']) << (switch_bit_offset[key] + 4);
             data |= getValue(status_map, button_status_control[key]) << switch_bit_offset[key];
         }
@@ -752,15 +753,15 @@ function setTimeZone(time_zone) {
  * @param {object} daylight_saving_time
  * @param {number} daylight_saving_time.enable values: (0: disable, 1: enable)
  * @param {number} daylight_saving_time.dst_bias, unit: minute range: [1, 120]
- * @param {number} daylight_saving_time.start_month, values: (1: January, 2: February, 3: March, 4: April, 5: May, 6: June, 7: July, 8: August, 9: September, 10: October, 11: November, 12: December)
- * @param {number} daylight_saving_time.start_week_num, range: [1, 5]
- * @param {number} daylight_saving_time.start_week_day, range: [1, 7]
- * @param {number} daylight_saving_time.start_hour_min, unit: minute, convert: "hh:mm" -> "hh * 60 + mm"
- * @param {number} daylight_saving_time.end_month, values: (1: January, 2: February, 3: March, 4: April, 5: May, 6: June, 7: July, 8: August, 9: September, 10: October, 11: November, 12: December)
- * @param {number} daylight_saving_time.end_week_num, range: [1, 5]
- * @param {number} daylight_saving_time.end_week_day, range: [1, 7]
- * @param {number} daylight_saving_time.end_hour_min, unit: minute, convert: "hh:mm" -> "hh * 60 + mm"
- * @example { "daylight_saving_time": { "enable": 1, "dst_bias": 60, "start_month": 3, "start_week_num": 2, "start_week_day": 7, "start_hour_min": 120, "end_month": 1, "end_week_num": 4, "end_week_day": 1, "end_hour_min": 180 } } output: FFBA013C032778000141B400
+ * @param {number} daylight_saving_time.start_month, values: (1: Jan., 2: Feb., 3: Mar., 4: Apr., 5: May, 6: Jun., 7: Jul., 8: Aug., 9: Sep., 10: Oct., 11: Nov., 12: Dec.)
+ * @param {number} daylight_saving_time.start_week_num, values: (1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "last")
+ * @param {number} daylight_saving_time.start_week_day, values: (1: "Mon.", 2: "Tues.", 3: "Wed.", 4: "Thurs.", 5: "Fri.", 6: "Sat.", 7: "Sun.")
+ * @param {number} daylight_saving_time.start_hour_min, unit: minute, convert: "hh:mm" -> "hh * 60 + mm" values: (0: "00:00", 60: "01:00", 120: "02:00", 180: "03:00", 240: "04:00", 300: "05:00", 360: "06:00", 420: "07:00", 480: "08:00", 540: "09:00", 600: "10:00", 660: "11:00", 720: "12:00", 780: "13:00", 840: "14:00", 900: "15:00", 960: "16:00", 1020: "17:00", 1080: "18:00", 1140: "19:00", 1200: "20:00", 1260: "21:00", 1320: "22:00", 1380: "23:00")
+ * @param {number} daylight_saving_time.end_month, values: (1: Jan., 2: Feb., 3: Mar., 4: Apr., 5: May, 6: Jun., 7: Jul., 8: Aug., 9: Sep., 10: Oct., 11: Nov., 12: Dec.)
+ * @param {number} daylight_saving_time.end_week_num, values: (1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "last")
+ * @param {number} daylight_saving_time.end_week_day, values: (1: "Mon.", 2: "Tues.", 3: "Wed.", 4: "Thurs.", 5: "Fri.", 6: "Sat.", 7: "Sun.")
+ * @param {number} daylight_saving_time.end_hour_min, unit: minute, convert: "hh:mm" -> "hh * 60 + mm" values: (0: "00:00", 60: "01:00", 120: "02:00", 180: "03:00", 240: "04:00", 300: "05:00", 360: "06:00", 420: "07:00", 480: "08:00", 540: "09:00", 600: "10:00", 660: "11:00", 720: "12:00", 780: "13:00", 840: "14:00", 900: "15:00", 960: "16:00", 1020: "17:00", 1080: "18:00", 1140: "19:00", 1200: "20:00", 1260: "21:00", 1320: "22:00", 1380: "23:00")
+ * @example { "daylight_saving_time": { "enable": 1, "dst_bias": 60, "start_month": 3, "start_week_num": 2, "start_week_day": 7, "start_hour_min": 120, "end_month": 1, "end_week_num": 4, "end_week_day": 1, "end_hour_min": 180 } } output: F972BC032778000141B400
  */
 function setDaylightSavingTime(daylight_saving_time) {
     var enable = daylight_saving_time.enable;
@@ -786,36 +787,55 @@ function setDaylightSavingTime(daylight_saving_time) {
         throw new Error("daylight_saving_time.dst_bias must be in range [1, 120]");
     }
 
-    var week_values = [1, 2, 3, 4, 5, 6, 7];
-    var month_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    var week_num_map = { 1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "last" };
+    var week_day_map = { 1: "Mon.", 2: "Tues.", 3: "Wed.", 4: "Thurs.", 5: "Fri.", 6: "Sat.", 7: "Sun." };
+    var month_map = { 1: "Jan.", 2: "Feb.", 3: "Mar.", 4: "Apr.", 5: "May.", 6: "Jun.", 7: "Jul.", 8: "Aug.", 9: "Sep.", 10: "Oct.", 11: "Nov.", 12: "Dec." };
+    var hour_min_map = { 0: "00:00", 60: "01:00", 120: "02:00", 180: "03:00", 240: "04:00", 300: "05:00", 360: "06:00", 420: "07:00", 480: "08:00", 540: "09:00", 600: "10:00", 660: "11:00", 720: "12:00", 780: "13:00", 840: "14:00", 900: "15:00", 960: "16:00", 1020: "17:00", 1080: "18:00", 1140: "19:00", 1200: "20:00", 1260: "21:00", 1320: "22:00", 1380: "23:00" };
+    var week_num_values = getValues(week_num_map);
+    var week_day_values = getValues(week_day_map);
+    var month_values = getValues(month_map);
+    var hour_min_values = getValues(hour_min_map);
     var enable_value = getValue(enable_map, enable);
+
+    if (enable_value && week_num_values.indexOf(start_week_num) === -1) {
+        throw new Error("daylight_saving_time.start_week_num must be one of " + week_num_values.join(", "));
+    }
+    if (enable_value && week_day_values.indexOf(start_week_day) === -1) {
+        throw new Error("daylight_saving_time.start_week_day must be one of " + week_day_values.join(", "));
+    }
+    if (enable_value && week_num_values.indexOf(end_week_num) === -1) {
+        throw new Error("daylight_saving_time.end_week_num must be one of " + week_num_values.join(", "));
+    }
+    if (enable_value && week_day_values.indexOf(end_week_day) === -1) {
+        throw new Error("daylight_saving_time.end_week_day must be one of " + week_day_values.join(", "));
+    }
     if (enable_value && month_values.indexOf(start_month) === -1) {
         throw new Error("daylight_saving_time.start_month must be one of " + month_values.join(", "));
     }
     if (enable_value && month_values.indexOf(end_month) === -1) {
         throw new Error("daylight_saving_time.end_month must be one of " + month_values.join(", "));
     }
-    if (enable_value && week_values.indexOf(start_week_day) === -1) {
-        throw new Error("daylight_saving_time.start_week_day must be one of " + week_values.join(", "));
+    if (enable_value && hour_min_values.indexOf(start_hour_min) === -1) {
+        throw new Error("daylight_saving_time.start_hour_min must be one of " + hour_min_values.join(", "));
     }
-    if (enable_value && week_values.indexOf(end_week_day) === -1) {
-        throw new Error("daylight_saving_time.end_week_day must be one of " + week_values.join(", "));
+    if (enable_value && hour_min_values.indexOf(end_hour_min) === -1) {
+        throw new Error("daylight_saving_time.end_hour_min must be one of " + hour_min_values.join(", "));
     }
 
     var data = 0x00;
-    data |= getValue(enable_map, enable) << 7;
+    data |= enable_value << 7;
     data |= offset;
 
     var buffer = new Buffer(11);
     buffer.writeUInt8(0xf9);
     buffer.writeUInt8(0x72);
     buffer.writeUInt8(data);
-    buffer.writeUInt8(start_month);
-    buffer.writeUInt8((start_week_num << 4) | start_week_day);
-    buffer.writeUInt16LE(start_hour_min);
-    buffer.writeUInt8(end_month);
-    buffer.writeUInt8((end_week_num << 4) | end_week_day);
-    buffer.writeUInt16LE(end_hour_min);
+    buffer.writeUInt8(getValue(month_map, start_month));
+    buffer.writeUInt8((getValue(week_num_map, start_week_num) << 4) | getValue(week_day_map, start_week_day));
+    buffer.writeUInt16LE(getValue(hour_min_map, start_hour_min));
+    buffer.writeUInt8(getValue(month_map, end_month));
+    buffer.writeUInt8((getValue(week_num_map, end_week_num) << 4) | getValue(week_day_map, end_week_day));
+    buffer.writeUInt16LE(getValue(hour_min_map, end_hour_min));
     return buffer.toBytes();
 }
 

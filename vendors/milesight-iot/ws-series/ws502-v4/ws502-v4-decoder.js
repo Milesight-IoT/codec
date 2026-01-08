@@ -188,11 +188,17 @@ function handle_downlink_response(channel_type, bytes, offset) {
             break;
         case 0x29:
             var data = readUInt8(bytes[offset]);
+            var button_bit_offset = { button1: 0, button2: 1 };
             var switch_bit_offset = { button_status1: 0, button_status2: 1 };
-            decoded.button_status_control = {};
-            for (var key in switch_bit_offset) {
-                decoded.button_status_control[key] = readOnOffStatus(data >>> switch_bit_offset[key] & 0x01);
-                decoded.button_status_control[key + '_change'] = readYesNoStatus((data >>> (switch_bit_offset[key] + 4)) & 0x01);
+            var mask = data >> 4 & 0x07;
+            var object_name = mask ? "button_status_control" : "button_status";
+            var offset_map = mask ? switch_bit_offset : button_bit_offset;
+            decoded[object_name] = {};
+            for (var key in offset_map) {
+                decoded[object_name][key] = readOnOffStatus(data >>> (offset_map[key]) & 0x01);
+                if (mask) {
+                    decoded[object_name][key + '_change'] = readYesNoStatus((data >>> (offset_map[key] + 4)) & 0x01);
+                }
             }
             offset += 1;
             break;
@@ -349,16 +355,19 @@ function readDstConfig(bytes) {
     var daylight_saving_time = {};
     daylight_saving_time.enable = readEnableStatus(enable_value);
     daylight_saving_time.dst_bias = offset_value;
-    daylight_saving_time.start_month = readUInt8(bytes[offset + 1]);
+
+    daylight_saving_time.start_month = readMonth(bytes[offset + 1]);
     var start_week_value = readUInt8(bytes[offset + 2]);
-    daylight_saving_time.start_week_num = start_week_value >> 4;
-    daylight_saving_time.start_week_day = start_week_value & 0x0f;
-    daylight_saving_time.start_hour_min = readUInt16LE(bytes.slice(offset + 3, offset + 5));
-    daylight_saving_time.end_month = readUInt8(bytes[offset + 5]);
+    daylight_saving_time.start_week_num = readWeek(start_week_value >> 4);
+    daylight_saving_time.start_week_day = readWeekDay(start_week_value & 0x0f);
+    daylight_saving_time.start_hour_min = readHourMin(readUInt16LE(bytes.slice(offset + 3, offset + 5)));
+
+    daylight_saving_time.end_month = readMonth(bytes[offset + 5]);
     var end_week_value = readUInt8(bytes[offset + 6]);
-    daylight_saving_time.end_week_num = end_week_value >> 4;
-    daylight_saving_time.end_week_day = end_week_value & 0x0f;
-    daylight_saving_time.end_hour_min = readUInt16LE(bytes.slice(offset + 7, offset + 9));
+    daylight_saving_time.end_week_num = readWeek(end_week_value >> 4);
+    daylight_saving_time.end_week_day = readWeekDay(end_week_value & 0x0f);
+    daylight_saving_time.end_hour_min = readHourMin(readUInt16LE(bytes.slice(offset + 7, offset + 9)));
+    
     offset += 9;
 
     return daylight_saving_time;
@@ -663,6 +672,36 @@ function readWeekDay(day) {
         7: "Sun."
     };
     return getValue(week_map, day);
+}
+
+function readHourMin(hour_min) {
+    var hour_min_map = {
+        0: "00:00",
+        60: "01:00",
+        120: "02:00",
+        180: "03:00",
+        240: "04:00",
+        300: "05:00",
+        360: "06:00",
+        420: "07:00",
+        480: "08:00",
+        540: "09:00",
+        600: "10:00",
+        660: "11:00",
+        720: "12:00",
+        780: "13:00",
+        840: "14:00",
+        900: "15:00",
+        960: "16:00",
+        1020: "17:00",
+        1080: "18:00",
+        1140: "19:00",
+        1200: "20:00",
+        1260: "21:00",
+        1320: "22:00",
+        1380: "23:00"
+    };
+    return getValue(hour_min_map, hour_min);
 }
 
 function readButtonId(button_id) {
