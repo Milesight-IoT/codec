@@ -62,8 +62,14 @@
       "data_type": "ENUM",
       "value_type": "UINT8",
       "values": [
-          { "value": 2, "name": "Class C" },
-          { "value": 2, "name": "Class C" }
+        {
+          "value": 2,
+          "name": "Class C"
+        },
+        {
+          "value": 2,
+          "name": "Class C"
+        }
       ],
       "bacnet_type": "multistate_value_object",
       "bacnet_unit_type_id": 95,
@@ -78,13 +84,19 @@
       "data_type": "BOOL",
       "value_type": "UINT8",
       "values": [
-          { "value": 0, "name": "off" },
-          { "value": 1, "name": "on" }
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
       ],
       "bacnet_type": "binary_input_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
-  },
+    },
     {
       "id": "voltage",
       "name": "Voltage",
@@ -648,7 +660,6 @@
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS",
       "reference": [
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_week_day",
@@ -656,34 +667,8 @@
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_num",
         "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
-      ]
-    },
-    {
-      "id": "daylight_saving_time.dst_bias",
-      "name": "DST Bias",
-      "value": "60",
-      "unit": "min",
-      "access_mode": "W",
-      "data_type": "NUMBER",
-      "value_type": "UINT8",
-      "range": [
-        1,
-        120
-      ],
-      "bacnet_type": "analog_output_object",
-      "bacnet_unit_type_id": 72,
-      "bacnet_unit_type": "UNITS_MINUTES",
-      "reference": [
-        "daylight_saving_time.enable",
-        "daylight_saving_time.start_month",
-        "daylight_saving_time.start_week_num",
-        "daylight_saving_time.start_week_day",
-        "daylight_saving_time.start_hour_min",
-        "daylight_saving_time.end_month",
-        "daylight_saving_time.end_week_num",
-        "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -749,14 +734,14 @@
       "bacnet_unit_type": "UNITS_NO_UNITS",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_week_day",
         "daylight_saving_time.start_hour_min",
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_num",
         "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -794,14 +779,14 @@
       "bacnet_unit_type": "UNITS_NO_UNITS",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_day",
         "daylight_saving_time.start_hour_min",
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_num",
         "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -847,14 +832,14 @@
       "bacnet_unit_type": "UNITS_NO_UNITS",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_hour_min",
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_num",
         "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -863,25 +848,119 @@
       "value": "0",
       "unit": "min",
       "access_mode": "W",
-      "data_type": "NUMBER",
+      "data_type": "ENUM",
       "value_type": "UINT16",
-      "range": [
-        0,
-        1440
+      "values": [
+        {
+          "value": 0,
+          "name": "00:00"
+        },
+        {
+          "value": 60,
+          "name": "01:00"
+        },
+        {
+          "value": 120,
+          "name": "02:00"
+        },
+        {
+          "value": 180,
+          "name": "03:00"
+        },
+        {
+          "value": 240,
+          "name": "04:00"
+        },
+        {
+          "value": 300,
+          "name": "05:00"
+        },
+        {
+          "value": 360,
+          "name": "06:00"
+        },
+        {
+          "value": 420,
+          "name": "07:00"
+        },
+        {
+          "value": 480,
+          "name": "08:00"
+        },
+        {
+          "value": 540,
+          "name": "09:00"
+        },
+        {
+          "value": 600,
+          "name": "10:00"
+        },
+        {
+          "value": 660,
+          "name": "11:00"
+        },
+        {
+          "value": 720,
+          "name": "12:00"
+        },
+        {
+          "value": 780,
+          "name": "13:00"
+        },
+        {
+          "value": 840,
+          "name": "14:00"
+        },
+        {
+          "value": 900,
+          "name": "15:00"
+        },
+        {
+          "value": 960,
+          "name": "16:00"
+        },
+        {
+          "value": 1020,
+          "name": "17:00"
+        },
+        {
+          "value": 1080,
+          "name": "18:00"
+        },
+        {
+          "value": 1140,
+          "name": "19:00"
+        },
+        {
+          "value": 1200,
+          "name": "20:00"
+        },
+        {
+          "value": 1260,
+          "name": "21:00"
+        },
+        {
+          "value": 1320,
+          "name": "22:00"
+        },
+        {
+          "value": 1380,
+          "name": "23:00"
+        }
       ],
-      "bacnet_type": "analog_output_object",
+      "bacnet_type": "multistate_value_object",
       "bacnet_unit_type_id": 72,
       "bacnet_unit_type": "UNITS_MINUTES",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_week_day",
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_num",
         "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -947,14 +1026,14 @@
       "bacnet_unit_type": "UNITS_NO_UNITS",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_week_day",
         "daylight_saving_time.start_hour_min",
         "daylight_saving_time.end_week_num",
         "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -992,14 +1071,14 @@
       "bacnet_unit_type": "UNITS_NO_UNITS",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_week_day",
         "daylight_saving_time.start_hour_min",
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_day",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -1045,14 +1124,14 @@
       "bacnet_unit_type": "UNITS_NO_UNITS",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_week_day",
         "daylight_saving_time.start_hour_min",
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_num",
-        "daylight_saving_time.end_hour_min"
+        "daylight_saving_time.end_hour_min",
+        "daylight_saving_time.dst_bias"
       ]
     },
     {
@@ -1061,25 +1140,146 @@
       "value": "0",
       "unit": "min",
       "access_mode": "W",
-      "data_type": "NUMBER",
+      "data_type": "ENUM",
       "value_type": "UINT16",
-      "range": [
-        0,
-        1440
+      "values": [
+        {
+          "value": 0,
+          "name": "00:00"
+        },
+        {
+          "value": 60,
+          "name": "01:00"
+        },
+        {
+          "value": 120,
+          "name": "02:00"
+        },
+        {
+          "value": 180,
+          "name": "03:00"
+        },
+        {
+          "value": 240,
+          "name": "04:00"
+        },
+        {
+          "value": 300,
+          "name": "05:00"
+        },
+        {
+          "value": 360,
+          "name": "06:00"
+        },
+        {
+          "value": 420,
+          "name": "07:00"
+        },
+        {
+          "value": 480,
+          "name": "08:00"
+        },
+        {
+          "value": 540,
+          "name": "09:00"
+        },
+        {
+          "value": 600,
+          "name": "10:00"
+        },
+        {
+          "value": 660,
+          "name": "11:00"
+        },
+        {
+          "value": 720,
+          "name": "12:00"
+        },
+        {
+          "value": 780,
+          "name": "13:00"
+        },
+        {
+          "value": 840,
+          "name": "14:00"
+        },
+        {
+          "value": 900,
+          "name": "15:00"
+        },
+        {
+          "value": 960,
+          "name": "16:00"
+        },
+        {
+          "value": 1020,
+          "name": "17:00"
+        },
+        {
+          "value": 1080,
+          "name": "18:00"
+        },
+        {
+          "value": 1140,
+          "name": "19:00"
+        },
+        {
+          "value": 1200,
+          "name": "20:00"
+        },
+        {
+          "value": 1260,
+          "name": "21:00"
+        },
+        {
+          "value": 1320,
+          "name": "22:00"
+        },
+        {
+          "value": 1380,
+          "name": "23:00"
+        }
       ],
-      "bacnet_type": "analog_output_object",
+      "bacnet_type": "multistate_value_object",
       "bacnet_unit_type_id": 72,
       "bacnet_unit_type": "UNITS_MINUTES",
       "reference": [
         "daylight_saving_time.enable",
-        "daylight_saving_time.dst_bias",
         "daylight_saving_time.start_month",
         "daylight_saving_time.start_week_num",
         "daylight_saving_time.start_week_day",
         "daylight_saving_time.start_hour_min",
         "daylight_saving_time.end_month",
         "daylight_saving_time.end_week_num",
-        "daylight_saving_time.end_week_day"
+        "daylight_saving_time.end_week_day",
+        "daylight_saving_time.dst_bias"
+      ]
+    },
+    {
+      "id": "daylight_saving_time.dst_bias",
+      "name": "DST Bias",
+      "value": "60",
+      "unit": "min",
+      "access_mode": "W",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "range": [
+        1,
+        120
+      ],
+      "bacnet_type": "analog_output_object",
+      "bacnet_unit_type_id": 72,
+      "bacnet_unit_type": "UNITS_MINUTES",
+      "reference": [
+        "daylight_saving_time.enable",
+        "daylight_saving_time.start_month",
+        "daylight_saving_time.start_week_num",
+        "daylight_saving_time.start_week_day",
+        "daylight_saving_time.start_hour_min",
+        "daylight_saving_time.end_month",
+        "daylight_saving_time.end_week_num",
+        "daylight_saving_time.end_week_day",
+        "daylight_saving_time.end_hour_min"
       ]
     },
     {
