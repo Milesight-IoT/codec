@@ -78,6 +78,32 @@
             "encoder_script": "vendors/milesight-iot/am-series/am107/am107-encoder.js"
         },
         {
+            "id": "am304l",
+            "name": "AM304L",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am300",
+            "sn": "6696",
+            "pn": ["000"],
+            "deveui": "24e124696",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/am-series/am304l/am304l-codec.json",
+            "decoder_script": "vendors/milesight-iot/am-series/am304l/am304l-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am-series/am304l/am304l-encoder.js"
+        },
+        {
+            "id": "am305l",
+            "name": "AM305L",
+            "description": "Indoor Ambience Monitoring Sensor",
+            "catalog": "am300",
+            "sn": "6699",
+            "pn": ["000"],
+            "deveui": "24e124699",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/am-series/am305l/am305l-codec.json",
+            "decoder_script": "vendors/milesight-iot/am-series/am305l/am305l-decoder.js",
+            "encoder_script": "vendors/milesight-iot/am-series/am305l/am305l-encoder.js"
+        },
+        {
             "id": "am307",
             "name": "AM307",
             "description": "Indoor Ambience Monitoring Sensor",
@@ -723,7 +749,7 @@
             "device_profile": ["ClassC-OTAA"],
             "codec": "vendors/milesight-iot/gs-series/gs601/gs601-codec.json",
             "decoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-decoder.js",
-            "encoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-encoder.js"            
+            "encoder_script": "vendors/milesight-iot/gs-series/gs601/gs601-encoder.js"
         },
         {
             "id": "ts101",
@@ -1612,7 +1638,7 @@
             "device_profile": ["ClassA-OTAA", "ClassC-OTAA"],
             "codec": "vendors/milesight-iot/wt-series/wt401/wt401-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-decoder.js",
-            "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js"            
+            "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js"
         }
     ]
 }
