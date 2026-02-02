@@ -1,0 +1,40 @@
+name: WeChat Work Notification
+
+on:
+  push:
+    branches:
+      - '**'  # 监听所有分支的推送
+    paths:
+      - 'version.json'  # 只在 version.json 文件变更时触发
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # 获取最近两个提交以便比较
+
+      - name: Get commit info and version
+        id: commit_info
+        run: |
+          echo "author=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
+          echo "message=$(git log -1 --pretty=format:'%s')" >> $GITHUB_OUTPUT
+          echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+          echo "version=$(jq -r '.version' version.json)" >> $GITHUB_OUTPUT
+          echo "date=$(jq -r '.date' version.json)" >> $GITHUB_OUTPUT
+          echo "link=$(jq -r '.link' version.json)" >> $GITHUB_OUTPUT
+
+      - name: Send WeChat Work notification
+        env:
+          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+        run: |
+          curl -X POST "$WECHAT_WEBHOOK" \
+            -H 'Content-Type: application/json' \
+            -d "{
+              \"msgtype\": \"markdown\",
+              \"markdown\": {
+                \"content\": \"## 新版本发布通知\n\n**版本：<font color=\\\"warning\\\">v${{ steps.commit_info.outputs.version }}</font>**\n**发布日期：** ${{ steps.commit_info.outputs.date }}\n\n────────────────\n\n**仓库：** ${{ github.repository }}\n**分支：** <font color=\\\"info\\\">${{ steps.commit_info.outputs.branch }}</font>\n**提交者：** ${{ steps.commit_info.outputs.author }}\n**提交信息：** ${{ steps.commit_info.outputs.message }}\n\n────────────────\n\n[📥 下载最新版本](${{ steps.commit_info.outputs.link }})  |  [📝 查看提交详情](${{ github.event.head_commit.url }})\"
+              }
+            }"
