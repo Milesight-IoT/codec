@@ -35,6 +35,6 @@ jobs:
             -d "{
               \"msgtype\": \"markdown\",
               \"markdown\": {
-                \"content\": \"## New Version Released\n\n**Version:** <font color=\\\"warning\\\">v${{ steps.commit_info.outputs.version }}</font>\n**Release Date:** ${{ steps.commit_info.outputs.date }}\n\n────────────────\n\n**Repository:** ${{ github.repository }}\n**Branch:** <font color=\\\"info\\\">${{ steps.commit_info.outputs.branch }}</font>\n**Author:** ${{ steps.commit_info.outputs.author }}\n**Commit:** ${{ steps.commit_info.outputs.message }}\n\n────────────────\n\n[Download Latest](${{ steps.commit_info.outputs.link }})  |  [View Commit](${{ github.event.head_commit.url }})\"
+                \"content\": \"## 新版本发布\n\n**版本：** <font color=\\\"warning\\\">v${{ steps.commit_info.outputs.version }}</font>\n**发布日期：** ${{ steps.commit_info.outputs.date }}\n\n────────────────\n\n**代码仓库：** ${{ github.repository }}\n**分支：** <font color=\\\"info\\\">${{ steps.commit_info.outputs.branch }}</font>\n**提交者：** ${{ steps.commit_info.outputs.author }}\n**提交信息：** ${{ steps.commit_info.outputs.message }}\n\n────────────────\n\n[查看提交](${{ github.event.head_commit.url }})  |  [下载最新版](${{ steps.commit_info.outputs.link }})\"
               }
             }"
