@@ -3,9 +3,9 @@ name: WeChat Work Notification
 on:
   push:
     branches:
-      - '**'  # 监听所有分支的推送
+      - '**'
     paths:
-      - 'version.json'  # 只在 version.json 文件变更时触发
+      - 'version.json'
 
 jobs:
   notify:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  # 获取最近两个提交以便比较
+          fetch-depth: 2
 
       - name: Get commit info and version
         id: commit_info
@@ -35,6 +35,6 @@ jobs:
             -d "{
               \"msgtype\": \"markdown\",
               \"markdown\": {
-                \"content\": \"## 新版本发布通知\n\n**版本：<font color=\\\"warning\\\">v${{ steps.commit_info.outputs.version }}</font>**\n**发布日期：** ${{ steps.commit_info.outputs.date }}\n\n────────────────\n\n**仓库：** ${{ github.repository }}\n**分支：** <font color=\\\"info\\\">${{ steps.commit_info.outputs.branch }}</font>\n**提交者：** ${{ steps.commit_info.outputs.author }}\n**提交信息：** ${{ steps.commit_info.outputs.message }}\n\n────────────────\n\n[📥 下载最新版本](${{ steps.commit_info.outputs.link }})  |  [📝 查看提交详情](${{ github.event.head_commit.url }})\"
+                \"content\": \"## New Version Released\n\n**Version:** <font color=\\\"warning\\\">v${{ steps.commit_info.outputs.version }}</font>\n**Release Date:** ${{ steps.commit_info.outputs.date }}\n\n────────────────\n\n**Repository:** ${{ github.repository }}\n**Branch:** <font color=\\\"info\\\">${{ steps.commit_info.outputs.branch }}</font>\n**Author:** ${{ steps.commit_info.outputs.author }}\n**Commit:** ${{ steps.commit_info.outputs.message }}\n\n────────────────\n\n[Download Latest](${{ steps.commit_info.outputs.link }})  |  [View Commit](${{ github.event.head_commit.url }})\"
               }
             }"
