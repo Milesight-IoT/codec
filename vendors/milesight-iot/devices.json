@@ -1523,6 +1523,19 @@
             "encoder_script": "vendors/milesight-iot/wt-series/wt101/wt101-encoder.js"
         },
         {
+            "id": "wt102",
+            "name": "WT102",
+            "description": "Wireless Thermostat",
+            "catalog": "wt",
+            "sn": "6527",
+            "pn": ["000"],
+            "deveui": "24e124527",
+            "device_profile": ["ClassB-OTAA"],
+            "codec": "vendors/milesight-iot/wt-series/wt102/wt102-codec.json",
+            "decoder_script": "vendors/milesight-iot/wt-series/wt102/wt102-decoder.js",
+            "encoder_script": "vendors/milesight-iot/wt-series/wt102/wt102-encoder.js"
+        },
+        {
             "id": "wt201",
             "name": "WT201",
             "description": "Smart Radiator Thermostat",
