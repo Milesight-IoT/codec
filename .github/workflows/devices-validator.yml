@@ -1,0 +1,142 @@
+name: Devices Validator
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - 'vendors/milesight-iot/devices.json'
+  pull_request:
+    branches:
+      - '**'
+    paths:
+      - 'vendors/milesight-iot/devices.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check new or modified devices for ipso_version
+        id: check
+        run: |
+          FILE="vendors/milesight-iot/devices.json"
+
+          # 获取旧版本的设备数据（id -> JSON 映射）
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            OLD_REF="${{ github.event.pull_request.base.sha }}"
+          else
+            OLD_REF="HEAD~1"
+          fi
+
+          # 将旧版本设备存为临时文件，按 id 索引
+          git show "$OLD_REF:$FILE" 2>/dev/null | jq -c '.devices[] | {(.id): .}' 2>/dev/null | jq -s 'add // {}' > /tmp/old_devices.json || echo '{}' > /tmp/old_devices.json
+
+          # 获取当前版本中所有设备
+          NEW_DEVICES=$(jq -c '.devices[]' "$FILE")
+
+          MISSING=""
+          while IFS= read -r device; do
+            id=$(echo "$device" | jq -r '.id')
+            has_ipso=$(echo "$device" | jq 'has("ipso_version")')
+
+            # 获取旧版本中该设备的数据
+            old_device=$(jq -c --arg id "$id" '.[$id] // empty' /tmp/old_devices.json)
+
+            if [ -z "$old_device" ]; then
+              # 新增设备
+              if [ "$has_ipso" = "false" ]; then
+                MISSING="${MISSING}${id}（新增）\n"
+              fi
+            else
+              # 已有设备被编辑，检查内容是否变化
+              old_sorted=$(echo "$old_device" | jq -cS '.')
+              new_sorted=$(echo "$device" | jq -cS '.')
+              if [ "$old_sorted" != "$new_sorted" ]; then
+                if [ "$has_ipso" = "false" ]; then
+                  MISSING="${MISSING}${id}（编辑）\n"
+                fi
+              fi
+            fi
+          done <<< "$NEW_DEVICES"
+
+          if [ -n "$MISSING" ]; then
+            echo "missing_devices=$(echo -e "$MISSING" | sed '/^$/d' | paste -sd ',' -)" >> $GITHUB_OUTPUT
+            echo "has_error=true" >> $GITHUB_OUTPUT
+            echo "::error::以下新增或编辑的设备缺少 ipso_version 字段: $(echo -e "$MISSING" | sed '/^$/d' | paste -sd ',' -)"
+            exit 1
+          else
+            echo "has_error=false" >> $GITHUB_OUTPUT
+            echo "所有新增或编辑的设备均包含 ipso_version 字段"
+          fi
+
+  notify:
+    needs: validate
+    if: always() && failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get missing devices info
+        id: info
+        run: |
+          FILE="vendors/milesight-iot/devices.json"
+
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            OLD_REF="${{ github.event.pull_request.base.sha }}"
+          else
+            OLD_REF="HEAD~1"
+          fi
+
+          git show "$OLD_REF:$FILE" 2>/dev/null | jq -c '.devices[] | {(.id): .}' 2>/dev/null | jq -s 'add // {}' > /tmp/old_devices.json || echo '{}' > /tmp/old_devices.json
+
+          NEW_DEVICES=$(jq -c '.devices[]' "$FILE")
+
+          MISSING=""
+          while IFS= read -r device; do
+            id=$(echo "$device" | jq -r '.id')
+            has_ipso=$(echo "$device" | jq 'has("ipso_version")')
+            old_device=$(jq -c --arg id "$id" '.[$id] // empty' /tmp/old_devices.json)
+
+            if [ -z "$old_device" ]; then
+              if [ "$has_ipso" = "false" ]; then
+                MISSING="${MISSING}- ${id}（新增）\n"
+              fi
+            else
+              old_sorted=$(echo "$old_device" | jq -cS '.')
+              new_sorted=$(echo "$device" | jq -cS '.')
+              if [ "$old_sorted" != "$new_sorted" ]; then
+                if [ "$has_ipso" = "false" ]; then
+                  MISSING="${MISSING}- ${id}（编辑）\n"
+                fi
+              fi
+            fi
+          done <<< "$NEW_DEVICES"
+
+          echo "missing_list<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$MISSING" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Send WeChat notification
+        env:
+          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+        run: |
+          if [ -n "$WECHAT_WEBHOOK" ]; then
+            curl -X POST "$WECHAT_WEBHOOK" \
+              -H 'Content-Type: application/json' \
+              -d "{
+                \"msgtype\": \"markdown\",
+                \"markdown\": {
+                  \"content\": \"## Devices 校验失败\n\n**原因：** 新增或编辑的设备缺少 <font color=\\\"warning\\\">ipso_version</font> 字段\n\n**缺失设备：**\n${{ steps.info.outputs.missing_list }}\n────────────────\n\n**代码仓库：** ${{ github.repository }}\n**分支：** <font color=\\\"warning\\\">${{ github.ref_name }}</font>\n**提交者：** ${{ github.actor }}\n**提交信息：** ${{ github.event.head_commit.message }}\n\n────────────────\n\n[查看 Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})  |  [查看提交](${{ github.event.head_commit.url }})\"
+                }
+              }"
+          else
+            echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
+          fi
