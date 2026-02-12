@@ -1533,7 +1533,8 @@
             "device_profile": ["ClassB-OTAA"],
             "codec": "vendors/milesight-iot/wt-series/wt102/wt102-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt102/wt102-decoder.js",
-            "encoder_script": "vendors/milesight-iot/wt-series/wt102/wt102-encoder.js"
+            "encoder_script": "vendors/milesight-iot/wt-series/wt102/wt102-encoder.js",
+            "ipso_version": "v2"
         },
         {
             "id": "wt201",
