@@ -183,6 +183,15 @@ function milesightDeviceEncode(payload) {
     if ("offline_control_mode" in payload) {
         encoded = encoded.concat(setOfflineControlMode(payload.offline_control_mode));
     }
+
+    // fireware version 1.4
+    if ("offline_timeout" in payload) {
+        encoded = encoded.concat(setOfflineTimeout(payload.offline_timeout));
+    }
+    if ("down_heart" in payload) {
+        encoded = encoded.concat(setDownHeart(payload.down_heart));
+    }
+    
     if ("wires_relay_config" in payload) {
         encoded = encoded.concat(setWiresRelayConfig(payload.wires_relay_config));
     }
@@ -233,14 +242,6 @@ function milesightDeviceEncode(payload) {
     }
     if ("temperature_control_forbidden_config" in payload) {
         encoded = encoded.concat(setTemperatureControlForbiddenConfig(payload.temperature_control_forbidden_config));
-    }
-
-    // fireware version 1.4
-    if ("offline_timeout" in payload) {
-        encoded = encoded.concat(setOfflineTimeout(payload.offline_timeout));
-    }
-    if ("down_heart" in payload) {
-        encoded = encoded.concat(setDownHeart(payload.down_heart));
     }
 
     return encoded;
@@ -1717,31 +1718,36 @@ function setOfflineControlMode(offline_control_mode) {
 /**
  * set offline timeout
  * @since firmware version 1.4
- * @param {number} offline_timeout unit: minute range: [1, 60] 255: disable
- * @example { "offline_timeout": 10 }
+ * @param {object} offline_timeout
+ * @param {number} offline_timeout.value values: [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+ * @param {string} offline_timeout.time values: [ 5, 10, 20, 30, 40, 50, 60, 'disable']
+ * @example { "offline_timeout": { "value": 1, "time": 5 } }
  */
-function setOfflineTimeout(offline_timeout) {
-    var enable_map = {255: "disable"};
-    var enable_values = getValues(enable_map);
-
+function setOfflineTimeout(offline_timeout) { 
+    var offline_timeout_value_map = [ 1, 2, 3, 4, 5, 6, 7, 8 ];
+    var offline_timeout_time_map = [ 5, 10, 20, 30, 40, 50, 60, 'disable'];
     var buffer = new Buffer(3);
-    if (enable_values.indexOf(offline_timeout) === -1) {
-        if (typeof offline_timeout !== "number") {
-            throw new Error("offline_timeout must be a number");
-        }
-        if (offline_timeout < 1 || offline_timeout > 60) {
-            throw new Error("offline_timeout must be in range [1, 60]");
-        }
-
-        buffer.writeUInt8(0xf9);
-        buffer.writeUInt8(0x29);
-        buffer.writeUInt8(offline_timeout);
-        return buffer.toBytes();
-    }
-
     buffer.writeUInt8(0xf9);
     buffer.writeUInt8(0x29);
-    buffer.writeUInt8(getValue(enable_map, offline_timeout));
+
+    if(RAW_VALUE) {
+        var value = offline_timeout.value;
+    
+        if (offline_timeout_value_map.indexOf(value) === -1) {
+            throw new Error("offline_timeout.value must be one of " + offline_timeout_value_map.join(", "));
+        }
+
+        buffer.writeUInt8(offline_timeout_time_map[value - 1] === 'disable' ? 255 : offline_timeout_time_map[value - 1]);
+    } else {
+        var time = offline_timeout.time;
+    
+        if (offline_timeout_time_map.indexOf(time) === -1) {
+            throw new Error("offline_timeout.time must be one of " + offline_timeout_time_map.join(", "));
+        }
+
+        buffer.writeUInt8(time === 'disable' ? 255 : time);
+    }
+
     return buffer.toBytes();
 }
 
