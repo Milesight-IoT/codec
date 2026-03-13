@@ -751,6 +751,107 @@
             "bacnet_type": "binary_output_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "install_config.install_method",
+            "name": "Install Config (Install Method)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "side" },
+                { "value": 1, "name": "top" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["install_config.install_method", "install_config.install_height", "install_config.compensation", "install_config.sensitivity_report_enable", "install_config.manual_gain"]
+        },
+        {
+            "id": "install_config.install_height",
+            "name": "Install Config (Install Height)",
+            "value": "",
+            "unit": "m",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 31,
+            "bacnet_unit_type": "UNITS_METERS",
+            "reference": ["install_config.install_method", "install_config.install_height", "install_config.compensation", "install_config.sensitivity_report_enable", "install_config.manual_gain"]
+        },
+        {
+            "id": "install_config.compensation",
+            "name": "Install Config (Compensation)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "INT8",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["install_config.install_method", "install_config.install_height", "install_config.compensation", "install_config.sensitivity_report_enable", "install_config.manual_gain"]
+        },
+        {
+            "id": "install_config.sensitivity_report_enable",
+            "name": "Install Config (Sensitivity Report Enable)",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "disable" },
+                { "value": 1, "name": "enable" }
+            ],
+            "bacnet_type": "binary_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "reference": ["install_config.install_method", "install_config.install_height", "install_config.compensation", "install_config.sensitivity_report_enable", "install_config.manual_gain"]
+        },
+        {
+            "id": "install_config.manual_gain",
+            "name": "Install Config (Manual Gain)",
+            "value": "",
+            "unit": "dB",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 199,
+            "bacnet_unit_type": "UNITS_DECIBELS",
+            "reference": ["install_config.install_method", "install_config.install_height", "install_config.compensation", "install_config.sensitivity_report_enable", "install_config.manual_gain"]
+        },
+        {
+            "id": "people_threshold_trigger_mode",
+            "name": "People Threshold Trigger Mode",
+            "value": "",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "threshold" },
+                { "value": 1, "name": "multiple" }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "current_sensitivity",
+            "name": "Current Sensitivity",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
         }
     ]
 }
