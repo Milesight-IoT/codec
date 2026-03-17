@@ -87,7 +87,7 @@ function milesightDeviceDecode(bytes) {
             } else if (depth_value === 0xfffd) {
                 decoded.depth_error = readSensorStatus(2);
             } else {
-                decoded.depth = depth_value / 100;
+                decoded.depth = depth_value;
             }
             i += 2;
         }
@@ -109,7 +109,7 @@ function milesightDeviceDecode(bytes) {
             } else if (depth_value === 0xfffd) {
                 data.depth_error = readSensorStatus(2);
             } else {
-                data.depth = depth_value / 100;
+                data.depth = depth_value;
             }
             i += 6;
             decoded.history = decoded.history || [];
