@@ -19,7 +19,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Check new or modified devices for ipso_version
         id: check
@@ -30,11 +30,23 @@ jobs:
           if [ "${{ github.event_name }}" == "pull_request" ]; then
             OLD_REF="${{ github.event.pull_request.base.sha }}"
           else
-            OLD_REF="HEAD~1"
+            OLD_REF="${{ github.event.before }}"
+            # 新分支首次 push 时 before 可能是全 0，回退到 HEAD~1（如果存在）
+            if [ -z "$OLD_REF" ] || [ "$OLD_REF" = "0000000000000000000000000000000000000000" ]; then
+              if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+                OLD_REF="HEAD~1"
+              else
+                OLD_REF=""
+              fi
+            fi
           fi
 
           # 将旧版本设备存为临时文件，按 id 索引
-          git show "$OLD_REF:$FILE" 2>/dev/null | jq -c '.devices[] | {(.id): .}' 2>/dev/null | jq -s 'add // {}' > /tmp/old_devices.json || echo '{}' > /tmp/old_devices.json
+          if [ -n "$OLD_REF" ] && git cat-file -e "$OLD_REF:$FILE" 2>/dev/null; then
+            git show "$OLD_REF:$FILE" | jq -c '.devices[] | {(.id): .}' 2>/dev/null | jq -s 'add // {}' > /tmp/old_devices.json || echo '{}' > /tmp/old_devices.json
+          else
+            echo '{}' > /tmp/old_devices.json
+          fi
 
           # 获取当前版本中所有设备
           NEW_DEVICES=$(jq -c '.devices[]' "$FILE")
@@ -82,7 +94,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Get missing devices info
         id: info
@@ -92,10 +104,21 @@ jobs:
           if [ "${{ github.event_name }}" == "pull_request" ]; then
             OLD_REF="${{ github.event.pull_request.base.sha }}"
           else
-            OLD_REF="HEAD~1"
+            OLD_REF="${{ github.event.before }}"
+            if [ -z "$OLD_REF" ] || [ "$OLD_REF" = "0000000000000000000000000000000000000000" ]; then
+              if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+                OLD_REF="HEAD~1"
+              else
+                OLD_REF=""
+              fi
+            fi
           fi
 
-          git show "$OLD_REF:$FILE" 2>/dev/null | jq -c '.devices[] | {(.id): .}' 2>/dev/null | jq -s 'add // {}' > /tmp/old_devices.json || echo '{}' > /tmp/old_devices.json
+          if [ -n "$OLD_REF" ] && git cat-file -e "$OLD_REF:$FILE" 2>/dev/null; then
+            git show "$OLD_REF:$FILE" | jq -c '.devices[] | {(.id): .}' 2>/dev/null | jq -s 'add // {}' > /tmp/old_devices.json || echo '{}' > /tmp/old_devices.json
+          else
+            echo '{}' > /tmp/old_devices.json
+          fi
 
           NEW_DEVICES=$(jq -c '.devices[]' "$FILE")
 
