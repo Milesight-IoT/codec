@@ -1,0 +1,120 @@
+{
+    "version": "1.0.0",
+    "bytes": "000c07925407000c15465375010b2e2800000b3b9093000a5a99060a5e72060c789800627002fd170000",
+    "object": [
+        {
+            "id": "message_format",
+            "name": "Message Format",
+            "value": "00",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 2,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "energy",
+            "name": "Energy",
+            "value": "754.92",
+            "unit": "MWh",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 24,
+            "bacnet_unit_type": "UNITS_MEGAWATT_HOURS"
+        },
+        {
+            "id": "volume",
+            "name": "Volume",
+            "value": "175534.6",
+            "unit": "m³",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 37,
+            "bacnet_unit_type": "UNITS_CUBIC_METERS"
+        },
+        {
+            "id": "power",
+            "name": "Power",
+            "value": "28",
+            "unit": "kW",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 22,
+            "bacnet_unit_type": "UNITS_KILOWATTS"
+        },
+        {
+            "id": "flow",
+            "name": "Flow",
+            "value": "9.39",
+            "unit": "m³/h",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 124,
+            "bacnet_unit_type": "UNITS_CUBIC_METERS_PER_HOUR"
+        },
+        {
+            "id": "forward_temperature",
+            "name": "Forward Temperature",
+            "value": "69.9",
+            "unit": "°C",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "return_temperature",
+            "name": "Return Temperature",
+            "value": "67.2",
+            "unit": "°C",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "meter_id",
+            "name": "Meter ID",
+            "value": "70620098",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 10,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "error_flags",
+            "name": "Error Flags",
+            "value": "0",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                { "value": 0, "name": "No Error" },
+                { "value": 1, "name": "Error" }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

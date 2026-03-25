@@ -17,6 +17,15 @@
             "description": "",
             "oui": "",
             "devices": "vendors/watteco/devices.json"
+        },
+        {
+            "id": "elvaco",
+            "name": "Elvaco",
+            "logo": "",
+            "website": "",
+            "description": "",
+            "oui": "",
+            "devices": "vendors/Elvaco/devices.json"
         }
     ]
 }
