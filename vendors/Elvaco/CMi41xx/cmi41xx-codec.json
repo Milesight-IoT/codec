@@ -24,7 +24,7 @@
             "data_type": "NUMBER",
             "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
-            "bacnet_unit_type_id": 24,
+            "bacnet_unit_type_id": 146,
             "bacnet_unit_type": "UNITS_MEGAWATT_HOURS"
         },
         {
@@ -36,7 +36,7 @@
             "data_type": "NUMBER",
             "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
-            "bacnet_unit_type_id": 37,
+            "bacnet_unit_type_id": 80,
             "bacnet_unit_type": "UNITS_CUBIC_METERS"
         },
         {
@@ -48,7 +48,7 @@
             "data_type": "NUMBER",
             "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
-            "bacnet_unit_type_id": 22,
+            "bacnet_unit_type_id": 48,
             "bacnet_unit_type": "UNITS_KILOWATTS"
         },
         {
@@ -60,7 +60,7 @@
             "data_type": "NUMBER",
             "value_type": "FLOAT",
             "bacnet_type": "analog_input_object",
-            "bacnet_unit_type_id": 124,
+            "bacnet_unit_type_id": 135,
             "bacnet_unit_type": "UNITS_CUBIC_METERS_PER_HOUR"
         },
         {

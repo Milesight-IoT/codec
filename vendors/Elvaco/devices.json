@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "cmi41xx",
+            "name": "CMi41xx",
+            "description": "Transforms Itron meter into LoRaWAN",
+            "catalog": "cmi41xx",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/Elvaco/CMi41xx/cmi41xx-codec.json",
+            "decoder_script": "vendors/Elvaco/CMi41xx/cmi41xx-decoder.js",
+            "encoder_script": "vendors/Elvaco/CMi41xx/cmi41xx-encoder.js"
+        }
+    ]
+}
