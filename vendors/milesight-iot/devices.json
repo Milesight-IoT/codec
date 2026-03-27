@@ -390,6 +390,20 @@
             "encoder_script": "vendors/milesight-iot/ct-series/ct310-v2/ct310-v2-encoder.js"
         },
         {
+            "id": "cth01",
+            "name": "CTH01",
+            "description": "Smart Power Monitor Hub",
+            "catalog": "cth",
+            "sn": "6637",
+            "pn": ["000"],
+            "deveui": "24e124637",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/cth-series/cth01/cth01-codec.json",
+            "decoder_script": "vendors/milesight-iot/cth-series/cth01/cth01-decoder.js",
+            "encoder_script": "vendors/milesight-iot/cth-series/cth01/cth01-encoder.js",
+            "ipso_version": "v2"
+        },
+        {
             "id": "ds3604",
             "name": "DS3604",
             "description": "Smart Eink Display",
