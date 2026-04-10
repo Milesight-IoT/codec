@@ -1,40 +1,243 @@
-name: WeChat Work Notification
+name: Version Release
 
 on:
   push:
     branches:
-      - '**'
+      - release
     paths:
-      - 'version.json'
+      - version.json
+
+concurrency:
+  group: version-release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
-  notify:
+  release:
     runs-on: ubuntu-latest
+    outputs:
+      should_release: ${{ steps.meta.outputs.should_release }}
+      version: ${{ steps.meta.outputs.version }}
+      date: ${{ steps.meta.outputs.date }}
+      tag: ${{ steps.meta.outputs.tag }}
+      archive_name: ${{ steps.meta.outputs.archive_name }}
+      download_url: ${{ steps.meta.outputs.download_url }}
+      author: ${{ steps.meta.outputs.author }}
+      message: ${{ steps.meta.outputs.message }}
+      branch: ${{ steps.meta.outputs.branch }}
+      commit_url: ${{ steps.meta.outputs.commit_url }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
-      - name: Get commit info and version
-        id: commit_info
+      - name: Collect release metadata
+        id: meta
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
         run: |
-          echo "author=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
-          echo "message=$(git log -1 --pretty=format:'%s')" >> $GITHUB_OUTPUT
-          echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
-          echo "version=$(jq -r '.version' version.json)" >> $GITHUB_OUTPUT
-          echo "date=$(jq -r '.date' version.json)" >> $GITHUB_OUTPUT
-          echo "link=$(jq -r '.link' version.json)" >> $GITHUB_OUTPUT
+          set -euo pipefail
 
+          git fetch --force --tags
+
+          current_version=$(jq -r '.version // empty' version.json)
+          current_date=$(jq -r '.date // empty' version.json)
+          author=$(git log -1 --pretty=format:'%an')
+          message=$(git log -1 --pretty=format:'%s')
+          branch="${GITHUB_REF#refs/heads/}"
+          commit_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
+
+          previous_version=""
+          if [ -n "${BEFORE_SHA:-}" ] && [ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE_SHA}:version.json" 2>/dev/null; then
+            previous_version=$(git show "${BEFORE_SHA}:version.json" | jq -r '.version // empty')
+          elif git rev-parse --verify HEAD~1 >/dev/null 2>&1 && git cat-file -e "HEAD~1:version.json" 2>/dev/null; then
+            previous_version=$(git show HEAD~1:version.json | jq -r '.version // empty')
+          fi
+
+          should_release=true
+          if [ "$previous_version" = "$current_version" ]; then
+            should_release=false
+          fi
+
+          tag="v${current_version}"
+          archive_name="codec-v${current_version}.zip"
+          download_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/releases/download/${tag}/${archive_name}"
+
+          {
+            echo "should_release=$should_release"
+            echo "version=$current_version"
+            echo "date=$current_date"
+            echo "tag=$tag"
+            echo "archive_name=$archive_name"
+            echo "download_url=$download_url"
+            echo "author=$author"
+            echo "message=$message"
+            echo "branch=$branch"
+            echo "commit_url=$commit_url"
+          } >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Release Decision"
+            echo ""
+            echo "- Current version: ${current_version:-<empty>}"
+            echo "- Previous version: ${previous_version:-<empty>}"
+            echo "- Should release: ${should_release}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Validate release fields
+        if: steps.meta.outputs.should_release == 'true'
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+          RELEASE_DATE: ${{ steps.meta.outputs.date }}
+        run: |
+          set -euo pipefail
+
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::version.json version must match X.Y.Z, got '$VERSION'"
+            exit 1
+          fi
+
+          if ! [[ "$RELEASE_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::version.json date must match YYYY-MM-DD, got '$RELEASE_DATE'"
+            exit 1
+          fi
+
+      - name: Build release archive
+        if: steps.meta.outputs.should_release == 'true'
+        id: archive
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+          ARCHIVE_NAME: ${{ steps.meta.outputs.archive_name }}
+        run: |
+          set -euo pipefail
+
+          archive_path="${RUNNER_TEMP}/${ARCHIVE_NAME}"
+          git archive --format=zip --output "$archive_path" --prefix="codec-v${VERSION}/" "$GITHUB_SHA"
+          echo "archive_path=$archive_path" >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Archive"
+            echo ""
+            echo "- File: ${ARCHIVE_NAME}"
+            echo "- Path: ${archive_path}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Prepare release notes
+        if: steps.meta.outputs.should_release == 'true'
+        id: notes
+        env:
+          TAG: ${{ steps.meta.outputs.tag }}
+          RELEASE_DATE: ${{ steps.meta.outputs.date }}
+          DOWNLOAD_URL: ${{ steps.meta.outputs.download_url }}
+        run: |
+          set -euo pipefail
+
+          notes_path="${RUNNER_TEMP}/release-notes.md"
+          cat <<EOF > "$notes_path"
+          ## Release Info
+
+          - Version: ${TAG}
+          - Date: ${RELEASE_DATE}
+          - Commit: \`${GITHUB_SHA}\`
+          - Download: ${DOWNLOAD_URL}
+          EOF
+
+          echo "notes_path=$notes_path" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update GitHub Release
+        if: steps.meta.outputs.should_release == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.meta.outputs.tag }}
+          ARCHIVE_PATH: ${{ steps.archive.outputs.archive_path }}
+          NOTES_PATH: ${{ steps.notes.outputs.notes_path }}
+        run: |
+          set -euo pipefail
+
+          if git rev-parse -q --verify "refs/tags/${TAG}" >/dev/null 2>&1; then
+            tag_sha=$(git rev-list -n 1 "$TAG")
+            if [ "$tag_sha" != "$GITHUB_SHA" ]; then
+              echo "::error::Tag ${TAG} already exists at ${tag_sha}, expected ${GITHUB_SHA}"
+              exit 1
+            fi
+            tag_exists=true
+          else
+            tag_exists=false
+          fi
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$ARCHIVE_PATH" --clobber
+            gh release edit "$TAG" --title "$TAG" --notes-file "$NOTES_PATH"
+            action_result="updated"
+          else
+            if [ "$tag_exists" = "true" ]; then
+              gh release create "$TAG" "$ARCHIVE_PATH" --title "$TAG" --notes-file "$NOTES_PATH"
+            else
+              gh release create "$TAG" "$ARCHIVE_PATH" --title "$TAG" --notes-file "$NOTES_PATH" --target "$GITHUB_SHA"
+            fi
+            action_result="created"
+          fi
+
+          {
+            echo "## GitHub Release"
+            echo ""
+            echo "- Tag: ${TAG}"
+            echo "- Result: ${action_result}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  notify:
+    needs: release
+    if: needs.release.outputs.should_release == 'true'
+    runs-on: ubuntu-latest
+    steps:
       - name: Send WeChat Work notification
         env:
           WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          REPOSITORY: ${{ github.repository }}
+          VERSION: ${{ needs.release.outputs.version }}
+          RELEASE_DATE: ${{ needs.release.outputs.date }}
+          BRANCH: ${{ needs.release.outputs.branch }}
+          AUTHOR: ${{ needs.release.outputs.author }}
+          MESSAGE: ${{ needs.release.outputs.message }}
+          COMMIT_URL: ${{ needs.release.outputs.commit_url }}
+          DOWNLOAD_URL: ${{ needs.release.outputs.download_url }}
         run: |
-          curl -X POST "$WECHAT_WEBHOOK" \
-            -H 'Content-Type: application/json' \
-            -d "{
-              \"msgtype\": \"markdown\",
-              \"markdown\": {
-                \"content\": \"## 新版本发布\n\n**版本：** <font color=\\\"warning\\\">v${{ steps.commit_info.outputs.version }}</font>\n**发布日期：** ${{ steps.commit_info.outputs.date }}\n\n────────────────\n\n**代码仓库：** ${{ github.repository }}\n**分支：** <font color=\\\"info\\\">${{ steps.commit_info.outputs.branch }}</font>\n**提交者：** ${{ steps.commit_info.outputs.author }}\n**提交信息：** ${{ steps.commit_info.outputs.message }}\n\n────────────────\n\n[查看提交](${{ github.event.head_commit.url }})  |  [下载最新版](${{ steps.commit_info.outputs.link }})\"
+          set -euo pipefail
+
+          if [ -z "${WECHAT_WEBHOOK:-}" ]; then
+            echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
+            exit 0
+          fi
+
+          payload=$(jq -n \
+            --arg version "v${VERSION}" \
+            --arg date "$RELEASE_DATE" \
+            --arg repository "$REPOSITORY" \
+            --arg branch "$BRANCH" \
+            --arg author "$AUTHOR" \
+            --arg message "$MESSAGE" \
+            --arg commit_url "$COMMIT_URL" \
+            --arg download_url "$DOWNLOAD_URL" \
+            '{
+              msgtype: "markdown",
+              markdown: {
+                content:
+                  "## 新版本发布\n\n" +
+                  "**版本：** <font color=\"warning\">" + $version + "</font>\n" +
+                  "**发布日期：** " + $date + "\n\n" +
+                  "────────────────\n\n" +
+                  "**代码仓库：** " + $repository + "\n" +
+                  "**分支：** <font color=\"info\">" + $branch + "</font>\n" +
+                  "**提交者：** " + $author + "\n" +
+                  "**提交信息：** " + $message + "\n\n" +
+                  "────────────────\n\n" +
+                  "[查看提交](" + $commit_url + ")  |  [下载版本包](" + $download_url + ")"
               }
-            }"
+            }')
+
+          curl --fail --silent --show-error -X POST "$WECHAT_WEBHOOK" \
+            -H 'Content-Type: application/json' \
+            -d "$payload"
