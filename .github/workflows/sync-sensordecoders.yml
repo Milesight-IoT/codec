@@ -1,0 +1,339 @@
+name: Sync SensorDecoders Mirror
+
+on:
+  workflow_run:
+    workflows:
+      - Version Release
+    types:
+      - completed
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: sync-sensordecoders-release
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'release'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate sync token
+        env:
+          SENSORDECODERS_SYNC_TOKEN: ${{ secrets.SENSORDECODERS_SYNC_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${SENSORDECODERS_SYNC_TOKEN:-}" ]; then
+            echo "::error::SENSORDECODERS_SYNC_TOKEN secret is not configured"
+            exit 1
+          fi
+
+      - name: Wait for prerequisite CI workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          set -euo pipefail
+
+          wait_for_workflow() {
+            local workflow_file="$1"
+            local workflow_name="$2"
+            local deadline=$(( $(date +%s) + 900 ))
+
+            while true; do
+              run_json=$(gh api \
+                -H "Accept: application/vnd.github+json" \
+                "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow_file}/runs?branch=${BRANCH}&event=push&per_page=20" |
+                jq -c --arg sha "$HEAD_SHA" '.workflow_runs | map(select(.head_sha == $sha)) | sort_by(.run_attempt) | last')
+
+              if [ -z "$run_json" ] || [ "$run_json" = "null" ]; then
+                echo "${workflow_name}: not triggered for ${HEAD_SHA}"
+                return 0
+              fi
+
+              status=$(echo "$run_json" | jq -r '.status')
+              conclusion=$(echo "$run_json" | jq -r '.conclusion // empty')
+              html_url=$(echo "$run_json" | jq -r '.html_url')
+
+              if [ "$status" != "completed" ]; then
+                if [ "$(date +%s)" -ge "$deadline" ]; then
+                  echo "::error::Timed out waiting for ${workflow_name} to finish: ${html_url}"
+                  return 1
+                fi
+
+                echo "${workflow_name}: waiting for completion (${status})"
+                sleep 15
+                continue
+              fi
+
+              if [ "$conclusion" != "success" ]; then
+                echo "::error::${workflow_name} concluded with ${conclusion}: ${html_url}"
+                return 1
+              fi
+
+              echo "${workflow_name}: success"
+              return 0
+            done
+          }
+
+          wait_for_workflow "codec-validator.yml" "Codec Validator"
+          wait_for_workflow "devices-validator.yml" "Devices Validator"
+
+      - name: Checkout codec repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Read release metadata
+        id: meta
+        run: |
+          set -euo pipefail
+
+          git fetch --force --tags
+
+          version=$(jq -r '.version // empty' version.json)
+          if [ -z "$version" ]; then
+            echo "::error::version.json does not contain a version value"
+            exit 1
+          fi
+
+          current_tag="v${version}"
+          if ! git rev-parse -q --verify "refs/tags/${current_tag}" >/dev/null 2>&1; then
+            echo "::error::Current release tag ${current_tag} does not exist"
+            exit 1
+          fi
+
+          previous_tag=$(git tag --sort=-version:refname | grep -Fxv "${current_tag}" | head -n 1 || true)
+          if [ -n "$previous_tag" ]; then
+            base_ref="$previous_tag"
+          else
+            base_ref=$(git hash-object -t tree /dev/null)
+          fi
+
+          {
+            echo "version=$version"
+            echo "current_tag=$current_tag"
+            echo "previous_tag=$previous_tag"
+            echo "base_ref=$base_ref"
+            echo "branch=${{ github.event.workflow_run.head_branch }}"
+            echo "sha=${{ github.event.workflow_run.head_sha }}"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Collect release delta files
+        id: delta
+        env:
+          CURRENT_TAG: ${{ steps.meta.outputs.current_tag }}
+          BASE_REF: ${{ steps.meta.outputs.base_ref }}
+        run: |
+          set -euo pipefail
+
+          manifest_path="${RUNNER_TEMP}/sensor-decoders-sync-files.txt"
+
+          : > "$manifest_path"
+          git diff --name-status --find-renames "$BASE_REF" "$CURRENT_TAG" -- vendors/milesight-iot | while IFS=$'\t' read -r status path_a path_b; do
+            case "$status" in
+              A|M|D|T)
+                printf '%s\n' "$path_a" >> "$manifest_path"
+                ;;
+              R*|C*)
+                printf '%s\n%s\n' "$path_a" "$path_b" >> "$manifest_path"
+                ;;
+            esac
+          done
+
+          filtered_manifest="${manifest_path}.filtered"
+          grep -E '^vendors/milesight-iot/.+(-codec\.json|-decoder\.js|-encoder\.js)$' "$manifest_path" | sort -u > "$filtered_manifest" || true
+          mv "$filtered_manifest" "$manifest_path"
+
+          changed_count=$(wc -l < "$manifest_path" | tr -d ' ')
+          if [ "$changed_count" -gt 0 ]; then
+            has_release_changes=true
+          else
+            has_release_changes=false
+          fi
+
+          {
+            echo "current_tag=$CURRENT_TAG"
+            echo "base_ref=$BASE_REF"
+            echo "manifest_path=$manifest_path"
+            echo "has_release_changes=$has_release_changes"
+            echo "changed_count=$changed_count"
+          } >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Release Delta"
+            echo
+            echo "- Current tag: \`$CURRENT_TAG\`"
+            echo "- Base ref: \`${BASE_REF}\`"
+            echo "- Changed codec files: $changed_count"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Checkout SensorDecoders main
+        if: steps.delta.outputs.has_release_changes == 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: Milesight-IoT/SensorDecoders
+          ref: main
+          path: sensor-decoder-mirror
+          token: ${{ secrets.SENSORDECODERS_SYNC_TOKEN }}
+          fetch-depth: 0
+
+      - name: Mirror released codec files
+        id: mirror
+        if: steps.delta.outputs.has_release_changes == 'true'
+        run: |
+          set -euo pipefail
+
+          bash ./.github/scripts/sync-sensordecoders.sh "$GITHUB_WORKSPACE" "$GITHUB_WORKSPACE/sensor-decoder-mirror" "${{ steps.delta.outputs.manifest_path }}"
+
+      - name: Prepare no-op summary
+        if: steps.delta.outputs.has_release_changes != 'true' || steps.mirror.outputs.has_changes != 'true'
+        run: |
+          echo "No SensorDecoders mirror changes were detected for release commit ${{ steps.meta.outputs.sha }}." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit mirrored files
+        if: steps.mirror.outputs.has_changes == 'true'
+        id: commit
+        working-directory: sensor-decoder-mirror
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          set -euo pipefail
+
+          branch="sync/codec-release-latest"
+
+          git checkout -B "$branch"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "sync: mirror codec release v${VERSION} to SensorDecoders main"
+          git push --force-with-lease origin "$branch"
+
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update SensorDecoders pull request
+        if: steps.mirror.outputs.has_changes == 'true'
+        working-directory: sensor-decoder-mirror
+        env:
+          GH_TOKEN: ${{ secrets.SENSORDECODERS_SYNC_TOKEN }}
+          VERSION: ${{ steps.meta.outputs.version }}
+          SOURCE_SHA: ${{ steps.meta.outputs.sha }}
+          SOURCE_BRANCH: ${{ steps.meta.outputs.branch }}
+          SYNC_BRANCH: ${{ steps.commit.outputs.branch }}
+        run: |
+          set -euo pipefail
+
+          title="sync: mirror codec release v${VERSION} to SensorDecoders main"
+          title_prefix="sync: mirror codec release "
+          body_file="${RUNNER_TEMP}/sensor-decoders-sync-pr.md"
+
+          changed_files=()
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            changed_files+=("$file")
+          done < <(git diff --name-only origin/main...HEAD -- '*-codec.json' '*-decoder.js' '*-encoder.js' | sort)
+
+          {
+            echo "## Summary"
+            echo
+            echo "- Codec version: \`v${VERSION}\`"
+            echo "- Source branch: \`${SOURCE_BRANCH}\`"
+            echo "- Source commit: \`${SOURCE_SHA}\`"
+            echo "- Delta range: \`${{ steps.meta.outputs.base_ref }} .. ${{ steps.meta.outputs.current_tag }}\`"
+            echo
+            echo "## Mirrored files"
+            echo
+            if [ "${#changed_files[@]}" -eq 0 ]; then
+              echo "- None"
+            else
+              printf -- "- \`%s\`\n" "${changed_files[@]}"
+            fi
+          } > "$body_file"
+
+          prs_json=$(gh pr list \
+            --repo Milesight-IoT/SensorDecoders \
+            --state open \
+            --base main \
+            --json number,headRefName,title)
+
+          existing_pr=$(echo "$prs_json" | jq -r --arg head "$SYNC_BRANCH" '.[] | select(.headRefName == $head) | .number' | head -n 1)
+
+          stale_prs=$(echo "$prs_json" | jq -r --arg head "$SYNC_BRANCH" --arg prefix "$title_prefix" '
+            .[]
+            | select(.headRefName != $head)
+            | select((.title // "") | startswith($prefix))
+            | .number
+          ')
+
+          if [ -n "$stale_prs" ]; then
+            while IFS= read -r pr_number; do
+              [ -z "$pr_number" ] && continue
+              gh pr close "$pr_number" \
+                --repo Milesight-IoT/SensorDecoders \
+                --comment "Superseded by the refreshed release mirror PR on branch \`${SYNC_BRANCH}\`."
+            done <<< "$stale_prs"
+          fi
+
+          if [ -n "$existing_pr" ]; then
+            gh pr edit "$existing_pr" \
+              --repo Milesight-IoT/SensorDecoders \
+              --title "$title" \
+              --body-file "$body_file"
+            action_result="updated"
+            pr_ref="#${existing_pr}"
+          else
+            pr_url=$(gh pr create \
+              --repo Milesight-IoT/SensorDecoders \
+              --base main \
+              --head "$SYNC_BRANCH" \
+              --title "$title" \
+              --body-file "$body_file")
+            action_result="created"
+            pr_ref="$pr_url"
+          fi
+
+          {
+            echo "## SensorDecoders Sync"
+            echo
+            echo "- Result: ${action_result}"
+            echo "- Ref: ${pr_ref}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  notify-sync-failure:
+    needs: sync
+    if: always() && needs.sync.result == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send SensorDecoders sync failure notification
+        env:
+          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          REPOSITORY: ${{ github.repository }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+          COMMIT_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${WECHAT_WEBHOOK:-}" ]; then
+            echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
+            exit 0
+          fi
+
+          payload=$(jq -n \
+            --arg repository "$REPOSITORY" \
+            --arg branch "$BRANCH" \
+            --arg commit_url "$COMMIT_URL" \
+            '{
+              msgtype: "markdown",
+              markdown: {
+                content: "## SensorDecoders 镜像同步失败\n\n**代码仓库：** \($repository)\n**分支：** <font color=\"info\">\($branch)</font>\n\n────────────────\n\n正式版本已发布，但自动同步到 SensorDecoders/main 失败，请尽快补做人工同步。\n\n[查看 Release Workflow](\($commit_url))  |  [查看 Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+              }
+            }')
+
+          curl --fail --silent --show-error -X POST "$WECHAT_WEBHOOK" \
+            -H 'Content-Type: application/json' \
+            -d "$payload"
