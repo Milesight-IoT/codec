@@ -11,6 +11,7 @@ on:
       - '**'
     paths:
       - 'vendors/milesight-iot/devices.json'
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -25,8 +26,36 @@ jobs:
         id: check
         run: |
           FILE="vendors/milesight-iot/devices.json"
+          HAS_ERROR=false
 
-          # 获取旧版本的设备数据（id -> JSON 映射）
+          check_duplicates() {
+            local field=$1 label=$2
+            local dups
+            dups=$(jq -r ".devices[].$field" "$FILE" | sort | uniq -d)
+            if [ -n "$dups" ]; then
+              while IFS= read -r dup; do
+                echo "::error::发现重复的设备 $label: ${dup}"
+              done <<< "$dups"
+              HAS_ERROR=true
+            fi
+          }
+
+          check_duplicates id id
+          check_duplicates name name
+
+          while IFS= read -r device; do
+            read -r id decoder encoder <<< "$(echo "$device" | jq -r '[.id, (.decoder_script // ""), (.encoder_script // "")] | @tsv')"
+            for field_val in "decoder_script:$decoder" "encoder_script:$encoder"; do
+              field="${field_val%%:*}"
+              script_path="${field_val#*:}"
+              [ -z "$script_path" ] && continue
+              if [ ! -f "$script_path" ]; then
+                echo "::error::${id}: ${field} 文件不存在 (${script_path})"
+                HAS_ERROR=true
+              fi
+            done
+          done <<< "$(jq -c '.devices[]' "$FILE")"
+
           if [ "${{ github.event_name }}" == "pull_request" ]; then
             OLD_REF="${{ github.event.pull_request.base.sha }}"
           else
@@ -41,49 +70,43 @@ jobs:
             fi
           fi
 
-          # 将旧版本设备存为临时文件，按 id 索引
           if [ -n "$OLD_REF" ] && git cat-file -e "$OLD_REF:$FILE" 2>/dev/null; then
             git show "$OLD_REF:$FILE" | jq -c '.devices[] | {(.id): .}' 2>/dev/null | jq -s 'add // {}' > /tmp/old_devices.json || echo '{}' > /tmp/old_devices.json
           else
             echo '{}' > /tmp/old_devices.json
           fi
 
-          # 获取当前版本中所有设备
-          NEW_DEVICES=$(jq -c '.devices[]' "$FILE")
-
           MISSING=""
           while IFS= read -r device; do
             id=$(echo "$device" | jq -r '.id')
             has_ipso=$(echo "$device" | jq 'has("ipso_version")')
-
-            # 获取旧版本中该设备的数据
             old_device=$(jq -c --arg id "$id" '.[$id] // empty' /tmp/old_devices.json)
 
             if [ -z "$old_device" ]; then
-              # 新增设备
               if [ "$has_ipso" = "false" ]; then
                 MISSING="${MISSING}${id}（新增）\n"
               fi
             else
-              # 已有设备被编辑，检查内容是否变化
               old_sorted=$(echo "$old_device" | jq -cS '.')
               new_sorted=$(echo "$device" | jq -cS '.')
-              if [ "$old_sorted" != "$new_sorted" ]; then
-                if [ "$has_ipso" = "false" ]; then
-                  MISSING="${MISSING}${id}（编辑）\n"
-                fi
+              if [ "$old_sorted" != "$new_sorted" ] && [ "$has_ipso" = "false" ]; then
+                MISSING="${MISSING}${id}（编辑）\n"
               fi
             fi
-          done <<< "$NEW_DEVICES"
+          done <<< "$(jq -c '.devices[]' "$FILE")"
 
           if [ -n "$MISSING" ]; then
             echo "missing_devices=$(echo -e "$MISSING" | sed '/^$/d' | paste -sd ',' -)" >> $GITHUB_OUTPUT
-            echo "has_error=true" >> $GITHUB_OUTPUT
             echo "::error::以下新增或编辑的设备缺少 ipso_version 字段: $(echo -e "$MISSING" | sed '/^$/d' | paste -sd ',' -)"
+            HAS_ERROR=true
+          fi
+
+          if [ "$HAS_ERROR" = "true" ]; then
+            echo "has_error=true" >> $GITHUB_OUTPUT
             exit 1
           else
             echo "has_error=false" >> $GITHUB_OUTPUT
-            echo "所有新增或编辑的设备均包含 ipso_version 字段"
+            echo "所有校验均通过"
           fi
 
   notify:
@@ -100,6 +123,33 @@ jobs:
         id: info
         run: |
           FILE="vendors/milesight-iot/devices.json"
+          ERRORS=""
+
+          collect_duplicates() {
+            local field=$1 label=$2
+            local dups
+            dups=$(jq -r ".devices[].$field" "$FILE" | sort | uniq -d)
+            if [ -n "$dups" ]; then
+              while IFS= read -r dup; do
+                ERRORS="${ERRORS}- 重复 $label: ${dup}\n"
+              done <<< "$dups"
+            fi
+          }
+
+          collect_duplicates id id
+          collect_duplicates name name
+
+          while IFS= read -r device; do
+            read -r id decoder encoder <<< "$(echo "$device" | jq -r '[.id, (.decoder_script // ""), (.encoder_script // "")] | @tsv')"
+            for field_val in "decoder_script:$decoder" "encoder_script:$encoder"; do
+              field="${field_val%%:*}"
+              script_path="${field_val#*:}"
+              [ -z "$script_path" ] && continue
+              if [ ! -f "$script_path" ]; then
+                ERRORS="${ERRORS}- ${id}: ${field} 文件不存在\n"
+              fi
+            done
+          done <<< "$(jq -c '.devices[]' "$FILE")"
 
           if [ "${{ github.event_name }}" == "pull_request" ]; then
             OLD_REF="${{ github.event.pull_request.base.sha }}"
@@ -120,9 +170,6 @@ jobs:
             echo '{}' > /tmp/old_devices.json
           fi
 
-          NEW_DEVICES=$(jq -c '.devices[]' "$FILE")
-
-          MISSING=""
           while IFS= read -r device; do
             id=$(echo "$device" | jq -r '.id')
             has_ipso=$(echo "$device" | jq 'has("ipso_version")')
@@ -130,36 +177,49 @@ jobs:
 
             if [ -z "$old_device" ]; then
               if [ "$has_ipso" = "false" ]; then
-                MISSING="${MISSING}- ${id}（新增）\n"
+                ERRORS="${ERRORS}- ${id}（新增）缺少 ipso_version\n"
               fi
             else
               old_sorted=$(echo "$old_device" | jq -cS '.')
               new_sorted=$(echo "$device" | jq -cS '.')
-              if [ "$old_sorted" != "$new_sorted" ]; then
-                if [ "$has_ipso" = "false" ]; then
-                  MISSING="${MISSING}- ${id}（编辑）\n"
-                fi
+              if [ "$old_sorted" != "$new_sorted" ] && [ "$has_ipso" = "false" ]; then
+                ERRORS="${ERRORS}- ${id}（编辑）缺少 ipso_version\n"
               fi
             fi
-          done <<< "$NEW_DEVICES"
+          done <<< "$(jq -c '.devices[]' "$FILE")"
 
-          echo "missing_list<<EOF" >> $GITHUB_OUTPUT
-          echo -e "$MISSING" >> $GITHUB_OUTPUT
+          echo "error_list<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$ERRORS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Send WeChat notification
         env:
           WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          ERROR_LIST: ${{ steps.info.outputs.error_list }}
+          REPOSITORY: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          ACTOR: ${{ github.actor }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          COMMIT_URL: ${{ github.event.head_commit.url }}
         run: |
           if [ -n "$WECHAT_WEBHOOK" ]; then
-            curl -X POST "$WECHAT_WEBHOOK" \
-              -H 'Content-Type: application/json' \
-              -d "{
-                \"msgtype\": \"markdown\",
-                \"markdown\": {
-                  \"content\": \"## Devices 校验失败\n\n**原因：** 新增或编辑的设备缺少 <font color=\\\"warning\\\">ipso_version</font> 字段\n\n**缺失设备：**\n${{ steps.info.outputs.missing_list }}\n────────────────\n\n**代码仓库：** ${{ github.repository }}\n**分支：** <font color=\\\"warning\\\">${{ github.ref_name }}</font>\n**提交者：** ${{ github.actor }}\n**提交信息：** ${{ github.event.head_commit.message }}\n\n────────────────\n\n[查看 Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})  |  [查看提交](${{ github.event.head_commit.url }})\"
+            payload=$(jq -n \
+              --arg error_list "$ERROR_LIST" \
+              --arg repository "$REPOSITORY" \
+              --arg branch "$BRANCH" \
+              --arg actor "$ACTOR" \
+              --arg commit_msg "$COMMIT_MSG" \
+              --arg commit_url "$COMMIT_URL" \
+              --arg actions_url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              '{
+                msgtype: "markdown",
+                markdown: {
+                  content: "## Devices 校验失败\n\n**错误详情：**\n\($error_list)\n────────────────\n\n**代码仓库：** \($repository)\n**分支：** <font color=\"warning\">\($branch)</font>\n**提交者：** \($actor)\n**提交信息：** \($commit_msg)\n\n────────────────\n\n[查看 Actions](\($actions_url))  |  [查看提交](\($commit_url))"
                 }
-              }"
+              }')
+            curl --fail --silent --show-error -X POST "$WECHAT_WEBHOOK" \
+              -H 'Content-Type: application/json' \
+              -d "$payload"
           else
             echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
           fi
