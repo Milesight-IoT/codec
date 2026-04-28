@@ -1817,9 +1817,9 @@
             "pn": ["000"],
             "deveui": "24e124637",
             "device_profile": ["ClassC-OTAA"],
-            "codec": "vendors/milesight-iot/cth-series/cth01-compress/cth01-compress-codec.json",
-            "decoder_script": "vendors/milesight-iot/cth-series/cth01-compress/cth01-compress-decoder.js",
-            "encoder_script": "vendors/milesight-iot/cth-series/cth01-compress/cth01-compress-encoder.js",
+            "codec": "vendors/milesight-iot/cth-series/cth01-compress/cth01-codec.json",
+            "decoder_script": "vendors/milesight-iot/cth-series/cth01-compress/cth01-decoder.js",
+            "encoder_script": "vendors/milesight-iot/cth-series/cth01-compress/cth01-encoder.js",
             "ipso_version": "v2"
         }
     ]
