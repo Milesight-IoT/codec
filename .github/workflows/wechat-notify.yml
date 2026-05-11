@@ -15,7 +15,8 @@ permissions:
   contents: write
 
 jobs:
-  release:
+  release-build:
+    name: Build and publish GitHub Release
     runs-on: ubuntu-latest
     outputs:
       should_release: ${{ steps.meta.outputs.should_release }}
@@ -188,22 +189,23 @@ jobs:
             echo "- Result: ${action_result}"
           } >> "$GITHUB_STEP_SUMMARY"
 
-  notify:
-    needs: release
-    if: needs.release.outputs.should_release == 'true'
+  release-notify:
+    name: Notify version release
+    needs: release-build
+    if: needs.release-build.outputs.should_release == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Send WeChat Work notification
         env:
           WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
           REPOSITORY: ${{ github.repository }}
-          VERSION: ${{ needs.release.outputs.version }}
-          RELEASE_DATE: ${{ needs.release.outputs.date }}
-          BRANCH: ${{ needs.release.outputs.branch }}
-          AUTHOR: ${{ needs.release.outputs.author }}
-          MESSAGE: ${{ needs.release.outputs.message }}
-          COMMIT_URL: ${{ needs.release.outputs.commit_url }}
-          DOWNLOAD_URL: ${{ needs.release.outputs.download_url }}
+          VERSION: ${{ needs.release-build.outputs.version }}
+          RELEASE_DATE: ${{ needs.release-build.outputs.date }}
+          BRANCH: ${{ needs.release-build.outputs.branch }}
+          AUTHOR: ${{ needs.release-build.outputs.author }}
+          MESSAGE: ${{ needs.release-build.outputs.message }}
+          COMMIT_URL: ${{ needs.release-build.outputs.commit_url }}
+          DOWNLOAD_URL: ${{ needs.release-build.outputs.download_url }}
         run: |
           set -euo pipefail
 
