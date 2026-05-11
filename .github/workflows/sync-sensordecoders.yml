@@ -16,7 +16,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync:
+  sync-mirror:
+    name: Mirror codec release to SensorDecoders
     if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'release'
     runs-on: ubuntu-latest
     steps:
@@ -304,9 +305,10 @@ jobs:
             echo "- Ref: ${pr_ref}"
           } >> "$GITHUB_STEP_SUMMARY"
 
-  notify-sync-failure:
-    needs: sync
-    if: always() && needs.sync.result == 'failure'
+  sync-notify:
+    name: Notify SensorDecoders sync failure
+    needs: sync-mirror
+    if: always() && needs.sync-mirror.result == 'failure'
     runs-on: ubuntu-latest
     steps:
       - name: Send SensorDecoders sync failure notification

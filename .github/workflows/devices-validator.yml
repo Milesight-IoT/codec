@@ -14,7 +14,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  validate:
+  devices-validate:
+    name: Validate devices.json
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -109,8 +110,9 @@ jobs:
             echo "所有校验均通过"
           fi
 
-  notify:
-    needs: validate
+  devices-notify:
+    name: Notify devices validation failure
+    needs: devices-validate
     if: always() && failure()
     runs-on: ubuntu-latest
     steps:
