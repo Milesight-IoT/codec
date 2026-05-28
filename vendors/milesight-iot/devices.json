@@ -1558,6 +1558,19 @@
             "ipso_version": "v1"
         },
         {
+            "id": "ws513_v3",
+            "name": "WS513 V3",
+            "description": "Wall Socket",
+            "catalog": "ws",
+            "sn": "6738",
+            "pn": ["203"],
+            "deveui": "24e124738",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/ws-series/ws513-v3/ws513-v3-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws-series/ws513-v3/ws513-v3-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ws-series/ws513-v3/ws513-v3-encoder.js"
+        },
+        {
             "id": "ws515",
             "name": "WS515",
             "description": "Wall Socket",
@@ -1570,6 +1583,19 @@
             "decoder_script": "vendors/milesight-iot/ws-series/ws515/ws515-decoder.js",
             "encoder_script": "vendors/milesight-iot/ws-series/ws515/ws515-encoder.js",
             "ipso_version": "v1"
+        },
+        {
+            "id": "ws515_v3",
+            "name": "WS515 V3",
+            "description": "Wall Socket",
+            "catalog": "ws",
+            "sn": "6738",
+            "pn": ["105"],
+            "deveui": "24e124738",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/ws-series/ws515-v3/ws515-v3-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws-series/ws515-v3/ws515-v3-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ws-series/ws515-v3/ws515-v3-encoder.js"
         },
         {
             "id": "ws513_w11",
