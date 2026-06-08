@@ -1568,7 +1568,8 @@
             "device_profile": ["ClassC-OTAA"],
             "codec": "vendors/milesight-iot/ws-series/ws513-v3/ws513-v3-codec.json",
             "decoder_script": "vendors/milesight-iot/ws-series/ws513-v3/ws513-v3-decoder.js",
-            "encoder_script": "vendors/milesight-iot/ws-series/ws513-v3/ws513-v3-encoder.js"
+            "encoder_script": "vendors/milesight-iot/ws-series/ws513-v3/ws513-v3-encoder.js",
+            "ipso_version": "v1"
         },
         {
             "id": "ws515",
@@ -1595,7 +1596,8 @@
             "device_profile": ["ClassC-OTAA"],
             "codec": "vendors/milesight-iot/ws-series/ws515-v3/ws515-v3-codec.json",
             "decoder_script": "vendors/milesight-iot/ws-series/ws515-v3/ws515-v3-decoder.js",
-            "encoder_script": "vendors/milesight-iot/ws-series/ws515-v3/ws515-v3-encoder.js"
+            "encoder_script": "vendors/milesight-iot/ws-series/ws515-v3/ws515-v3-encoder.js",
+            "ipso_version": "v1"
         },
         {
             "id": "ws513_w11",
