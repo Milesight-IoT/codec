@@ -66,7 +66,7 @@
 |   130 |          MHz           | UNITS_MEGAHERTZ                              |    Frequency    |
 |   131 |          1/h           | UNITS_PER_HOUR                               |    Frequency    |
 |    28 |          g/kg          | UNITS_GRAMS_OF_WATER_PER_KILOGRAM_DRY_AIR    |    Humidity     |
-|    29 |         %r.h.          | UNITS_PERCENT_RELATIVE_HUMIDITY              |    Humidity     |
+|    29 |          %RH           | UNITS_PERCENT_RELATIVE_HUMIDITY              |    Humidity     |
 |    30 |           mm           | UNITS_MILLIMETERS                            |     Length      |
 |    31 |           m            | UNITS_METERS                                 |     Length      |
 |    32 |           in           | UNITS_INCHES                                 |     Length      |
