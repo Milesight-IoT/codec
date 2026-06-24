@@ -5,7 +5,7 @@
  *
  * @product EM320-TH
  */
-var RAW_VALUE = 0x01;
+var RAW_VALUE = 0x00;
 
 /* eslint no-redeclare: "off" */
 /* eslint-disable */
@@ -26,82 +26,149 @@ function Decoder(bytes, port) {
 }
 /* eslint-enable */
 
+
 function milesightDeviceDecode(bytes) {
-    var decoded = {};
+    var decoded = {
+        device: {
+            model: "EM320-TH",
+            type: "MSL",
+            cellular: "Unknown"
+        },
+        payload: {
+            type: "Reading",
+            version: 1
+        },
+        sensors: [
+            {
+                slot: 1,
+                type: "Temperature",
+                unit: "Celsius",
+                values: []
+            },
+            {
+                slot: 1,
+                type: "Humidity",
+                unit: "Percent",
+                values: []
+            }
+        ]
+    };
+
+    var _firmwareVersion = ''
+
+    function pushSensorData(temperature, humidity , timestamp) {
+        var time = new Date(timestamp * 1000).toISOString();
+        decoded.sensors[0].values.push({
+            value: temperature,
+            time: time,
+        })
+
+        decoded.sensors[1].values.push( {
+            value: humidity,
+            time: time,
+        })
+    }
+
 
     for (var i = 0; i < bytes.length;) {
         var channel_id = bytes[i++];
         var channel_type = bytes[i++];
 
-        // IPSO VERSION
-        if (channel_id === 0xff && channel_type === 0x01) {
-            decoded.ipso_version = readProtocolVersion(bytes[i]);
+        // BATTERY
+        if (channel_id === 0x01 && channel_type === 0x75) {
+            decoded.device.batteryPercent = readUInt8(bytes[i]);
             i += 1;
         }
-        // HARDWARE VERSION
-        else if (channel_id === 0xff && channel_type === 0x09) {
-            decoded.hardware_version = readHardwareVersion(bytes.slice(i, i + 2));
-            i += 2;
-        }
+
         // FIRMWARE VERSION
         else if (channel_id === 0xff && channel_type === 0x0a) {
-            decoded.firmware_version = readFirmwareVersion(bytes.slice(i, i + 2));
+            _firmwareVersion = readFirmwareVersion(bytes.slice(i, i + 2));
             i += 2;
         }
+
+        // HARDWARE VERSION
+        else if (channel_id === 0xff && channel_type === 0x09) {
+            decoded.device.hardwareVersion = readHardwareVersion(bytes.slice(i, i + 2));
+            i += 2;
+        }
+
+        // SERIAL NUMBER
+        else if (channel_id === 0xff && channel_type === 0x16) {
+            decoded.device.serial = readSerialNumber(bytes.slice(i, i + 8));
+            i += 8;
+        }
+
+        // TEMPERATURE & HUMIDITY
+        else if (channel_id === 0x03 && channel_type === 0xac) {
+            var timestamp = readUInt32LE(bytes.slice(i, i + 4))
+            i += 4;
+            var temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
+            i += 2;
+            var humidity = readUInt8(bytes[i]) / 2;
+            i += 1;
+
+            pushSensorData(temperature, humidity, timestamp)
+        }
+
+        // HISTORY
+        else if (channel_id === 0x20 && channel_type === 0xce) {
+            var _timestamp = readUInt32LE(bytes.slice(i, i + 4));
+            var _temperature = readInt16LE(bytes.slice(i + 4, i + 6)) / 10;
+            var _humidity = readUInt8(bytes[i + 6]) / 2;
+            i += 7;
+
+            pushSensorData(_temperature, _humidity, _timestamp)
+        }
+
         // TSL VERSION
         else if (channel_id === 0xff && channel_type === 0xff) {
             decoded.tsl_version = readTslVersion(bytes.slice(i, i + 2));
-            i += 2;
         }
-        // SERIAL NUMBER
-        else if (channel_id === 0xff && channel_type === 0x16) {
-            decoded.sn = readSerialNumber(bytes.slice(i, i + 8));
-            i += 8;
-        }
+
         // LORAWAN CLASS TYPE
         else if (channel_id === 0xff && channel_type === 0x0f) {
             decoded.lorawan_class = readLoRaWANClass(bytes[i]);
             i += 1;
         }
+
         // RESET EVENT
         else if (channel_id === 0xff && channel_type === 0xfe) {
             decoded.reset_event = readResetEvent(1);
             i += 1;
         }
+
         // DEVICE STATUS
         else if (channel_id === 0xff && channel_type === 0x0b) {
             decoded.device_status = readDeviceStatus(1);
             i += 1;
         }
 
-        // BATTERY
-        else if (channel_id === 0x01 && channel_type === 0x75) {
-            decoded.battery = readUInt8(bytes[i]);
+        // STORAGE STATUS (V1.7+, cert version only)
+        else if (channel_id === 0x05 && channel_type === 0x9c) {
+            decoded.storage_status = readStorageStatus(bytes[i]);
             i += 1;
         }
-        // TEMPERATURE
-        else if (channel_id === 0x03 && channel_type === 0x67) {
-            decoded.temperature = readInt16LE(bytes.slice(i, i + 2)) / 10;
+
+        // FULL STORAGE ALARM ENABLE (V1.7+, cert version only)
+        else if (channel_id === 0xf9 && channel_type === 0xc9) {
+            decoded.full_storage_alarm_enable = readEnableStatus(bytes[i]);
+            i += 1;
+        }
+
+        // IPSO VERSION
+        else if (channel_id === 0xff && channel_type === 0x01) {
+            i += 1;
+        }
+
+        // TSL VERSION
+        else if (channel_id === 0xff && channel_type === 0xff) {
             i += 2;
         }
-        // HUMIDITY
-        else if (channel_id === 0x04 && channel_type === 0x68) {
-            decoded.humidity = readUInt8(bytes[i]) / 2;
-            i += 1;
-        }
-        // HISTORY
-        else if (channel_id === 0x20 && channel_type === 0xce) {
-            var data = {};
-            data.timestamp = readUInt32LE(bytes.slice(i, i + 4));
-            data.temperature = readInt16LE(bytes.slice(i + 4, i + 6)) / 10;
-            data.humidity = readUInt8(bytes[i + 6]) / 2;
-            i += 7;
-            decoded.history = decoded.history || [];
-            decoded.history.push(data);
-        }
+
+
         // DOWNLINK RESPONSE
-        else if (channel_id === 0xfe || channel_id === 0xff) {
-            var result = handle_downlink_response(channel_type, bytes, i);
+        else if (channel_id === 0xfe || channel_id === 0xff || channel_id === 0xf8) {
+            var result = handle_downlink_response(channel_id, channel_type, bytes, i);
             decoded = Object.assign(decoded, result.data);
             i = result.offset;
         } else {
@@ -109,11 +176,24 @@ function milesightDeviceDecode(bytes) {
         }
     }
 
+    if (decoded.sensors.every(function (sensor) {
+        return sensor.values.length === 0;
+    })){
+        delete decoded.sensors
+    }
+
+    var hardwareMajorVersion = readVersionMajorCode(decoded.device.hardwareVersion);
+    var firmwareVersionCode = readVersionCode(_firmwareVersion);
+    if (hardwareMajorVersion && firmwareVersionCode) {
+        decoded.device.firmwareVersion = "EM320-TH.2954." + hardwareMajorVersion + "00." + firmwareVersionCode;
+    }
+
     return decoded;
 }
 
-function handle_downlink_response(channel_type, bytes, offset) {
+function handle_downlink_response(channel_id, channel_type, bytes, offset) {
     var decoded = {};
+    var has_result_flag = hasResultFlag(channel_id);
 
     switch (channel_type) {
         case 0x02:
@@ -163,17 +243,29 @@ function handle_downlink_response(channel_type, bytes, offset) {
             }
             offset += 3;
             break;
+        // FULL STORAGE ALARM ENABLE (V1.7+, cert version only)
+        case 0xc9:
+            decoded.full_storage_alarm_enable = readEnableStatus(bytes[offset]);
+            offset += 1;
+            // For F8 channel, read result code
+            if (has_result_flag) {
+                var result_code = readUInt8(bytes[offset]);
+                offset += 1;
+                if (result_code !== 0) {
+                    var request = decoded;
+                    decoded = {};
+                    decoded.device_response_result = {};
+                    decoded.device_response_result.channel_type = channel_type;
+                    decoded.device_response_result.result = readResultStatus(result_code);
+                    decoded.device_response_result.request = request;
+                }
+            }
+            break;
         default:
             throw new Error("unknown downlink response");
     }
 
     return { data: decoded, offset: offset };
-}
-
-function readProtocolVersion(bytes) {
-    var major = (bytes & 0xf0) >> 4;
-    var minor = bytes & 0x0f;
-    return "v" + major + "." + minor;
 }
 
 function readHardwareVersion(bytes) {
@@ -186,6 +278,28 @@ function readFirmwareVersion(bytes) {
     var major = (bytes[0] & 0xff).toString(16);
     var minor = (bytes[1] & 0xff).toString(16);
     return "v" + major + "." + minor;
+}
+
+function readVersionMajorCode(version) {
+    if (!version) {
+        return "";
+    }
+
+    var matched = /^v([0-9a-fA-F]+)\./.exec(version);
+    return matched ? ("0" + matched[1]).slice(-2) : "";
+}
+
+function readVersionCode(version) {
+    if (!version) {
+        return "";
+    }
+
+    var matched = /^v([0-9a-fA-F]+)\.([0-9a-fA-F]+)$/.exec(version);
+    if (!matched) {
+        return "";
+    }
+
+    return ("0" + matched[1]).slice(-2) + ("0" + matched[2]).slice(-2);
 }
 
 function readTslVersion(bytes) {
@@ -219,6 +333,33 @@ function readResetEvent(status) {
 
 function readDeviceStatus(status) {
     var status_map = { 0: "off", 1: "on" };
+    return getValue(status_map, status);
+}
+
+/**
+ * read storage status (V1.7+, cert version only)
+ * @param {number} status values: (1: sufficient, 2: less_than_10_percent, 3: full, 4: overwritten)
+ */
+function readStorageStatus(status) {
+    var status_map = {
+        1: "sufficient",
+        2: "less_than_10_percent",
+        3: "full",
+        4: "overwritten"
+    };
+    return getValue(status_map, status);
+}
+
+function hasResultFlag(channel_id) {
+    return channel_id === 0xf8;
+}
+
+function readResultStatus(status) {
+    var status_map = {
+        0: "success",
+        1: "forbidden",
+        2: "invalid parameter"
+    };
     return getValue(status_map, status);
 }
 
