@@ -195,9 +195,9 @@ jobs:
     if: needs.release-build.outputs.should_release == 'true'
     runs-on: ubuntu-latest
     steps:
-      - name: Send WeChat Work notification
+      - name: Send Feishu notification
         env:
-          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK_URL }}
           REPOSITORY: ${{ github.repository }}
           VERSION: ${{ needs.release-build.outputs.version }}
           RELEASE_DATE: ${{ needs.release-build.outputs.date }}
@@ -209,8 +209,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [ -z "${WECHAT_WEBHOOK:-}" ]; then
-            echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
+          if [ -z "${FEISHU_WEBHOOK:-}" ]; then
+            echo "Warning: FEISHU_WEBHOOK_URL secret is not configured, skipping notification"
             exit 0
           fi
 
@@ -224,12 +224,41 @@ jobs:
             --arg commit_url "$COMMIT_URL" \
             --arg download_url "$DOWNLOAD_URL" \
             '{
-              msgtype: "markdown",
-              markdown: {
-                content: "## 新版本发布\n\n**版本：** <font color=\"warning\">\($version)</font>\n**发布日期：** \($date)\n\n────────────────\n\n**代码仓库：** \($repository)\n**分支：** <font color=\"info\">\($branch)</font>\n**提交者：** \($author)\n**提交信息：** \($message)\n\n────────────────\n\n[查看提交](\($commit_url))  |  [下载版本包](\($download_url))"
+              msg_type: "interactive",
+              card: {
+                header: {
+                  title: { tag: "plain_text", content: "新版本发布" },
+                  template: "blue"
+                },
+                elements: [
+                  {
+                    tag: "div",
+                    text: {
+                      tag: "lark_md",
+                      content: "**版本：** <font color=\"orange\">\($version)</font>\n**发布日期：** \($date)\n\n---\n\n**代码仓库：** \($repository)\n**分支：** <font color=\"blue\">\($branch)</font>\n**提交者：** \($author)\n**提交信息：** \($message)"
+                    }
+                  },
+                  {
+                    tag: "action",
+                    actions: [
+                      {
+                        tag: "button",
+                        text: { tag: "plain_text", content: "查看提交" },
+                        url: $commit_url,
+                        type: "primary"
+                      },
+                      {
+                        tag: "button",
+                        text: { tag: "plain_text", content: "下载版本包" },
+                        url: $download_url,
+                        type: "default"
+                      }
+                    ]
+                  }
+                ]
               }
             }')
 
-          curl --fail --silent --show-error -X POST "$WECHAT_WEBHOOK" \
+          curl --fail --silent --show-error -X POST "$FEISHU_WEBHOOK" \
             -H 'Content-Type: application/json' \
             -d "$payload"

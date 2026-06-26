@@ -313,15 +313,16 @@ jobs:
     steps:
       - name: Send SensorDecoders sync failure notification
         env:
-          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK_URL }}
           REPOSITORY: ${{ github.repository }}
           BRANCH: ${{ github.event.workflow_run.head_branch }}
           COMMIT_URL: ${{ github.event.workflow_run.html_url }}
+          ACTIONS_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           set -euo pipefail
 
-          if [ -z "${WECHAT_WEBHOOK:-}" ]; then
-            echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
+          if [ -z "${FEISHU_WEBHOOK:-}" ]; then
+            echo "Warning: FEISHU_WEBHOOK_URL secret is not configured, skipping notification"
             exit 0
           fi
 
@@ -329,13 +330,43 @@ jobs:
             --arg repository "$REPOSITORY" \
             --arg branch "$BRANCH" \
             --arg commit_url "$COMMIT_URL" \
+            --arg actions_url "$ACTIONS_URL" \
             '{
-              msgtype: "markdown",
-              markdown: {
-                content: "## SensorDecoders 镜像同步失败\n\n**代码仓库：** \($repository)\n**分支：** <font color=\"info\">\($branch)</font>\n\n────────────────\n\n正式版本已发布，但自动同步到 SensorDecoders/main 失败，请尽快补做人工同步。\n\n[查看 Release Workflow](\($commit_url))  |  [查看 Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+              msg_type: "interactive",
+              card: {
+                header: {
+                  title: { tag: "plain_text", content: "SensorDecoders 镜像同步失败" },
+                  template: "red"
+                },
+                elements: [
+                  {
+                    tag: "div",
+                    text: {
+                      tag: "lark_md",
+                      content: "**代码仓库：** \($repository)\n**分支：** <font color=\"blue\">\($branch)</font>\n\n---\n\n正式版本已发布，但自动同步到 SensorDecoders/main 失败，请尽快补做人工同步。"
+                    }
+                  },
+                  {
+                    tag: "action",
+                    actions: [
+                      {
+                        tag: "button",
+                        text: { tag: "plain_text", content: "查看 Release Workflow" },
+                        url: $commit_url,
+                        type: "primary"
+                      },
+                      {
+                        tag: "button",
+                        text: { tag: "plain_text", content: "查看 Actions" },
+                        url: $actions_url,
+                        type: "default"
+                      }
+                    ]
+                  }
+                ]
               }
             }')
 
-          curl --fail --silent --show-error -X POST "$WECHAT_WEBHOOK" \
+          curl --fail --silent --show-error -X POST "$FEISHU_WEBHOOK" \
             -H 'Content-Type: application/json' \
             -d "$payload"
