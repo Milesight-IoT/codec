@@ -73,19 +73,62 @@ jobs:
     if: always() && failure() && needs.codec-detect-files.outputs.files != '[]'
     runs-on: ubuntu-latest
     steps:
-      - name: Send WeChat notification
+      - name: Send Feishu notification
         env:
-          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          REPOSITORY: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          ACTOR: ${{ github.actor }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          COMMIT_URL: ${{ github.event.head_commit.url }}
+          ACTIONS_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          if [ -n "$WECHAT_WEBHOOK" ]; then
-            curl -X POST "$WECHAT_WEBHOOK" \
-              -H 'Content-Type: application/json' \
-              -d "{
-                \"msgtype\": \"markdown\",
-                \"markdown\": {
-                  \"content\": \"## Codec 校验失败\n\n**代码仓库：** ${{ github.repository }}\n**分支：** <font color=\\\"warning\\\">${{ github.ref_name }}</font>\n**提交者：** ${{ github.actor }}\n**提交信息：** ${{ github.event.head_commit.message }}\n\n────────────────\n\n[查看 Actions](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})  |  [查看提交](${{ github.event.head_commit.url }})\"
+          if [ -n "$FEISHU_WEBHOOK" ]; then
+            payload=$(jq -n \
+              --arg repository "$REPOSITORY" \
+              --arg branch "$BRANCH" \
+              --arg actor "$ACTOR" \
+              --arg commit_msg "$COMMIT_MSG" \
+              --arg commit_url "$COMMIT_URL" \
+              --arg actions_url "$ACTIONS_URL" \
+              '{
+                msg_type: "interactive",
+                card: {
+                  header: {
+                    title: { tag: "plain_text", content: "Codec 校验失败" },
+                    template: "red"
+                  },
+                  elements: [
+                    {
+                      tag: "div",
+                      text: {
+                        tag: "lark_md",
+                        content: "**代码仓库：** \($repository)\n**分支：** <font color=\"orange\">\($branch)</font>\n**提交者：** \($actor)\n**提交信息：** \($commit_msg)"
+                      }
+                    },
+                    {
+                      tag: "action",
+                      actions: [
+                        {
+                          tag: "button",
+                          text: { tag: "plain_text", content: "查看 Actions" },
+                          url: $actions_url,
+                          type: "primary"
+                        },
+                        {
+                          tag: "button",
+                          text: { tag: "plain_text", content: "查看提交" },
+                          url: $commit_url,
+                          type: "default"
+                        }
+                      ]
+                    }
+                  ]
                 }
-              }"
+              }')
+            curl --fail --silent --show-error -X POST "$FEISHU_WEBHOOK" \
+              -H 'Content-Type: application/json' \
+              -d "$payload"
           else
-            echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
+            echo "Warning: FEISHU_WEBHOOK_URL secret is not configured, skipping notification"
           fi

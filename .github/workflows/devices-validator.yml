@@ -194,9 +194,9 @@ jobs:
           echo -e "$ERRORS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Send WeChat notification
+      - name: Send Feishu notification
         env:
-          WECHAT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK_URL }}
           ERROR_LIST: ${{ steps.info.outputs.error_list }}
           REPOSITORY: ${{ github.repository }}
           BRANCH: ${{ github.ref_name }}
@@ -204,7 +204,7 @@ jobs:
           COMMIT_MSG: ${{ github.event.head_commit.message }}
           COMMIT_URL: ${{ github.event.head_commit.url }}
         run: |
-          if [ -n "$WECHAT_WEBHOOK" ]; then
+          if [ -n "$FEISHU_WEBHOOK" ]; then
             payload=$(jq -n \
               --arg error_list "$ERROR_LIST" \
               --arg repository "$REPOSITORY" \
@@ -214,14 +214,43 @@ jobs:
               --arg commit_url "$COMMIT_URL" \
               --arg actions_url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
               '{
-                msgtype: "markdown",
-                markdown: {
-                  content: "## Devices 校验失败\n\n**错误详情：**\n\($error_list)\n────────────────\n\n**代码仓库：** \($repository)\n**分支：** <font color=\"warning\">\($branch)</font>\n**提交者：** \($actor)\n**提交信息：** \($commit_msg)\n\n────────────────\n\n[查看 Actions](\($actions_url))  |  [查看提交](\($commit_url))"
+                msg_type: "interactive",
+                card: {
+                  header: {
+                    title: { tag: "plain_text", content: "Devices 校验失败" },
+                    template: "red"
+                  },
+                  elements: [
+                    {
+                      tag: "div",
+                      text: {
+                        tag: "lark_md",
+                        content: "**错误详情：**\n\($error_list)\n\n---\n\n**代码仓库：** \($repository)\n**分支：** <font color=\"orange\">\($branch)</font>\n**提交者：** \($actor)\n**提交信息：** \($commit_msg)"
+                      }
+                    },
+                    {
+                      tag: "action",
+                      actions: [
+                        {
+                          tag: "button",
+                          text: { tag: "plain_text", content: "查看 Actions" },
+                          url: $actions_url,
+                          type: "primary"
+                        },
+                        {
+                          tag: "button",
+                          text: { tag: "plain_text", content: "查看提交" },
+                          url: $commit_url,
+                          type: "default"
+                        }
+                      ]
+                    }
+                  ]
                 }
               }')
-            curl --fail --silent --show-error -X POST "$WECHAT_WEBHOOK" \
+            curl --fail --silent --show-error -X POST "$FEISHU_WEBHOOK" \
               -H 'Content-Type: application/json' \
               -d "$payload"
           else
-            echo "Warning: WECHAT_WEBHOOK_URL secret is not configured, skipping notification"
+            echo "Warning: FEISHU_WEBHOOK_URL secret is not configured, skipping notification"
           fi
