@@ -1,0 +1,1056 @@
+{
+  "version": "1.0.0",
+  "bytes": "a004000000051400000032240000004f340000006e",
+  "object": [
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "frame_type",
+      "name": "Frame Type",
+      "value": "Trame de mesure",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "voltage_idle",
+      "name": "Idle Supply Voltage",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "voltage_tx",
+      "name": "Tx Supply Voltage",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "battery_voltage",
+      "name": "Voltage of the battery",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "timestamp",
+      "name": "Unix epoch timestamp",
+      "value": "",
+      "unit": "s",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 73,
+      "bacnet_unit_type": "UNITS_SECONDS"
+    },
+    {
+      "id": "test_counter",
+      "name": "Test counter 1",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "first_index",
+      "name": "Meter Index 1",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "second_index",
+      "name": "Meter Index 2",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "third_index",
+      "name": "Meter Index 3",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "fourth_index",
+      "name": "Meter Index 4",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "first_index_alarm_high",
+      "name": "Meter 1 alarm high",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "first_index_alarm_low",
+      "name": "Meter 1 alarm low",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "second_index_alarm_high",
+      "name": "Meter 2 alarm high",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "second_index_alarm_low",
+      "name": "Meter 2 alarm low",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "third_index_alarm_high",
+      "name": "Meter 3 alarm high",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "third_index_alarm_low",
+      "name": "Meter 3 alarm low",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "fourth_index_alarm_high",
+      "name": "Meter 4 alarm high",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "fourth_index_alarm_low",
+      "name": "Meter 4 alarm low",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input1",
+      "name": "Digital input 1",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input2",
+      "name": "Digital input 2",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input3",
+      "name": "Digital input 3",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input4",
+      "name": "Digital input 4",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input_change1",
+      "name": "Digital input 1 state change triggered",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input_change2",
+      "name": "Digital input 2 state change triggered",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input_change3",
+      "name": "Digital input 3 state change triggered",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "digital_input_change4",
+      "name": "Digital input 4 state change triggered",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "wire_cut",
+      "name": "WIRECUT input state",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "overflow_error",
+      "name": "The data array is full, cannot write more data to it",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "history_overflow_error",
+      "name": "History depth is too large or too small for the frame",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "sample_out_of_range_error",
+      "name": "The number of samples is too large or too small for the frame",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "channel_out_of_range_error",
+      "name": "The number of channels in the header of the frame is too large or too small",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "type_out_of_range_error",
+      "name": "The measurement type in the header of the frame is too large or too small",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "sampling_period_error",
+      "name": "Bad sample period structure",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "subtask_error",
+      "name": "End of a subtask after exiting an infinite loop",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "null_pointer_error",
+      "name": "Null pointer error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "battery_dead_error",
+      "name": "The battery level is critical",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "eeprom_error",
+      "name": "EEPROM is corrupt",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "rom_error",
+      "name": "ROM is corrupt",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "ram_error",
+      "name": "RAM is corrupt",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "radio_error",
+      "name": "Radio module initialization failed",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "busy_error",
+      "name": "The module is already busy (possibly not initialized",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "bridge_error",
+      "name": "The module is in bridge mode, impossible to send data by radio",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "queue_full_error",
+      "name": "The radio buffer is full",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "blackbox_error",
+      "name": "Error while initializing the black box",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "keep_alive_error",
+      "name": "Wrong keep alive frame period structure",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "deep_sleep_error",
+      "name": "The device has entered deep sleep mode",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "battery_low_error",
+      "name": "The battery level is low",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "transmission_error",
+      "name": "A transmission has been initiated but an error has occurred",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "payload_bigger_error",
+      "name": "The size of the message is too large compared to the capacity of the network",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "radio_paring_error",
+      "name": "Unable to pair to a network before time runs out",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "sensor_timeout_error",
+      "name": "A timeout has been reached on the sensor",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "sensor_stop_error",
+      "name": "The sensor did not return a value during a reading",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    },
+    {
+      "id": "sensor_fail_error",
+      "name": "The sensor has stopped to operate",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ]
+    }
+  ]
+}

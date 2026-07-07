@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "bytes": "01C80BC8",
+  "object": [
+    {
+      "id": "raw_uplink",
+      "name": "Raw Uplink",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "battery_voltage",
+      "name": "Battery Voltage",
+      "value": "3.6",
+      "unit": "V",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS",
+      "access_mode": "R"
+    },
+    {
+      "id": "battery_status",
+      "name": "Battery Status",
+      "value": "Good",
+      "unit": "",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "access_mode": "R",
+      "max_length": 64
+    },
+    {
+      "id": "fan_runtime",
+      "name": "Fan Run Time",
+      "value": "0",
+      "unit": "s",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 73,
+      "bacnet_unit_type": "UNITS_SECONDS",
+      "access_mode": "R"
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "value": "22.5",
+      "unit": "°C",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+      "access_mode": "R"
+    },
+    {
+      "id": "humidity",
+      "name": "Humidity",
+      "value": "55",
+      "unit": "%",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 98,
+      "bacnet_unit_type": "UNITS_PERCENT",
+      "access_mode": "R"
+    },
+    {
+      "id": "adc_kohm",
+      "name": "ADC Resistance",
+      "value": "0.0",
+      "unit": "kΩ",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 122,
+      "bacnet_unit_type": "UNITS_KILOHMS",
+      "access_mode": "R"
+    },
+    {
+      "id": "leak_detected",
+      "name": "Leak Detected",
+      "value": "false",
+      "unit": "",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "No Leak"
+        },
+        {
+          "value": 1,
+          "name": "Leak"
+        }
+      ],
+      "access_mode": "R"
+    }
+  ]
+}

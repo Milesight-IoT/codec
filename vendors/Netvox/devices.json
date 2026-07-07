@@ -1,0 +1,1139 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "r311a",
+            "name": "Netvox - R311A",
+            "description": "",
+            "catalog": "r311a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r311a/r311a-codec.json",
+            "decoder_script": "vendors/Netvox/r311a/r311a-decoder.js",
+            "encoder_script": "vendors/Netvox/r311a/r311a-encoder.js"
+        },
+        {
+            "id": "r311w",
+            "name": "Netvox - R311W",
+            "description": "",
+            "catalog": "r311w",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r311w/r311w-codec.json",
+            "decoder_script": "vendors/Netvox/r311w/r311w-decoder.js",
+            "encoder_script": "vendors/Netvox/r311w/r311w-encoder.js"
+        },
+        {
+            "id": "r602b",
+            "name": "Netvox - R602B",
+            "description": "",
+            "catalog": "r602b",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r602b/r602b-codec.json",
+            "decoder_script": "vendors/Netvox/r602b/r602b-decoder.js",
+            "encoder_script": "vendors/Netvox/r602b/r602b-encoder.js"
+        },
+        {
+            "id": "r711",
+            "name": "Netvox - R711",
+            "description": "",
+            "catalog": "r711",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r711/r711-codec.json",
+            "decoder_script": "vendors/Netvox/r711/r711-decoder.js",
+            "encoder_script": "vendors/Netvox/r711/r711-encoder.js"
+        },
+        {
+            "id": "r718a",
+            "name": "Netvox - R718A",
+            "description": "",
+            "catalog": "r718a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718a/r718a-codec.json",
+            "decoder_script": "vendors/Netvox/r718a/r718a-decoder.js",
+            "encoder_script": "vendors/Netvox/r718a/r718a-encoder.js"
+        },
+        {
+            "id": "r718a01",
+            "name": "Netvox - R718A01",
+            "description": "",
+            "catalog": "r718a01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718a01/r718a01-codec.json",
+            "decoder_script": "vendors/Netvox/r718a01/r718a01-decoder.js",
+            "encoder_script": "vendors/Netvox/r718a01/r718a01-encoder.js"
+        },
+        {
+            "id": "r718ab",
+            "name": "Netvox - R718AB",
+            "description": "",
+            "catalog": "r718ab",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ab/r718ab-codec.json",
+            "decoder_script": "vendors/Netvox/r718ab/r718ab-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ab/r718ab-encoder.js"
+        },
+        {
+            "id": "r718ad",
+            "name": "Netvox - R718AD",
+            "description": "",
+            "catalog": "r718ad",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ad/r718ad-codec.json",
+            "decoder_script": "vendors/Netvox/r718ad/r718ad-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ad/r718ad-encoder.js"
+        },
+        {
+            "id": "r718b",
+            "name": "Netvox - R718B",
+            "description": "",
+            "catalog": "r718b",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718b/r718b-codec.json",
+            "decoder_script": "vendors/Netvox/r718b/r718b-decoder.js",
+            "encoder_script": "vendors/Netvox/r718b/r718b-encoder.js"
+        },
+        {
+            "id": "r718ck",
+            "name": "Netvox - R718CK",
+            "description": "",
+            "catalog": "r718ck",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ck/r718ck-codec.json",
+            "decoder_script": "vendors/Netvox/r718ck/r718ck-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ck/r718ck-encoder.js"
+        },
+        {
+            "id": "r718ck2",
+            "name": "Netvox - R718CK2",
+            "description": "",
+            "catalog": "r718ck2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ck2/r718ck2-codec.json",
+            "decoder_script": "vendors/Netvox/r718ck2/r718ck2-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ck2/r718ck2-encoder.js"
+        },
+        {
+            "id": "r718cn",
+            "name": "Netvox - R718CN",
+            "description": "",
+            "catalog": "r718cn",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718cn/r718cn-codec.json",
+            "decoder_script": "vendors/Netvox/r718cn/r718cn-decoder.js",
+            "encoder_script": "vendors/Netvox/r718cn/r718cn-encoder.js"
+        },
+        {
+            "id": "r718cn2",
+            "name": "Netvox - R718CN2",
+            "description": "",
+            "catalog": "r718cn2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718cn2/r718cn2-codec.json",
+            "decoder_script": "vendors/Netvox/r718cn2/r718cn2-decoder.js",
+            "encoder_script": "vendors/Netvox/r718cn2/r718cn2-encoder.js"
+        },
+        {
+            "id": "r718cr",
+            "name": "Netvox - R718CR",
+            "description": "",
+            "catalog": "r718cr",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718cr/r718cr-codec.json",
+            "decoder_script": "vendors/Netvox/r718cr/r718cr-decoder.js",
+            "encoder_script": "vendors/Netvox/r718cr/r718cr-encoder.js"
+        },
+        {
+            "id": "r718cr2",
+            "name": "Netvox - R718CR2",
+            "description": "",
+            "catalog": "r718cr2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718cr2/r718cr2-codec.json",
+            "decoder_script": "vendors/Netvox/r718cr2/r718cr2-decoder.js",
+            "encoder_script": "vendors/Netvox/r718cr2/r718cr2-encoder.js"
+        },
+        {
+            "id": "r718ct",
+            "name": "Netvox - R718CT",
+            "description": "",
+            "catalog": "r718ct",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ct/r718ct-codec.json",
+            "decoder_script": "vendors/Netvox/r718ct/r718ct-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ct/r718ct-encoder.js"
+        },
+        {
+            "id": "r718ct2",
+            "name": "Netvox - R718CT2",
+            "description": "",
+            "catalog": "r718ct2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ct2/r718ct2-codec.json",
+            "decoder_script": "vendors/Netvox/r718ct2/r718ct2-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ct2/r718ct2-encoder.js"
+        },
+        {
+            "id": "r718db",
+            "name": "Netvox - R718DB",
+            "description": "",
+            "catalog": "r718db",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718db/r718db-codec.json",
+            "decoder_script": "vendors/Netvox/r718db/r718db-decoder.js",
+            "encoder_script": "vendors/Netvox/r718db/r718db-encoder.js"
+        },
+        {
+            "id": "r718e",
+            "name": "Netvox - R718E",
+            "description": "",
+            "catalog": "r718e",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718e/r718e-codec.json",
+            "decoder_script": "vendors/Netvox/r718e/r718e-decoder.js",
+            "encoder_script": "vendors/Netvox/r718e/r718e-encoder.js"
+        },
+        {
+            "id": "r718ea",
+            "name": "Netvox - R718EA",
+            "description": "",
+            "catalog": "r718ea",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ea/r718ea-codec.json",
+            "decoder_script": "vendors/Netvox/r718ea/r718ea-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ea/r718ea-encoder.js"
+        },
+        {
+            "id": "r718f",
+            "name": "Netvox - R718F",
+            "description": "",
+            "catalog": "r718f",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718f/r718f-codec.json",
+            "decoder_script": "vendors/Netvox/r718f/r718f-decoder.js",
+            "encoder_script": "vendors/Netvox/r718f/r718f-encoder.js"
+        },
+        {
+            "id": "r718f2",
+            "name": "Netvox - R718F2",
+            "description": "",
+            "catalog": "r718f2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718f2/r718f2-codec.json",
+            "decoder_script": "vendors/Netvox/r718f2/r718f2-decoder.js",
+            "encoder_script": "vendors/Netvox/r718f2/r718f2-encoder.js"
+        },
+        {
+            "id": "r718g",
+            "name": "Netvox - R718G",
+            "description": "",
+            "catalog": "r718g",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718g/r718g-codec.json",
+            "decoder_script": "vendors/Netvox/r718g/r718g-decoder.js",
+            "encoder_script": "vendors/Netvox/r718g/r718g-encoder.js"
+        },
+        {
+            "id": "r718h",
+            "name": "Netvox - R718H",
+            "description": "",
+            "catalog": "r718h",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718h/r718h-codec.json",
+            "decoder_script": "vendors/Netvox/r718h/r718h-decoder.js",
+            "encoder_script": "vendors/Netvox/r718h/r718h-encoder.js"
+        },
+        {
+            "id": "r718j",
+            "name": "Netvox - R718J",
+            "description": "",
+            "catalog": "r718j",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718j/r718j-codec.json",
+            "decoder_script": "vendors/Netvox/r718j/r718j-decoder.js",
+            "encoder_script": "vendors/Netvox/r718j/r718j-encoder.js"
+        },
+        {
+            "id": "r718j2",
+            "name": "Netvox - R718J2",
+            "description": "",
+            "catalog": "r718j2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718j2/r718j2-codec.json",
+            "decoder_script": "vendors/Netvox/r718j2/r718j2-decoder.js",
+            "encoder_script": "vendors/Netvox/r718j2/r718j2-encoder.js"
+        },
+        {
+            "id": "r718ma",
+            "name": "Netvox - R718MA",
+            "description": "",
+            "catalog": "r718ma",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ma/r718ma-codec.json",
+            "decoder_script": "vendors/Netvox/r718ma/r718ma-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ma/r718ma-encoder.js"
+        },
+        {
+            "id": "r718n1",
+            "name": "Netvox - R718N1",
+            "description": "",
+            "catalog": "r718n1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718n1/r718n1-codec.json",
+            "decoder_script": "vendors/Netvox/r718n1/r718n1-decoder.js",
+            "encoder_script": "vendors/Netvox/r718n1/r718n1-encoder.js"
+        },
+        {
+            "id": "r718n17",
+            "name": "Netvox - R718N17",
+            "description": "",
+            "catalog": "r718n17",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718n17/r718n17-codec.json",
+            "decoder_script": "vendors/Netvox/r718n17/r718n17-decoder.js",
+            "encoder_script": "vendors/Netvox/r718n17/r718n17-encoder.js"
+        },
+        {
+            "id": "r718n3",
+            "name": "Netvox - R718N3",
+            "description": "",
+            "catalog": "r718n3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718n3/r718n3-codec.json",
+            "decoder_script": "vendors/Netvox/r718n3/r718n3-decoder.js",
+            "encoder_script": "vendors/Netvox/r718n3/r718n3-encoder.js"
+        },
+        {
+            "id": "r718n37",
+            "name": "Netvox - R718N37",
+            "description": "",
+            "catalog": "r718n37",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718n37/r718n37-codec.json",
+            "decoder_script": "vendors/Netvox/r718n37/r718n37-decoder.js",
+            "encoder_script": "vendors/Netvox/r718n37/r718n37-encoder.js"
+        },
+        {
+            "id": "r718nl3",
+            "name": "Netvox - R718NL3",
+            "description": "",
+            "catalog": "r718nl3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl3/r718nl3-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl3/r718nl3-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl3/r718nl3-encoder.js"
+        },
+        {
+            "id": "r718nl315",
+            "name": "Netvox - R718NL315",
+            "description": "",
+            "catalog": "r718nl315",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl315/r718nl315-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl315/r718nl315-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl315/r718nl315-encoder.js"
+        },
+        {
+            "id": "r718nl325",
+            "name": "Netvox - R718NL325",
+            "description": "",
+            "catalog": "r718nl325",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl325/r718nl325-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl325/r718nl325-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl325/r718nl325-encoder.js"
+        },
+        {
+            "id": "r718nl363",
+            "name": "Netvox - R718NL363",
+            "description": "",
+            "catalog": "r718nl363",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl363/r718nl363-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl363/r718nl363-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl363/r718nl363-encoder.js"
+        },
+        {
+            "id": "r718nl37",
+            "name": "Netvox - R718NL37",
+            "description": "",
+            "catalog": "r718nl37",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl37/r718nl37-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl37/r718nl37-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl37/r718nl37-encoder.js"
+        },
+        {
+            "id": "r718pa11",
+            "name": "Netvox - R718PA11",
+            "description": "",
+            "catalog": "r718pa11",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa11/r718pa11-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa11/r718pa11-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa11/r718pa11-encoder.js"
+        },
+        {
+            "id": "r718pa12",
+            "name": "Netvox - R718PA12",
+            "description": "",
+            "catalog": "r718pa12",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa12/r718pa12-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa12/r718pa12-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa12/r718pa12-encoder.js"
+        },
+        {
+            "id": "r718pa14",
+            "name": "Netvox - R718PA14",
+            "description": "",
+            "catalog": "r718pa14",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa14/r718pa14-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa14/r718pa14-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa14/r718pa14-encoder.js"
+        },
+        {
+            "id": "r718pa15",
+            "name": "Netvox - R718PA15",
+            "description": "",
+            "catalog": "r718pa15",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa15/r718pa15-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa15/r718pa15-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa15/r718pa15-encoder.js"
+        },
+        {
+            "id": "r718pa16",
+            "name": "Netvox - R718PA16",
+            "description": "",
+            "catalog": "r718pa16",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa16/r718pa16-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa16/r718pa16-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa16/r718pa16-encoder.js"
+        },
+        {
+            "id": "r718pa17",
+            "name": "Netvox - R718PA17",
+            "description": "",
+            "catalog": "r718pa17",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa17/r718pa17-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa17/r718pa17-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa17/r718pa17-encoder.js"
+        },
+        {
+            "id": "r718pa18",
+            "name": "Netvox - R718PA18",
+            "description": "",
+            "catalog": "r718pa18",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa18/r718pa18-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa18/r718pa18-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa18/r718pa18-encoder.js"
+        },
+        {
+            "id": "r718pa4",
+            "name": "Netvox - R718PA4",
+            "description": "",
+            "catalog": "r718pa4",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa4/r718pa4-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa4/r718pa4-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa4/r718pa4-encoder.js"
+        },
+        {
+            "id": "r718pa5",
+            "name": "Netvox - R718PA5",
+            "description": "",
+            "catalog": "r718pa5",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa5/r718pa5-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa5/r718pa5-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa5/r718pa5-encoder.js"
+        },
+        {
+            "id": "r718pa6",
+            "name": "Netvox - R718PA6",
+            "description": "",
+            "catalog": "r718pa6",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa6/r718pa6-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa6/r718pa6-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa6/r718pa6-encoder.js"
+        },
+        {
+            "id": "r718pa7",
+            "name": "Netvox - R718PA7",
+            "description": "",
+            "catalog": "r718pa7",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa7/r718pa7-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa7/r718pa7-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa7/r718pa7-encoder.js"
+        },
+        {
+            "id": "r718pa8",
+            "name": "Netvox - R718PA8",
+            "description": "",
+            "catalog": "r718pa8",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa8/r718pa8-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa8/r718pa8-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa8/r718pa8-encoder.js"
+        },
+        {
+            "id": "r718pa9",
+            "name": "Netvox - R718PA9",
+            "description": "",
+            "catalog": "r718pa9",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa9/r718pa9-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa9/r718pa9-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa9/r718pa9-encoder.js"
+        },
+        {
+            "id": "r718pb13",
+            "name": "Netvox - R718PB13",
+            "description": "",
+            "catalog": "r718pb13",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pb13/r718pb13-codec.json",
+            "decoder_script": "vendors/Netvox/r718pb13/r718pb13-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pb13/r718pb13-encoder.js"
+        },
+        {
+            "id": "r718pb14",
+            "name": "Netvox - R718PB14",
+            "description": "",
+            "catalog": "r718pb14",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pb14/r718pb14-codec.json",
+            "decoder_script": "vendors/Netvox/r718pb14/r718pb14-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pb14/r718pb14-encoder.js"
+        },
+        {
+            "id": "r718pb15",
+            "name": "Netvox - R718PB15",
+            "description": "",
+            "catalog": "r718pb15",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pb15/r718pb15-codec.json",
+            "decoder_script": "vendors/Netvox/r718pb15/r718pb15-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pb15/r718pb15-encoder.js"
+        },
+        {
+            "id": "r718pb15a",
+            "name": "Netvox - R718PB15A",
+            "description": "",
+            "catalog": "r718pb15a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pb15a/r718pb15a-codec.json",
+            "decoder_script": "vendors/Netvox/r718pb15a/r718pb15a-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pb15a/r718pb15a-encoder.js"
+        },
+        {
+            "id": "r718ubb",
+            "name": "Netvox - R718UBB",
+            "description": "",
+            "catalog": "r718ubb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718ubb/r718ubb-codec.json",
+            "decoder_script": "vendors/Netvox/r718ubb/r718ubb-decoder.js",
+            "encoder_script": "vendors/Netvox/r718ubb/r718ubb-encoder.js"
+        },
+        {
+            "id": "r718wb",
+            "name": "Netvox - R718WB",
+            "description": "",
+            "catalog": "r718wb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718wb/r718wb-codec.json",
+            "decoder_script": "vendors/Netvox/r718wb/r718wb-decoder.js",
+            "encoder_script": "vendors/Netvox/r718wb/r718wb-encoder.js"
+        },
+        {
+            "id": "r718x",
+            "name": "Netvox - R718X",
+            "description": "",
+            "catalog": "r718x",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718x/r718x-codec.json",
+            "decoder_script": "vendors/Netvox/r718x/r718x-decoder.js",
+            "encoder_script": "vendors/Netvox/r718x/r718x-encoder.js"
+        },
+        {
+            "id": "r718y",
+            "name": "Netvox - R718Y",
+            "description": "",
+            "catalog": "r718y",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718y/r718y-codec.json",
+            "decoder_script": "vendors/Netvox/r718y/r718y-decoder.js",
+            "encoder_script": "vendors/Netvox/r718y/r718y-encoder.js"
+        },
+        {
+            "id": "r719a",
+            "name": "Netvox - R719A",
+            "description": "",
+            "catalog": "r719a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r719a/r719a-codec.json",
+            "decoder_script": "vendors/Netvox/r719a/r719a-decoder.js",
+            "encoder_script": "vendors/Netvox/r719a/r719a-encoder.js"
+        },
+        {
+            "id": "r720flt",
+            "name": "Netvox - R720FLT",
+            "description": "",
+            "catalog": "r720flt",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r720flt/r720flt-codec.json",
+            "decoder_script": "vendors/Netvox/r720flt/r720flt-decoder.js",
+            "encoder_script": "vendors/Netvox/r720flt/r720flt-encoder.js"
+        },
+        {
+            "id": "r72608",
+            "name": "Netvox - R72608",
+            "description": "",
+            "catalog": "r72608",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r72608/r72608-codec.json",
+            "decoder_script": "vendors/Netvox/r72608/r72608-decoder.js",
+            "encoder_script": "vendors/Netvox/r72608/r72608-encoder.js"
+        },
+        {
+            "id": "r72610",
+            "name": "Netvox - R72610",
+            "description": "",
+            "catalog": "r72610",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r72610/r72610-codec.json",
+            "decoder_script": "vendors/Netvox/r72610/r72610-decoder.js",
+            "encoder_script": "vendors/Netvox/r72610/r72610-encoder.js"
+        },
+        {
+            "id": "r72613",
+            "name": "Netvox - R72613",
+            "description": "",
+            "catalog": "r72613",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r72613/r72613-codec.json",
+            "decoder_script": "vendors/Netvox/r72613/r72613-decoder.js",
+            "encoder_script": "vendors/Netvox/r72613/r72613-encoder.js"
+        },
+        {
+            "id": "r72615",
+            "name": "Netvox - R72615",
+            "description": "",
+            "catalog": "r72615",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r72615/r72615-codec.json",
+            "decoder_script": "vendors/Netvox/r72615/r72615-decoder.js",
+            "encoder_script": "vendors/Netvox/r72615/r72615-encoder.js"
+        },
+        {
+            "id": "r72615a",
+            "name": "Netvox - R72615A",
+            "description": "",
+            "catalog": "r72615a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r72615a/r72615a-codec.json",
+            "decoder_script": "vendors/Netvox/r72615a/r72615a-decoder.js",
+            "encoder_script": "vendors/Netvox/r72615a/r72615a-encoder.js"
+        },
+        {
+            "id": "r72616",
+            "name": "Netvox - R72616",
+            "description": "",
+            "catalog": "r72616",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r72616/r72616-codec.json",
+            "decoder_script": "vendors/Netvox/r72616/r72616-decoder.js",
+            "encoder_script": "vendors/Netvox/r72616/r72616-encoder.js"
+        },
+        {
+            "id": "r72616a",
+            "name": "Netvox - R72616A",
+            "description": "",
+            "catalog": "r72616a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r72616a/r72616a-codec.json",
+            "decoder_script": "vendors/Netvox/r72616a/r72616a-decoder.js",
+            "encoder_script": "vendors/Netvox/r72616a/r72616a-encoder.js"
+        },
+        {
+            "id": "r809a01",
+            "name": "Netvox - R809A01",
+            "description": "",
+            "catalog": "r809a01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r809a01/r809a01-codec.json",
+            "decoder_script": "vendors/Netvox/r809a01/r809a01-decoder.js",
+            "encoder_script": "vendors/Netvox/r809a01/r809a01-encoder.js"
+        },
+        {
+            "id": "r831d",
+            "name": "Netvox - R831D",
+            "description": "",
+            "catalog": "r831d",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r831d/r831d-codec.json",
+            "decoder_script": "vendors/Netvox/r831d/r831d-decoder.js",
+            "encoder_script": "vendors/Netvox/r831d/r831d-encoder.js"
+        },
+        {
+            "id": "r900nab",
+            "name": "Netvox - R900NAB",
+            "description": "",
+            "catalog": "r900nab",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r900nab/r900nab-codec.json",
+            "decoder_script": "vendors/Netvox/r900nab/r900nab-decoder.js",
+            "encoder_script": "vendors/Netvox/r900nab/r900nab-encoder.js"
+        },
+        {
+            "id": "r900nab315t1o",
+            "name": "Netvox - R900NAB315T1O",
+            "description": "",
+            "catalog": "r900nab315t1o",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r900nab315t1o/r900nab315t1o-codec.json",
+            "decoder_script": "vendors/Netvox/r900nab315t1o/r900nab315t1o-decoder.js",
+            "encoder_script": "vendors/Netvox/r900nab315t1o/r900nab315t1o-encoder.js"
+        },
+        {
+            "id": "r900nab607t4o",
+            "name": "Netvox - R900NAB607T4O",
+            "description": "",
+            "catalog": "r900nab607t4o",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r900nab607t4o/r900nab607t4o-codec.json",
+            "decoder_script": "vendors/Netvox/r900nab607t4o/r900nab607t4o-decoder.js",
+            "encoder_script": "vendors/Netvox/r900nab607t4o/r900nab607t4o-encoder.js"
+        },
+        {
+            "id": "r900nab615t1o",
+            "name": "Netvox - R900NAB615T1O",
+            "description": "",
+            "catalog": "r900nab615t1o",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r900nab615t1o/r900nab615t1o-codec.json",
+            "decoder_script": "vendors/Netvox/r900nab615t1o/r900nab615t1o-decoder.js",
+            "encoder_script": "vendors/Netvox/r900nab615t1o/r900nab615t1o-encoder.js"
+        },
+        {
+            "id": "ra02a",
+            "name": "Netvox - RA02A",
+            "description": "",
+            "catalog": "ra02a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/ra02a/ra02a-codec.json",
+            "decoder_script": "vendors/Netvox/ra02a/ra02a-decoder.js",
+            "encoder_script": "vendors/Netvox/ra02a/ra02a-encoder.js"
+        },
+        {
+            "id": "ra02c",
+            "name": "Netvox - RA02C",
+            "description": "",
+            "catalog": "ra02c",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/ra02c/ra02c-codec.json",
+            "decoder_script": "vendors/Netvox/ra02c/ra02c-decoder.js",
+            "encoder_script": "vendors/Netvox/ra02c/ra02c-encoder.js"
+        },
+        {
+            "id": "ra02g",
+            "name": "Netvox - RA02G",
+            "description": "",
+            "catalog": "ra02g",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/ra02g/ra02g-codec.json",
+            "decoder_script": "vendors/Netvox/ra02g/ra02g-decoder.js",
+            "encoder_script": "vendors/Netvox/ra02g/ra02g-encoder.js"
+        },
+        {
+            "id": "ra07",
+            "name": "Netvox - RA07",
+            "description": "",
+            "catalog": "ra07",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/ra07/ra07-codec.json",
+            "decoder_script": "vendors/Netvox/ra07/ra07-decoder.js",
+            "encoder_script": "vendors/Netvox/ra07/ra07-encoder.js"
+        },
+        {
+            "id": "ra08b",
+            "name": "Netvox - RA08B",
+            "description": "",
+            "catalog": "ra08b",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/ra08b/ra08b-codec.json",
+            "decoder_script": "vendors/Netvox/ra08b/ra08b-decoder.js",
+            "encoder_script": "vendors/Netvox/ra08b/ra08b-encoder.js"
+        },
+        {
+            "id": "ra10",
+            "name": "Netvox - RA10",
+            "description": "",
+            "catalog": "ra10",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/ra10/ra10-codec.json",
+            "decoder_script": "vendors/Netvox/ra10/ra10-decoder.js",
+            "encoder_script": "vendors/Netvox/ra10/ra10-encoder.js"
+        },
+        {
+            "id": "rb02b",
+            "name": "Netvox - RB02B",
+            "description": "",
+            "catalog": "rb02b",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/rb02b/rb02b-codec.json",
+            "decoder_script": "vendors/Netvox/rb02b/rb02b-decoder.js",
+            "encoder_script": "vendors/Netvox/rb02b/rb02b-encoder.js"
+        },
+        {
+            "id": "rb02c",
+            "name": "Netvox - RB02C",
+            "description": "",
+            "catalog": "rb02c",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/rb02c/rb02c-codec.json",
+            "decoder_script": "vendors/Netvox/rb02c/rb02c-decoder.js",
+            "encoder_script": "vendors/Netvox/rb02c/rb02c-encoder.js"
+        },
+        {
+            "id": "rb11e",
+            "name": "Netvox - RB11E",
+            "description": "",
+            "catalog": "rb11e",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/rb11e/rb11e-codec.json",
+            "decoder_script": "vendors/Netvox/rb11e/rb11e-decoder.js",
+            "encoder_script": "vendors/Netvox/rb11e/rb11e-encoder.js"
+        }
+    ]
+}

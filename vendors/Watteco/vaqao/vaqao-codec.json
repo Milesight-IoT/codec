@@ -1,0 +1,197 @@
+{
+  "version": "1.0.0",
+  "bytes": "70060000e2760090cfc0015b028423fb03272919804c121c003ebc5bd6895f0040000b68b72c27a0ddb4dc8076db920c68b72c19605b04",
+  "object": [
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "value": "18.5",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+    },
+    {
+      "id": "humidity",
+      "name": "Humidity",
+      "value": "31",
+      "unit": "%",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 98,
+      "bacnet_unit_type": "UNITS_PERCENT"
+    },
+    {
+      "id": "co2_concentration",
+      "name": "CO2 Concentration",
+      "value": "470",
+      "unit": "ppm",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 96,
+      "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+    },
+    {
+      "id": "concentration",
+      "name": "Air Quality Index",
+      "value": "250",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "occupancy",
+      "name": "Occupancy",
+      "value": "0",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "vacant"
+        },
+        {
+          "value": 1,
+          "name": "occupied"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "illuminance",
+      "name": "Illuminance",
+      "value": "160",
+      "unit": "lx",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 37,
+      "bacnet_unit_type": "UNITS_LUXES"
+    },
+    {
+      "id": "pressure",
+      "name": "Atmospheric Pressure",
+      "value": "1011",
+      "unit": "mbar",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 134,
+      "bacnet_unit_type": "UNITS_MILLIBARS"
+    },
+    {
+      "id": "violation_detection",
+      "name": "Violation Detection",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "normal"
+        },
+        {
+          "value": 1,
+          "name": "violated"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "battery_voltage",
+      "name": "Battery Voltage",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "firmware",
+      "name": "Firmware Version",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 32,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "message_type",
+      "name": "Message Type",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 32,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "cov",
+      "name": "Composés Organiques Volatiles",
+      "value_type": "UINT32",
+      "data_type": "NUMBER",
+      "unit": "",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "bacnet_type": "analog_input_object",
+      "value": "0",
+      "access_mode": "R"
+    },
+    {
+      "id": "analog",
+      "name": "Vertical angle displacement",
+      "value_type": "FLOAT",
+      "data_type": "NUMBER",
+      "unit": "°",
+      "bacnet_unit_type_id": 90,
+      "bacnet_unit_type": "UNITS_DEGREES_ANGULAR",
+      "bacnet_type": "analog_input_object",
+      "value": "0.0",
+      "access_mode": "R"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    }
+  ]
+}

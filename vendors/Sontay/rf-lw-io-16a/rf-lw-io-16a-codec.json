@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "bytes": "FF01C8",
+  "object": [
+    {
+      "id": "raw_uplink",
+      "name": "Raw Uplink",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "internal_temp",
+      "name": "Internal Temperature",
+      "value": "25",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "value": "0.0",
+      "unit": "kWh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 19,
+      "bacnet_unit_type": "UNITS_KILOWATT_HOURS"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "value": "0",
+      "unit": "W",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 47,
+      "bacnet_unit_type": "UNITS_WATTS"
+    },
+    {
+      "id": "ac_voltage",
+      "name": "AC Voltage",
+      "value": "230",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "ac_current",
+      "name": "AC Current",
+      "value": "0",
+      "unit": "mA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 2,
+      "bacnet_unit_type": "UNITS_MILLIAMPERES"
+    },
+    {
+      "id": "relay_state",
+      "name": "Relay State",
+      "value": "0",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "OFF"
+        },
+        {
+          "value": 1,
+          "name": "ON"
+        }
+      ]
+    }
+  ]
+}

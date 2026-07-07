@@ -1,0 +1,369 @@
+{
+  "version": "1.0.0",
+  "devices": [
+    {
+      "id": "acw-dind160",
+      "name": "ATIM - ACW-DIND160",
+      "description": "",
+      "catalog": "acw-dind160",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-dind160/acw-dind160-codec.json",
+      "decoder_script": "vendors/ATIM/acw-dind160/acw-dind160-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-dind160/acw-dind160-encoder.js"
+    },
+    {
+      "id": "acw-dind21",
+      "name": "ATIM - ACW-DIND21",
+      "description": "",
+      "catalog": "acw-dind21",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-dind21/acw-dind21-codec.json",
+      "decoder_script": "vendors/ATIM/acw-dind21/acw-dind21-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-dind21/acw-dind21-encoder.js"
+    },
+    {
+      "id": "acw-dind44",
+      "name": "ATIM - ACW-DIND44",
+      "description": "",
+      "catalog": "acw-dind44",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-dind44/acw-dind44-codec.json",
+      "decoder_script": "vendors/ATIM/acw-dind44/acw-dind44-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-dind44/acw-dind44-encoder.js"
+    },
+    {
+      "id": "acw-dind80",
+      "name": "ATIM - ACW-DIND80",
+      "description": "",
+      "catalog": "acw-dind80",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-dind80/acw-dind80-codec.json",
+      "decoder_script": "vendors/ATIM/acw-dind80/acw-dind80-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-dind80/acw-dind80-encoder.js"
+    },
+    {
+      "id": "acw-dind88",
+      "name": "ATIM - ACW-DIND88",
+      "description": "",
+      "catalog": "acw-dind88",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-dind88/acw-dind88-codec.json",
+      "decoder_script": "vendors/ATIM/acw-dind88/acw-dind88-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-dind88/acw-dind88-encoder.js"
+    },
+    {
+      "id": "acw-dinda",
+      "name": "ATIM - ACW-DINDA",
+      "description": "",
+      "catalog": "acw-dinda",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-dinda/acw-dinda-codec.json",
+      "decoder_script": "vendors/ATIM/acw-dinda/acw-dinda-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-dinda/acw-dinda-encoder.js"
+    },
+    {
+      "id": "acw-ilb100",
+      "name": "ATIM - ACW-ILB100",
+      "description": "",
+      "catalog": "acw-ilb100",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-ilb100/acw-ilb100-codec.json",
+      "decoder_script": "vendors/ATIM/acw-ilb100/acw-ilb100-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-ilb100/acw-ilb100-encoder.js"
+    },
+    {
+      "id": "acw-ilb30",
+      "name": "ATIM - ACW-ILB30",
+      "description": "",
+      "catalog": "acw-ilb30",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-ilb30/acw-ilb30-codec.json",
+      "decoder_script": "vendors/ATIM/acw-ilb30/acw-ilb30-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-ilb30/acw-ilb30-encoder.js"
+    },
+    {
+      "id": "acw-lvl",
+      "name": "ATIM - ACW-LVL",
+      "description": "",
+      "catalog": "acw-lvl",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-lvl/acw-lvl-codec.json",
+      "decoder_script": "vendors/ATIM/acw-lvl/acw-lvl-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-lvl/acw-lvl-encoder.js"
+    },
+    {
+      "id": "acw-mr2-ex",
+      "name": "ATIM - ACW-MR2-EX",
+      "description": "",
+      "catalog": "acw-mr2-ex",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-mr2-ex/acw-mr2-ex-codec.json",
+      "decoder_script": "vendors/ATIM/acw-mr2-ex/acw-mr2-ex-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-mr2-ex/acw-mr2-ex-encoder.js"
+    },
+    {
+      "id": "acw-mr4",
+      "name": "ATIM - ACW-MR4",
+      "description": "",
+      "catalog": "acw-mr4",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-mr4/acw-mr4-codec.json",
+      "decoder_script": "vendors/ATIM/acw-mr4/acw-mr4-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-mr4/acw-mr4-encoder.js"
+    },
+    {
+      "id": "acw-pir180-o",
+      "name": "ATIM - ACW-PIR180-O",
+      "description": "",
+      "catalog": "acw-pir180-o",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-pir180-o/acw-pir180-o-codec.json",
+      "decoder_script": "vendors/ATIM/acw-pir180-o/acw-pir180-o-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-pir180-o/acw-pir180-o-encoder.js"
+    },
+    {
+      "id": "acw-pir360",
+      "name": "ATIM - ACW-PIR360",
+      "description": "",
+      "catalog": "acw-pir360",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-pir360/acw-pir360-codec.json",
+      "decoder_script": "vendors/ATIM/acw-pir360/acw-pir360-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-pir360/acw-pir360-encoder.js"
+    },
+    {
+      "id": "acw-pir90-i",
+      "name": "ATIM - ACW-PIR90-I",
+      "description": "",
+      "catalog": "acw-pir90-i",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-pir90-i/acw-pir90-i-codec.json",
+      "decoder_script": "vendors/ATIM/acw-pir90-i/acw-pir90-i-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-pir90-i/acw-pir90-i-encoder.js"
+    },
+    {
+      "id": "acw-pir90-o",
+      "name": "ATIM - ACW-PIR90-O",
+      "description": "",
+      "catalog": "acw-pir90-o",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-pir90-o/acw-pir90-o-codec.json",
+      "decoder_script": "vendors/ATIM/acw-pir90-o/acw-pir90-o-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-pir90-o/acw-pir90-o-encoder.js"
+    },
+    {
+      "id": "acw-tcr",
+      "name": "ATIM - ACW-TCR",
+      "description": "",
+      "catalog": "acw-tcr",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-tcr/acw-tcr-codec.json",
+      "decoder_script": "vendors/ATIM/acw-tcr/acw-tcr-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-tcr/acw-tcr-encoder.js"
+    },
+    {
+      "id": "acw-thaq",
+      "name": "ATIM - ACW-THAQ",
+      "description": "",
+      "catalog": "acw-thaq",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-thaq/acw-thaq-codec.json",
+      "decoder_script": "vendors/ATIM/acw-thaq/acw-thaq-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-thaq/acw-thaq-encoder.js"
+    },
+    {
+      "id": "acw-thx",
+      "name": "ATIM - ACW-THX",
+      "description": "",
+      "catalog": "acw-thx",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-thx/acw-thx-codec.json",
+      "decoder_script": "vendors/ATIM/acw-thx/acw-thx-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-thx/acw-thx-encoder.js"
+    },
+    {
+      "id": "acw-tm0p",
+      "name": "ATIM - ACW-TM0P",
+      "description": "",
+      "catalog": "acw-tm0p",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-tm0p/acw-tm0p-codec.json",
+      "decoder_script": "vendors/ATIM/acw-tm0p/acw-tm0p-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-tm0p/acw-tm0p-encoder.js"
+    },
+    {
+      "id": "acw-tm1p",
+      "name": "ATIM - ACW-TM1P",
+      "description": "",
+      "catalog": "acw-tm1p",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-tm1p/acw-tm1p-codec.json",
+      "decoder_script": "vendors/ATIM/acw-tm1p/acw-tm1p-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-tm1p/acw-tm1p-encoder.js"
+    },
+    {
+      "id": "acw-tm1p-cryo",
+      "name": "ATIM - ACW-TM1P-CRYO",
+      "description": "",
+      "catalog": "acw-tm1p-cryo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-tm1p-cryo/acw-tm1p-cryo-codec.json",
+      "decoder_script": "vendors/ATIM/acw-tm1p-cryo/acw-tm1p-cryo-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-tm1p-cryo/acw-tm1p-cryo-encoder.js"
+    },
+    {
+      "id": "acw-tm2p",
+      "name": "ATIM - ACW-TM2P",
+      "description": "",
+      "catalog": "acw-tm2p",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-tm2p/acw-tm2p-codec.json",
+      "decoder_script": "vendors/ATIM/acw-tm2p/acw-tm2p-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-tm2p/acw-tm2p-encoder.js"
+    },
+    {
+      "id": "acw-tst",
+      "name": "ATIM - ACW-TST",
+      "description": "",
+      "catalog": "acw-tst",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-tst/acw-tst-codec.json",
+      "decoder_script": "vendors/ATIM/acw-tst/acw-tst-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-tst/acw-tst-encoder.js"
+    },
+    {
+      "id": "acw-wl-i",
+      "name": "ATIM - ACW-WL-I",
+      "description": "",
+      "catalog": "acw-wl-i",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-wl-i/acw-wl-i-codec.json",
+      "decoder_script": "vendors/ATIM/acw-wl-i/acw-wl-i-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-wl-i/acw-wl-i-encoder.js"
+    },
+    {
+      "id": "acw-wl-o",
+      "name": "ATIM - ACW-WL-O",
+      "description": "",
+      "catalog": "acw-wl-o",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/acw-wl-o/acw-wl-o-codec.json",
+      "decoder_script": "vendors/ATIM/acw-wl-o/acw-wl-o-decoder.js",
+      "encoder_script": "vendors/ATIM/acw-wl-o/acw-wl-o-encoder.js"
+    },
+    {
+      "id": "e-green-sensor",
+      "name": "ATIM - E-GREEN-SENSOR",
+      "description": "",
+      "catalog": "e-green-sensor",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/ATIM/e-green-sensor/e-green-sensor-codec.json",
+      "decoder_script": "vendors/ATIM/e-green-sensor/e-green-sensor-decoder.js",
+      "encoder_script": "vendors/ATIM/e-green-sensor/e-green-sensor-encoder.js"
+    }
+  ]
+}

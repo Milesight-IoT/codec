@@ -1,0 +1,311 @@
+{
+  "version": "1.0.0",
+  "bytes": "58100100FA020064",
+  "object": [
+    {
+      "id": "battery",
+      "name": "Battery Level",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 8,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "ok"
+    },
+    {
+      "id": "appflag_1",
+      "name": "Configuration Inconsistency",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "0"
+    },
+    {
+      "id": "appflag_2",
+      "name": "Samples Lost",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    },
+    {
+      "id": "sensor_1_temperature",
+      "name": "Sensor 1 Temperature",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+      "value": "25"
+    },
+    {
+      "id": "sensor_1_alarm_high_temperature_threshold",
+      "name": "Sensor 1 Alarm High Temperature Threshold",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "inactive"
+        },
+        {
+          "value": 1,
+          "name": "active"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "1"
+    },
+    {
+      "id": "sensor_1_alarm_low_temperature_threshold",
+      "name": "Sensor 1 Alarm Low Temperature Threshold",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "inactive"
+        },
+        {
+          "value": 1,
+          "name": "active"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "0"
+    },
+    {
+      "id": "sensor_2_temperature",
+      "name": "Sensor 2 Temperature",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+      "value": "10"
+    },
+    {
+      "id": "sensor_2_alarm_low_temperature_threshold",
+      "name": "Sensor 2 Alarm Low Temperature Threshold",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "inactive"
+        },
+        {
+          "value": 1,
+          "name": "active"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "1"
+    },
+    {
+      "id": "sensor_2_alarm_high_temperature_threshold",
+      "name": "Sensor 2 Alarm High Temperature Threshold",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "inactive"
+        },
+        {
+          "value": 1,
+          "name": "active"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "0"
+    },
+    {
+      "id": "lora_adr",
+      "name": "LoRaWAN ADR",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    },
+    {
+      "id": "lora_duty_cycle",
+      "name": "LoRaWAN Duty Cycle",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "",
+      "values": [
+        {
+          "value": 0,
+          "name": "disabled"
+        },
+        {
+          "value": 1,
+          "name": "enabled"
+        }
+      ]
+    },
+    {
+      "id": "lora_provisioning_mode",
+      "name": "LoRaWAN Provisioning Mode",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 8,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    },
+    {
+      "id": "missing_network",
+      "name": "Missing Network",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    },
+    {
+      "id": "sensor_1_temperature_error_detected",
+      "name": "Sensor 1 Temperature Error Detected",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "0"
+    },
+    {
+      "id": "sensor_2_temperature_error_detected",
+      "name": "Sensor 2 Temperature Error Detected",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "0"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    }
+  ]
+}

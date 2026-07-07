@@ -1,0 +1,789 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "dl-10hs",
+            "name": "Decentlab - DL-10HS",
+            "description": "Decentlab legacy 10HS capacitance soil moisture and temperature sensor.",
+            "catalog": "dl-10hs",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-10hs/dl-10hs-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-10hs/dl-10hs-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-10hs/dl-10hs-encoder.js"
+        },
+        {
+            "id": "dl-5te",
+            "name": "Decentlab - DL-5TE",
+            "description": "Decentlab 5TE soil dielectric permittivity, volumetric water content, temperature and EC sensor.",
+            "catalog": "dl-5te",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-5te/dl-5te-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-5te/dl-5te-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-5te/dl-5te-encoder.js"
+        },
+        {
+            "id": "dl-5tm",
+            "name": "Decentlab - DL-5TM",
+            "description": "Decentlab legacy 5TM soil moisture and temperature sensor.",
+            "catalog": "dl-5tm",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-5tm/dl-5tm-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-5tm/dl-5tm-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-5tm/dl-5tm-encoder.js"
+        },
+        {
+            "id": "dl-alb",
+            "name": "Decentlab - DL-ALB",
+            "description": "Decentlab albedometer measuring incoming and reflected solar radiation for albedo calculation.",
+            "catalog": "dl-alb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-alb/dl-alb-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-alb/dl-alb-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-alb/dl-alb-encoder.js"
+        },
+        {
+            "id": "dl-atm22",
+            "name": "Decentlab - DL-ATM22",
+            "description": "Decentlab ultrasonic wind speed, direction, and air temperature sensor.",
+            "catalog": "dl-atm22",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-atm22/dl-atm22-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-atm22/dl-atm22-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-atm22/dl-atm22-encoder.js"
+        },
+        {
+            "id": "dl-atm41",
+            "name": "Decentlab - DL-ATM41",
+            "description": "Decentlab eleven-parameter all-in-one weather station including solar, precipitation, wind, temperature, humidity and pressure.",
+            "catalog": "dl-atm41",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-atm41/dl-atm41-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-atm41/dl-atm41-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-atm41/dl-atm41-encoder.js"
+        },
+        {
+            "id": "dl-atm41g2",
+            "name": "Decentlab - DL-ATM41G2",
+            "description": "Decentlab second-generation eleven-parameter weather station with precipitation electrical conductivity and cumulative precipitation.",
+            "catalog": "dl-atm41g2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-atm41g2/dl-atm41g2-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-atm41g2/dl-atm41g2-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-atm41g2/dl-atm41g2-encoder.js"
+        },
+        {
+            "id": "dl-blg",
+            "name": "Decentlab - DL-BLG",
+            "description": "Decentlab black globe temperature sensor for mean radiant temperature measurement.",
+            "catalog": "dl-blg",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-blg/dl-blg-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-blg/dl-blg-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-blg/dl-blg-encoder.js"
+        },
+        {
+            "id": "dl-ctd10",
+            "name": "Decentlab - DL-CTD10",
+            "description": "Decentlab water depth, temperature and electrical conductivity sensor for liquid level monitoring.",
+            "catalog": "dl-ctd10",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ctd10/dl-ctd10-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ctd10/dl-ctd10-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ctd10/dl-ctd10-encoder.js"
+        },
+        {
+            "id": "dl-ctd10b",
+            "name": "Decentlab - DL-CTD10B",
+            "description": "Decentlab CTD10B water depth, temperature and electrical conductivity sensor variant.",
+            "catalog": "dl-ctd10b",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ctd10b/dl-ctd10b-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ctd10b/dl-ctd10b-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ctd10b/dl-ctd10b-encoder.js"
+        },
+        {
+            "id": "dl-cws",
+            "name": "Decentlab - DL-CWS",
+            "description": "Decentlab high-precision winter road maintenance sensor measuring surface, air temperature, dew point and road angle.",
+            "catalog": "dl-cws",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-cws/dl-cws-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-cws/dl-cws-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-cws/dl-cws-encoder.js"
+        },
+        {
+            "id": "dl-cws2",
+            "name": "Decentlab - DL-CWS2",
+            "description": "Decentlab winter road maintenance sensor with radiation shield, adding shielded air T&H measurements.",
+            "catalog": "dl-cws2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-cws2/dl-cws2-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-cws2/dl-cws2-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-cws2/dl-cws2-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-002",
+            "name": "Decentlab - DL-DLR2-002",
+            "description": "Decentlab single-channel pulse counter with pulse count, interval and cumulative count.",
+            "catalog": "dl-dlr2-002",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-002/dl-dlr2-002-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-002/dl-dlr2-002-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-002/dl-dlr2-002-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-003",
+            "name": "Decentlab - DL-DLR2-003",
+            "description": "Decentlab single digital input (on/off state) sensor device.",
+            "catalog": "dl-dlr2-003",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-003/dl-dlr2-003-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-003/dl-dlr2-003-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-003/dl-dlr2-003-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-005",
+            "name": "Decentlab - DL-DLR2-005",
+            "description": "Decentlab analog voltage input sensor device.",
+            "catalog": "dl-dlr2-005",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-005/dl-dlr2-005-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-005/dl-dlr2-005-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-005/dl-dlr2-005-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-006",
+            "name": "Decentlab - DL-DLR2-006",
+            "description": "Decentlab potentiometer position sensor.",
+            "catalog": "dl-dlr2-006",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-006/dl-dlr2-006-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-006/dl-dlr2-006-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-006/dl-dlr2-006-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-010",
+            "name": "Decentlab - DL-DLR2-010",
+            "description": "Decentlab dual-channel pulse counter with per-channel count, interval and cumulative count.",
+            "catalog": "dl-dlr2-010",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-010/dl-dlr2-010-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-010/dl-dlr2-010-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-010/dl-dlr2-010-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-011",
+            "name": "Decentlab - DL-DLR2-011",
+            "description": "Decentlab dual digital input sensor device.",
+            "catalog": "dl-dlr2-011",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-011/dl-dlr2-011-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-011/dl-dlr2-011-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-011/dl-dlr2-011-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-012",
+            "name": "Decentlab - DL-DLR2-012",
+            "description": "Decentlab strain gauge sensor.",
+            "catalog": "dl-dlr2-012",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-012/dl-dlr2-012-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-012/dl-dlr2-012-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-012/dl-dlr2-012-encoder.js"
+        },
+        {
+            "id": "dl-ds18",
+            "name": "Decentlab - DL-DS18",
+            "description": "Decentlab DS18B20-based temperature sensor for air or liquid temperature.",
+            "catalog": "dl-ds18",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ds18/dl-ds18-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ds18/dl-ds18-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ds18/dl-ds18-encoder.js"
+        },
+        {
+            "id": "dl-ds182",
+            "name": "Decentlab - DL-DS182",
+            "description": "Decentlab dual-channel DS18B20 temperature sensor.",
+            "catalog": "dl-ds182",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ds182/dl-ds182-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ds182/dl-ds182-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ds182/dl-ds182-encoder.js"
+        },
+        {
+            "id": "dl-epar",
+            "name": "Decentlab - DL-EPAR",
+            "description": "Decentlab extended photosynthetically active radiation (PAR) sensor.",
+            "catalog": "dl-epar",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-epar/dl-epar-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-epar/dl-epar-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-epar/dl-epar-encoder.js"
+        },
+        {
+            "id": "dl-fspar",
+            "name": "Decentlab - DL-FSPAR",
+            "description": "Decentlab fiber-optic submerged photosynthetically active radiation sensor.",
+            "catalog": "dl-fspar",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-fspar/dl-fspar-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-fspar/dl-fspar-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-fspar/dl-fspar-encoder.js"
+        },
+        {
+            "id": "dl-gmm",
+            "name": "Decentlab - DL-GMM",
+            "description": "Decentlab greenhouse multi-monitor measuring PAR, temperature, humidity, CO2, pressure and VPD.",
+            "catalog": "dl-gmm",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-gmm/dl-gmm-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-gmm/dl-gmm-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-gmm/dl-gmm-encoder.js"
+        },
+        {
+            "id": "dl-gs3",
+            "name": "Decentlab - DL-GS3",
+            "description": "Decentlab GS3 soil dielectric permittivity, volumetric water content, temperature and EC sensor.",
+            "catalog": "dl-gs3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-gs3/dl-gs3-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-gs3/dl-gs3-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-gs3/dl-gs3-encoder.js"
+        },
+        {
+            "id": "dl-iam",
+            "name": "Decentlab - DL-IAM",
+            "description": "Decentlab indoor ambiance monitor measuring T, RH, pressure, light, CO2, TVOC and activity.",
+            "catalog": "dl-iam",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-iam/dl-iam-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-iam/dl-iam-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-iam/dl-iam-encoder.js"
+        },
+        {
+            "id": "dl-ifd",
+            "name": "Decentlab - DL-IFD",
+            "description": "Decentlab fruit dendrometer measuring fruit size via linear displacement.",
+            "catalog": "dl-ifd",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ifd/dl-ifd-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ifd/dl-ifd-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ifd/dl-ifd-encoder.js"
+        },
+        {
+            "id": "dl-ilt",
+            "name": "Decentlab - DL-ILT",
+            "description": "Decentlab infrared leaf temperature sensor.",
+            "catalog": "dl-ilt",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ilt/dl-ilt-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ilt/dl-ilt-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ilt/dl-ilt-encoder.js"
+        },
+        {
+            "id": "dl-isd",
+            "name": "Decentlab - DL-ISD",
+            "description": "Decentlab stem dendrometer measuring stem diameter.",
+            "catalog": "dl-isd",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-isd/dl-isd-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-isd/dl-isd-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-isd/dl-isd-encoder.js"
+        },
+        {
+            "id": "dl-isf",
+            "name": "Decentlab - DL-ISF",
+            "description": "Decentlab sap flow sensor measuring volumetric sap flow and heat velocity in plant stems.",
+            "catalog": "dl-isf",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-isf/dl-isf-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-isf/dl-isf-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-isf/dl-isf-encoder.js"
+        },
+        {
+            "id": "dl-itst",
+            "name": "Decentlab - DL-ITST",
+            "description": "Decentlab infrared surface temperature sensor with head temperature reference.",
+            "catalog": "dl-itst",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-itst/dl-itst-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-itst/dl-itst-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-itst/dl-itst-encoder.js"
+        },
+        {
+            "id": "dl-lid",
+            "name": "Decentlab - DL-LID",
+            "description": "Decentlab laser distance and level sensor with statistical distribution of measurements.",
+            "catalog": "dl-lid",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-lid/dl-lid-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-lid/dl-lid-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-lid/dl-lid-encoder.js"
+        },
+        {
+            "id": "dl-lid2",
+            "name": "Decentlab - DL-LID2",
+            "description": "Decentlab second-generation laser distance sensor with extended statistical measurement output.",
+            "catalog": "dl-lid2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-lid2/dl-lid2-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-lid2/dl-lid2-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-lid2/dl-lid2-encoder.js"
+        },
+        {
+            "id": "dl-lp8p",
+            "name": "Decentlab - DL-LP8P",
+            "description": "Decentlab CO2, temperature, humidity and barometric pressure sensor using LP8P NDIR sensor.",
+            "catalog": "dl-lp8p",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-lp8p/dl-lp8p-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-lp8p/dl-lp8p-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-lp8p/dl-lp8p-encoder.js"
+        },
+        {
+            "id": "dl-lpw",
+            "name": "Decentlab - DL-LPW",
+            "description": "Decentlab linear potentiometer position/displacement sensor.",
+            "catalog": "dl-lpw",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-lpw/dl-lpw-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-lpw/dl-lpw-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-lpw/dl-lpw-encoder.js"
+        },
+        {
+            "id": "dl-lws",
+            "name": "Decentlab - DL-LWS",
+            "description": "Decentlab dielectric leaf wetness sensor.",
+            "catalog": "dl-lws",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-lws/dl-lws-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-lws/dl-lws-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-lws/dl-lws-encoder.js"
+        },
+        {
+            "id": "dl-mbx",
+            "name": "Decentlab - DL-MBX",
+            "description": "Decentlab ultrasonic distance and level sensor.",
+            "catalog": "dl-mbx",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-mbx/dl-mbx-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-mbx/dl-mbx-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-mbx/dl-mbx-encoder.js"
+        },
+        {
+            "id": "dl-ntu",
+            "name": "Decentlab - DL-NTU",
+            "description": "Decentlab optical turbidity (NTU/FNU/mg/L) and temperature sensor.",
+            "catalog": "dl-ntu",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ntu/dl-ntu-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ntu/dl-ntu-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ntu/dl-ntu-encoder.js"
+        },
+        {
+            "id": "dl-optod",
+            "name": "Decentlab - DL-OPTOD",
+            "description": "Decentlab optical dissolved oxygen and temperature sensor.",
+            "catalog": "dl-optod",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-optod/dl-optod-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-optod/dl-optod-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-optod/dl-optod-encoder.js"
+        },
+        {
+            "id": "dl-par",
+            "name": "Decentlab - DL-PAR",
+            "description": "Decentlab PAR sensor for quantifying photosynthetically active radiation.",
+            "catalog": "dl-par",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-par/dl-par-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-par/dl-par-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-par/dl-par-encoder.js"
+        },
+        {
+            "id": "dl-pheht",
+            "name": "Decentlab - DL-PHEHT",
+            "description": "Decentlab pH, ORP/redox and temperature sensor for water quality monitoring.",
+            "catalog": "dl-pheht",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-pheht/dl-pheht-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-pheht/dl-pheht-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-pheht/dl-pheht-encoder.js"
+        },
+        {
+            "id": "dl-pm",
+            "name": "Decentlab - DL-PM",
+            "description": "Decentlab PM1.0/PM2.5/PM4/PM10 mass concentration and number concentration sensor with T, RH and pressure.",
+            "catalog": "dl-pm",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-pm/dl-pm-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-pm/dl-pm-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-pm/dl-pm-encoder.js"
+        },
+        {
+            "id": "dl-pyr",
+            "name": "Decentlab - DL-PYR",
+            "description": "Decentlab pyranometer measuring total shortwave solar radiation.",
+            "catalog": "dl-pyr",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-pyr/dl-pyr-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-pyr/dl-pyr-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-pyr/dl-pyr-encoder.js"
+        },
+        {
+            "id": "dl-rad",
+            "name": "Decentlab - DL-RAD",
+            "description": "Decentlab radar distance and level sensor with reliability indicator.",
+            "catalog": "dl-rad",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-rad/dl-rad-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-rad/dl-rad-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-rad/dl-rad-encoder.js"
+        },
+        {
+            "id": "dl-rhc",
+            "name": "Decentlab - DL-RHC",
+            "description": "Decentlab high-precision air temperature and humidity sensor with radiation shield.",
+            "catalog": "dl-rhc",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-rhc/dl-rhc-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-rhc/dl-rhc-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-rhc/dl-rhc-encoder.js"
+        },
+        {
+            "id": "dl-sdd",
+            "name": "Decentlab - DL-SDD",
+            "description": "Decentlab multi-depth soil moisture, temperature and salinity profile sensor (up to 12 levels).",
+            "catalog": "dl-sdd",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-sdd/dl-sdd-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-sdd/dl-sdd-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-sdd/dl-sdd-encoder.js"
+        },
+        {
+            "id": "dl-sht21",
+            "name": "Decentlab - DL-SHT21",
+            "description": "Decentlab SHT21-based air temperature and humidity sensor.",
+            "catalog": "dl-sht21",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-sht21/dl-sht21-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-sht21/dl-sht21-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-sht21/dl-sht21-encoder.js"
+        },
+        {
+            "id": "dl-sht35",
+            "name": "Decentlab - DL-SHT35",
+            "description": "Decentlab SHT35-based air temperature and humidity sensor with radiation shield.",
+            "catalog": "dl-sht35",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-sht35/dl-sht35-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-sht35/dl-sht35-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-sht35/dl-sht35-encoder.js"
+        },
+        {
+            "id": "dl-smtp",
+            "name": "Decentlab - DL-SMTP",
+            "description": "Decentlab multi-depth soil moisture and temperature profile sensor (up to 8 depth levels).",
+            "catalog": "dl-smtp",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-smtp/dl-smtp-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-smtp/dl-smtp-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-smtp/dl-smtp-encoder.js"
+        },
+        {
+            "id": "dl-tp",
+            "name": "Decentlab - DL-TP",
+            "description": "Decentlab multi-level temperature profile sensor (up to 16 levels).",
+            "catalog": "dl-tp",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-tp/dl-tp-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-tp/dl-tp-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-tp/dl-tp-encoder.js"
+        },
+        {
+            "id": "dl-trs11",
+            "name": "Decentlab - DL-TRS11",
+            "description": "Decentlab TRS11 soil moisture, temperature and electrical conductivity sensor.",
+            "catalog": "dl-trs11",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-trs11/dl-trs11-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-trs11/dl-trs11-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-trs11/dl-trs11-encoder.js"
+        },
+        {
+            "id": "dl-trs12",
+            "name": "Decentlab - DL-TRS12",
+            "description": "Decentlab TRS12 soil moisture, temperature and electrical conductivity sensor variant.",
+            "catalog": "dl-trs12",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-trs12/dl-trs12-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-trs12/dl-trs12-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-trs12/dl-trs12-encoder.js"
+        },
+        {
+            "id": "dl-trs21",
+            "name": "Decentlab - DL-TRS21",
+            "description": "Decentlab soil water potential (matric potential) and temperature sensor.",
+            "catalog": "dl-trs21",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-trs21/dl-trs21-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-trs21/dl-trs21-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-trs21/dl-trs21-encoder.js"
+        },
+        {
+            "id": "dl-wrm",
+            "name": "Decentlab - DL-WRM",
+            "description": "Decentlab winter road maintenance sensor measuring air T&H, surface and head temperature.",
+            "catalog": "dl-wrm",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-wrm/dl-wrm-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-wrm/dl-wrm-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-wrm/dl-wrm-encoder.js"
+        },
+        {
+            "id": "dl-zn1",
+            "name": "Decentlab - DL-ZN1",
+            "description": "Decentlab single-stem dendrometer measuring tree trunk diameter variation.",
+            "catalog": "dl-zn1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-zn1/dl-zn1-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-zn1/dl-zn1-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-zn1/dl-zn1-encoder.js"
+        },
+        {
+            "id": "dl-zn2",
+            "name": "Decentlab - DL-ZN2",
+            "description": "Decentlab dual dendrometer measuring two stem/trunk diameter variation channels.",
+            "catalog": "dl-zn2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-zn2/dl-zn2-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-zn2/dl-zn2-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-zn2/dl-zn2-encoder.js"
+        }
+    ]
+}

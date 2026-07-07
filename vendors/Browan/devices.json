@@ -1,0 +1,117 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "tbhh100",
+            "name": "Browan - TBHH100",
+            "description": "Browan LoRaWAN temperature and humidity sensor for indoor environments.",
+            "catalog": "tbhh100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbhh100/tbhh100-codec.json",
+            "decoder_script": "vendors/Browan/tbhh100/tbhh100-decoder.js",
+            "encoder_script": "vendors/Browan/tbhh100/tbhh100-encoder.js"
+        },
+        {
+            "id": "tbam100",
+            "name": "Browan - TBAM100",
+            "description": "Browan LoRaWAN ambient light sensor measuring lux and board temperature.",
+            "catalog": "tbam100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbam100/tbam100-codec.json",
+            "decoder_script": "vendors/Browan/tbam100/tbam100-decoder.js",
+            "encoder_script": "vendors/Browan/tbam100/tbam100-encoder.js"
+        },
+        {
+            "id": "tbdw100",
+            "name": "Browan - TBDW100",
+            "description": "Browan LoRaWAN door and window open/close sensor.",
+            "catalog": "tbdw100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbdw100/tbdw100-codec.json",
+            "decoder_script": "vendors/Browan/tbdw100/tbdw100-decoder.js",
+            "encoder_script": "vendors/Browan/tbdw100/tbdw100-encoder.js"
+        },
+        {
+            "id": "tbms100",
+            "name": "Browan - TBMS100",
+            "description": "Browan LoRaWAN PIR motion sensor.",
+            "catalog": "tbms100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbms100/tbms100-codec.json",
+            "decoder_script": "vendors/Browan/tbms100/tbms100-decoder.js",
+            "encoder_script": "vendors/Browan/tbms100/tbms100-encoder.js"
+        },
+        {
+            "id": "tbpb100",
+            "name": "Browan - TBPB100",
+            "description": "Browan LoRaWAN push button sensor.",
+            "catalog": "tbpb100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbpb100/tbpb100-codec.json",
+            "decoder_script": "vendors/Browan/tbpb100/tbpb100-decoder.js",
+            "encoder_script": "vendors/Browan/tbpb100/tbpb100-encoder.js"
+        },
+        {
+            "id": "tbsl100",
+            "name": "Browan - TBSL100",
+            "description": "Browan LoRaWAN sound level sensor measuring decibels.",
+            "catalog": "tbsl100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbsl100/tbsl100-codec.json",
+            "decoder_script": "vendors/Browan/tbsl100/tbsl100-decoder.js",
+            "encoder_script": "vendors/Browan/tbsl100/tbsl100-encoder.js"
+        },
+        {
+            "id": "tbwl100",
+            "name": "Browan - TBWL100",
+            "description": "Browan LoRaWAN water leak detection sensor.",
+            "catalog": "tbwl100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbwl100/tbwl100-codec.json",
+            "decoder_script": "vendors/Browan/tbwl100/tbwl100-decoder.js",
+            "encoder_script": "vendors/Browan/tbwl100/tbwl100-encoder.js"
+        },
+        {
+            "id": "tbhv110",
+            "name": "Browan - TBHV110",
+            "description": "Browan LoRaWAN indoor air quality sensor measuring CO2eq, VOC, IAQ, temperature and humidity.",
+            "catalog": "tbhv110",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbhv110/tbhv110-codec.json",
+            "decoder_script": "vendors/Browan/tbhv110/tbhv110-decoder.js",
+            "encoder_script": "vendors/Browan/tbhv110/tbhv110-encoder.js"
+        }
+    ]
+}

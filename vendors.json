@@ -8,6 +8,132 @@
             "description": "Make Sensing Matter",
             "oui": "24e124",
             "devices": "vendors/milesight-iot/devices.json"
+        },
+        {
+            "id": "elsys",
+            "name": "Elsys",
+            "logo": "",
+            "website": "https://www.elsys.se",
+            "description": "Swedish company providing wireless sensors and IoT solutions for smart buildings and energy management.",
+            "oui": "a81758",
+            "devices": "vendors/Elsys/devices.json"
+        },
+        {
+            "id": "adeunis",
+            "name": "Adeunis",
+            "logo": "",
+            "website": "https://www.adeunis.com",
+            "description": "French manufacturer of LoRaWAN and Sigfox industrial sensors and field test devices.",
+            "oui": "0018b2",
+            "devices": "vendors/Adeunis/devices.json"
+        },
+        {
+            "id": "dragino",
+            "name": "Dragino",
+            "logo": "",
+            "website": "https://www.dragino.com",
+            "description": "Chinese manufacturer of LoRaWAN end nodes, gateways and IoT sensors.",
+            "oui": "a84041",
+            "devices": "vendors/Dragino/devices.json"
+        },
+        {
+            "id": "netvox",
+            "name": "Netvox",
+            "logo": "",
+            "website": "http://www.netvox.com.tw",
+            "description": "Taiwanese manufacturer of LoRaWAN sensors and actuators (R311/R602/R711/R718/R719/R720/R72x/R809/R831/R900/RA/RB series).",
+            "oui": "",
+            "devices": "vendors/Netvox/devices.json"
+        },
+        {
+            "id": "watteco",
+            "name": "Watteco",
+            "logo": "",
+            "website": "https://www.watteco.com",
+            "description": "French manufacturer of LoRaWAN sensors (NKE group); uses ZCL Cluster-based payload format on fPort 125.",
+            "oui": "",
+            "devices": "vendors/Watteco/devices.json"
+        },
+        {
+            "id": "atim",
+            "name": "ATIM",
+            "logo": "",
+            "website": "https://www.atim.com",
+            "description": "French manufacturer of LoRaWAN sensors for building automation and industrial monitoring (ACW series).",
+            "oui": "",
+            "devices": "vendors/ATIM/devices.json"
+        },
+        {
+            "id": "sontay",
+            "name": "Sontay",
+            "logo": "",
+            "website": "https://www.sontay.com",
+            "description": "UK manufacturer of building automation sensors and LoRaWAN wireless sensing solutions (RF-LW series).",
+            "oui": "",
+            "devices": "vendors/Sontay/devices.json"
+        },
+        {
+            "id": "mclimate",
+            "name": "MClimate",
+            "logo": "",
+            "website": "https://mclimate.eu",
+            "description": "Bulgarian IoT manufacturer specializing in LoRaWAN smart building devices including TRVs, CO2 sensors, flood sensors, and water valves.",
+            "oui": "",
+            "devices": "vendors/MClimate/devices.json"
+        },
+        {
+            "id": "sensecap",
+            "name": "SenseCAP",
+            "logo": "",
+            "website": "https://www.seeedstudio.com/sensecap",
+            "description": "Seeed Studio's industrial-grade LoRaWAN sensor series for smart agriculture and environmental monitoring.",
+            "oui": "",
+            "devices": "vendors/SenseCAP/devices.json"
+        },
+        {
+            "id": "enless",
+            "name": "Enless Wireless",
+            "logo": "",
+            "website": "https://enless-wireless.com",
+            "description": "French manufacturer of LoRaWAN sensors for building automation, including T&H, CO2, pulse counters and analog sensors.",
+            "oui": "",
+            "devices": "vendors/Enless/devices.json"
+        },
+        {
+            "id": "browan",
+            "name": "Browan",
+            "logo": "",
+            "website": "https://www.browan.com",
+            "description": "Taiwan-based LoRaWAN sensor manufacturer, TABS product line covering T&H, motion, door/window, water leak, light, sound and IAQ.",
+            "oui": "",
+            "devices": "vendors/Browan/devices.json"
+        },
+        {
+            "id": "decentlab",
+            "name": "Decentlab",
+            "logo": "",
+            "website": "https://www.decentlab.com",
+            "description": "Swiss manufacturer of precision LoRaWAN environmental and agricultural sensors covering weather stations, soil, water quality, distance, PAR, and IAQ.",
+            "oui": "",
+            "devices": "vendors/Decentlab/devices.json"
+        },
+        {
+            "id": "fludia",
+            "name": "Fludia",
+            "logo": "",
+            "website": "https://www.fludia.com",
+            "description": "French manufacturer of LoRaWAN IoT sensors for smart metering and energy monitoring (FM432 series: electricity, gas, pulse, temperature).",
+            "oui": "",
+            "devices": "vendors/Fludia/devices.json"
+        },
+        {
+            "id": "synetica",
+            "name": "Synetica",
+            "logo": "",
+            "website": "https://synetica.net",
+            "description": "UK-based manufacturer of LoRaWAN environmental and air quality sensors under the enLink brand.",
+            "oui": "",
+            "devices": "vendors/Synetica/devices.json"
         }
     ]
 }

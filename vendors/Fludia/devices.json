@@ -1,0 +1,77 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "FM432e",
+            "name": "Fludia - FM432e",
+            "description": "LoRaWAN IoT electricity sensor with optical head for electronic and electromechanical meters",
+            "catalog": "FM432e",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/Fludia/FM432e/FM432e-codec.json",
+            "decoder_script": "vendors/Fludia/FM432e/FM432e-decoder.js",
+            "encoder_script": "vendors/Fludia/FM432e/FM432e-encoder.js"
+        },
+        {
+            "id": "FM432g-n",
+            "name": "Fludia - FM432g-n",
+            "description": "LoRaWAN IoT gas sensor with optical head for gas meter digit reading",
+            "catalog": "FM432g-n",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/Fludia/FM432g-n/FM432g-n-codec.json",
+            "decoder_script": "vendors/Fludia/FM432g-n/FM432g-n-decoder.js",
+            "encoder_script": "vendors/Fludia/FM432g-n/FM432g-n-encoder.js"
+        },
+        {
+            "id": "FM432ir",
+            "name": "Fludia - FM432ir",
+            "description": "LoRaWAN IoT electricity sensor for German meters with IR/SML protocol support",
+            "catalog": "FM432ir",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/Fludia/FM432ir/FM432ir-codec.json",
+            "decoder_script": "vendors/Fludia/FM432ir/FM432ir-decoder.js",
+            "encoder_script": "vendors/Fludia/FM432ir/FM432ir-encoder.js"
+        },
+        {
+            "id": "FM432p-n",
+            "name": "Fludia - FM432p-n",
+            "description": "LoRaWAN IoT pulse sensor for gas, water, heat, or electricity meters (nc version)",
+            "catalog": "FM432p-n",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/Fludia/FM432p-n/FM432p-n-codec.json",
+            "decoder_script": "vendors/Fludia/FM432p-n/FM432p-n-decoder.js",
+            "encoder_script": "vendors/Fludia/FM432p-n/FM432p-n-encoder.js"
+        },
+        {
+            "id": "FM432p-n_ap",
+            "name": "Fludia - FM432p-n_ap",
+            "description": "LoRaWAN IoT pulse sensor with adjustable parameters (AP version)",
+            "catalog": "FM432p-n_ap",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/Fludia/FM432p-n_ap/FM432p-n_ap-codec.json",
+            "decoder_script": "vendors/Fludia/FM432p-n_ap/FM432p-n_ap-decoder.js",
+            "encoder_script": "vendors/Fludia/FM432p-n_ap/FM432p-n_ap-encoder.js"
+        },
+        {
+            "id": "FM432t",
+            "name": "Fludia - FM432t",
+            "description": "LoRaWAN IoT indoor temperature sensor",
+            "catalog": "FM432t",
+            "sn": "",
+            "deveui": "",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/Fludia/FM432t/FM432t-codec.json",
+            "decoder_script": "vendors/Fludia/FM432t/FM432t-decoder.js",
+            "encoder_script": "vendors/Fludia/FM432t/FM432t-encoder.js"
+        }
+    ]
+}

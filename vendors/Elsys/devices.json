@@ -1,0 +1,201 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "ers",
+            "name": "Elsys - ERS",
+            "description": "Smart building sensor with motion, temperature, humidity, light",
+            "catalog": "ers",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers/ers-codec.json",
+            "decoder_script": "vendors/Elsys/ers/ers-decoder.js",
+            "encoder_script": "vendors/Elsys/ers/ers-encoder.js"
+        },
+        {
+            "id": "ers-co2",
+            "name": "Elsys - ERS CO2",
+            "description": "Indoor environment with CO2: temperature, humidity, light, motion, CO2",
+            "catalog": "ers-co2",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-co2/ers-co2-codec.json",
+            "decoder_script": "vendors/Elsys/ers-co2/ers-co2-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-co2/ers-co2-encoder.js"
+        },
+        {
+            "id": "ers-co2-lite",
+            "name": "Elsys - ERS CO2 Lite",
+            "description": "Indoor CO2 monitoring: temperature, humidity, CO2",
+            "catalog": "ers-co2-lite",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-co2-lite/ers-co2-lite-codec.json",
+            "decoder_script": "vendors/Elsys/ers-co2-lite/ers-co2-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-co2-lite/ers-co2-lite-encoder.js"
+        },
+        {
+            "id": "ers-voc",
+            "name": "Elsys - ERS VOC",
+            "description": "Indoor air quality: temperature, humidity, light, motion, VOC",
+            "catalog": "ers-voc",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-voc/ers-voc-codec.json",
+            "decoder_script": "vendors/Elsys/ers-voc/ers-voc-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-voc/ers-voc-encoder.js"
+        },
+        {
+            "id": "ers-eye",
+            "name": "Elsys - ERS EYE",
+            "description": "Advanced occupancy: temperature, humidity, light, motion, occupancy",
+            "catalog": "ers-eye",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-eye/ers-eye-codec.json",
+            "decoder_script": "vendors/Elsys/ers-eye/ers-eye-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-eye/ers-eye-encoder.js"
+        },
+        {
+            "id": "ers-sound",
+            "name": "Elsys - ERS Sound",
+            "description": "Indoor environment with sound: temperature, humidity, light, motion, sound",
+            "catalog": "ers-sound",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-sound/ers-sound-codec.json",
+            "decoder_script": "vendors/Elsys/ers-sound/ers-sound-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-sound/ers-sound-encoder.js"
+        },
+        {
+            "id": "ers-lite",
+            "name": "Elsys - ERS Lite",
+            "description": "Indoor environment monitoring: temperature, humidity",
+            "catalog": "ers-lite",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-lite/ers-lite-codec.json",
+            "decoder_script": "vendors/Elsys/ers-lite/ers-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-lite/ers-lite-encoder.js"
+        },
+        {
+            "id": "elt-2",
+            "name": "Elsys - ELT-2",
+            "description": "Multi-sensor LoRaWAN device with full IO, accelerometer, pressure, etc.",
+            "catalog": "elt-2",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/elt-2/elt-2-codec.json",
+            "decoder_script": "vendors/Elsys/elt-2/elt-2-decoder.js",
+            "encoder_script": "vendors/Elsys/elt-2/elt-2-encoder.js"
+        },
+        {
+            "id": "elt-lite",
+            "name": "Elsys - ELT Lite",
+            "description": "1-channel GPIO LoRaWAN device for analog/digital signals",
+            "catalog": "elt-lite",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/elt-lite/elt-lite-codec.json",
+            "decoder_script": "vendors/Elsys/elt-lite/elt-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/elt-lite/elt-lite-encoder.js"
+        },
+        {
+            "id": "elt-ultrasonic",
+            "name": "Elsys - ELT Ultrasonic",
+            "description": "Ultrasonic distance sensor with full IO, temperature, humidity, pressure",
+            "catalog": "elt-ultrasonic",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/elt-ultrasonic/elt-ultrasonic-codec.json",
+            "decoder_script": "vendors/Elsys/elt-ultrasonic/elt-ultrasonic-decoder.js",
+            "encoder_script": "vendors/Elsys/elt-ultrasonic/elt-ultrasonic-encoder.js"
+        },
+        {
+            "id": "ems",
+            "name": "Elsys - EMS",
+            "description": "Mini sensor: temperature, humidity, accelerometer, water leak, door switch",
+            "catalog": "ems",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems/ems-codec.json",
+            "decoder_script": "vendors/Elsys/ems/ems-decoder.js",
+            "encoder_script": "vendors/Elsys/ems/ems-encoder.js"
+        },
+        {
+            "id": "ems-door",
+            "name": "Elsys - EMS Door",
+            "description": "Door switch and accelerometer for door/window monitoring",
+            "catalog": "ems-door",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems-door/ems-door-codec.json",
+            "decoder_script": "vendors/Elsys/ems-door/ems-door-decoder.js",
+            "encoder_script": "vendors/Elsys/ems-door/ems-door-encoder.js"
+        },
+        {
+            "id": "ems-lite",
+            "name": "Elsys - EMS Lite",
+            "description": "Temperature, humidity and water leak detection",
+            "catalog": "ems-lite",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems-lite/ems-lite-codec.json",
+            "decoder_script": "vendors/Elsys/ems-lite/ems-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/ems-lite/ems-lite-encoder.js"
+        },
+        {
+            "id": "ems-desk",
+            "name": "Elsys - EMS Desk",
+            "description": "Desk occupancy: temperature, humidity, accelerometer, occupancy",
+            "catalog": "ems-desk",
+            "sn": "",
+            "deveui": "a81758",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems-desk/ems-desk-codec.json",
+            "decoder_script": "vendors/Elsys/ems-desk/ems-desk-decoder.js",
+            "encoder_script": "vendors/Elsys/ems-desk/ems-desk-encoder.js"
+        }
+    ]
+}

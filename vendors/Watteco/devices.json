@@ -1,0 +1,481 @@
+{
+  "version": "1.0.0",
+  "devices": [
+    {
+      "id": "atmo",
+      "name": "Watteco - ATM'O",
+      "description": "",
+      "catalog": "atmo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/atmo/atmo-codec.json",
+      "decoder_script": "vendors/Watteco/atmo/atmo-decoder.js",
+      "encoder_script": "vendors/Watteco/atmo/atmo-encoder.js"
+    },
+    {
+      "id": "bob-assistant",
+      "name": "Watteco - BOB ASSISTANT",
+      "description": "",
+      "catalog": "bob-assistant",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/bob-assistant/bob-assistant-codec.json",
+      "decoder_script": "vendors/Watteco/bob-assistant/bob-assistant-decoder.js",
+      "encoder_script": "vendors/Watteco/bob-assistant/bob-assistant-encoder.js"
+    },
+    {
+      "id": "climo",
+      "name": "Watteco - CLIM'O",
+      "description": "",
+      "catalog": "climo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/climo/climo-codec.json",
+      "decoder_script": "vendors/Watteco/climo/climo-decoder.js",
+      "encoder_script": "vendors/Watteco/climo/climo-encoder.js"
+    },
+    {
+      "id": "closo",
+      "name": "Watteco - CLOS'O",
+      "description": "",
+      "catalog": "closo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/closo/closo-codec.json",
+      "decoder_script": "vendors/Watteco/closo/closo-decoder.js",
+      "encoder_script": "vendors/Watteco/closo/closo-encoder.js"
+    },
+    {
+      "id": "flasho",
+      "name": "Watteco - FLASH'O",
+      "description": "",
+      "catalog": "flasho",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/flasho/flasho-codec.json",
+      "decoder_script": "vendors/Watteco/flasho/flasho-decoder.js",
+      "encoder_script": "vendors/Watteco/flasho/flasho-encoder.js"
+    },
+    {
+      "id": "hygrotempo",
+      "name": "Watteco - HYGROTEMP'O",
+      "description": "",
+      "catalog": "hygrotempo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/hygrotempo/hygrotempo-codec.json",
+      "decoder_script": "vendors/Watteco/hygrotempo/hygrotempo-decoder.js",
+      "encoder_script": "vendors/Watteco/hygrotempo/hygrotempo-encoder.js"
+    },
+    {
+      "id": "inclino",
+      "name": "Watteco - INCLIN'O",
+      "description": "",
+      "catalog": "inclino",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/inclino/inclino-codec.json",
+      "decoder_script": "vendors/Watteco/inclino/inclino-decoder.js",
+      "encoder_script": "vendors/Watteco/inclino/inclino-encoder.js"
+    },
+    {
+      "id": "indoor-temperature",
+      "name": "Watteco - INDOOR TEMPERATURE",
+      "description": "",
+      "catalog": "indoor-temperature",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/indoor-temperature/indoor-temperature-codec.json",
+      "decoder_script": "vendors/Watteco/indoor-temperature/indoor-temperature-decoder.js",
+      "encoder_script": "vendors/Watteco/indoor-temperature/indoor-temperature-encoder.js"
+    },
+    {
+      "id": "indoor-temperature-and-humidity",
+      "name": "Watteco - INDOOR TEMPERATURE AND HUMIDITY",
+      "description": "",
+      "catalog": "indoor-temperature-and-humidity",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/indoor-temperature-and-humidity/indoor-temperature-and-humidity-codec.json",
+      "decoder_script": "vendors/Watteco/indoor-temperature-and-humidity/indoor-temperature-and-humidity-decoder.js",
+      "encoder_script": "vendors/Watteco/indoor-temperature-and-humidity/indoor-temperature-and-humidity-encoder.js"
+    },
+    {
+      "id": "ino",
+      "name": "Watteco - IN'O",
+      "description": "",
+      "catalog": "ino",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/ino/ino-codec.json",
+      "decoder_script": "vendors/Watteco/ino/ino-decoder.js",
+      "encoder_script": "vendors/Watteco/ino/ino-encoder.js"
+    },
+    {
+      "id": "intenso",
+      "name": "Watteco - INTENS'O",
+      "description": "",
+      "catalog": "intenso",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/intenso/intenso-codec.json",
+      "decoder_script": "vendors/Watteco/intenso/intenso-decoder.js",
+      "encoder_script": "vendors/Watteco/intenso/intenso-encoder.js"
+    },
+    {
+      "id": "levo-plus-liquid-level-solution",
+      "name": "Watteco - LEV'O+ LIQUID LEVEL SOLUTION",
+      "description": "",
+      "catalog": "levo-plus-liquid-level-solution",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/levo-plus-liquid-level-solution/levo-plus-liquid-level-solution-codec.json",
+      "decoder_script": "vendors/Watteco/levo-plus-liquid-level-solution/levo-plus-liquid-level-solution-decoder.js",
+      "encoder_script": "vendors/Watteco/levo-plus-liquid-level-solution/levo-plus-liquid-level-solution-encoder.js"
+    },
+    {
+      "id": "modbus-master-rs485-lorawan",
+      "name": "Watteco - MODBUS MASTER RS485 LORAWAN",
+      "description": "",
+      "catalog": "modbus-master-rs485-lorawan",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/modbus-master-rs485-lorawan/modbus-master-rs485-lorawan-codec.json",
+      "decoder_script": "vendors/Watteco/modbus-master-rs485-lorawan/modbus-master-rs485-lorawan-decoder.js",
+      "encoder_script": "vendors/Watteco/modbus-master-rs485-lorawan/modbus-master-rs485-lorawan-encoder.js"
+    },
+    {
+      "id": "monito",
+      "name": "Watteco - MONIT'O",
+      "description": "",
+      "catalog": "monito",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/monito/monito-codec.json",
+      "decoder_script": "vendors/Watteco/monito/monito-decoder.js",
+      "encoder_script": "vendors/Watteco/monito/monito-encoder.js"
+    },
+    {
+      "id": "moveo",
+      "name": "Watteco - MOVE'O",
+      "description": "",
+      "catalog": "moveo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/moveo/moveo-codec.json",
+      "decoder_script": "vendors/Watteco/moveo/moveo-decoder.js",
+      "encoder_script": "vendors/Watteco/moveo/moveo-encoder.js"
+    },
+    {
+      "id": "nke-pilot-wire",
+      "name": "Watteco - NKE PILOT WIRE",
+      "description": "",
+      "catalog": "nke-pilot-wire",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/nke-pilot-wire/nke-pilot-wire-codec.json",
+      "decoder_script": "vendors/Watteco/nke-pilot-wire/nke-pilot-wire-decoder.js",
+      "encoder_script": "vendors/Watteco/nke-pilot-wire/nke-pilot-wire-encoder.js"
+    },
+    {
+      "id": "outdoor-temperature",
+      "name": "Watteco - OUTDOOR TEMPERATURE",
+      "description": "",
+      "catalog": "outdoor-temperature",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/outdoor-temperature/outdoor-temperature-codec.json",
+      "decoder_script": "vendors/Watteco/outdoor-temperature/outdoor-temperature-decoder.js",
+      "encoder_script": "vendors/Watteco/outdoor-temperature/outdoor-temperature-encoder.js"
+    },
+    {
+      "id": "presso",
+      "name": "Watteco - PRESS'O",
+      "description": "",
+      "catalog": "presso",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/presso/presso-codec.json",
+      "decoder_script": "vendors/Watteco/presso/presso-decoder.js",
+      "encoder_script": "vendors/Watteco/presso/presso-encoder.js"
+    },
+    {
+      "id": "pt-1000",
+      "name": "Watteco - PT 1000",
+      "description": "",
+      "catalog": "pt-1000",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/pt-1000/pt-1000-codec.json",
+      "decoder_script": "vendors/Watteco/pt-1000/pt-1000-decoder.js",
+      "encoder_script": "vendors/Watteco/pt-1000/pt-1000-encoder.js"
+    },
+    {
+      "id": "pulse-senso",
+      "name": "Watteco - PULSE SENS'O",
+      "description": "",
+      "catalog": "pulse-senso",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/pulse-senso/pulse-senso-codec.json",
+      "decoder_script": "vendors/Watteco/pulse-senso/pulse-senso-decoder.js",
+      "encoder_script": "vendors/Watteco/pulse-senso/pulse-senso-encoder.js"
+    },
+    {
+      "id": "remote-temperature-sensor-v1",
+      "name": "Watteco - REMOTE TEMPERATURE SENSOR V1",
+      "description": "",
+      "catalog": "remote-temperature-sensor-v1",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/remote-temperature-sensor-v1/remote-temperature-sensor-v1-codec.json",
+      "decoder_script": "vendors/Watteco/remote-temperature-sensor-v1/remote-temperature-sensor-v1-decoder.js",
+      "encoder_script": "vendors/Watteco/remote-temperature-sensor-v1/remote-temperature-sensor-v1-encoder.js"
+    },
+    {
+      "id": "remote-temperature-sensor-v2",
+      "name": "Watteco - REMOTE TEMPERATURE SENSOR V2",
+      "description": "",
+      "catalog": "remote-temperature-sensor-v2",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/remote-temperature-sensor-v2/remote-temperature-sensor-v2-codec.json",
+      "decoder_script": "vendors/Watteco/remote-temperature-sensor-v2/remote-temperature-sensor-v2-decoder.js",
+      "encoder_script": "vendors/Watteco/remote-temperature-sensor-v2/remote-temperature-sensor-v2-encoder.js"
+    },
+    {
+      "id": "smart-plug",
+      "name": "Watteco - SMART PLUG",
+      "description": "",
+      "catalog": "smart-plug",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/smart-plug/smart-plug-codec.json",
+      "decoder_script": "vendors/Watteco/smart-plug/smart-plug-decoder.js",
+      "encoder_script": "vendors/Watteco/smart-plug/smart-plug-encoder.js"
+    },
+    {
+      "id": "tempo",
+      "name": "Watteco - TEMP'O",
+      "description": "",
+      "catalog": "tempo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/tempo/tempo-codec.json",
+      "decoder_script": "vendors/Watteco/tempo/tempo-decoder.js",
+      "encoder_script": "vendors/Watteco/tempo/tempo-encoder.js"
+    },
+    {
+      "id": "ticso-cbe",
+      "name": "Watteco - TICS'O CBE",
+      "description": "",
+      "catalog": "ticso-cbe",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/ticso-cbe/ticso-cbe-codec.json",
+      "decoder_script": "vendors/Watteco/ticso-cbe/ticso-cbe-decoder.js",
+      "encoder_script": "vendors/Watteco/ticso-cbe/ticso-cbe-encoder.js"
+    },
+    {
+      "id": "ticso-cje",
+      "name": "Watteco - TICS'O CJE",
+      "description": "",
+      "catalog": "ticso-cje",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/ticso-cje/ticso-cje-codec.json",
+      "decoder_script": "vendors/Watteco/ticso-cje/ticso-cje-decoder.js",
+      "encoder_script": "vendors/Watteco/ticso-cje/ticso-cje-encoder.js"
+    },
+    {
+      "id": "ticso-ice",
+      "name": "Watteco - TICS'O ICE",
+      "description": "",
+      "catalog": "ticso-ice",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/ticso-ice/ticso-ice-codec.json",
+      "decoder_script": "vendors/Watteco/ticso-ice/ticso-ice-decoder.js",
+      "encoder_script": "vendors/Watteco/ticso-ice/ticso-ice-encoder.js"
+    },
+    {
+      "id": "ticso-pme-pmi",
+      "name": "Watteco - TICS'O PME PMI",
+      "description": "",
+      "catalog": "ticso-pme-pmi",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/ticso-pme-pmi/ticso-pme-pmi-codec.json",
+      "decoder_script": "vendors/Watteco/ticso-pme-pmi/ticso-pme-pmi-decoder.js",
+      "encoder_script": "vendors/Watteco/ticso-pme-pmi/ticso-pme-pmi-encoder.js"
+    },
+    {
+      "id": "ticso-standard",
+      "name": "Watteco - TICS'O STANDARD",
+      "description": "",
+      "catalog": "ticso-standard",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/ticso-standard/ticso-standard-codec.json",
+      "decoder_script": "vendors/Watteco/ticso-standard/ticso-standard-decoder.js",
+      "encoder_script": "vendors/Watteco/ticso-standard/ticso-standard-encoder.js"
+    },
+    {
+      "id": "torano-atex",
+      "name": "Watteco - TORAN'O ATEX",
+      "description": "",
+      "catalog": "torano-atex",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/torano-atex/torano-atex-codec.json",
+      "decoder_script": "vendors/Watteco/torano-atex/torano-atex-decoder.js",
+      "encoder_script": "vendors/Watteco/torano-atex/torano-atex-encoder.js"
+    },
+    {
+      "id": "triphaso",
+      "name": "Watteco - TRIPHAS'O",
+      "description": "",
+      "catalog": "triphaso",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/triphaso/triphaso-codec.json",
+      "decoder_script": "vendors/Watteco/triphaso/triphaso-decoder.js",
+      "encoder_script": "vendors/Watteco/triphaso/triphaso-encoder.js"
+    },
+    {
+      "id": "vaqao",
+      "name": "Watteco - VAQA'O",
+      "description": "",
+      "catalog": "vaqao",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/vaqao/vaqao-codec.json",
+      "decoder_script": "vendors/Watteco/vaqao/vaqao-decoder.js",
+      "encoder_script": "vendors/Watteco/vaqao/vaqao-encoder.js"
+    },
+    {
+      "id": "vaqao-plus",
+      "name": "Watteco - VAQA'O+",
+      "description": "",
+      "catalog": "vaqao-plus",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/vaqao-plus/vaqao-plus-codec.json",
+      "decoder_script": "vendors/Watteco/vaqao-plus/vaqao-plus-decoder.js",
+      "encoder_script": "vendors/Watteco/vaqao-plus/vaqao-plus-encoder.js"
+    },
+    {
+      "id": "ventilo",
+      "name": "Watteco - VENTIL'O",
+      "description": "",
+      "catalog": "ventilo",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Watteco/ventilo/ventilo-codec.json",
+      "decoder_script": "vendors/Watteco/ventilo/ventilo-decoder.js",
+      "encoder_script": "vendors/Watteco/ventilo/ventilo-encoder.js"
+    }
+  ]
+}

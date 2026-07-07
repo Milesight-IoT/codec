@@ -1,0 +1,103 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "s2101",
+            "name": "SenseCAP - S2101",
+            "description": "Battery-powered IP66 LoRaWAN® air temperature (-40~85°C) and humidity (0~100%RH) sensor.",
+            "catalog": "s2101",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/SenseCAP/s2101/s2101-codec.json",
+            "decoder_script": "vendors/SenseCAP/s2101/s2101-decoder.js",
+            "encoder_script": "vendors/SenseCAP/s2101/s2101-encoder.js"
+        },
+        {
+            "id": "s2102",
+            "name": "SenseCAP - S2102",
+            "description": "Battery-powered IP66 LoRaWAN® light intensity sensor, range 0–160000 lux.",
+            "catalog": "s2102",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/SenseCAP/s2102/s2102-codec.json",
+            "decoder_script": "vendors/SenseCAP/s2102/s2102-decoder.js",
+            "encoder_script": "vendors/SenseCAP/s2102/s2102-encoder.js"
+        },
+        {
+            "id": "s2103",
+            "name": "SenseCAP - S2103",
+            "description": "Battery-powered IP66 LoRaWAN® CO2 (400~10000 ppm), temperature and humidity sensor.",
+            "catalog": "s2103",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/SenseCAP/s2103/s2103-codec.json",
+            "decoder_script": "vendors/SenseCAP/s2103/s2103-decoder.js",
+            "encoder_script": "vendors/SenseCAP/s2103/s2103-encoder.js"
+        },
+        {
+            "id": "s2104",
+            "name": "SenseCAP - S2104",
+            "description": "Battery-powered IP66 LoRaWAN® soil moisture (0~100%) and temperature (-40~80°C) sensor.",
+            "catalog": "s2104",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/SenseCAP/s2104/s2104-codec.json",
+            "decoder_script": "vendors/SenseCAP/s2104/s2104-decoder.js",
+            "encoder_script": "vendors/SenseCAP/s2104/s2104-encoder.js"
+        },
+        {
+            "id": "s2105",
+            "name": "SenseCAP - S2105",
+            "description": "Battery-powered IP66 LoRaWAN® soil moisture, temperature and electrical conductivity (0~23 dS/m) sensor.",
+            "catalog": "s2105",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/SenseCAP/s2105/s2105-codec.json",
+            "decoder_script": "vendors/SenseCAP/s2105/s2105-decoder.js",
+            "encoder_script": "vendors/SenseCAP/s2105/s2105-encoder.js"
+        },
+        {
+            "id": "s2120",
+            "name": "SenseCAP - S2120",
+            "description": "Battery-powered IP66 LoRaWAN® weather station measuring temperature, humidity, light, UV, wind speed/direction, rainfall, and barometric pressure.",
+            "catalog": "s2120",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/SenseCAP/s2120/s2120-codec.json",
+            "decoder_script": "vendors/SenseCAP/s2120/s2120-decoder.js",
+            "encoder_script": "vendors/SenseCAP/s2120/s2120-encoder.js"
+        },
+        {
+            "id": "s2100",
+            "name": "SenseCAP - S2100",
+            "description": "Battery-powered IP66 LoRaWAN® data logger supporting RS485/Analog/GPIO sensors with OTA configuration.",
+            "catalog": "s2100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/SenseCAP/s2100/s2100-codec.json",
+            "decoder_script": "vendors/SenseCAP/s2100/s2100-decoder.js",
+            "encoder_script": "vendors/SenseCAP/s2100/s2100-encoder.js"
+        }
+    ]
+}

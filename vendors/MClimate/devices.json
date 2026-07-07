@@ -1,0 +1,75 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "vicki",
+            "name": "MClimate - Vicki",
+            "description": "MClimate Vicki is a LoRaWAN® smart radiator thermostat with built-in temperature and humidity sensors, and motor-driven valve control.",
+            "catalog": "vicki",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/vicki/vicki-codec.json",
+            "decoder_script": "vendors/MClimate/vicki/vicki-decoder.js",
+            "encoder_script": "vendors/MClimate/vicki/vicki-encoder.js"
+        },
+        {
+            "id": "ht-sensor",
+            "name": "MClimate - HT Sensor",
+            "description": "MClimate HT Sensor is a LoRaWAN® indoor temperature and humidity sensor with optional external thermistor input.",
+            "catalog": "ht-sensor",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/ht-sensor/ht-sensor-codec.json",
+            "decoder_script": "vendors/MClimate/ht-sensor/ht-sensor-decoder.js",
+            "encoder_script": "vendors/MClimate/ht-sensor/ht-sensor-encoder.js"
+        },
+        {
+            "id": "co2-sensor",
+            "name": "MClimate - CO2 Sensor and Notifier",
+            "description": "MClimate CO2 Sensor uses NDIR technology to measure CO2 concentration with temperature and humidity.",
+            "catalog": "co2-sensor",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/co2-sensor/co2-sensor-codec.json",
+            "decoder_script": "vendors/MClimate/co2-sensor/co2-sensor-decoder.js",
+            "encoder_script": "vendors/MClimate/co2-sensor/co2-sensor-encoder.js"
+        },
+        {
+            "id": "flood-sensor",
+            "name": "MClimate - Flood Sensor",
+            "description": "MClimate Flood Sensor detects water leakage, box tampering, and includes a temperature sensor.",
+            "catalog": "flood-sensor",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/flood-sensor/flood-sensor-codec.json",
+            "decoder_script": "vendors/MClimate/flood-sensor/flood-sensor-decoder.js",
+            "encoder_script": "vendors/MClimate/flood-sensor/flood-sensor-encoder.js"
+        },
+        {
+            "id": "t-valve",
+            "name": "MClimate - T-Valve",
+            "description": "MClimate T-Valve is a LoRaWAN® water valve with water temperature, ambient temperature, flood and tamper sensors.",
+            "catalog": "t-valve",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/t-valve/t-valve-codec.json",
+            "decoder_script": "vendors/MClimate/t-valve/t-valve-decoder.js",
+            "encoder_script": "vendors/MClimate/t-valve/t-valve-encoder.js"
+        }
+    ]
+}

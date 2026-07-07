@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "bytes": "070E100100E20229030127050F031101",
+  "object": [
+    {
+      "id": "battery_voltage",
+      "name": "Battery Voltage",
+      "value": "3600",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "value": "22.6",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+    },
+    {
+      "id": "humidity",
+      "name": "Humidity",
+      "value": "41",
+      "unit": "%",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 98,
+      "bacnet_unit_type": "UNITS_PERCENT"
+    },
+    {
+      "id": "acceleration_x",
+      "name": "Acceleration X",
+      "value": "1",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "INT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "acceleration_y",
+      "name": "Acceleration Y",
+      "value": "39",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "INT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "acceleration_z",
+      "name": "Acceleration Z",
+      "value": "5",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "INT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "acceleration_movements",
+      "name": "Acceleration Movements",
+      "value": "3",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "occupancy",
+      "name": "Occupancy",
+      "value": "1",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "no occupancy"
+        },
+        {
+          "value": 1,
+          "name": "occupancy detected"
+        },
+        {
+          "value": 2,
+          "name": "many people detected"
+        }
+      ]
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    }
+  ]
+}

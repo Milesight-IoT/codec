@@ -1,0 +1,229 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "tx-trh-amb-600-021",
+            "name": "Enless - TX T&H AMB 600-021",
+            "description": "Enless Wireless ambient temperature and humidity sensor.",
+            "catalog": "tx-trh-amb-600-021",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-trh-amb-600-021/tx-trh-amb-600-021-codec.json",
+            "decoder_script": "vendors/Enless/tx-trh-amb-600-021/tx-trh-amb-600-021-decoder.js",
+            "encoder_script": "vendors/Enless/tx-trh-amb-600-021/tx-trh-amb-600-021-encoder.js"
+        },
+        {
+            "id": "tx-amb-600-023",
+            "name": "Enless - TX CO2/VOC/T&H AMB 600-023",
+            "description": "Enless Wireless ambient CO2, VOC, temperature and humidity sensor.",
+            "catalog": "tx-amb-600-023",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-amb-600-023/tx-amb-600-023-codec.json",
+            "decoder_script": "vendors/Enless/tx-amb-600-023/tx-amb-600-023-decoder.js",
+            "encoder_script": "vendors/Enless/tx-amb-600-023/tx-amb-600-023-encoder.js"
+        },
+        {
+            "id": "tx-temp-ins-600-031",
+            "name": "Enless - TX TEMP INS 600-031",
+            "description": "Enless Wireless ruggedized temperature sensor with internal probe.",
+            "catalog": "tx-temp-ins-600-031",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-temp-ins-600-031/tx-temp-ins-600-031-codec.json",
+            "decoder_script": "vendors/Enless/tx-temp-ins-600-031/tx-temp-ins-600-031-decoder.js",
+            "encoder_script": "vendors/Enless/tx-temp-ins-600-031/tx-temp-ins-600-031-encoder.js"
+        },
+        {
+            "id": "tx-temp-cont1-600-032",
+            "name": "Enless - TX TEMP CONT1 600-032",
+            "description": "Enless Wireless temperature sensor with single PT1000 external probe.",
+            "catalog": "tx-temp-cont1-600-032",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-temp-cont1-600-032/tx-temp-cont1-600-032-codec.json",
+            "decoder_script": "vendors/Enless/tx-temp-cont1-600-032/tx-temp-cont1-600-032-decoder.js",
+            "encoder_script": "vendors/Enless/tx-temp-cont1-600-032/tx-temp-cont1-600-032-encoder.js"
+        },
+        {
+            "id": "tx-temp-cont2-600-034",
+            "name": "Enless - TX TEMP CONT2 600-034 / 600-232",
+            "description": "Enless Wireless temperature sensor with dual PT1000 external probes.",
+            "catalog": "tx-temp-cont2-600-034",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-temp-cont2-600-034/tx-temp-cont2-600-034-codec.json",
+            "decoder_script": "vendors/Enless/tx-temp-cont2-600-034/tx-temp-cont2-600-034-decoder.js",
+            "encoder_script": "vendors/Enless/tx-temp-cont2-600-034/tx-temp-cont2-600-034-encoder.js"
+        },
+        {
+            "id": "tx-analog-600-035",
+            "name": "Enless - TX 4-20mA 600-035",
+            "description": "Enless Wireless 4–20 mA analog current input sensor.",
+            "catalog": "tx-analog-600-035",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-analog-600-035/tx-analog-600-035-codec.json",
+            "decoder_script": "vendors/Enless/tx-analog-600-035/tx-analog-600-035-decoder.js",
+            "encoder_script": "vendors/Enless/tx-analog-600-035/tx-analog-600-035-encoder.js"
+        },
+        {
+            "id": "tx-pulse-600-036",
+            "name": "Enless - TX PULSE 600-036",
+            "description": "Enless Wireless pulse counter sensor (3 channels: CH1, CH2, OC).",
+            "catalog": "tx-pulse-600-036",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-pulse-600-036/tx-pulse-600-036-codec.json",
+            "decoder_script": "vendors/Enless/tx-pulse-600-036/tx-pulse-600-036-decoder.js",
+            "encoder_script": "vendors/Enless/tx-pulse-600-036/tx-pulse-600-036-encoder.js"
+        },
+        {
+            "id": "tx-pulse-atex-600-037",
+            "name": "Enless - TX PULSE ATEX 600-037",
+            "description": "Enless Wireless ATEX-certified pulse counter sensor for hazardous environments.",
+            "catalog": "tx-pulse-atex-600-037",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-pulse-atex-600-037/tx-pulse-atex-600-037-codec.json",
+            "decoder_script": "vendors/Enless/tx-pulse-atex-600-037/tx-pulse-atex-600-037-decoder.js",
+            "encoder_script": "vendors/Enless/tx-pulse-atex-600-037/tx-pulse-atex-600-037-encoder.js"
+        },
+        {
+            "id": "tx-pulse-led-600-038",
+            "name": "Enless - TX PULSE LED 600-038",
+            "description": "Enless Wireless pulse sensor for LED indicators on electricity meters.",
+            "catalog": "tx-pulse-led-600-038",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-pulse-led-600-038/tx-pulse-led-600-038-codec.json",
+            "decoder_script": "vendors/Enless/tx-pulse-led-600-038/tx-pulse-led-600-038-decoder.js",
+            "encoder_script": "vendors/Enless/tx-pulse-led-600-038/tx-pulse-led-600-038-encoder.js"
+        },
+        {
+            "id": "tx-contact-600-039",
+            "name": "Enless - TX CONTACT 600-039",
+            "description": "Enless Wireless state-change / dry-contact sensor (3 channels).",
+            "catalog": "tx-contact-600-039",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-contact-600-039/tx-contact-600-039-codec.json",
+            "decoder_script": "vendors/Enless/tx-contact-600-039/tx-contact-600-039-decoder.js",
+            "encoder_script": "vendors/Enless/tx-contact-600-039/tx-contact-600-039-encoder.js"
+        },
+        {
+            "id": "tx-trh-mini-600-050",
+            "name": "Enless - TX T&H MINI 600-050",
+            "description": "Enless Wireless Mini temperature and humidity sensor (V2).",
+            "catalog": "tx-trh-mini-600-050",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-trh-mini-600-050/tx-trh-mini-600-050-codec.json",
+            "decoder_script": "vendors/Enless/tx-trh-mini-600-050/tx-trh-mini-600-050-decoder.js",
+            "encoder_script": "vendors/Enless/tx-trh-mini-600-050/tx-trh-mini-600-050-encoder.js"
+        },
+        {
+            "id": "tx-trh-amb-600-051",
+            "name": "Enless - TX T&H AMB 600-051",
+            "description": "Enless Wireless ambient temperature and humidity sensor (V2).",
+            "catalog": "tx-trh-amb-600-051",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-trh-amb-600-051/tx-trh-amb-600-051-codec.json",
+            "decoder_script": "vendors/Enless/tx-trh-amb-600-051/tx-trh-amb-600-051-decoder.js",
+            "encoder_script": "vendors/Enless/tx-trh-amb-600-051/tx-trh-amb-600-051-encoder.js"
+        },
+        {
+            "id": "tx-trh-eink-600-052",
+            "name": "Enless - TX T&H EINK AMB 600-052",
+            "description": "Enless Wireless E-Ink display temperature and humidity sensor (V2).",
+            "catalog": "tx-trh-eink-600-052",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-trh-eink-600-052/tx-trh-eink-600-052-codec.json",
+            "decoder_script": "vendors/Enless/tx-trh-eink-600-052/tx-trh-eink-600-052-decoder.js",
+            "encoder_script": "vendors/Enless/tx-trh-eink-600-052/tx-trh-eink-600-052-encoder.js"
+        },
+        {
+            "id": "tx-co2-trh-600-053",
+            "name": "Enless - TX CO2 T&H AMB 600-053",
+            "description": "Enless Wireless CO2, temperature and humidity sensor (V2).",
+            "catalog": "tx-co2-trh-600-053",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-co2-trh-600-053/tx-co2-trh-600-053-codec.json",
+            "decoder_script": "vendors/Enless/tx-co2-trh-600-053/tx-co2-trh-600-053-decoder.js",
+            "encoder_script": "vendors/Enless/tx-co2-trh-600-053/tx-co2-trh-600-053-encoder.js"
+        },
+        {
+            "id": "tx-light-pir-600-062",
+            "name": "Enless - TX LIGHT PIR T&H 600-062",
+            "description": "Enless Wireless light, PIR, temperature and humidity sensor (V2).",
+            "catalog": "tx-light-pir-600-062",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-light-pir-600-062/tx-light-pir-600-062-codec.json",
+            "decoder_script": "vendors/Enless/tx-light-pir-600-062/tx-light-pir-600-062-decoder.js",
+            "encoder_script": "vendors/Enless/tx-light-pir-600-062/tx-light-pir-600-062-encoder.js"
+        },
+        {
+            "id": "tx-window-600-065",
+            "name": "Enless - TX WINDOW 600-065",
+            "description": "Enless Wireless door/window contact sensor (V2).",
+            "catalog": "tx-window-600-065",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Enless/tx-window-600-065/tx-window-600-065-codec.json",
+            "decoder_script": "vendors/Enless/tx-window-600-065/tx-window-600-065-decoder.js",
+            "encoder_script": "vendors/Enless/tx-window-600-065/tx-window-600-065-encoder.js"
+        }
+    ]
+}

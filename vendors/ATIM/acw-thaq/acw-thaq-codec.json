@@ -1,0 +1,781 @@
+{
+  "version": "1.0.0",
+  "bytes": "A0080BB8090FA00C00640D015E",
+  "object": [
+    {
+      "id": "frame_type",
+      "name": "Frame Type",
+      "value": "Trame de mesure",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 64,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "voltage_idle",
+      "name": "Idle Supply Voltage",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "timestamp",
+      "name": "Timestamp",
+      "value": "",
+      "unit": "s",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 73,
+      "bacnet_unit_type": "UNITS_SECONDS"
+    },
+    {
+      "id": "voltage_tx",
+      "name": "TX Supply Voltage",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "battery",
+      "name": "Battery Level",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 64,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "humidity",
+      "name": "Humidity",
+      "value": "40",
+      "unit": "%",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 98,
+      "bacnet_unit_type": "UNITS_PERCENT"
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "value": "30",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+    },
+    {
+      "id": "temperature_alarm_high",
+      "name": "Temp Alarm High",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "temperature_alarm_low",
+      "name": "Temp Alarm Low",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "humidity_alarm_high",
+      "name": "Humidity Alarm High",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "humidity_alarm_low",
+      "name": "Humidity Alarm Low",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "test_counter",
+      "name": "Test Counter",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "overflow_error",
+      "name": "Data Array Overflow",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "history_overflow_error",
+      "name": "History Overflow Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "sample_out_of_range_error",
+      "name": "Sample Out of Range",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "channel_out_of_range_error",
+      "name": "Channel Out of Range",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "type_out_of_range_error",
+      "name": "Type Out of Range",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "sampling_period_error",
+      "name": "Sampling Period Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "subtask_error",
+      "name": "Subtask Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "null_pointer_error",
+      "name": "Null Pointer Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "eeprom_error",
+      "name": "EEPROM Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "rom_error",
+      "name": "ROM Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "ram_error",
+      "name": "RAM Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "radio_error",
+      "name": "Radio Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "busy_error",
+      "name": "Radio Busy Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "bridge_error",
+      "name": "Bridge Mode Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "queue_full_error",
+      "name": "Radio Queue Full",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "blackbox_error",
+      "name": "Blackbox Init Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "keep_alive_error",
+      "name": "Keep Alive Period Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "deep_sleep_error",
+      "name": "Deep Sleep Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "transmission_error",
+      "name": "Transmission Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "payload_bigger_error",
+      "name": "Payload Too Large",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "radio_paring_error",
+      "name": "Radio Pairing Timeout",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "sensor_timeout_error",
+      "name": "Sensor Timeout",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "sensor_stop_error",
+      "name": "Sensor Stop Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "battery_dead_error",
+      "name": "Battery Dead Error Voltage",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "battery_low_error",
+      "name": "Battery Low Error Voltage",
+      "value": "",
+      "unit": "mV",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 124,
+      "bacnet_unit_type": "UNITS_MILLIVOLTS"
+    },
+    {
+      "id": "sensor_fail_error",
+      "name": "Sensor Fail Error",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "values": [
+        {
+          "value": 0,
+          "name": "false"
+        },
+        {
+          "value": 1,
+          "name": "true"
+        }
+      ]
+    },
+    {
+      "id": "voc",
+      "name": "VOC Level",
+      "value": "100",
+      "unit": "ppb",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 97,
+      "bacnet_unit_type": "UNITS_PARTS_PER_BILLION"
+    },
+    {
+      "id": "co2",
+      "name": "CO2 Level",
+      "value": "350",
+      "unit": "ppm",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 96,
+      "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    }
+  ]
+}

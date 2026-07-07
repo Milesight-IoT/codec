@@ -1,0 +1,355 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "enlink-air",
+            "name": "Synetica - enLink Air",
+            "description": "Indoor air quality monitor with multi-sensor capability",
+            "catalog": "enlink-air",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-air/enlink-air-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-air/enlink-air-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-air/enlink-air-encoder.js"
+        },
+        {
+            "id": "enlink-air-x",
+            "name": "Synetica - enLink Air X",
+            "description": "Outdoor air quality monitor",
+            "catalog": "enlink-air-x",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-air-x/enlink-air-x-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-air-x/enlink-air-x-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-air-x/enlink-air-x-encoder.js"
+        },
+        {
+            "id": "enlink-iaq-c",
+            "name": "Synetica - enLink IAQ-C",
+            "description": "Indoor air quality monitor with CO2 measurement",
+            "catalog": "enlink-iaq-c",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-iaq-c/enlink-iaq-c-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-iaq-c/enlink-iaq-c-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-iaq-c/enlink-iaq-c-encoder.js"
+        },
+        {
+            "id": "enlink-iaq-c-duct",
+            "name": "Synetica - enLink IAQ-C Duct",
+            "description": "Duct sampling enclosure for IAQ-C",
+            "catalog": "enlink-iaq-c-duct",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-iaq-c-duct/enlink-iaq-c-duct-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-iaq-c-duct/enlink-iaq-c-duct-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-iaq-c-duct/enlink-iaq-c-duct-encoder.js"
+        },
+        {
+            "id": "enlink-iaq-iso",
+            "name": "Synetica - enLink IAQ ISO",
+            "description": "Cleanroom air quality monitor",
+            "catalog": "enlink-iaq-iso",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-iaq-iso/enlink-iaq-iso-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-iaq-iso/enlink-iaq-iso-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-iaq-iso/enlink-iaq-iso-encoder.js"
+        },
+        {
+            "id": "enlink-iaq-plus",
+            "name": "Synetica - enLink IAQ Plus",
+            "description": "Indoor air quality monitor with advanced sensing",
+            "catalog": "enlink-iaq-plus",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-iaq-plus/enlink-iaq-plus-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-iaq-plus/enlink-iaq-plus-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-iaq-plus/enlink-iaq-plus-encoder.js"
+        },
+        {
+            "id": "enlink-iaq-radon",
+            "name": "Synetica - enLink IAQ Radon",
+            "description": "Indoor air quality monitor with radon gas detection",
+            "catalog": "enlink-iaq-radon",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-iaq-radon/enlink-iaq-radon-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-iaq-radon/enlink-iaq-radon-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-iaq-radon/enlink-iaq-radon-encoder.js"
+        },
+        {
+            "id": "enlink-iaq-vape",
+            "name": "Synetica - enLink IAQ Vape",
+            "description": "Vape and smoke detection sensor",
+            "catalog": "enlink-iaq-vape",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-iaq-vape/enlink-iaq-vape-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-iaq-vape/enlink-iaq-vape-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-iaq-vape/enlink-iaq-vape-encoder.js"
+        },
+        {
+            "id": "enlink-modbus",
+            "name": "Synetica - enLink Modbus Bridge",
+            "description": "Modbus to LoRaWAN bridge for wired meter integration",
+            "catalog": "enlink-modbus",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-modbus/enlink-modbus-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-modbus/enlink-modbus-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-modbus/enlink-modbus-encoder.js"
+        },
+        {
+            "id": "enlink-oaq",
+            "name": "Synetica - enLink OAQ",
+            "description": "Outdoor air quality monitor measuring up to 10 parameters",
+            "catalog": "enlink-oaq",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-oaq/enlink-oaq-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-oaq/enlink-oaq-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-oaq/enlink-oaq-encoder.js"
+        },
+        {
+            "id": "enlink-oaq-sps",
+            "name": "Synetica - enLink OAQ SPS",
+            "description": "Solar-powered outdoor air quality monitor",
+            "catalog": "enlink-oaq-sps",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-oaq-sps/enlink-oaq-sps-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-oaq-sps/enlink-oaq-sps-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-oaq-sps/enlink-oaq-sps-encoder.js"
+        },
+        {
+            "id": "enlink-oaq-xps",
+            "name": "Synetica - enLink OAQ XPS",
+            "description": "External-powered outdoor air quality monitor",
+            "catalog": "enlink-oaq-xps",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-oaq-xps/enlink-oaq-xps-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-oaq-xps/enlink-oaq-xps-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-oaq-xps/enlink-oaq-xps-encoder.js"
+        },
+        {
+            "id": "enlink-odoursense",
+            "name": "Synetica - enLink OdourSense",
+            "description": "Odour detection sensor",
+            "catalog": "enlink-odoursense",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-odoursense/enlink-odoursense-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-odoursense/enlink-odoursense-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-odoursense/enlink-odoursense-encoder.js"
+        },
+        {
+            "id": "enlink-status-af",
+            "name": "Synetica - enLink Status-AF",
+            "description": "Air velocity sensor",
+            "catalog": "enlink-status-af",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-status-af/enlink-status-af-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-status-af/enlink-status-af-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-status-af/enlink-status-af-encoder.js"
+        },
+        {
+            "id": "enlink-status-dp",
+            "name": "Synetica - enLink Status-DP",
+            "description": "Differential pressure sensor",
+            "catalog": "enlink-status-dp",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-status-dp/enlink-status-dp-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-status-dp/enlink-status-dp-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-status-dp/enlink-status-dp-encoder.js"
+        },
+        {
+            "id": "enlink-status-gp",
+            "name": "Synetica - enLink Status-GP",
+            "description": "Gauge pressure sensor",
+            "catalog": "enlink-status-gp",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-status-gp/enlink-status-gp-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-status-gp/enlink-status-gp-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-status-gp/enlink-status-gp-encoder.js"
+        },
+        {
+            "id": "enlink-status-l",
+            "name": "Synetica - enLink Status-L",
+            "description": "Leak detection sensor",
+            "catalog": "enlink-status-l",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-status-l/enlink-status-l-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-status-l/enlink-status-l-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-status-l/enlink-status-l-encoder.js"
+        },
+        {
+            "id": "enlink-status-p",
+            "name": "Synetica - enLink Status-P",
+            "description": "Pulse counter for utility meters",
+            "catalog": "enlink-status-p",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-status-p/enlink-status-p-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-status-p/enlink-status-p-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-status-p/enlink-status-p-encoder.js"
+        },
+        {
+            "id": "enlink-status-t",
+            "name": "Synetica - enLink Status-T",
+            "description": "Temperature probe sensor (1 or 2 probes)",
+            "catalog": "enlink-status-t",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-status-t/enlink-status-t-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-status-t/enlink-status-t-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-status-t/enlink-status-t-encoder.js"
+        },
+        {
+            "id": "enlink-status-vc",
+            "name": "Synetica - enLink Status-VC",
+            "description": "Voltage and current sensor",
+            "catalog": "enlink-status-vc",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-status-vc/enlink-status-vc-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-status-vc/enlink-status-vc-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-status-vc/enlink-status-vc-encoder.js"
+        },
+        {
+            "id": "enlink-zone",
+            "name": "Synetica - enLink Zone",
+            "description": "Environmental sensor for general area monitoring",
+            "catalog": "enlink-zone",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-zone/enlink-zone-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-zone/enlink-zone-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-zone/enlink-zone-encoder.js"
+        },
+        {
+            "id": "enlink-zone-2",
+            "name": "Synetica - enLink Zone 2",
+            "description": "Environmental sensor with high-resolution humidity",
+            "catalog": "enlink-zone-2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-zone-2/enlink-zone-2-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-zone-2/enlink-zone-2-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-zone-2/enlink-zone-2-encoder.js"
+        },
+        {
+            "id": "enlink-zone-plus",
+            "name": "Synetica - enLink Zone Plus",
+            "description": "Enhanced environmental sensor",
+            "catalog": "enlink-zone-plus",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-zone-plus/enlink-zone-plus-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-zone-plus/enlink-zone-plus-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-zone-plus/enlink-zone-plus-encoder.js"
+        },
+        {
+            "id": "enlink-zone-view",
+            "name": "Synetica - enLink Zone View",
+            "description": "Environmental sensor with e-paper display",
+            "catalog": "enlink-zone-view",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-zone-view/enlink-zone-view-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-zone-view/enlink-zone-view-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-zone-view/enlink-zone-view-encoder.js"
+        },
+        {
+            "id": "enlink-zone-view-home",
+            "name": "Synetica - enLink Zone View Home",
+            "description": "Damp and mold prevention sensor",
+            "catalog": "enlink-zone-view-home",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Synetica/enlink-zone-view-home/enlink-zone-view-home-codec.json",
+            "decoder_script": "vendors/Synetica/enlink-zone-view-home/enlink-zone-view-home-decoder.js",
+            "encoder_script": "vendors/Synetica/enlink-zone-view-home/enlink-zone-view-home-encoder.js"
+        }
+    ]
+}

@@ -1,0 +1,179 @@
+{
+  "version": "1.0.0",
+  "bytes": "438000FA0064",
+  "object": [
+    {
+      "id": "battery",
+      "name": "Battery Level",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 8,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "ok"
+    },
+    {
+      "id": "appflag_1",
+      "name": "Configuration Inconsistency",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "0"
+    },
+    {
+      "id": "appflag_2",
+      "name": "Samples Lost",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "0"
+    },
+    {
+      "id": "internal_sensor_temperature",
+      "name": "Internal Sensor Temperature",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+      "value": "25"
+    },
+    {
+      "id": "external_sensor_temperature",
+      "name": "External Sensor Temperature",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS",
+      "value": "10"
+    },
+    {
+      "id": "lora_adr",
+      "name": "LoRaWAN ADR",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "off"
+        },
+        {
+          "value": 1,
+          "name": "on"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    },
+    {
+      "id": "lora_duty_cycle",
+      "name": "LoRaWAN Duty Cycle",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": "",
+      "values": [
+        {
+          "value": 0,
+          "name": "disabled"
+        },
+        {
+          "value": 1,
+          "name": "enabled"
+        }
+      ]
+    },
+    {
+      "id": "lora_provisioning_mode",
+      "name": "LoRaWAN Provisioning Mode",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 8,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    },
+    {
+      "id": "missing_network",
+      "name": "Missing Network",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "no"
+        },
+        {
+          "value": 1,
+          "name": "yes"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS",
+      "value": ""
+    }
+  ]
+}

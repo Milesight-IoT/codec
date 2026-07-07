@@ -1,0 +1,92 @@
+{
+  "version": "1.0.0",
+  "bytes": "019a012400cea6ff970000",
+  "object": [
+    {
+      "id": "battery",
+      "name": "Battery Level",
+      "value": "ok",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 8,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "battery_voltage",
+      "name": "Battery Voltage",
+      "value": "3.6",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "unit": "V",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "x_angle",
+      "name": "Angle X",
+      "value": "0",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "INT16",
+      "unit": "°",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 90,
+      "bacnet_unit_type": "UNITS_DEGREES_ANGULAR"
+    },
+    {
+      "id": "y_angle",
+      "name": "Angle Y",
+      "value": "-50",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "INT16",
+      "unit": "°",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 90,
+      "bacnet_unit_type": "UNITS_DEGREES_ANGULAR"
+    },
+    {
+      "id": "z_angle",
+      "name": "Angle Z",
+      "value": "-90",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "INT16",
+      "unit": "°",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 90,
+      "bacnet_unit_type": "UNITS_DEGREES_ANGULAR"
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "value": "-10.5",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "unit": "°C",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    }
+  ]
+}
