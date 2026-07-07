@@ -1,0 +1,579 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "ais01-lb",
+            "name": "Dragino - AIS01-LB",
+            "description": "AIS01-LB LoRaWAN sensor.",
+            "catalog": "ais01-lb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ais01-lb/ais01-lb-codec.json",
+            "decoder_script": "vendors/Dragino/ais01-lb/ais01-lb-decoder.js",
+            "encoder_script": "vendors/Dragino/ais01-lb/ais01-lb-encoder.js"
+        },
+        {
+            "id": "aqs01-l",
+            "name": "Dragino - AQS01-L",
+            "description": "AQS01-L LoRaWAN sensor.",
+            "catalog": "aqs01-l",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/aqs01-l/aqs01-l-codec.json",
+            "decoder_script": "vendors/Dragino/aqs01-l/aqs01-l-decoder.js",
+            "encoder_script": "vendors/Dragino/aqs01-l/aqs01-l-encoder.js"
+        },
+        {
+            "id": "cpl01",
+            "name": "Dragino - CPL01",
+            "description": "CPL01 LoRaWAN sensor.",
+            "catalog": "cpl01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/cpl01/cpl01-codec.json",
+            "decoder_script": "vendors/Dragino/cpl01/cpl01-decoder.js",
+            "encoder_script": "vendors/Dragino/cpl01/cpl01-encoder.js"
+        },
+        {
+            "id": "cpl03",
+            "name": "Dragino - CPL03",
+            "description": "CPL03 LoRaWAN sensor.",
+            "catalog": "cpl03",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/cpl03/cpl03-codec.json",
+            "decoder_script": "vendors/Dragino/cpl03/cpl03-decoder.js",
+            "encoder_script": "vendors/Dragino/cpl03/cpl03-encoder.js"
+        },
+        {
+            "id": "cs01-lb",
+            "name": "Dragino - CS01-LB",
+            "description": "CS01-LB LoRaWAN sensor.",
+            "catalog": "cs01-lb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/cs01-lb/cs01-lb-codec.json",
+            "decoder_script": "vendors/Dragino/cs01-lb/cs01-lb-decoder.js",
+            "encoder_script": "vendors/Dragino/cs01-lb/cs01-lb-encoder.js"
+        },
+        {
+            "id": "d20-lb",
+            "name": "Dragino - D20-LB",
+            "description": "D20-LB LoRaWAN sensor.",
+            "catalog": "d20-lb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/d20-lb/d20-lb-codec.json",
+            "decoder_script": "vendors/Dragino/d20-lb/d20-lb-decoder.js",
+            "encoder_script": "vendors/Dragino/d20-lb/d20-lb-encoder.js"
+        },
+        {
+            "id": "ds20l",
+            "name": "Dragino - DS20L",
+            "description": "DS20L LoRaWAN sensor.",
+            "catalog": "ds20l",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ds20l/ds20l-codec.json",
+            "decoder_script": "vendors/Dragino/ds20l/ds20l-decoder.js",
+            "encoder_script": "vendors/Dragino/ds20l/ds20l-encoder.js"
+        },
+        {
+            "id": "laq4",
+            "name": "Dragino - LAQ4",
+            "description": "LAQ4 LoRaWAN sensor.",
+            "catalog": "laq4",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/laq4/laq4-codec.json",
+            "decoder_script": "vendors/Dragino/laq4/laq4-decoder.js",
+            "encoder_script": "vendors/Dragino/laq4/laq4-encoder.js"
+        },
+        {
+            "id": "lbt1",
+            "name": "Dragino - LBT1",
+            "description": "LBT1 LoRaWAN sensor.",
+            "catalog": "lbt1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lbt1/lbt1-codec.json",
+            "decoder_script": "vendors/Dragino/lbt1/lbt1-decoder.js",
+            "encoder_script": "vendors/Dragino/lbt1/lbt1-encoder.js"
+        },
+        {
+            "id": "ldds20",
+            "name": "Dragino - LDDS20",
+            "description": "LDDS20 LoRaWAN sensor.",
+            "catalog": "ldds20",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ldds20/ldds20-codec.json",
+            "decoder_script": "vendors/Dragino/ldds20/ldds20-decoder.js",
+            "encoder_script": "vendors/Dragino/ldds20/ldds20-encoder.js"
+        },
+        {
+            "id": "ldds45",
+            "name": "Dragino - LDDS45",
+            "description": "LDDS45 LoRaWAN sensor.",
+            "catalog": "ldds45",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ldds45/ldds45-codec.json",
+            "decoder_script": "vendors/Dragino/ldds45/ldds45-decoder.js",
+            "encoder_script": "vendors/Dragino/ldds45/ldds45-encoder.js"
+        },
+        {
+            "id": "ldds75",
+            "name": "Dragino - LDDS75",
+            "description": "LDDS75 LoRaWAN sensor.",
+            "catalog": "ldds75",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ldds75/ldds75-codec.json",
+            "decoder_script": "vendors/Dragino/ldds75/ldds75-decoder.js",
+            "encoder_script": "vendors/Dragino/ldds75/ldds75-encoder.js"
+        },
+        {
+            "id": "lds01",
+            "name": "Dragino - LDS01",
+            "description": "LDS01 LoRaWAN sensor.",
+            "catalog": "lds01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lds01/lds01-codec.json",
+            "decoder_script": "vendors/Dragino/lds01/lds01-decoder.js",
+            "encoder_script": "vendors/Dragino/lds01/lds01-encoder.js"
+        },
+        {
+            "id": "lds02",
+            "name": "Dragino - LDS02",
+            "description": "LDS02 LoRaWAN sensor.",
+            "catalog": "lds02",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lds02/lds02-codec.json",
+            "decoder_script": "vendors/Dragino/lds02/lds02-decoder.js",
+            "encoder_script": "vendors/Dragino/lds02/lds02-encoder.js"
+        },
+        {
+            "id": "lds03a",
+            "name": "Dragino - LDS03A",
+            "description": "LDS03A LoRaWAN sensor.",
+            "catalog": "lds03a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lds03a/lds03a-codec.json",
+            "decoder_script": "vendors/Dragino/lds03a/lds03a-decoder.js",
+            "encoder_script": "vendors/Dragino/lds03a/lds03a-encoder.js"
+        },
+        {
+            "id": "lgt92",
+            "name": "Dragino - LGT92",
+            "description": "LGT92 LoRaWAN sensor.",
+            "catalog": "lgt92",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lgt92/lgt92-codec.json",
+            "decoder_script": "vendors/Dragino/lgt92/lgt92-decoder.js",
+            "encoder_script": "vendors/Dragino/lgt92/lgt92-encoder.js"
+        },
+        {
+            "id": "lht52",
+            "name": "Dragino - LHT52",
+            "description": "LHT52 LoRaWAN sensor.",
+            "catalog": "lht52",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lht52/lht52-codec.json",
+            "decoder_script": "vendors/Dragino/lht52/lht52-decoder.js",
+            "encoder_script": "vendors/Dragino/lht52/lht52-encoder.js"
+        },
+        {
+            "id": "lht65",
+            "name": "Dragino - LHT65",
+            "description": "LHT65 LoRaWAN sensor.",
+            "catalog": "lht65",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lht65/lht65-codec.json",
+            "decoder_script": "vendors/Dragino/lht65/lht65-decoder.js",
+            "encoder_script": "vendors/Dragino/lht65/lht65-encoder.js"
+        },
+        {
+            "id": "lht65n",
+            "name": "Dragino - LHT65N",
+            "description": "LHT65N LoRaWAN sensor.",
+            "catalog": "lht65n",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lht65n/lht65n-codec.json",
+            "decoder_script": "vendors/Dragino/lht65n/lht65n-decoder.js",
+            "encoder_script": "vendors/Dragino/lht65n/lht65n-encoder.js"
+        },
+        {
+            "id": "llds12",
+            "name": "Dragino - LLDS12",
+            "description": "LLDS12 LoRaWAN sensor.",
+            "catalog": "llds12",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/llds12/llds12-codec.json",
+            "decoder_script": "vendors/Dragino/llds12/llds12-decoder.js",
+            "encoder_script": "vendors/Dragino/llds12/llds12-encoder.js"
+        },
+        {
+            "id": "llms01",
+            "name": "Dragino - LLMS01",
+            "description": "LLMS01 LoRaWAN sensor.",
+            "catalog": "llms01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/llms01/llms01-codec.json",
+            "decoder_script": "vendors/Dragino/llms01/llms01-decoder.js",
+            "encoder_script": "vendors/Dragino/llms01/llms01-encoder.js"
+        },
+        {
+            "id": "lmds120",
+            "name": "Dragino - LMDS120",
+            "description": "LMDS120 LoRaWAN sensor.",
+            "catalog": "lmds120",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lmds120/lmds120-codec.json",
+            "decoder_script": "vendors/Dragino/lmds120/lmds120-decoder.js",
+            "encoder_script": "vendors/Dragino/lmds120/lmds120-encoder.js"
+        },
+        {
+            "id": "lse01",
+            "name": "Dragino - LSE01",
+            "description": "LSE01 LoRaWAN sensor.",
+            "catalog": "lse01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lse01/lse01-codec.json",
+            "decoder_script": "vendors/Dragino/lse01/lse01-decoder.js",
+            "encoder_script": "vendors/Dragino/lse01/lse01-encoder.js"
+        },
+        {
+            "id": "lsn50v2-d23",
+            "name": "Dragino - LSN50v2-D23",
+            "description": "LSN50v2-D23 LoRaWAN sensor.",
+            "catalog": "lsn50v2-d23",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lsn50v2-d23/lsn50v2-d23-codec.json",
+            "decoder_script": "vendors/Dragino/lsn50v2-d23/lsn50v2-d23-decoder.js",
+            "encoder_script": "vendors/Dragino/lsn50v2-d23/lsn50v2-d23-encoder.js"
+        },
+        {
+            "id": "lsph01",
+            "name": "Dragino - LSPH01",
+            "description": "LSPH01 LoRaWAN sensor.",
+            "catalog": "lsph01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lsph01/lsph01-codec.json",
+            "decoder_script": "vendors/Dragino/lsph01/lsph01-decoder.js",
+            "encoder_script": "vendors/Dragino/lsph01/lsph01-encoder.js"
+        },
+        {
+            "id": "lt-22222-l",
+            "name": "Dragino - LT-22222-L",
+            "description": "LT-22222-L LoRaWAN sensor.",
+            "catalog": "lt-22222-l",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lt-22222-l/lt-22222-l-codec.json",
+            "decoder_script": "vendors/Dragino/lt-22222-l/lt-22222-l-decoder.js",
+            "encoder_script": "vendors/Dragino/lt-22222-l/lt-22222-l-encoder.js"
+        },
+        {
+            "id": "lt-33222-l",
+            "name": "Dragino - LT-33222-L",
+            "description": "LT-33222-L LoRaWAN sensor.",
+            "catalog": "lt-33222-l",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lt-33222-l/lt-33222-l-codec.json",
+            "decoder_script": "vendors/Dragino/lt-33222-l/lt-33222-l-decoder.js",
+            "encoder_script": "vendors/Dragino/lt-33222-l/lt-33222-l-encoder.js"
+        },
+        {
+            "id": "ltc2",
+            "name": "Dragino - LTC2",
+            "description": "LTC2 LoRaWAN sensor.",
+            "catalog": "ltc2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ltc2/ltc2-codec.json",
+            "decoder_script": "vendors/Dragino/ltc2/ltc2-decoder.js",
+            "encoder_script": "vendors/Dragino/ltc2/ltc2-encoder.js"
+        },
+        {
+            "id": "lwl01",
+            "name": "Dragino - LWL01",
+            "description": "LWL01 LoRaWAN sensor.",
+            "catalog": "lwl01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lwl01/lwl01-codec.json",
+            "decoder_script": "vendors/Dragino/lwl01/lwl01-decoder.js",
+            "encoder_script": "vendors/Dragino/lwl01/lwl01-encoder.js"
+        },
+        {
+            "id": "lwl02",
+            "name": "Dragino - LWL02",
+            "description": "LWL02 LoRaWAN sensor.",
+            "catalog": "lwl02",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lwl02/lwl02-codec.json",
+            "decoder_script": "vendors/Dragino/lwl02/lwl02-decoder.js",
+            "encoder_script": "vendors/Dragino/lwl02/lwl02-encoder.js"
+        },
+        {
+            "id": "lwl03a",
+            "name": "Dragino - LWL03A",
+            "description": "LWL03A LoRaWAN sensor.",
+            "catalog": "lwl03a",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lwl03a/lwl03a-codec.json",
+            "decoder_script": "vendors/Dragino/lwl03a/lwl03a-decoder.js",
+            "encoder_script": "vendors/Dragino/lwl03a/lwl03a-encoder.js"
+        },
+        {
+            "id": "lwl04",
+            "name": "Dragino - LWL04",
+            "description": "LWL04 LoRaWAN sensor.",
+            "catalog": "lwl04",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/lwl04/lwl04-codec.json",
+            "decoder_script": "vendors/Dragino/lwl04/lwl04-decoder.js",
+            "encoder_script": "vendors/Dragino/lwl04/lwl04-encoder.js"
+        },
+        {
+            "id": "pb01",
+            "name": "Dragino - PB01",
+            "description": "PB01 LoRaWAN sensor.",
+            "catalog": "pb01",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/pb01/pb01-codec.json",
+            "decoder_script": "vendors/Dragino/pb01/pb01-decoder.js",
+            "encoder_script": "vendors/Dragino/pb01/pb01-encoder.js"
+        },
+        {
+            "id": "pb05-l",
+            "name": "Dragino - PB05-L",
+            "description": "PB05-L LoRaWAN sensor.",
+            "catalog": "pb05-l",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/pb05-l/pb05-l-codec.json",
+            "decoder_script": "vendors/Dragino/pb05-l/pb05-l-decoder.js",
+            "encoder_script": "vendors/Dragino/pb05-l/pb05-l-encoder.js"
+        },
+        {
+            "id": "ps-lb-d",
+            "name": "Dragino - PS-LB-D",
+            "description": "PS-LB-D LoRaWAN sensor.",
+            "catalog": "ps-lb-d",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ps-lb-d/ps-lb-d-codec.json",
+            "decoder_script": "vendors/Dragino/ps-lb-d/ps-lb-d-decoder.js",
+            "encoder_script": "vendors/Dragino/ps-lb-d/ps-lb-d-encoder.js"
+        },
+        {
+            "id": "ps-lb-na",
+            "name": "Dragino - PS-LB-NA",
+            "description": "PS-LB-NA LoRaWAN sensor.",
+            "catalog": "ps-lb-na",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/ps-lb-na/ps-lb-na-codec.json",
+            "decoder_script": "vendors/Dragino/ps-lb-na/ps-lb-na-decoder.js",
+            "encoder_script": "vendors/Dragino/ps-lb-na/ps-lb-na-encoder.js"
+        },
+        {
+            "id": "s31b-lb",
+            "name": "Dragino - S31B-LB",
+            "description": "S31B-LB LoRaWAN sensor.",
+            "catalog": "s31b-lb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/s31b-lb/s31b-lb-codec.json",
+            "decoder_script": "vendors/Dragino/s31b-lb/s31b-lb-decoder.js",
+            "encoder_script": "vendors/Dragino/s31b-lb/s31b-lb-encoder.js"
+        },
+        {
+            "id": "se01-lb-ls",
+            "name": "Dragino - SE01-LB-LS",
+            "description": "SE01-LB-LS LoRaWAN sensor.",
+            "catalog": "se01-lb-ls",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/se01-lb-ls/se01-lb-ls-codec.json",
+            "decoder_script": "vendors/Dragino/se01-lb-ls/se01-lb-ls-decoder.js",
+            "encoder_script": "vendors/Dragino/se01-lb-ls/se01-lb-ls-encoder.js"
+        },
+        {
+            "id": "sw3l",
+            "name": "Dragino - SW3L",
+            "description": "SW3L LoRaWAN sensor.",
+            "catalog": "sw3l",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/sw3l/sw3l-codec.json",
+            "decoder_script": "vendors/Dragino/sw3l/sw3l-decoder.js",
+            "encoder_script": "vendors/Dragino/sw3l/sw3l-encoder.js"
+        },
+        {
+            "id": "tc01-lb",
+            "name": "Dragino - TC01-LB",
+            "description": "TC01-LB LoRaWAN sensor.",
+            "catalog": "tc01-lb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/tc01-lb/tc01-lb-codec.json",
+            "decoder_script": "vendors/Dragino/tc01-lb/tc01-lb-decoder.js",
+            "encoder_script": "vendors/Dragino/tc01-lb/tc01-lb-encoder.js"
+        },
+        {
+            "id": "trackerd",
+            "name": "Dragino - TrackerD",
+            "description": "TrackerD LoRaWAN sensor.",
+            "catalog": "trackerd",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Dragino/trackerd/trackerd-codec.json",
+            "decoder_script": "vendors/Dragino/trackerd/trackerd-decoder.js",
+            "encoder_script": "vendors/Dragino/trackerd/trackerd-encoder.js"
+        }
+    ]
+}

@@ -1,0 +1,495 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "arf8123aa-field-test-device",
+            "name": "Adeunis - ARF8123AA - FIELD TEST DEVICE",
+            "description": "Adeunis - ARF8123AA - FIELD TEST DEVICE LoRaWAN sensor.",
+            "catalog": "arf8123aa-field-test-device",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-ABP"
+            ],
+            "codec": "vendors/Adeunis/arf8123aa-field-test-device/arf8123aa-field-test-device-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8123aa-field-test-device/arf8123aa-field-test-device-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8123aa-field-test-device/arf8123aa-field-test-device-encoder.js"
+        },
+        {
+            "id": "arf8170aa-dry-contacts-v1",
+            "name": "Adeunis - ARF8170AA - DRY CONTACTS V1",
+            "description": "Adeunis - ARF8170AA - DRY CONTACTS V1 LoRaWAN sensor.",
+            "catalog": "arf8170aa-dry-contacts-v1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8170aa-dry-contacts-v1/arf8170aa-dry-contacts-v1-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8170aa-dry-contacts-v1/arf8170aa-dry-contacts-v1-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8170aa-dry-contacts-v1/arf8170aa-dry-contacts-v1-encoder.js"
+        },
+        {
+            "id": "arf8170ara",
+            "name": "Adeunis - ARF8170ARA",
+            "description": "Adeunis - ARF8170ARA LoRaWAN sensor.",
+            "catalog": "arf8170ara",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8170ara/arf8170ara-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8170ara/arf8170ara-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8170ara/arf8170ara-encoder.js"
+        },
+        {
+            "id": "arf8170ba-b03-waterleak-cable",
+            "name": "Adeunis - ARF8170BA-B03 - WATERLEAK CABLE",
+            "description": "Adeunis - ARF8170BA-B03 - WATERLEAK CABLE LoRaWAN sensor.",
+            "catalog": "arf8170ba-b03-waterleak-cable",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8170ba-b03-waterleak-cable/arf8170ba-b03-waterleak-cable-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8170ba-b03-waterleak-cable/arf8170ba-b03-waterleak-cable-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8170ba-b03-waterleak-cable/arf8170ba-b03-waterleak-cable-encoder.js"
+        },
+        {
+            "id": "arf8170ba-b04-waterleak-spot",
+            "name": "Adeunis - ARF8170BA-B04 - WATERLEAK SPOT",
+            "description": "Adeunis - ARF8170BA-B04 - WATERLEAK SPOT LoRaWAN sensor.",
+            "catalog": "arf8170ba-b04-waterleak-spot",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8170ba-b04-waterleak-spot/arf8170ba-b04-waterleak-spot-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8170ba-b04-waterleak-spot/arf8170ba-b04-waterleak-spot-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8170ba-b04-waterleak-spot/arf8170ba-b04-waterleak-spot-encoder.js"
+        },
+        {
+            "id": "arf8170ba-dry-contacts-v1",
+            "name": "Adeunis - ARF8170BA - DRY CONTACTS V1",
+            "description": "Adeunis - ARF8170BA - DRY CONTACTS V1 LoRaWAN sensor.",
+            "catalog": "arf8170ba-dry-contacts-v1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8170ba-dry-contacts-v1/arf8170ba-dry-contacts-v1-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8170ba-dry-contacts-v1/arf8170ba-dry-contacts-v1-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8170ba-dry-contacts-v1/arf8170ba-dry-contacts-v1-encoder.js"
+        },
+        {
+            "id": "arf8170bca-b02-double-level",
+            "name": "Adeunis - ARF8170BCA-B02 - DOUBLE LEVEL SENSOR",
+            "description": "Adeunis - ARF8170BCA-B02 - DOUBLE LEVEL SENSOR LoRaWAN sensor.",
+            "catalog": "arf8170bca-b02-double-level",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8170bca-b02-double-level/arf8170bca-b02-double-level-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8170bca-b02-double-level/arf8170bca-b02-double-level-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8170bca-b02-double-level/arf8170bca-b02-double-level-encoder.js"
+        },
+        {
+            "id": "arf8170bca-dry-contacts-v2",
+            "name": "Adeunis - ARF8170BCA - DRY CONTACTS V2",
+            "description": "Adeunis - ARF8170BCA - DRY CONTACTS V2 LoRaWAN sensor.",
+            "catalog": "arf8170bca-dry-contacts-v2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8170bca-dry-contacts-v2/arf8170bca-dry-contacts-v2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8170bca-dry-contacts-v2/arf8170bca-dry-contacts-v2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8170bca-dry-contacts-v2/arf8170bca-dry-contacts-v2-encoder.js"
+        },
+        {
+            "id": "arf8171ba-dry-contacts-v2",
+            "name": "Adeunis - ARF8171BA - DRY CONTACTS V2",
+            "description": "Adeunis - ARF8171BA - DRY CONTACTS V2 LoRaWAN sensor.",
+            "catalog": "arf8171ba-dry-contacts-v2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8171ba-dry-contacts-v2/arf8171ba-dry-contacts-v2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8171ba-dry-contacts-v2/arf8171ba-dry-contacts-v2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8171ba-dry-contacts-v2/arf8171ba-dry-contacts-v2-encoder.js"
+        },
+        {
+            "id": "arf8180ara-temp-v4",
+            "name": "Adeunis - ARF8180ARA - TEMP - CODEC TEMP V4",
+            "description": "Adeunis - ARF8180ARA - TEMP - CODEC TEMP V4 LoRaWAN sensor.",
+            "catalog": "arf8180ara-temp-v4",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8180ara-temp-v4/arf8180ara-temp-v4-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8180ara-temp-v4/arf8180ara-temp-v4-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8180ara-temp-v4/arf8180ara-temp-v4-encoder.js"
+        },
+        {
+            "id": "arf8180arb-temp-v4",
+            "name": "Adeunis - ARF8180ARB - TEMP - CODEC TEMP V4",
+            "description": "Adeunis - ARF8180ARB - TEMP - CODEC TEMP V4 LoRaWAN sensor.",
+            "catalog": "arf8180arb-temp-v4",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8180arb-temp-v4/arf8180arb-temp-v4-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8180arb-temp-v4/arf8180arb-temp-v4-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8180arb-temp-v4/arf8180arb-temp-v4-encoder.js"
+        },
+        {
+            "id": "arf8180bca-temp",
+            "name": "Adeunis - ARF8180BCA - TEMP - CODEC TEMP",
+            "description": "Adeunis - ARF8180BCA - TEMP - CODEC TEMP LoRaWAN sensor.",
+            "catalog": "arf8180bca-temp",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8180bca-temp/arf8180bca-temp-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8180bca-temp/arf8180bca-temp-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8180bca-temp/arf8180bca-temp-encoder.js"
+        },
+        {
+            "id": "arf8180bca-temp-v3",
+            "name": "Adeunis - ARF8180BCA - TEMP - CODEC TEMP V3",
+            "description": "Adeunis - ARF8180BCA - TEMP - CODEC TEMP V3 LoRaWAN sensor.",
+            "catalog": "arf8180bca-temp-v3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8180bca-temp-v3/arf8180bca-temp-v3-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8180bca-temp-v3/arf8180bca-temp-v3-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8180bca-temp-v3/arf8180bca-temp-v3-encoder.js"
+        },
+        {
+            "id": "arf8180bca-temp-v4",
+            "name": "Adeunis - ARF8180BCA - TEMP - CODEC TEMP V4",
+            "description": "Adeunis - ARF8180BCA - TEMP - CODEC TEMP V4 LoRaWAN sensor.",
+            "catalog": "arf8180bca-temp-v4",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8180bca-temp-v4/arf8180bca-temp-v4-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8180bca-temp-v4/arf8180bca-temp-v4-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8180bca-temp-v4/arf8180bca-temp-v4-encoder.js"
+        },
+        {
+            "id": "arf8190ba-analog",
+            "name": "Adeunis - ARF8190BA - ANALOG",
+            "description": "Adeunis - ARF8190BA - ANALOG LoRaWAN sensor.",
+            "catalog": "arf8190ba-analog",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8190ba-analog/arf8190ba-analog-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8190ba-analog/arf8190ba-analog-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8190ba-analog/arf8190ba-analog-encoder.js"
+        },
+        {
+            "id": "arf8190ba-b02-analog-2",
+            "name": "Adeunis - ARF8190BA-B02 ANALOG 2",
+            "description": "Adeunis - ARF8190BA-B02 ANALOG 2 LoRaWAN sensor.",
+            "catalog": "arf8190ba-b02-analog-2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8190ba-b02-analog-2/arf8190ba-b02-analog-2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8190ba-b02-analog-2/arf8190ba-b02-analog-2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8190ba-b02-analog-2/arf8190ba-b02-analog-2-encoder.js"
+        },
+        {
+            "id": "arf8190ba-b03-analog-2",
+            "name": "Adeunis - ARF8190BA -B03 ANALOG 2",
+            "description": "Adeunis - ARF8190BA -B03 ANALOG 2 LoRaWAN sensor.",
+            "catalog": "arf8190ba-b03-analog-2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8190ba-b03-analog-2/arf8190ba-b03-analog-2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8190ba-b03-analog-2/arf8190ba-b03-analog-2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8190ba-b03-analog-2/arf8190ba-b03-analog-2-encoder.js"
+        },
+        {
+            "id": "arf8200aa",
+            "name": "Adeunis - ARF8200AA",
+            "description": "Adeunis - ARF8200AA LoRaWAN sensor.",
+            "catalog": "arf8200aa",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8200aa/arf8200aa-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8200aa/arf8200aa-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8200aa/arf8200aa-encoder.js"
+        },
+        {
+            "id": "arf8230aba-pulse",
+            "name": "Adeunis - ARF8230ABA - PULSE",
+            "description": "Adeunis - ARF8230ABA - PULSE LoRaWAN sensor.",
+            "catalog": "arf8230aba-pulse",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8230aba-pulse/arf8230aba-pulse-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8230aba-pulse/arf8230aba-pulse-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8230aba-pulse/arf8230aba-pulse-encoder.js"
+        },
+        {
+            "id": "arf8230ara-pulse",
+            "name": "Adeunis - ARF8230ARA - PULSE",
+            "description": "Adeunis - ARF8230ARA - PULSE LoRaWAN sensor.",
+            "catalog": "arf8230ara-pulse",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8230ara-pulse/arf8230ara-pulse-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8230ara-pulse/arf8230ara-pulse-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8230ara-pulse/arf8230ara-pulse-encoder.js"
+        },
+        {
+            "id": "arf8230fa-pulse-atex",
+            "name": "Adeunis - ARF8230FA - PULSE ATEX",
+            "description": "Adeunis - ARF8230FA - PULSE ATEX LoRaWAN sensor.",
+            "catalog": "arf8230fa-pulse-atex",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8230fa-pulse-atex/arf8230fa-pulse-atex-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8230fa-pulse-atex/arf8230fa-pulse-atex-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8230fa-pulse-atex/arf8230fa-pulse-atex-encoder.js"
+        },
+        {
+            "id": "arf8240aa-modbus-lorawan",
+            "name": "Adeunis - ARF8240AA - MODBUS LORAWAN",
+            "description": "Adeunis - ARF8240AA - MODBUS LORAWAN LoRaWAN sensor.",
+            "catalog": "arf8240aa-modbus-lorawan",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8240aa-modbus-lorawan/arf8240aa-modbus-lorawan-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8240aa-modbus-lorawan/arf8240aa-modbus-lorawan-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8240aa-modbus-lorawan/arf8240aa-modbus-lorawan-encoder.js"
+        },
+        {
+            "id": "arf8250aa-tic",
+            "name": "Adeunis - ARF8250AA - TIC",
+            "description": "Adeunis - ARF8250AA - TIC LoRaWAN sensor.",
+            "catalog": "arf8250aa-tic",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8250aa-tic/arf8250aa-tic-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8250aa-tic/arf8250aa-tic-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8250aa-tic/arf8250aa-tic-encoder.js"
+        },
+        {
+            "id": "arf8275a-comfort",
+            "name": "Adeunis - ARF8275A - COMFORT",
+            "description": "Adeunis Comfort 2 (ARF8275A) — temperature & humidity LoRaWAN sensor with alarms and digital inputs.",
+            "catalog": "arf8275a-comfort",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8275a-comfort/arf8275a-comfort-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8275a-comfort/arf8275a-comfort-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8275a-comfort/arf8275a-comfort-encoder.js"
+        },
+        {
+            "id": "arf8275a-comfort-v2",
+            "name": "Adeunis - ARF8275A - COMFORT V2",
+            "description": "Adeunis - ARF8275A - COMFORT V2 LoRaWAN sensor.",
+            "catalog": "arf8275a-comfort-v2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8275a-comfort-v2/arf8275a-comfort-v2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8275a-comfort-v2/arf8275a-comfort-v2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8275a-comfort-v2/arf8275a-comfort-v2-encoder.js"
+        },
+        {
+            "id": "arf8275ara-comfort-v2",
+            "name": "Adeunis - ARF8275ARA COMFORT V2",
+            "description": "Adeunis - ARF8275ARA COMFORT V2 LoRaWAN sensor.",
+            "catalog": "arf8275ara-comfort-v2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8275ara-comfort-v2/arf8275ara-comfort-v2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8275ara-comfort-v2/arf8275ara-comfort-v2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8275ara-comfort-v2/arf8275ara-comfort-v2-encoder.js"
+        },
+        {
+            "id": "arf8276a-motion",
+            "name": "Adeunis - ARF8276A - MOTION",
+            "description": "Adeunis Motion (ARF8276A) — PIR presence and luminosity LoRaWAN sensor with alarms and digital inputs.",
+            "catalog": "arf8276a-motion",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8276a-motion/arf8276a-motion-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8276a-motion/arf8276a-motion-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8276a-motion/arf8276a-motion-encoder.js"
+        },
+        {
+            "id": "arf8283aa-delta-p",
+            "name": "Adeunis - ARF8283AA - DELTA P",
+            "description": "Adeunis - ARF8283AA - DELTA P LoRaWAN sensor.",
+            "catalog": "arf8283aa-delta-p",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8283aa-delta-p/arf8283aa-delta-p-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8283aa-delta-p/arf8283aa-delta-p-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8283aa-delta-p/arf8283aa-delta-p-encoder.js"
+        },
+        {
+            "id": "arf8373aa-comfort-co2",
+            "name": "Adeunis - ARF8373AA - COMFORT CO2",
+            "description": "Adeunis - ARF8373AA - COMFORT CO2 LoRaWAN sensor.",
+            "catalog": "arf8373aa-comfort-co2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8373aa-comfort-co2/arf8373aa-comfort-co2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8373aa-comfort-co2/arf8373aa-comfort-co2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8373aa-comfort-co2/arf8373aa-comfort-co2-encoder.js"
+        },
+        {
+            "id": "arf8373ab-comfort-co2",
+            "name": "Adeunis - ARF8373AB - COMFORT CO2",
+            "description": "Adeunis - ARF8373AB - COMFORT CO2 LoRaWAN sensor.",
+            "catalog": "arf8373ab-comfort-co2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8373ab-comfort-co2/arf8373ab-comfort-co2-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8373ab-comfort-co2/arf8373ab-comfort-co2-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8373ab-comfort-co2/arf8373ab-comfort-co2-encoder.js"
+        },
+        {
+            "id": "arf8373ara-comfort-serenity",
+            "name": "Adeunis - ARF8373ARA COMFORT SERENITY",
+            "description": "Adeunis - ARF8373ARA COMFORT SERENITY LoRaWAN sensor.",
+            "catalog": "arf8373ara-comfort-serenity",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8373ara-comfort-serenity/arf8373ara-comfort-serenity-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8373ara-comfort-serenity/arf8373ara-comfort-serenity-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8373ara-comfort-serenity/arf8373ara-comfort-serenity-encoder.js"
+        },
+        {
+            "id": "arf8377aa-breath",
+            "name": "Adeunis - ARF8377AA - BREATH",
+            "description": "Adeunis - ARF8377AA - BREATH LoRaWAN sensor.",
+            "catalog": "arf8377aa-breath",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/arf8377aa-breath/arf8377aa-breath-codec.json",
+            "decoder_script": "vendors/Adeunis/arf8377aa-breath/arf8377aa-breath-decoder.js",
+            "encoder_script": "vendors/Adeunis/arf8377aa-breath/arf8377aa-breath-encoder.js"
+        },
+        {
+            "id": "tic-cbe-linky-mono",
+            "name": "Adeunis - TIC CBE/LINKY MONO",
+            "description": "Adeunis - TIC CBE/LINKY MONO LoRaWAN sensor.",
+            "catalog": "tic-cbe-linky-mono",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/tic-cbe-linky-mono/tic-cbe-linky-mono-codec.json",
+            "decoder_script": "vendors/Adeunis/tic-cbe-linky-mono/tic-cbe-linky-mono-decoder.js",
+            "encoder_script": "vendors/Adeunis/tic-cbe-linky-mono/tic-cbe-linky-mono-encoder.js"
+        },
+        {
+            "id": "tic-cbe-linky-tri",
+            "name": "Adeunis - TIC CBE/LINKY TRI",
+            "description": "Adeunis - TIC CBE/LINKY TRI LoRaWAN sensor.",
+            "catalog": "tic-cbe-linky-tri",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/tic-cbe-linky-tri/tic-cbe-linky-tri-codec.json",
+            "decoder_script": "vendors/Adeunis/tic-cbe-linky-tri/tic-cbe-linky-tri-decoder.js",
+            "encoder_script": "vendors/Adeunis/tic-cbe-linky-tri/tic-cbe-linky-tri-encoder.js"
+        },
+        {
+            "id": "tic-pme-pmi",
+            "name": "Adeunis - TIC PME PMI",
+            "description": "Adeunis - TIC PME PMI LoRaWAN sensor.",
+            "catalog": "tic-pme-pmi",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Adeunis/tic-pme-pmi/tic-pme-pmi-codec.json",
+            "decoder_script": "vendors/Adeunis/tic-pme-pmi/tic-pme-pmi-decoder.js",
+            "encoder_script": "vendors/Adeunis/tic-pme-pmi/tic-pme-pmi-encoder.js"
+        }
+    ]
+}

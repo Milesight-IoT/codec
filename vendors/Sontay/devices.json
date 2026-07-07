@@ -1,0 +1,523 @@
+{
+  "version": "1.0.0",
+  "devices": [
+    {
+      "id": "rf-lw-t-c",
+      "name": "Sontay - RF-LW-T-C",
+      "description": "Compact room temperature sensor.",
+      "catalog": "rf-lw-t-c",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-t-c/rf-lw-t-c-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-t-c/rf-lw-t-c-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-t-c/rf-lw-t-c-encoder.js"
+    },
+    {
+      "id": "rf-lw-t-d",
+      "name": "Sontay - RF-LW-T-D",
+      "description": "Duct temperature sensor.",
+      "catalog": "rf-lw-t-d",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-t-d/rf-lw-t-d-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-t-d/rf-lw-t-d-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-t-d/rf-lw-t-d-encoder.js"
+    },
+    {
+      "id": "rf-lw-t-i",
+      "name": "Sontay - RF-LW-T-I",
+      "description": "Immersion temperature sensor.",
+      "catalog": "rf-lw-t-i",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-t-i/rf-lw-t-i-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-t-i/rf-lw-t-i-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-t-i/rf-lw-t-i-encoder.js"
+    },
+    {
+      "id": "rf-lw-t-o",
+      "name": "Sontay - RF-LW-T-O",
+      "description": "Outdoor temperature sensor.",
+      "catalog": "rf-lw-t-o",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-t-o/rf-lw-t-o-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-t-o/rf-lw-t-o-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-t-o/rf-lw-t-o-encoder.js"
+    },
+    {
+      "id": "rf-lw-t-or",
+      "name": "Sontay - RF-LW-T-OR",
+      "description": "Outdoor remote temperature sensor.",
+      "catalog": "rf-lw-t-or",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-t-or/rf-lw-t-or-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-t-or/rf-lw-t-or-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-t-or/rf-lw-t-or-encoder.js"
+    },
+    {
+      "id": "rf-lw-t-s",
+      "name": "Sontay - RF-LW-T-S",
+      "description": "Surface temperature sensor.",
+      "catalog": "rf-lw-t-s",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-t-s/rf-lw-t-s-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-t-s/rf-lw-t-s-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-t-s/rf-lw-t-s-encoder.js"
+    },
+    {
+      "id": "rf-lw-t-555",
+      "name": "Sontay - RF-LW-T-555",
+      "description": "Flat panel temperature sensor.",
+      "catalog": "rf-lw-t-555",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-t-555/rf-lw-t-555-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-t-555/rf-lw-t-555-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-t-555/rf-lw-t-555-encoder.js"
+    },
+    {
+      "id": "rf-lw-rh-d",
+      "name": "Sontay - RF-LW-RH-D",
+      "description": "Duct temperature and humidity sensor.",
+      "catalog": "rf-lw-rh-d",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-rh-d/rf-lw-rh-d-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-rh-d/rf-lw-rh-d-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-rh-d/rf-lw-rh-d-encoder.js"
+    },
+    {
+      "id": "rf-lw-rh-o",
+      "name": "Sontay - RF-LW-RH-O",
+      "description": "Outdoor temperature and humidity sensor.",
+      "catalog": "rf-lw-rh-o",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-rh-o/rf-lw-rh-o-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-rh-o/rf-lw-rh-o-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-rh-o/rf-lw-rh-o-encoder.js"
+    },
+    {
+      "id": "rf-lw-rh-r",
+      "name": "Sontay - RF-LW-RH-R",
+      "description": "Room temperature and humidity sensor.",
+      "catalog": "rf-lw-rh-r",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-rh-r/rf-lw-rh-r-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-rh-r/rf-lw-rh-r-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-rh-r/rf-lw-rh-r-encoder.js"
+    },
+    {
+      "id": "rf-lw-rh-s",
+      "name": "Sontay - RF-LW-RH-S",
+      "description": "Surface temperature and humidity sensor.",
+      "catalog": "rf-lw-rh-s",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-rh-s/rf-lw-rh-s-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-rh-s/rf-lw-rh-s-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-rh-s/rf-lw-rh-s-encoder.js"
+    },
+    {
+      "id": "rf-lw-rh-w",
+      "name": "Sontay - RF-LW-RH-W",
+      "description": "Wall temperature and humidity sensor.",
+      "catalog": "rf-lw-rh-w",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-rh-w/rf-lw-rh-w-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-rh-w/rf-lw-rh-w-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-rh-w/rf-lw-rh-w-encoder.js"
+    },
+    {
+      "id": "rf-lw-co2-t-s",
+      "name": "Sontay - RF-LW-CO2-T-S",
+      "description": "CO2, temperature sensor (single display).",
+      "catalog": "rf-lw-co2-t-s",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-co2-t-s/rf-lw-co2-t-s-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-co2-t-s/rf-lw-co2-t-s-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-co2-t-s/rf-lw-co2-t-s-encoder.js"
+    },
+    {
+      "id": "rf-lw-co2-d",
+      "name": "Sontay - RF-LW-CO2-D",
+      "description": "Duct CO2, temperature and humidity sensor.",
+      "catalog": "rf-lw-co2-d",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-co2-d/rf-lw-co2-d-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-co2-d/rf-lw-co2-d-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-co2-d/rf-lw-co2-d-encoder.js"
+    },
+    {
+      "id": "rf-lw-co2-t-d",
+      "name": "Sontay - RF-LW-CO2-T-D",
+      "description": "CO2, temperature and humidity sensor (dual display).",
+      "catalog": "rf-lw-co2-t-d",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-co2-t-d/rf-lw-co2-t-d-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-co2-t-d/rf-lw-co2-t-d-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-co2-t-d/rf-lw-co2-t-d-encoder.js"
+    },
+    {
+      "id": "rf-lw-rht-co2-s",
+      "name": "Sontay - RF-LW-RHT-CO2-S",
+      "description": "CO2, temperature and humidity sensor (single display).",
+      "catalog": "rf-lw-rht-co2-s",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-rht-co2-s/rf-lw-rht-co2-s-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-rht-co2-s/rf-lw-rht-co2-s-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-rht-co2-s/rf-lw-rht-co2-s-encoder.js"
+    },
+    {
+      "id": "rf-lw-rht-co2-d",
+      "name": "Sontay - RF-LW-RHT-CO2-D",
+      "description": "CO2, temperature and humidity sensor (dual display).",
+      "catalog": "rf-lw-rht-co2-d",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-rht-co2-d/rf-lw-rht-co2-d-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-rht-co2-d/rf-lw-rht-co2-d-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-rht-co2-d/rf-lw-rht-co2-d-encoder.js"
+    },
+    {
+      "id": "rf-lw-thvb",
+      "name": "Sontay - RF-LW-THVB",
+      "description": "Indoor air quality sensor (T, RH, VOC, CO2, PM, light, pressure, motion, sound).",
+      "catalog": "rf-lw-thvb",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-thvb/rf-lw-thvb-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-thvb/rf-lw-thvb-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-thvb/rf-lw-thvb-encoder.js"
+    },
+    {
+      "id": "rf-lw-thlvb",
+      "name": "Sontay - RF-LW-THLVB",
+      "description": "Indoor air quality sensor with additional PM sizes.",
+      "catalog": "rf-lw-thlvb",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-thlvb/rf-lw-thlvb-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-thlvb/rf-lw-thlvb-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-thlvb/rf-lw-thlvb-encoder.js"
+    },
+    {
+      "id": "rf-lw-tiaq",
+      "name": "Sontay - RF-LW-TIAQ",
+      "description": "Indoor air quality sensor (T, RH, VOC, CO2, sound, PM, barometric pressure).",
+      "catalog": "rf-lw-tiaq",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-tiaq/rf-lw-tiaq-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-tiaq/rf-lw-tiaq-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-tiaq/rf-lw-tiaq-encoder.js"
+    },
+    {
+      "id": "rf-lw-tiaq-ox",
+      "name": "Sontay - RF-LW-TIAQ-OX",
+      "description": "Indoor air quality sensor with gas detection (T, RH, VOC, CO2, O2, CO, ozone, H2S, NO/NO2/SO2, sound, PM).",
+      "catalog": "rf-lw-tiaq-ox",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-tiaq-ox/rf-lw-tiaq-ox-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-tiaq-ox/rf-lw-tiaq-ox-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-tiaq-ox/rf-lw-tiaq-ox-encoder.js"
+    },
+    {
+      "id": "rf-lw-toaq",
+      "name": "Sontay - RF-LW-TOAQ",
+      "description": "Outdoor air quality sensor (T, RH, VOC, CO2, barometric pressure, sound, PM).",
+      "catalog": "rf-lw-toaq",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-toaq/rf-lw-toaq-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-toaq/rf-lw-toaq-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-toaq/rf-lw-toaq-encoder.js"
+    },
+    {
+      "id": "rf-lw-av",
+      "name": "Sontay - RF-LW-AV",
+      "description": "Air velocity sensor (T, RH, differential pressure, air flow).",
+      "catalog": "rf-lw-av",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-av/rf-lw-av-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-av/rf-lw-av-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-av/rf-lw-av-encoder.js"
+    },
+    {
+      "id": "rf-lw-dp1",
+      "name": "Sontay - RF-LW-DP1",
+      "description": "Differential pressure sensor (T, RH, differential pressure, air flow).",
+      "catalog": "rf-lw-dp1",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-dp1/rf-lw-dp1-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-dp1/rf-lw-dp1-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-dp1/rf-lw-dp1-encoder.js"
+    },
+    {
+      "id": "rf-lw-gp1",
+      "name": "Sontay - RF-LW-GP1",
+      "description": "Gauge pressure sensor (T, RH, gauge pressure, gauge sensor temperature).",
+      "catalog": "rf-lw-gp1",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-gp1/rf-lw-gp1-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-gp1/rf-lw-gp1-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-gp1/rf-lw-gp1-encoder.js"
+    },
+    {
+      "id": "rf-lw-pulse",
+      "name": "Sontay - RF-LW-PULSE",
+      "description": "Pulse counter sensor (T, RH, 3x pulse inputs).",
+      "catalog": "rf-lw-pulse",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-pulse/rf-lw-pulse-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-pulse/rf-lw-pulse-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-pulse/rf-lw-pulse-encoder.js"
+    },
+    {
+      "id": "rf-lw-wd-am",
+      "name": "Sontay - RF-LW-WD-AM",
+      "description": "Water detect and alarm module (T, RH, ADC resistance, leak detection).",
+      "catalog": "rf-lw-wd-am",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-wd-am/rf-lw-wd-am-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-wd-am/rf-lw-wd-am-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-wd-am/rf-lw-wd-am-encoder.js"
+    },
+    {
+      "id": "rf-lw-modb",
+      "name": "Sontay - RF-LW-MODB",
+      "description": "Modbus bridge (32 channels: exception, interval, cumulative).",
+      "catalog": "rf-lw-modb",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-modb/rf-lw-modb-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-modb/rf-lw-modb-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-modb/rf-lw-modb-encoder.js"
+    },
+    {
+      "id": "rf-lw-flood",
+      "name": "Sontay - RF-LW-FLOOD",
+      "description": "Flood sensor with tamper and temperature detection.",
+      "catalog": "rf-lw-flood",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-flood/rf-lw-flood-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-flood/rf-lw-flood-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-flood/rf-lw-flood-encoder.js"
+    },
+    {
+      "id": "rf-lw-btn-01",
+      "name": "Sontay - RF-LW-BTN-01",
+      "description": "LoRaWAN wireless button with temperature sensor.",
+      "catalog": "rf-lw-btn-01",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-btn-01/rf-lw-btn-01-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-btn-01/rf-lw-btn-01-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-btn-01/rf-lw-btn-01-encoder.js"
+    },
+    {
+      "id": "rf-lw-oc",
+      "name": "Sontay - RF-LW-OC",
+      "description": "Open/close (door/window) sensor with temperature.",
+      "catalog": "rf-lw-oc",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-oc/rf-lw-oc-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-oc/rf-lw-oc-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-oc/rf-lw-oc-encoder.js"
+    },
+    {
+      "id": "rf-lw-trv",
+      "name": "Sontay - RF-LW-TRV",
+      "description": "Thermostatic radiator valve (TRV) with humidity sensor.",
+      "catalog": "rf-lw-trv",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-trv/rf-lw-trv-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-trv/rf-lw-trv-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-trv/rf-lw-trv-encoder.js"
+    },
+    {
+      "id": "rf-lw-th-fssp",
+      "name": "Sontay - RF-LW-TH-FSSP",
+      "description": "Fan coil unit thermostat with humidity sensor.",
+      "catalog": "rf-lw-th-fssp",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-th-fssp/rf-lw-th-fssp-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-th-fssp/rf-lw-th-fssp-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-th-fssp/rf-lw-th-fssp-encoder.js"
+    },
+    {
+      "id": "rf-lw-thlc-s",
+      "name": "Sontay - RF-LW-THLC-S",
+      "description": "CO2, temperature, humidity and light sensor with display.",
+      "catalog": "rf-lw-thlc-s",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-thlc-s/rf-lw-thlc-s-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-thlc-s/rf-lw-thlc-s-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-thlc-s/rf-lw-thlc-s-encoder.js"
+    },
+    {
+      "id": "rf-lw-thpir-sp",
+      "name": "Sontay - RF-LW-THPIR-SP",
+      "description": "Wireless thermostat with PIR occupancy sensor.",
+      "catalog": "rf-lw-thpir-sp",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-thpir-sp/rf-lw-thpir-sp-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-thpir-sp/rf-lw-thpir-sp-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-thpir-sp/rf-lw-thpir-sp-encoder.js"
+    },
+    {
+      "id": "rf-lw-io-16a",
+      "name": "Sontay - RF-LW-IO-16A",
+      "description": "16A smart switch with power metering.",
+      "catalog": "rf-lw-io-16a",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-io-16a/rf-lw-io-16a-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-io-16a/rf-lw-io-16a-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-io-16a/rf-lw-io-16a-encoder.js"
+    },
+    {
+      "id": "rf-lw-vz",
+      "name": "Sontay - RF-LW-VZ",
+      "description": "Motorised valve controller with flood detection.",
+      "catalog": "rf-lw-vz",
+      "sn": "",
+      "deveui": "",
+      "device_profile": [
+        "ClassA-OTAA"
+      ],
+      "codec": "vendors/Sontay/rf-lw-vz/rf-lw-vz-codec.json",
+      "decoder_script": "vendors/Sontay/rf-lw-vz/rf-lw-vz-decoder.js",
+      "encoder_script": "vendors/Sontay/rf-lw-vz/rf-lw-vz-encoder.js"
+    }
+  ]
+}
