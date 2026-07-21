@@ -1210,6 +1210,20 @@
             "ipso_version": "v1"
         },
         {
+            "id": "vs350_v3",
+            "name": "VS350 V3",
+            "description": "Passage People Counter",
+            "catalog": "vs",
+            "sn": "6717",
+            "pn": ["000"],
+            "deveui": "24e124717",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/vs-series/vs350/vs350-codec.json",
+            "decoder_script": "vendors/milesight-iot/vs-series/vs350/vs350-decoder.js",
+            "encoder_script": "vendors/milesight-iot/vs-series/vs350/vs350-encoder.js",
+            "ipso_version": "v1"
+        },
+        {
             "id": "vs351",
             "name": "VS351",
             "description": "Mini AI Thermopile People Counter",
@@ -1314,6 +1328,20 @@
             "sn": "6983",
             "pn": ["000"],
             "deveui": "24e124983",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/ws-series/ws201/ws201-codec.json",
+            "decoder_script": "vendors/milesight-iot/ws-series/ws201/ws201-decoder.js",
+            "encoder_script": "vendors/milesight-iot/ws-series/ws201/ws201-encoder.js",
+            "ipso_version": "v1"
+        },
+        {
+            "id": "ws201_v2",
+            "name": "WS201 V2",
+            "description": "Smart Fill Level Monitoring Sensor",
+            "catalog": "ws",
+            "sn": "6984",
+            "pn": ["000"],
+            "deveui": "24e124984",
             "device_profile": ["ClassA-OTAA"],
             "codec": "vendors/milesight-iot/ws-series/ws201/ws201-codec.json",
             "decoder_script": "vendors/milesight-iot/ws-series/ws201/ws201-decoder.js",
