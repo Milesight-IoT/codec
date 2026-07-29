@@ -588,6 +588,20 @@
             "ipso_version": "v1"
         },
         {
+            "id": "em320_th_v2",
+            "name": "EM320-TH V2",
+            "description": "Temperature & Humidity Sensor",
+            "catalog": "em320",
+            "sn": "6863",
+            "pn": ["000", "002"],
+            "deveui": "24e124863",
+            "device_profile": ["ClassA-OTAA"],
+            "codec": "vendors/milesight-iot/em-series/em320-th-v2/em320-th-v2-codec.json",
+            "decoder_script": "vendors/milesight-iot/em-series/em320-th-v2/em320-th-v2-decoder.js",
+            "encoder_script": "vendors/milesight-iot/em-series/em320-th-v2/em320-th-v2-encoder.js",
+            "ipso_version": "v1"
+        },
+        {
             "id": "em320_tilt",
             "name": "EM320-TILT",
             "description": "Tilt Sensor",
