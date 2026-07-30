@@ -313,7 +313,7 @@ jobs:
     steps:
       - name: Send SensorDecoders sync failure notification
         env:
-          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK_URL_RD }}
           REPOSITORY: ${{ github.repository }}
           BRANCH: ${{ github.event.workflow_run.head_branch }}
           COMMIT_URL: ${{ github.event.workflow_run.html_url }}
@@ -322,7 +322,7 @@ jobs:
           set -euo pipefail
 
           if [ -z "${FEISHU_WEBHOOK:-}" ]; then
-            echo "Warning: FEISHU_WEBHOOK_URL secret is not configured, skipping notification"
+            echo "Warning: FEISHU_WEBHOOK_URL_RD secret is not configured, skipping notification"
             exit 0
           fi
 
