@@ -561,7 +561,7 @@
             "access_mode": "R",
             "data_type": "ENUM",
             "value_type": "UINT8",
-            "values": [{ "value": 1, "name": "read error" }],
+            "values": [{ "value": 1, "name": "read error" }, { "value": 2, "name": "Unsupported Command" }],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -574,7 +574,7 @@
             "access_mode": "R",
             "data_type": "ENUM",
             "value_type": "UINT8",
-            "values": [{ "value": 1, "name": "read error" }],
+            "values": [{ "value": 1, "name": "read error" }, { "value": 2, "name": "Unsupported Command" }],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"

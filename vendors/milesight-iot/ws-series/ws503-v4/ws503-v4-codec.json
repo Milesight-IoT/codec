@@ -62,8 +62,14 @@
       "data_type": "ENUM",
       "value_type": "UINT8",
       "values": [
-          { "value": 2, "name": "Class C" },
-          { "value": 2, "name": "Class C" }
+          {
+          "value": 2,
+          "name": "Class C"
+          },
+          {
+          "value": 3,
+          "name": "Unsupported Command"
+          }
       ],
       "bacnet_type": "multistate_value_object",
       "bacnet_unit_type_id": 95,
@@ -1409,8 +1415,8 @@
           "name": "Overcurrent"
         },
         {
-          "value": 1,
-          "name": "Overcurrent"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1434,8 +1440,8 @@
           "name": "Abnormal"
         },
         {
-          "value": 1,
-          "name": "Abnormal"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1457,8 +1463,8 @@
           "name": "Overtemperature"
         },
         {
-          "value": 1,
-          "name": "Overtemperature"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1480,8 +1486,8 @@
           "name": "Collect_error"
         },
         {
-          "value": 1,
-          "name": "Collect_error"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1503,8 +1509,8 @@
           "name": "Collect_error"
         },
         {
-          "value": 1,
-          "name": "Collect_error"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1526,8 +1532,8 @@
           "name": "Collect_error"
         },
         {
-          "value": 1,
-          "name": "Collect_error"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1549,8 +1555,8 @@
           "name": "Collect_error"
         },
         {
-          "value": 1,
-          "name": "Collect_error"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1572,8 +1578,8 @@
           "name": "Collect_error"
         },
         {
-          "value": 1,
-          "name": "Collect_error"
+          "value": 2,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",

@@ -1197,8 +1197,8 @@
           "name": "collect abnormal"
         },
         {
-          "value": 0,
-          "name": "collect abnormal"
+          "value": 1,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
@@ -1220,8 +1220,8 @@
           "name": "collect abnormal"
         },
         {
-          "value": 0,
-          "name": "collect abnormal"
+          "value": 1,
+          "name": "Unsupported Command"
         }
       ],
       "bacnet_type": "multistate_value_object",
