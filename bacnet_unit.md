@@ -117,7 +117,7 @@
 |   206 |          mmWS          | UNITS_MILLIMETERS_OF_WATER                   |    Pressure     |
 |    62 |           °C           | UNITS_DEGREES_CELSIUS                        |   Temperature   |
 |    63 |           K            | UNITS_DEGREES_KELVIN                         |   Temperature   |
-|    64 |           ℉            | UNITS_DEGREES_FAHRENHEIT                     |   Temperature   |
+|    64 |           °F            | UNITS_DEGREES_FAHRENHEIT                     |   Temperature   |
 |    65 |  Degree-days-Celsius   | UNITS_DEGREE_DAYS_CELSIUS                    |   Temperature   |
 |    66 | Degree-days-Fahrenheit | UNITS_DEGREE_DAYS_FAHRENHEIT                 |   Temperature   |
 |   120 |          ΔT°F          | UNITS_DELTA_DEGREES_FAHRENHEIT               |   Temperature   |
