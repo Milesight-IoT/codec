@@ -515,12 +515,12 @@
           "value_type": "UINT8",
           "values": [
               {
-                  "name": "low voltage alarm",
-                  "value": 0
+                  "value": 0,
+                  "name": "low voltage alarm"
               },
               {
-                  "name": "low voltage alarm",
-                  "value": 0
+                  "value": 1,
+                  "name": "Unsupported Command"
               }
           ],
           "bacnet_type": "multistate_input_object",

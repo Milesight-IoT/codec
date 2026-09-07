@@ -3477,8 +3477,8 @@
                     "name": "No Data"
                 },
                 {
-                    "value": 3,
-                    "name": "No Data"
+                    "value": 4,
+                    "name": "Unsupported Command"
                 }
             ],
             "bacnet_type": "multistate_value_object",
@@ -4664,8 +4664,8 @@
                     "name": "Timer Switch Enable"
                 },
                 {
-                    "value": 0,
-                    "name": "Timer Switch Enable"
+                    "value": 1,
+                    "name": "Unsupported Command"
                 }
             ],
             "bacnet_type": "multistate_value_object",

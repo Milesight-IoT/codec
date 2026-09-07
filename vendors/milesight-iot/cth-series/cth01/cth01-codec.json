@@ -6951,8 +6951,8 @@
                     "name": "condition: x>B"
                 },
                 {
-                    "value": 2,
-                    "name": "condition: x>B"
+                    "value": 3,
+                    "name": "Unsupported Command"
                 }
             ],
             "bacnet_type": "multistate_value_object",

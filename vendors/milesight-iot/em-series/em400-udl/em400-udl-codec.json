@@ -309,7 +309,7 @@
             "access_mode": "RW",
             "data_type": "ENUM",
             "value_type": "UINT8",
-            "values": [{ "value": 0, "name": "standard" }],
+            "values": [{ "value": 0, "name": "standard" }, { "value": 1, "name": "Unsupported Command" }],
             "bacnet_type": "multistate_value_object",
             "bacnet_unit_type_id": 95,
             "bacnet_unit_type": "UNITS_NO_UNITS"
