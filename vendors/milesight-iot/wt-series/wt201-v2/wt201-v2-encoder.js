@@ -101,6 +101,9 @@ function milesightDeviceEncode(payload) {
     if ("temperature" in payload) {
         encoded = encoded.concat(setOutsideTemperature(payload.temperature));
     }
+    if ("outside_temperature" in payload) {
+        encoded = encoded.concat(setOutsideTemperature(payload.outside_temperature));
+    }
     if ("humidity" in payload) {
         encoded = encoded.concat(setHumidity(payload.humidity));
     }
@@ -3059,6 +3062,10 @@ function isInteger(str) {
 
 function processTemperature(payload) {
 	var allTemperatureProperties = {
+        "outside_temperature": {
+            "coefficient": 0.1,
+            "constant": 32
+        },
         "temperature_control_delta1": {
             "coefficient": 0.1,
             "constant": 0
