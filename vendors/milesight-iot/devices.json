@@ -1931,6 +1931,20 @@
             "ipso_version": "v2"
         },
         {
+            "id": "uc711",
+            "name": "UC711",
+            "description": "HVAC Controller",
+            "catalog": "uc",
+            "sn": "6407",
+            "pn": ["000"],
+            "deveui": "24e124407",
+            "device_profile": ["ClassC-OTAA"],
+            "codec": "vendors/milesight-iot/uc-series/uc711/uc711-codec.json",
+            "decoder_script": "vendors/milesight-iot/uc-series/uc711/uc711-decoder.js",
+            "encoder_script": "vendors/milesight-iot/uc-series/uc711/uc711-encoder.js",
+            "ipso_version": "v2"
+        },
+        {
             "id": "cth01",
             "name": "CTH01",
             "description": "Intelligent power monitoring terminal",
