@@ -1,0 +1,440 @@
+{
+    "version": "1.0.0",
+    "bytes": "00DA002600FF010A010101020304000320006C00000301028301",
+    "object": [
+        {
+            "id": "room_temperature",
+            "name": "Room Temperature",
+            "value": "21.8",
+            "unit": "°C",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "room_humidity",
+            "name": "Room Humidity",
+            "value": "38",
+            "unit": "%",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "setpoint",
+            "name": "Setpoint",
+            "value": "25.5",
+            "unit": "°C",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "system_mode",
+            "name": "System Mode",
+            "value": "1",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Heat"
+                },
+                {
+                    "value": 1,
+                    "name": "Cool"
+                },
+                {
+                    "value": 2,
+                    "name": "Vent"
+                },
+                {
+                    "value": 3,
+                    "name": "Dehumidify"
+                },
+                {
+                    "value": 4,
+                    "name": "Auto"
+                },
+                {
+                    "value": 5,
+                    "name": "Off"
+                }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "switching_diff",
+            "name": "Switching Differential",
+            "value": "1",
+            "unit": "°C",
+            "access_mode": "RW",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_value_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "away",
+            "name": "Away Mode",
+            "value": "1",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Home"
+                },
+                {
+                    "value": 1,
+                    "name": "Away"
+                }
+            ],
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lock_out_status",
+            "name": "Lock Out Status",
+            "value": "1",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Disabled"
+                },
+                {
+                    "value": 1,
+                    "name": "Enabled"
+                }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "lock_pin_number",
+            "name": "Lock Pin Number",
+            "value": "1234",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 4,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature_reading_format",
+            "name": "Temperature Reading Format",
+            "value": "0",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Celsius"
+                },
+                {
+                    "value": 1,
+                    "name": "Fahrenheit"
+                }
+            ],
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "fan",
+            "name": "Fan Speed",
+            "value": "3",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "High"
+                },
+                {
+                    "value": 1,
+                    "name": "Med"
+                },
+                {
+                    "value": 2,
+                    "name": "Low"
+                },
+                {
+                    "value": 3,
+                    "name": "Auto"
+                }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "timezone",
+            "name": "Timezone",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "UTC+0"
+                },
+                {
+                    "value": 1,
+                    "name": "UTC+1"
+                },
+                {
+                    "value": 2,
+                    "name": "UTC+2"
+                },
+                {
+                    "value": 3,
+                    "name": "UTC+3"
+                },
+                {
+                    "value": 4,
+                    "name": "UTC+4"
+                },
+                {
+                    "value": 5,
+                    "name": "UTC+5"
+                },
+                {
+                    "value": 6,
+                    "name": "UTC+6"
+                },
+                {
+                    "value": 7,
+                    "name": "UTC+7"
+                },
+                {
+                    "value": 8,
+                    "name": "UTC+8"
+                },
+                {
+                    "value": 9,
+                    "name": "UTC+9"
+                },
+                {
+                    "value": 10,
+                    "name": "UTC+10"
+                },
+                {
+                    "value": 11,
+                    "name": "UTC+11"
+                },
+                {
+                    "value": 12,
+                    "name": "UTC+12"
+                },
+                {
+                    "value": 13,
+                    "name": "UTC-12"
+                },
+                {
+                    "value": 14,
+                    "name": "UTC-11"
+                },
+                {
+                    "value": 15,
+                    "name": "UTC-10 (Hawaii)"
+                },
+                {
+                    "value": 16,
+                    "name": "UTC-9 (Alaska)"
+                },
+                {
+                    "value": 17,
+                    "name": "UTC-8 (Pacific)"
+                },
+                {
+                    "value": 18,
+                    "name": "UTC-7 (Mountain)"
+                },
+                {
+                    "value": 19,
+                    "name": "UTC-6 (Central)"
+                },
+                {
+                    "value": 20,
+                    "name": "UTC-5 (Eastern)"
+                },
+                {
+                    "value": 21,
+                    "name": "UTC-4"
+                },
+                {
+                    "value": 22,
+                    "name": "UTC-3"
+                },
+                {
+                    "value": 23,
+                    "name": "UTC-2"
+                },
+                {
+                    "value": 24,
+                    "name": "UTC-1"
+                }
+            ],
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "firmware",
+            "name": "Firmware Version",
+            "value": "108",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "valve_status_cool",
+            "name": "Valve Status (Cool / 2-Pipe)",
+            "value": "0",
+            "unit": "%",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "valve_status_heat",
+            "name": "Valve Status (Heat / 4-Pipe)",
+            "value": "0",
+            "unit": "%",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "fan_status",
+            "name": "Fan Status",
+            "value": "3",
+            "unit": "%",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "schedule_mode",
+            "name": "Schedule Mode",
+            "value": "1",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Weekday/Weekend"
+                },
+                {
+                    "value": 1,
+                    "name": "7 Days"
+                },
+                {
+                    "value": 2,
+                    "name": "24 Hrs"
+                },
+                {
+                    "value": 3,
+                    "name": "None"
+                }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "co2",
+            "name": "CO2",
+            "value": "643",
+            "unit": "ppm",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "on_off_status",
+            "name": "On/Off Status",
+            "value": "1",
+            "unit": "",
+            "access_mode": "RW",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Off"
+                },
+                {
+                    "value": 1,
+                    "name": "On"
+                }
+            ],
+            "bacnet_type": "multistate_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "raw_downlink",
+            "name": "Raw Downlink Payload",
+            "value": "",
+            "unit": "",
+            "access_mode": "W",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 242,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}
