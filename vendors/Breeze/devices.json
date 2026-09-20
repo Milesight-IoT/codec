@@ -1,0 +1,19 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "bc107",
+            "name": "Breeze - BC107",
+            "description": "LoRaWAN fan-coil thermostat for 2/4-pipe FCU systems with room temperature, humidity, CO2, valve and fan status reporting (BC107-4M/4EM/4AM/4AEM).",
+            "catalog": "bc107",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Breeze/bc107/bc107-codec.json",
+            "decoder_script": "vendors/Breeze/bc107/bc107-decoder.js",
+            "encoder_script": "vendors/Breeze/bc107/bc107-encoder.js"
+        }
+    ]
+}

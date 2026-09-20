@@ -134,6 +134,15 @@
             "description": "UK-based manufacturer of LoRaWAN environmental and air quality sensors under the enLink brand.",
             "oui": "",
             "devices": "vendors/Synetica/devices.json"
+        },
+        {
+            "id": "breeze",
+            "name": "Breeze Controls",
+            "logo": "",
+            "website": "https://www.breezecontrols.com",
+            "description": "HVAC controls brand of Beijing Breeze Technology, offering multi-protocol smart thermostats and fan coil controls including LoRaWAN models (BC107 series).",
+            "oui": "",
+            "devices": "vendors/Breeze/devices.json"
         }
     ]
 }
