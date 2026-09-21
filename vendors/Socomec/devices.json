@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "countis-e03",
+            "name": "Socomec - COUNTIS E03",
+            "description": "COUNTIS E03 energy meter, Modbus RTU (V/A/W/VAr/VA/PF/Hz/kWh)",
+            "catalog": "power-meter",
+            "protocol": "modbus rtu",
+            "codec": "vendors/Socomec/countis-e03/countis-e03-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "none",
+            "modbus_stopbits": 1
+        }
+    ]
+}

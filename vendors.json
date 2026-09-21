@@ -170,6 +170,42 @@
             "description": "HVAC controls brand of Beijing Breeze Technology, offering multi-protocol smart thermostats and fan coil controls including LoRaWAN models (BC107 series).",
             "oui": "",
             "devices": "vendors/Breeze/devices.json"
+        },
+        {
+            "id": "honeywell",
+            "name": "Honeywell",
+            "logo": "",
+            "website": "https://www.honeywell.com",
+            "description": "Global building technologies manufacturer; TC300 fan coil unit controller (BACnet/Modbus).",
+            "oui": "",
+            "devices": "vendors/Honeywell/devices.json"
+        },
+        {
+            "id": "carlogavazzi",
+            "name": "Carlo Gavazzi",
+            "logo": "",
+            "website": "https://www.carlogavazzi.com",
+            "description": "Italian manufacturer of automation components including energy analyzers and motor controls.",
+            "oui": "",
+            "devices": "vendors/CarloGavazzi/devices.json"
+        },
+        {
+            "id": "socomec",
+            "name": "Socomec",
+            "logo": "",
+            "website": "https://www.socomec.com",
+            "description": "French manufacturer of power monitoring and energy management solutions (COUNTIS/DIRIS meters).",
+            "oui": "",
+            "devices": "vendors/Socomec/devices.json"
+        },
+        {
+            "id": "siemens",
+            "name": "Siemens",
+            "logo": "",
+            "website": "https://www.siemens.com",
+            "description": "Siemens Smart Infrastructure: PAC power quality meters, RDF thermostats, Climatix HVAC controllers.",
+            "oui": "",
+            "devices": "vendors/Siemens/devices.json"
         }
     ]
 }
