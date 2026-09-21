@@ -1,0 +1,29 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "pac4200",
+            "name": "Siemens - PAC4200",
+            "description": "PAC4200 power quality analyzer, Modbus RTU",
+            "catalog": "power-meter",
+            "protocol": "modbus rtu",
+            "codec": "vendors/Siemens/pac4200/pac4200-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "rdf302",
+            "name": "Siemens - RDF302",
+            "description": "RDF302 room thermostat, Modbus RTU (BACnet-capable HVAC controller)",
+            "catalog": "thermostat",
+            "protocol": "modbus rtu",
+            "codec": "vendors/Siemens/rdf302/rdf302-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 19200,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        }
+    ]
+}

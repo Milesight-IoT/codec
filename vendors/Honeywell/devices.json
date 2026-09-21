@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "tc300",
+            "name": "Honeywell - TC300",
+            "description": "Commercial fan coil thermostat with BACnet/Modbus (341 objects)",
+            "catalog": "thermostat",
+            "protocol": "modbus rtu",
+            "codec": "vendors/Honeywell/tc300/tc300-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 19200,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        }
+    ]
+}

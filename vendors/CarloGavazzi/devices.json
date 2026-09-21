@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "em210",
+            "name": "Carlo Gavazzi - EM210",
+            "description": "EM210 three-phase power analyzer, Modbus RTU (V/A/W/VA/VAr/PF/Hz/kWh)",
+            "catalog": "power-meter",
+            "protocol": "modbus rtu",
+            "codec": "vendors/CarloGavazzi/em210/em210-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        }
+    ]
+}
