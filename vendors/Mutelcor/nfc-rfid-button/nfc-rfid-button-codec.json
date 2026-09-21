@@ -1,0 +1,226 @@
+{
+    "version": "1.0.0",
+    "bytes": "02014901021234101234567890",
+    "object": [
+        {
+            "id": "voltage",
+            "name": "Battery Voltage",
+            "value": "3.29",
+            "unit": "V",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 5,
+            "bacnet_unit_type": "UNITS_VOLTS"
+        },
+        {
+            "id": "op_code",
+            "name": "Op Code",
+            "value": "1",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Heartbeat"
+                },
+                {
+                    "value": 1,
+                    "name": "Alarm"
+                }
+            ],
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "alarm_bitmask",
+            "name": "Alarm Bitmask",
+            "value": "2",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "alarm_id",
+            "name": "Alarm ID",
+            "value": "4660",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "uid_type",
+            "name": "UID Type",
+            "value": "16",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "ISO/IEC14443-4A"
+                },
+                {
+                    "value": 1,
+                    "name": "FeliCa 212 kbps"
+                },
+                {
+                    "value": 2,
+                    "name": "FeliCa 424 kbps"
+                },
+                {
+                    "value": 3,
+                    "name": "ISO/IEC14443-4B"
+                },
+                {
+                    "value": 4,
+                    "name": "Innovision Jewel/Topaz tag"
+                },
+                {
+                    "value": 16,
+                    "name": "Mifare (ISO/IEC14443-4A)"
+                },
+                {
+                    "value": 17,
+                    "name": "FeliCa 212 kbps"
+                },
+                {
+                    "value": 18,
+                    "name": "FeliCa 424 kbps"
+                },
+                {
+                    "value": 32,
+                    "name": "ISO/IEC14443-4A"
+                },
+                {
+                    "value": 35,
+                    "name": "ISO/IEC14443-4B"
+                },
+                {
+                    "value": 64,
+                    "name": "DEP passive 106 kbps"
+                },
+                {
+                    "value": 65,
+                    "name": "DEP passive 212 kbps"
+                },
+                {
+                    "value": 66,
+                    "name": "DEP passive 424 kbps"
+                },
+                {
+                    "value": 128,
+                    "name": "DEP active 106 kbps"
+                },
+                {
+                    "value": 129,
+                    "name": "DEP active 212 kbps"
+                },
+                {
+                    "value": 130,
+                    "name": "DEP active 424 kbps"
+                },
+                {
+                    "value": 255,
+                    "name": "Error reading the Tag"
+                }
+            ],
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "uid_error",
+            "name": "UID Error",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 32,
+                    "name": "Reader not found at startup"
+                },
+                {
+                    "value": 48,
+                    "name": "No tag/card found"
+                },
+                {
+                    "value": 64,
+                    "name": "Reader communication error"
+                },
+                {
+                    "value": 80,
+                    "name": "Tag/card read error, can be caused by low voltage"
+                },
+                {
+                    "value": 96,
+                    "name": "Tag/card read error"
+                },
+                {
+                    "value": 112,
+                    "name": "Multiple tags/cards"
+                },
+                {
+                    "value": 144,
+                    "name": "Tag/card not supported"
+                },
+                {
+                    "value": 160,
+                    "name": "Reading tag/card interrupted"
+                },
+                {
+                    "value": 176,
+                    "name": "UID too long, max 10"
+                },
+                {
+                    "value": 192,
+                    "name": "Tag/card with random UID"
+                }
+            ],
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "uid_hex",
+            "name": "UID Hex",
+            "value": "1234567890",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 32,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "raw_downlink",
+            "name": "Raw Downlink Payload",
+            "value": "",
+            "unit": "",
+            "access_mode": "W",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 242,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

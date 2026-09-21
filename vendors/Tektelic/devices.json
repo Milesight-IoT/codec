@@ -1,0 +1,159 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "breeze",
+            "name": "Tektelic - BREEZE",
+            "description": "LoRaWAN indoor air quality sensor with CO2, temperature, humidity, light and PIR (Breeze / Breeze-V).",
+            "catalog": "breeze",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/breeze/breeze-codec.json",
+            "decoder_script": "vendors/Tektelic/breeze/breeze-decoder.js",
+            "encoder_script": "vendors/Tektelic/breeze/breeze-encoder.js"
+        },
+        {
+            "id": "comfort-trm-1.3",
+            "name": "Tektelic - COMFORT TRM 1.3",
+            "description": "Tektelic Smart Room Sensor (legacy TRM v1.3 payload): temperature, humidity, light, PIR, accelerometer, external connector.",
+            "catalog": "comfort-trm-1.3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/comfort-trm-1.3/comfort-trm-1.3-codec.json",
+            "decoder_script": "vendors/Tektelic/comfort-trm-1.3/comfort-trm-1.3-decoder.js",
+            "encoder_script": "vendors/Tektelic/comfort-trm-1.3/comfort-trm-1.3-encoder.js"
+        },
+        {
+            "id": "comfort-trm-3.1",
+            "name": "Tektelic - COMFORT TRM 3.1",
+            "description": "Tektelic Smart Room Sensor Gen3 (TRM v3.1 payload) with port 5 diagnostics: temperature, humidity, light, PIR, accelerometer, external connector.",
+            "catalog": "comfort-trm-3.1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/comfort-trm-3.1/comfort-trm-3.1-codec.json",
+            "decoder_script": "vendors/Tektelic/comfort-trm-3.1/comfort-trm-3.1-decoder.js",
+            "encoder_script": "vendors/Tektelic/comfort-trm-3.1/comfort-trm-3.1-encoder.js"
+        },
+        {
+            "id": "kiwi-clover",
+            "name": "Tektelic - KIWI CLOVER",
+            "description": "LoRaWAN agriculture sensor: soil moisture (Watermark), irrigation inputs, thermistors, light, accelerometer and environment.",
+            "catalog": "kiwi-clover",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/kiwi-clover/kiwi-clover-codec.json",
+            "decoder_script": "vendors/Tektelic/kiwi-clover/kiwi-clover-decoder.js",
+            "encoder_script": "vendors/Tektelic/kiwi-clover/kiwi-clover-encoder.js"
+        },
+        {
+            "id": "orca",
+            "name": "Tektelic - ORCA",
+            "description": "LoRaWAN GNSS asset tracker: position, speed, geofence, acceleration, BLE scanning and GNSS diagnostics/logging.",
+            "catalog": "orca",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/orca/orca-codec.json",
+            "decoder_script": "vendors/Tektelic/orca/orca-decoder.js",
+            "encoder_script": "vendors/Tektelic/orca/orca-encoder.js"
+        },
+        {
+            "id": "seal",
+            "name": "Tektelic - SEAL",
+            "description": "LoRaWAN GNSS tracking sensor with pressure, temperature, accelerometer, BLE scanning, safety states and geofencing (SEAL / SEAL-Ex).",
+            "catalog": "seal",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/seal/seal-codec.json",
+            "decoder_script": "vendors/Tektelic/seal/seal-decoder.js",
+            "encoder_script": "vendors/Tektelic/seal/seal-encoder.js"
+        },
+        {
+            "id": "sparrow",
+            "name": "Tektelic - SPARROW",
+            "description": "LoRaWAN BLE tracker/beacon scanner: MCU temperature, battery, accelerometer and BLE MAC/LAP reporting.",
+            "catalog": "sparrow",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/sparrow/sparrow-codec.json",
+            "decoder_script": "vendors/Tektelic/sparrow/sparrow-decoder.js",
+            "encoder_script": "vendors/Tektelic/sparrow/sparrow-encoder.js"
+        },
+        {
+            "id": "stork",
+            "name": "Tektelic - STORK",
+            "description": "LoRaWAN tracking sensor: temperature, humidity, battery, acceleration and BLE/GNSS/Wi-Fi scan failure reporting.",
+            "catalog": "stork",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/stork/stork-codec.json",
+            "decoder_script": "vendors/Tektelic/stork/stork-decoder.js",
+            "encoder_script": "vendors/Tektelic/stork/stork-encoder.js"
+        },
+        {
+            "id": "tundra",
+            "name": "Tektelic - TUNDRA",
+            "description": "LoRaWAN level/environment monitoring sensor: probe temperature, reed switch counting, humidity and acceleration.",
+            "catalog": "tundra",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/tundra/tundra-codec.json",
+            "decoder_script": "vendors/Tektelic/tundra/tundra-decoder.js",
+            "encoder_script": "vendors/Tektelic/tundra/tundra-encoder.js"
+        },
+        {
+            "id": "vivid-trm-1.3",
+            "name": "Tektelic - VIVID TRM 1.3",
+            "description": "Tektelic Smart Room Sensor VIVID (legacy TRM v1.3 payload, identical payload to COMFORT 1.3).",
+            "catalog": "vivid-trm-1.3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/vivid-trm-1.3/vivid-trm-1.3-codec.json",
+            "decoder_script": "vendors/Tektelic/vivid-trm-1.3/vivid-trm-1.3-decoder.js",
+            "encoder_script": "vendors/Tektelic/vivid-trm-1.3/vivid-trm-1.3-encoder.js"
+        },
+        {
+            "id": "vivid-trm-3.1",
+            "name": "Tektelic - VIVID TRM 3.1",
+            "description": "Tektelic Smart Room Sensor VIVID Gen3 (TRM v3.1 payload, identical payload to COMFORT 3.1).",
+            "catalog": "vivid-trm-3.1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Tektelic/vivid-trm-3.1/vivid-trm-3.1-codec.json",
+            "decoder_script": "vendors/Tektelic/vivid-trm-3.1/vivid-trm-3.1-decoder.js",
+            "encoder_script": "vendors/Tektelic/vivid-trm-3.1/vivid-trm-3.1-encoder.js"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "cmi4110",
+            "name": "Elvaco - CMI4110",
+            "description": "LoRaWAN M-Bus meter interface (heat/cooling): energy, volume, power, flow and temperatures with BCD8 encoding (M-Bus EN 13757 DIB payload).",
+            "catalog": "cmi4110",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elvaco/cmi4110/cmi4110-codec.json",
+            "decoder_script": "vendors/Elvaco/cmi4110/cmi4110-decoder.js",
+            "encoder_script": "vendors/Elvaco/cmi4110/cmi4110-encoder.js"
+        },
+        {
+            "id": "cmi4111",
+            "name": "Elvaco - CMI4111",
+            "description": "LoRaWAN M-Bus meter interface (heat/cooling) with CO2 meter support: energy, volume, power, flow, temperatures and diagnostics.",
+            "catalog": "cmi4111",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elvaco/cmi4111/cmi4111-codec.json",
+            "decoder_script": "vendors/Elvaco/cmi4111/cmi4111-decoder.js",
+            "encoder_script": "vendors/Elvaco/cmi4111/cmi4111-encoder.js"
+        },
+        {
+            "id": "cmi4130",
+            "name": "Elvaco - CMI4130",
+            "description": "LoRaWAN M-Bus meter interface for Kamstrup multical: energy, volume, power, flow, temperatures and combined heat/cooling.",
+            "catalog": "cmi4130",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elvaco/cmi4130/cmi4130-codec.json",
+            "decoder_script": "vendors/Elvaco/cmi4130/cmi4130-decoder.js",
+            "encoder_script": "vendors/Elvaco/cmi4130/cmi4130-encoder.js"
+        },
+        {
+            "id": "cmi4140",
+            "name": "Elvaco - CMI4140",
+            "description": "LoRaWAN M-Bus meter interface (heat/cooling): standard, scheduled, combined, heat-intelligence and pulse reporting formats.",
+            "catalog": "cmi4140",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elvaco/cmi4140/cmi4140-codec.json",
+            "decoder_script": "vendors/Elvaco/cmi4140/cmi4140-decoder.js",
+            "encoder_script": "vendors/Elvaco/cmi4140/cmi4140-encoder.js"
+        },
+        {
+            "id": "cmi4160",
+            "name": "Elvaco - CMI4160",
+            "description": "LoRaWAN M-Bus meter interface for Diehl SHARKY: energy, volume, power, flow, temperatures and combined heat/cooling.",
+            "catalog": "cmi4160",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elvaco/cmi4160/cmi4160-codec.json",
+            "decoder_script": "vendors/Elvaco/cmi4160/cmi4160-decoder.js",
+            "encoder_script": "vendors/Elvaco/cmi4160/cmi4160-encoder.js"
+        },
+        {
+            "id": "cmi4170",
+            "name": "Elvaco - CMI4170",
+            "description": "LoRaWAN M-Bus meter interface for Engelmann: energy, volume, power, flow, temperatures, combined heat/cooling and dual-message pulse reporting.",
+            "catalog": "cmi4170",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elvaco/cmi4170/cmi4170-codec.json",
+            "decoder_script": "vendors/Elvaco/cmi4170/cmi4170-decoder.js",
+            "encoder_script": "vendors/Elvaco/cmi4170/cmi4170-encoder.js"
+        }
+    ]
+}

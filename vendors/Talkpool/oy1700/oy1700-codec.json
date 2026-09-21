@@ -1,0 +1,197 @@
+{
+  "version": "1.0.0",
+  "bytes": "3e441d021b01340112",
+  "object": [
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "value": "19.3",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+    },
+    {
+      "id": "humidity",
+      "name": "Humidity",
+      "value": "85.1",
+      "unit": "%",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 98,
+      "bacnet_unit_type": "UNITS_PERCENT"
+    },
+    {
+      "id": "pm10",
+      "name": "PM10",
+      "value": "539",
+      "unit": "ppm",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 96,
+      "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+    },
+    {
+      "id": "pm2_5",
+      "name": "PM2.5",
+      "value": "308",
+      "unit": "ppm",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 96,
+      "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+    },
+    {
+      "id": "pm1",
+      "name": "PM1.0",
+      "value": "274",
+      "unit": "ppm",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 96,
+      "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+    },
+    {
+      "id": "type",
+      "name": "Uplink Type",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 24,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "index",
+      "name": "Command Index",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "status",
+      "name": "Status Bitfield",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "normal_startup",
+      "name": "Normal Startup",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        { "value": 0, "name": "false" },
+        { "value": 1, "name": "true" }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "boot_problem",
+      "name": "Boot Problem",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        { "value": 0, "name": "false" },
+        { "value": 1, "name": "true" }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "measurement_interval",
+      "name": "Measurement Interval",
+      "value": "",
+      "unit": "min",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 72,
+      "bacnet_unit_type": "UNITS_MINUTES"
+    },
+    {
+      "id": "fw_build_hash",
+      "name": "FW Build Hash",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 12,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "cpu_voltage",
+      "name": "CPU Voltage",
+      "value": "",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "cpu_temperature",
+      "name": "CPU Temperature",
+      "value": "",
+      "unit": "°C",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 62,
+      "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    }
+  ]
+}
