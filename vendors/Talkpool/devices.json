@@ -1,0 +1,61 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "oy1110",
+            "name": "Talkpool - OY1110",
+            "description": "LoRaWAN temperature and humidity sensor with periodic and grouped reporting (Talkpool OY family protocol).",
+            "catalog": "oy1110",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Talkpool/oy1110/oy1110-codec.json",
+            "decoder_script": "vendors/Talkpool/oy1110/oy1110-decoder.js",
+            "encoder_script": "vendors/Talkpool/oy1110/oy1110-encoder.js"
+        },
+        {
+            "id": "oy1210",
+            "name": "Talkpool - OY1210",
+            "description": "LoRaWAN indoor climate sensor with temperature, humidity and CO2 (Talkpool OY family protocol).",
+            "catalog": "oy1210",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Talkpool/oy1210/oy1210-codec.json",
+            "decoder_script": "vendors/Talkpool/oy1210/oy1210-decoder.js",
+            "encoder_script": "vendors/Talkpool/oy1210/oy1210-encoder.js"
+        },
+        {
+            "id": "oy1700",
+            "name": "Talkpool - OY1700",
+            "description": "LoRaWAN air quality sensor with temperature, humidity and PM10/PM2.5/PM1.0 particle readings (Talkpool OY family protocol).",
+            "catalog": "oy1700",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Talkpool/oy1700/oy1700-codec.json",
+            "decoder_script": "vendors/Talkpool/oy1700/oy1700-decoder.js",
+            "encoder_script": "vendors/Talkpool/oy1700/oy1700-encoder.js"
+        },
+        {
+            "id": "oy1400",
+            "name": "Talkpool - OY1400",
+            "description": "LoRaWAN dual-channel industrial sensor unit for 0-10V / 4-20mA inputs with grouped reporting.",
+            "catalog": "oy1400",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Talkpool/oy1400/oy1400-codec.json",
+            "decoder_script": "vendors/Talkpool/oy1400/oy1400-decoder.js",
+            "encoder_script": "vendors/Talkpool/oy1400/oy1400-encoder.js"
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "panic-button",
+            "name": "Mutelcor - Panic Button",
+            "description": "LoRaWAN panic button with alarm confirmation (MTC-PB01/PB02).",
+            "catalog": "panic-button",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Mutelcor/panic-button/panic-button-codec.json",
+            "decoder_script": "vendors/Mutelcor/panic-button/panic-button-decoder.js",
+            "encoder_script": "vendors/Mutelcor/panic-button/panic-button-encoder.js"
+        },
+        {
+            "id": "alarm-unit",
+            "name": "Mutelcor - Alarm Unit",
+            "description": "LoRaWAN alarm unit, Class C and battery versions (MTC-AU01/AU02/AU03/AU04).",
+            "catalog": "alarm-unit",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Mutelcor/alarm-unit/alarm-unit-codec.json",
+            "decoder_script": "vendors/Mutelcor/alarm-unit/alarm-unit-decoder.js",
+            "encoder_script": "vendors/Mutelcor/alarm-unit/alarm-unit-encoder.js"
+        },
+        {
+            "id": "customer-feedback",
+            "name": "Mutelcor - Customer Feedback",
+            "description": "LoRaWAN customer satisfaction feedback buttons (MTC-CF01).",
+            "catalog": "customer-feedback",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Mutelcor/customer-feedback/customer-feedback-codec.json",
+            "decoder_script": "vendors/Mutelcor/customer-feedback/customer-feedback-decoder.js",
+            "encoder_script": "vendors/Mutelcor/customer-feedback/customer-feedback-encoder.js"
+        },
+        {
+            "id": "smart-co2",
+            "name": "Mutelcor - Smart CO2",
+            "description": "LoRaWAN indoor air quality sensor: temperature, humidity and CO2 (MTC-CO2-01 to 04).",
+            "catalog": "smart-co2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Mutelcor/smart-co2/smart-co2-codec.json",
+            "decoder_script": "vendors/Mutelcor/smart-co2/smart-co2-decoder.js",
+            "encoder_script": "vendors/Mutelcor/smart-co2/smart-co2-encoder.js"
+        },
+        {
+            "id": "manhole-sensor",
+            "name": "Mutelcor - Manhole Sensor",
+            "description": "LoRaWAN manhole cover open/closed position sensor (MTC-MH01).",
+            "catalog": "manhole-sensor",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Mutelcor/manhole-sensor/manhole-sensor-codec.json",
+            "decoder_script": "vendors/Mutelcor/manhole-sensor/manhole-sensor-decoder.js",
+            "encoder_script": "vendors/Mutelcor/manhole-sensor/manhole-sensor-encoder.js"
+        },
+        {
+            "id": "multi-function-device",
+            "name": "Mutelcor - Multi-Function Device",
+            "description": "LoRaWAN multi-function device with digital inputs (MTC-MF01).",
+            "catalog": "multi-function-device",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Mutelcor/multi-function-device/multi-function-device-codec.json",
+            "decoder_script": "vendors/Mutelcor/multi-function-device/multi-function-device-decoder.js",
+            "encoder_script": "vendors/Mutelcor/multi-function-device/multi-function-device-encoder.js"
+        },
+        {
+            "id": "nfc-rfid-button",
+            "name": "Mutelcor - NFC RFID LoRa Button",
+            "description": "LoRaWAN button with NFC/RFID tag reader (MTC-NFC01/NFC02).",
+            "catalog": "nfc-rfid-button",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Mutelcor/nfc-rfid-button/nfc-rfid-button-codec.json",
+            "decoder_script": "vendors/Mutelcor/nfc-rfid-button/nfc-rfid-button-decoder.js",
+            "encoder_script": "vendors/Mutelcor/nfc-rfid-button/nfc-rfid-button-encoder.js"
+        }
+    ]
+}
