@@ -206,6 +206,42 @@
             "description": "Siemens Smart Infrastructure: PAC power quality meters, RDF thermostats, Climatix HVAC controllers.",
             "oui": "",
             "devices": "vendors/Siemens/devices.json"
+        },
+        {
+            "id": "schneiderelectric",
+            "name": "Schneider Electric",
+            "logo": "",
+            "website": "https://www.se.com",
+            "description": "Global energy management: PowerLogic power meters and power quality analyzers (Modbus RTU/TCP).",
+            "oui": "",
+            "devices": "vendors/SchneiderElectric/devices.json"
+        },
+        {
+            "id": "belimo",
+            "name": "Belimo",
+            "logo": "",
+            "website": "https://www.belimo.com",
+            "description": "Swiss manufacturer of HVAC damper and valve actuators with Modbus RTU/TCP interfaces.",
+            "oui": "",
+            "devices": "vendors/Belimo/devices.json"
+        },
+        {
+            "id": "atlantic",
+            "name": "Atlantic",
+            "logo": "",
+            "website": "",
+            "description": "French HVAC and water heating manufacturer (Atlantic group), Modbus-equipped equipment.",
+            "oui": "",
+            "devices": "vendors/Atlantic/devices.json"
+        },
+        {
+            "id": "eastron",
+            "name": "Eastron",
+            "logo": "",
+            "website": "",
+            "description": "Chinese manufacturer of DIN-rail energy meters (SDM series) with Modbus RTU/TCP.",
+            "oui": "",
+            "devices": "vendors/Eastron/devices.json"
         }
     ]
 }

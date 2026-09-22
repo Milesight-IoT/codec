@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus tcp",
+  "codec": "vendors/SchneiderElectric/pm5761/pm5761-codec.json",
+  "modbus_default_slave_id": 1
+}

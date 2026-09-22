@@ -1,0 +1,428 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "a9mem1560-powertag-a9-f63-1p-n-63a",
+            "name": "Schneider Electric - A9MEM1560 POWERTAG A9 F63 1P N 63A",
+            "description": "MODBUS TCP device codec, 8 objects",
+            "catalog": "a9mem1560-powertag-a9-f63-1p-n-63a",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/a9mem1560-powertag-a9-f63-1p-n-63a/a9mem1560-powertag-a9-f63-1p-n-63a-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "a9mem1570-powertag-a9-f63-3p-n-63a",
+            "name": "Schneider Electric - A9MEM1570 POWERTAG A9 F63 3P N 63A",
+            "description": "MODBUS TCP device codec, 17 objects",
+            "catalog": "a9mem1570-powertag-a9-f63-3p-n-63a",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/a9mem1570-powertag-a9-f63-3p-n-63a/a9mem1570-powertag-a9-f63-3p-n-63a-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "altivar-atv212",
+            "name": "Schneider Electric - ALTIVAR ATV212",
+            "description": "MODBUS RTU device codec, 41 objects",
+            "catalog": "altivar-atv212",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/altivar-atv212/altivar-atv212-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 19200,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "em6400ng",
+            "name": "Schneider Electric - EM6400NG",
+            "description": "MODBUS RTU device codec, 36 objects",
+            "catalog": "em6400ng",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/em6400ng/em6400ng-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "em6436h",
+            "name": "Schneider Electric - EM6436H",
+            "description": "MODBUS RTU device codec, 33 objects",
+            "catalog": "em6436h",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/em6436h/em6436h-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem2050",
+            "name": "Schneider Electric - IEM2050",
+            "description": "MODBUS RTU device codec, 15 objects",
+            "catalog": "iem2050",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem2050/iem2050-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem2055",
+            "name": "Schneider Electric - IEM2055",
+            "description": "MODBUS RTU device codec, 15 objects",
+            "catalog": "iem2055",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem2055/iem2055-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3150",
+            "name": "Schneider Electric - IEM3150",
+            "description": "MODBUS RTU device codec, 23 objects",
+            "catalog": "iem3150",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3150/iem3150-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3155",
+            "name": "Schneider Electric - IEM3155",
+            "description": "MODBUS RTU device codec, 35 objects",
+            "catalog": "iem3155",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3155/iem3155-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3250",
+            "name": "Schneider Electric - IEM3250",
+            "description": "MODBUS RTU device codec, 23 objects",
+            "catalog": "iem3250",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3250/iem3250-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3255",
+            "name": "Schneider Electric - IEM3255",
+            "description": "MODBUS RTU device codec, 35 objects",
+            "catalog": "iem3255",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3255/iem3255-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3350",
+            "name": "Schneider Electric - IEM3350",
+            "description": "MODBUS RTU device codec, 23 objects",
+            "catalog": "iem3350",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3350/iem3350-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3355",
+            "name": "Schneider Electric - IEM3355",
+            "description": "MODBUS RTU device codec, 35 objects",
+            "catalog": "iem3355",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3355/iem3355-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3455",
+            "name": "Schneider Electric - IEM3455",
+            "description": "MODBUS RTU device codec, 31 objects",
+            "catalog": "iem3455",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3455/iem3455-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "iem3555",
+            "name": "Schneider Electric - IEM3555",
+            "description": "MODBUS RTU device codec, 31 objects",
+            "catalog": "iem3555",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/iem3555/iem3555-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "metsepm3250-powerlogic-pm3250",
+            "name": "Schneider Electric - METSEPM3250 POWERLOGIC PM3250",
+            "description": "MODBUS TCP device codec, 30 objects",
+            "catalog": "metsepm3250-powerlogic-pm3250",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/metsepm3250-powerlogic-pm3250/metsepm3250-powerlogic-pm3250-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pas600-c2di",
+            "name": "Schneider Electric - PAS600 C2DI",
+            "description": "MODBUS TCP device codec, 6 objects",
+            "catalog": "pas600-c2di",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pas600-c2di/pas600-c2di-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pas600-cio",
+            "name": "Schneider Electric - PAS600 CIO",
+            "description": "MODBUS TCP device codec, 4 objects",
+            "catalog": "pas600-cio",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pas600-cio/pas600-cio-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pas600-energy-63",
+            "name": "Schneider Electric - PAS600 ENERGY 63",
+            "description": "MODBUS TCP device codec, 27 objects",
+            "catalog": "pas600-energy-63",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pas600-energy-63/pas600-energy-63-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pas600-energy-f160-rope",
+            "name": "Schneider Electric - PAS600 ENERGY F160 ROPE",
+            "description": "MODBUS TCP device codec, 59 objects",
+            "catalog": "pas600-energy-f160-rope",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pas600-energy-f160-rope/pas600-energy-f160-rope-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pas600-energy-m250-m630-eframe",
+            "name": "Schneider Electric - PAS600 ENERGY M250 M630 EFRAME",
+            "description": "MODBUS TCP device codec, 29 objects",
+            "catalog": "pas600-energy-m250-m630-eframe",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pas600-energy-m250-m630-eframe/pas600-energy-m250-m630-eframe-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pas600-panel-server",
+            "name": "Schneider Electric - PAS600 PANEL SERVER",
+            "description": "MODBUS TCP device codec, 240 objects",
+            "catalog": "pas600-panel-server",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pas600-panel-server/pas600-panel-server-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm2120",
+            "name": "Schneider Electric - PM2120",
+            "description": "MODBUS RTU device codec, 36 objects",
+            "catalog": "pm2120",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/pm2120/pm2120-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 19200,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "pm2130",
+            "name": "Schneider Electric - PM2130",
+            "description": "MODBUS RTU device codec, 36 objects",
+            "catalog": "pm2130",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/pm2130/pm2130-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 19200,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "pm2220",
+            "name": "Schneider Electric - PM2220",
+            "description": "MODBUS RTU device codec, 36 objects",
+            "catalog": "pm2220",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/pm2220/pm2220-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 19200,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "pm51xx",
+            "name": "Schneider Electric - PM51XX",
+            "description": "MODBUS RTU device codec, 49 objects",
+            "catalog": "pm51xx",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/pm51xx/pm51xx-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 19200,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "pm5560",
+            "name": "Schneider Electric - PM5560",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5560",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5560/pm5560-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5561",
+            "name": "Schneider Electric - PM5561",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5561",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5561/pm5561-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5563",
+            "name": "Schneider Electric - PM5563",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5563",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5563/pm5563-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5570",
+            "name": "Schneider Electric - PM5570",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5570",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5570/pm5570-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5580",
+            "name": "Schneider Electric - PM5580",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5580",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5580/pm5580-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5650",
+            "name": "Schneider Electric - PM5650",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5650",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5650/pm5650-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5660",
+            "name": "Schneider Electric - PM5660",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5660",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5660/pm5660-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5661",
+            "name": "Schneider Electric - PM5661",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5661",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5661/pm5661-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5760",
+            "name": "Schneider Electric - PM5760",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5760",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5760/pm5760-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm5761",
+            "name": "Schneider Electric - PM5761",
+            "description": "MODBUS TCP device codec, 37 objects",
+            "catalog": "pm5761",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm5761/pm5761-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "pm710mg",
+            "name": "Schneider Electric - PM710MG",
+            "description": "MODBUS RTU device codec, 41 objects",
+            "catalog": "pm710mg",
+            "protocol": "modbus rtu",
+            "codec": "vendors/SchneiderElectric/pm710mg/pm710mg-codec.json",
+            "modbus_default_slave_id": 1,
+            "modbus_baudrate": 9600,
+            "modbus_parity": "even",
+            "modbus_stopbits": 1
+        },
+        {
+            "id": "pm9c",
+            "name": "Schneider Electric - PM9C",
+            "description": "MODBUS TCP device codec, 34 objects",
+            "catalog": "pm9c",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/pm9c/pm9c-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "powertag-m250-3p-lv434020",
+            "name": "Schneider Electric - POWERTAG M250 3P LV434020",
+            "description": "MODBUS TCP device codec, 56 objects",
+            "catalog": "powertag-m250-3p-lv434020",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/powertag-m250-3p-lv434020/powertag-m250-3p-lv434020-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "powertag-m250-4p-lv434021",
+            "name": "Schneider Electric - POWERTAG M250 4P LV434021",
+            "description": "MODBUS TCP device codec, 56 objects",
+            "catalog": "powertag-m250-4p-lv434021",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/powertag-m250-4p-lv434021/powertag-m250-4p-lv434021-codec.json",
+            "modbus_default_slave_id": 1
+        },
+        {
+            "id": "uniflair-am-cooling-system",
+            "name": "Schneider Electric - UNIFLAIR AM COOLING SYSTEM",
+            "description": "MODBUS TCP device codec, 196 objects",
+            "catalog": "uniflair-am-cooling-system",
+            "protocol": "modbus tcp",
+            "codec": "vendors/SchneiderElectric/uniflair-am-cooling-system/uniflair-am-cooling-system-codec.json",
+            "modbus_default_slave_id": 1
+        }
+    ]
+}

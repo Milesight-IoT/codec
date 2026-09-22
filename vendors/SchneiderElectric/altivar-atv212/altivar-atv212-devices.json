@@ -1,0 +1,8 @@
+{
+  "protocol": "modbus rtu",
+  "codec": "vendors/SchneiderElectric/altivar-atv212/altivar-atv212-codec.json",
+  "modbus_default_slave_id": 1,
+  "modbus_baudrate": 19200,
+  "modbus_parity": "even",
+  "modbus_stopbits": 1
+}

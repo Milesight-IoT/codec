@@ -1,0 +1,8 @@
+{
+  "protocol": "modbus rtu",
+  "codec": "vendors/Belimo/ev032r3-bac-v4/ev032r3-bac-v4-codec.json",
+  "modbus_default_slave_id": 1,
+  "modbus_baudrate": 38400,
+  "modbus_parity": "none",
+  "modbus_stopbits": 2
+}

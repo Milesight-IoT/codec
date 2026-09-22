@@ -1,0 +1,8 @@
+{
+  "protocol": "modbus rtu",
+  "codec": "vendors/Atlantic/navistem-b2000-navipass-modbus-rtu/navistem-b2000-navipass-modbus-rtu-codec.json",
+  "modbus_default_slave_id": 1,
+  "modbus_baudrate": 19200,
+  "modbus_parity": "even",
+  "modbus_stopbits": 1
+}

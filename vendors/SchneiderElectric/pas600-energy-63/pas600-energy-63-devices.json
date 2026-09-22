@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus tcp",
+  "codec": "vendors/SchneiderElectric/pas600-energy-63/pas600-energy-63-codec.json",
+  "modbus_default_slave_id": 1
+}

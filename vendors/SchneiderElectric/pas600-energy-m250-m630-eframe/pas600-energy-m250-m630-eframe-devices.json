@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus tcp",
+  "codec": "vendors/SchneiderElectric/pas600-energy-m250-m630-eframe/pas600-energy-m250-m630-eframe-codec.json",
+  "modbus_default_slave_id": 1
+}
