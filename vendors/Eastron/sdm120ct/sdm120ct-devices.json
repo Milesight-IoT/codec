@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus rtu",
+  "codec": "vendors/Eastron/sdm120ct/sdm120ct-codec.json",
+  "modbus_default_slave_id": 1
+}

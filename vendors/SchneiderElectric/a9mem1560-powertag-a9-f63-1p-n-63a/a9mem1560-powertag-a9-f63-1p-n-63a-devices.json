@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus tcp",
+  "codec": "vendors/SchneiderElectric/a9mem1560-powertag-a9-f63-1p-n-63a/a9mem1560-powertag-a9-f63-1p-n-63a-codec.json",
+  "modbus_default_slave_id": 1
+}

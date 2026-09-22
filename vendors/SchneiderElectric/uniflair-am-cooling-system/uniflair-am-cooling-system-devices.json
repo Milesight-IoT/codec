@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus tcp",
+  "codec": "vendors/SchneiderElectric/uniflair-am-cooling-system/uniflair-am-cooling-system-codec.json",
+  "modbus_default_slave_id": 1
+}

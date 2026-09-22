@@ -1,0 +1,8 @@
+{
+  "protocol": "modbus rtu",
+  "codec": "vendors/Eastron/sdm630mct-3p3w/sdm630mct-3p3w-codec.json",
+  "modbus_default_slave_id": 1,
+  "modbus_baudrate": 19200,
+  "modbus_parity": "even",
+  "modbus_stopbits": 1
+}

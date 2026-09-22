@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus tcp",
+  "codec": "vendors/SchneiderElectric/powertag-m250-3p-lv434020/powertag-m250-3p-lv434020-codec.json",
+  "modbus_default_slave_id": 1
+}

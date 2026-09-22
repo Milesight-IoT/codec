@@ -1,0 +1,8 @@
+{
+  "protocol": "modbus rtu",
+  "codec": "vendors/SchneiderElectric/iem3355/iem3355-codec.json",
+  "modbus_default_slave_id": 1,
+  "modbus_baudrate": 9600,
+  "modbus_parity": "even",
+  "modbus_stopbits": 1
+}

@@ -1,0 +1,5 @@
+{
+  "protocol": "modbus tcp",
+  "codec": "vendors/SchneiderElectric/metsepm3250-powerlogic-pm3250/metsepm3250-powerlogic-pm3250-codec.json",
+  "modbus_default_slave_id": 1
+}
