@@ -179,6 +179,24 @@
             "description": "Bulgarian manufacturer of LoRaWAN HVAC and monitoring devices.",
             "oui": "70b3d52dd",
             "devices": "vendors/MClimate/devices.json"
+        },
+        {
+            "id": "synetica",
+            "name": "Synetica",
+            "logo": "",
+            "website": "https://synetica.net",
+            "description": "UK manufacturer of enLink LoRaWAN environmental sensors.",
+            "oui": "",
+            "devices": "vendors/Synetica/devices.json"
+        },
+        {
+            "id": "sensecap",
+            "name": "SenseCAP",
+            "logo": "",
+            "website": "https://www.seeedstudio.com",
+            "description": "Seeed IoT sensor brand SenseCAP LoRaWAN series.",
+            "oui": "2cf7f1",
+            "devices": "vendors/SenseCAP/devices.json"
         }
     ]
 }

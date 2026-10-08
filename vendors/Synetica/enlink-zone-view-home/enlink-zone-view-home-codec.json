@@ -1,0 +1,211 @@
+{
+    "version": "1.0.0",
+    "bytes": "01010d3b23d80300c80801a4130000000314000002581600363f000000373f800000383fc0000039410000003a40000000420dde",
+    "object": [
+        {
+            "id": "raw_uplink",
+            "name": "Raw Uplink",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 242,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "raw_downlink",
+            "name": "Raw Downlink Payload",
+            "value": "",
+            "unit": "",
+            "access_mode": "W",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 242,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "26.9",
+            "unit": "°C",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "humidity",
+            "name": "Relative Humidity",
+            "value": "91.76",
+            "unit": "%",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 98,
+            "bacnet_unit_type": "UNITS_PERCENT"
+        },
+        {
+            "id": "light",
+            "name": "Ambient Light",
+            "value": "200",
+            "unit": "lx",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 37,
+            "bacnet_unit_type": "UNITS_LUXES"
+        },
+        {
+            "id": "co2",
+            "name": "Carbon Dioxide",
+            "value": "420",
+            "unit": "ppm",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "detection_count",
+            "name": "Detection Count",
+            "value": "3",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "occupied_duration",
+            "name": "Total Occupied Duration",
+            "value": "600",
+            "unit": "s",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 73,
+            "bacnet_unit_type": "UNITS_SECONDS"
+        },
+        {
+            "id": "detection_status",
+            "name": "Detection Status",
+            "value": "0",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Inactive"
+                },
+                {
+                    "value": 1,
+                    "name": "Detected"
+                }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "tvoc_min",
+            "name": "TVOC Minimum",
+            "value": "0.5",
+            "unit": "mg/m³",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 218,
+            "bacnet_unit_type": "UNITS_MILLIGRAMS_PER_CUBIC_METER"
+        },
+        {
+            "id": "tvoc_avg",
+            "name": "TVOC Average",
+            "value": "1",
+            "unit": "mg/m³",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 218,
+            "bacnet_unit_type": "UNITS_MILLIGRAMS_PER_CUBIC_METER"
+        },
+        {
+            "id": "tvoc_max",
+            "name": "TVOC Maximum",
+            "value": "1.5",
+            "unit": "mg/m³",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 218,
+            "bacnet_unit_type": "UNITS_MILLIGRAMS_PER_CUBIC_METER"
+        },
+        {
+            "id": "etoh_ppm",
+            "name": "EtOH (Ethanol Equivalent)",
+            "value": "8",
+            "unit": "ppm",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "tvoc_iaq",
+            "name": "TVOC IAQ",
+            "value": "2",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "battery_voltage",
+            "name": "Battery Voltage",
+            "value": "3550",
+            "unit": "mV",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 124,
+            "bacnet_unit_type": "UNITS_MILLIVOLTS"
+        },
+        {
+            "id": "firmware_version",
+            "name": "Firmware Version",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 8,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        }
+    ]
+}

@@ -365,6 +365,160 @@
             "codec": "vendors/Sontay/rf-lw-thpir-sp/rf-lw-thpir-sp-codec.json",
             "decoder_script": "vendors/Sontay/rf-lw-thpir-sp/rf-lw-thpir-sp-decoder.js",
             "encoder_script": "vendors/Sontay/rf-lw-thpir-sp/rf-lw-thpir-sp-encoder.js"
+        },
+        {
+            "id": "rf-lw-av",
+            "name": "Sontay - RF-LW-AV",
+            "description": "Air velocity sensor",
+            "catalog": "rf-lw-av",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-av/rf-lw-av-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-av/rf-lw-av-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-av/rf-lw-av-encoder.js"
+        },
+        {
+            "id": "rf-lw-dp1",
+            "name": "Sontay - RF-LW-DP1",
+            "description": "Differential pressure sensor",
+            "catalog": "rf-lw-dp1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-dp1/rf-lw-dp1-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-dp1/rf-lw-dp1-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-dp1/rf-lw-dp1-encoder.js"
+        },
+        {
+            "id": "rf-lw-gp1",
+            "name": "Sontay - RF-LW-GP1",
+            "description": "Gauge pressure sensor",
+            "catalog": "rf-lw-gp1",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-gp1/rf-lw-gp1-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-gp1/rf-lw-gp1-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-gp1/rf-lw-gp1-encoder.js"
+        },
+        {
+            "id": "rf-lw-modb",
+            "name": "Sontay - RF-LW-MODB",
+            "description": "Modbus RTU bridge",
+            "catalog": "rf-lw-modb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-modb/rf-lw-modb-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-modb/rf-lw-modb-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-modb/rf-lw-modb-encoder.js"
+        },
+        {
+            "id": "rf-lw-pulse",
+            "name": "Sontay - RF-LW-PULSE",
+            "description": "3-channel pulse counter",
+            "catalog": "rf-lw-pulse",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-pulse/rf-lw-pulse-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-pulse/rf-lw-pulse-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-pulse/rf-lw-pulse-encoder.js"
+        },
+        {
+            "id": "rf-lw-thlvb",
+            "name": "Sontay - RF-LW-THLVB",
+            "description": "Indoor environment sensor family",
+            "catalog": "rf-lw-thlvb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-thlvb/rf-lw-thlvb-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-thlvb/rf-lw-thlvb-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-thlvb/rf-lw-thlvb-encoder.js"
+        },
+        {
+            "id": "rf-lw-thvb",
+            "name": "Sontay - RF-LW-THVB",
+            "description": "Indoor environment sensor",
+            "catalog": "rf-lw-thvb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-thvb/rf-lw-thvb-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-thvb/rf-lw-thvb-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-thvb/rf-lw-thvb-encoder.js"
+        },
+        {
+            "id": "rf-lw-tiaq",
+            "name": "Sontay - RF-LW-TIAQ",
+            "description": "Indoor air quality monitor",
+            "catalog": "rf-lw-tiaq",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-tiaq/rf-lw-tiaq-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-tiaq/rf-lw-tiaq-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-tiaq/rf-lw-tiaq-encoder.js"
+        },
+        {
+            "id": "rf-lw-tiaq-ox",
+            "name": "Sontay - RF-LW-TIAQ-OX",
+            "description": "Indoor air quality monitor enhanced",
+            "catalog": "rf-lw-tiaq-ox",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-tiaq-ox/rf-lw-tiaq-ox-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-tiaq-ox/rf-lw-tiaq-ox-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-tiaq-ox/rf-lw-tiaq-ox-encoder.js"
+        },
+        {
+            "id": "rf-lw-toaq",
+            "name": "Sontay - RF-LW-TOAQ",
+            "description": "Outdoor air quality monitor",
+            "catalog": "rf-lw-toaq",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-toaq/rf-lw-toaq-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-toaq/rf-lw-toaq-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-toaq/rf-lw-toaq-encoder.js"
+        },
+        {
+            "id": "rf-lw-wd-am",
+            "name": "Sontay - RF-LW-WD-AM",
+            "description": "Water detection cable sensor",
+            "catalog": "rf-lw-wd-am",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Sontay/rf-lw-wd-am/rf-lw-wd-am-codec.json",
+            "decoder_script": "vendors/Sontay/rf-lw-wd-am/rf-lw-wd-am-decoder.js",
+            "encoder_script": "vendors/Sontay/rf-lw-wd-am/rf-lw-wd-am-encoder.js"
         }
     ]
 }

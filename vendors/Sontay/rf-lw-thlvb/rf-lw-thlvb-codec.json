@@ -1,0 +1,210 @@
+{
+    "version": "1.0.0",
+    "bytes": "01012302560301A40404010501F40803E81300000007140000012C50420CCCCD51422ACCCD52425F999A420D1A",
+    "object": [
+        {
+            "id": "raw_uplink",
+            "name": "Raw Uplink Payload",
+            "value": "",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 242,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "raw_downlink",
+            "name": "Raw Downlink Payload",
+            "value": "",
+            "unit": "",
+            "access_mode": "W",
+            "data_type": "TEXT",
+            "value_type": "STRING",
+            "max_length": 242,
+            "bacnet_type": "character_string_value_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "temperature",
+            "name": "Temperature",
+            "value": "29.1",
+            "unit": "°C",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 62,
+            "bacnet_unit_type": "UNITS_DEGREES_CELSIUS"
+        },
+        {
+            "id": "humidity",
+            "name": "Humidity",
+            "value": "86",
+            "unit": "%RH",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT8",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 29,
+            "bacnet_unit_type": "UNITS_PERCENT_RELATIVE_HUMIDITY"
+        },
+        {
+            "id": "light_level",
+            "name": "Light Level",
+            "value": "420",
+            "unit": "lx",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 37,
+            "bacnet_unit_type": "UNITS_LUXES"
+        },
+        {
+            "id": "pressure",
+            "name": "Barometric Pressure",
+            "value": "1025",
+            "unit": "mbar",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 134,
+            "bacnet_unit_type": "UNITS_MILLIBARS"
+        },
+        {
+            "id": "voc_iaq",
+            "name": "VOC IAQ Index",
+            "value": "500",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "co2",
+            "name": "CO2",
+            "value": "1000",
+            "unit": "ppm",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 96,
+            "bacnet_unit_type": "UNITS_PARTS_PER_MILLION"
+        },
+        {
+            "id": "detection_count",
+            "name": "Motion Detection Count",
+            "value": "7",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "occupied_duration",
+            "name": "Occupied Duration",
+            "value": "300",
+            "unit": "s",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 73,
+            "bacnet_unit_type": "UNITS_SECONDS"
+        },
+        {
+            "id": "sound_minimum",
+            "name": "Sound Level Minimum",
+            "value": "35.2",
+            "unit": "dB",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 199,
+            "bacnet_unit_type": "UNITS_DECIBELS"
+        },
+        {
+            "id": "sound_average",
+            "name": "Sound Level Average",
+            "value": "42.7",
+            "unit": "dB",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 199,
+            "bacnet_unit_type": "UNITS_DECIBELS"
+        },
+        {
+            "id": "sound_maximum",
+            "name": "Sound Level Maximum",
+            "value": "55.9",
+            "unit": "dB",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "FLOAT",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 199,
+            "bacnet_unit_type": "UNITS_DECIBELS"
+        },
+        {
+            "id": "battery_voltage",
+            "name": "Battery Voltage",
+            "value": "3354",
+            "unit": "mV",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT16",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 124,
+            "bacnet_unit_type": "UNITS_MILLIVOLTS"
+        },
+        {
+            "id": "battery_status",
+            "name": "Battery Status",
+            "value": "5",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "External Power"
+                },
+                {
+                    "value": 255,
+                    "name": "Error"
+                }
+            ]
+        },
+        {
+            "id": "fan_runtime",
+            "name": "Fan Runtime",
+            "value": "3600",
+            "unit": "s",
+            "access_mode": "R",
+            "data_type": "NUMBER",
+            "value_type": "UINT32",
+            "bacnet_type": "analog_input_object",
+            "bacnet_unit_type_id": 73,
+            "bacnet_unit_type": "UNITS_SECONDS"
+        }
+    ]
+}
