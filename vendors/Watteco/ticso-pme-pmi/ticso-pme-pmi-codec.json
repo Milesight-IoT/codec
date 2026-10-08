@@ -1,0 +1,2712 @@
+{
+  "version": "1.0.0",
+  "bytes": "110A005700004125488007000000100E0603143622799610040B100E1113071ED87F2000007500007500008A0B",
+  "object": [
+    {
+      "id": "raw_uplink",
+      "name": "Raw Uplink",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "test_mode",
+      "name": "TRAME Test Mode",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "meter_id",
+      "name": "Meter Identifier, hex (ADS)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "tariff_processing_1",
+      "name": "Tariff Processing Name Calendar 1 (MESURES1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "BT 4 SUP36"
+        },
+        {
+          "value": 4,
+          "name": "BT 5 SUP36"
+        },
+        {
+          "value": 5,
+          "name": "HTA 5"
+        },
+        {
+          "value": 6,
+          "name": "HTA 8"
+        },
+        {
+          "value": 7,
+          "name": "TJ EJP"
+        },
+        {
+          "value": 8,
+          "name": "TJ EJP-HH"
+        },
+        {
+          "value": 9,
+          "name": "TJ EJP-PM"
+        },
+        {
+          "value": 10,
+          "name": "TJ EJP-SD"
+        },
+        {
+          "value": 11,
+          "name": "TJ LU"
+        },
+        {
+          "value": 12,
+          "name": "TJ LU-CH"
+        },
+        {
+          "value": 13,
+          "name": "TJ LU-P"
+        },
+        {
+          "value": 14,
+          "name": "TJ LU-PH"
+        },
+        {
+          "value": 15,
+          "name": "TJ LU-SD"
+        },
+        {
+          "value": 16,
+          "name": "TJ MU"
+        },
+        {
+          "value": 17,
+          "name": "TV A5 BASE"
+        },
+        {
+          "value": 18,
+          "name": "TV A8 BASE"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "datetime",
+      "name": "Current Datetime (DATE)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "active_energy_withdrawn_primary",
+      "name": "Active Energy Drawn Primary Since Pulse (EA_s)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "reactive_pos_energy_primary",
+      "name": "Positive Reactive Energy Primary Since Pulse (ER+_s)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_neg_energy_primary",
+      "name": "Negative Reactive Energy Primary Since Pulse (ER-_s)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "apparent_energy_withdrawn_primary",
+      "name": "Apparent Energy Drawn Primary Since Pulse (EAPP_s)",
+      "value": "",
+      "unit": "VAh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "active_energy_injected_primary",
+      "name": "Active Energy Injected Primary Since Pulse (EA_i)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "reactive_pos_energy_injected_primary",
+      "name": "Positive Reactive Energy Injected Primary (ER+_i)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_neg_energy_injected_primary",
+      "name": "Negative Reactive Energy Injected Primary (ER-_i)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "apparent_energy_injected_primary",
+      "name": "Apparent Energy Injected Primary (EAPP_i)",
+      "value": "",
+      "unit": "VAh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "current_tarif_period_1",
+      "name": "Current Tariff Period 1 (PTCOUR1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "external_tarif_signal",
+      "name": "External Tariff Signal (TARIFDYN)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_tarif_period_1",
+      "name": "Current Dynamic Tariff Period 1 (ETATDYN1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "notice_tarif_period_1",
+      "name": "Notified Tariff Period 1 (PREAVIS1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_1_start_date",
+      "name": "Dynamic Period 1 Start (TDYN1CD) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_1_start_tarif",
+      "name": "Dynamic Period 1 Start (TDYN1CD) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_1_end_date",
+      "name": "Dynamic Period 1 End (TDYN1CF) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_1_end_tarif",
+      "name": "Dynamic Period 1 End (TDYN1CF) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_1_start_date",
+      "name": "Next Dynamic Period 1 Start (TDYN1FD) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_1_start_tarif",
+      "name": "Next Dynamic Period 1 Start (TDYN1FD) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_1_end_date",
+      "name": "Next Dynamic Period 1 End (TDYN1FF) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_1_end_tarif",
+      "name": "Next Dynamic Period 1 End (TDYN1FF) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mode",
+      "name": "Mode (CONTROLE)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "config",
+      "name": "Direction CONSO/PROD (CONFIG)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_power_1_date",
+      "name": "Mean Active Power Point 1 Date (DATEPA1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_power_withdrawn_1",
+      "name": "Mean Active Power 1 Drawn (PA1_s)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_injected_1",
+      "name": "Mean Active Power 1 Injected (PA1_i)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_2_date",
+      "name": "Mean Active Power Point 2 Date (DATEPA2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_power_withdrawn_2",
+      "name": "Mean Active Power 2 Drawn (PA2_s)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_injected_2",
+      "name": "Mean Active Power 2 Injected (PA2_i)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_3_date",
+      "name": "Mean Active Power Point 3 Date (DATEPA3)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_power_withdrawn_3",
+      "name": "Mean Active Power 3 Drawn (PA3_s)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_injected_3",
+      "name": "Mean Active Power 3 Injected (PA3_i)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_4_date",
+      "name": "Mean Active Power Point 4 Date (DATEPA4)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_power_withdrawn_4",
+      "name": "Mean Active Power 4 Drawn (PA4_s)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_injected_4",
+      "name": "Mean Active Power 4 Injected (PA4_i)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_5_date",
+      "name": "Mean Active Power Point 5 Date (DATEPA5)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_power_withdrawn_5",
+      "name": "Mean Active Power 5 Drawn (PA5_s)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_injected_5",
+      "name": "Mean Active Power 5 Injected (PA5_i)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_6_date",
+      "name": "Mean Active Power Point 6 Date (DATEPA6)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_power_withdrawn_6",
+      "name": "Mean Active Power 6 Drawn (PA6_s)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "mean_power_injected_6",
+      "name": "Mean Active Power 6 Injected (PA6_i)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "contract_period_start",
+      "name": "Contract Period P Start (DebP)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "active_energy_withdrawn_period",
+      "name": "Active Energy Drawn Period P (EAP_s)",
+      "value": "",
+      "unit": "kWh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 19,
+      "bacnet_unit_type": "UNITS_KILOWATT_HOURS"
+    },
+    {
+      "id": "active_energy_injected_period",
+      "name": "Active Energy Injected Period P (EAP_i)",
+      "value": "",
+      "unit": "kWh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 19,
+      "bacnet_unit_type": "UNITS_KILOWATT_HOURS"
+    },
+    {
+      "id": "reactive_pos_energy_withdrawn_period",
+      "name": "Positive Reactive Energy Drawn Period P (ER+P_s)",
+      "value": "",
+      "unit": "kvarh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_neg_energy_withdrawn_period",
+      "name": "Negative Reactive Energy Drawn Period P (ER-P_s)",
+      "value": "",
+      "unit": "kvarh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_pos_energy_injected_period",
+      "name": "Positive Reactive Energy Injected Period P (ER+P_i)",
+      "value": "",
+      "unit": "kvarh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_neg_energy_injected_period",
+      "name": "Negative Reactive Energy Injected Period P (ER-P_i)",
+      "value": "",
+      "unit": "kvarh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "prev_contract_period_start",
+      "name": "Previous Contract Period P-1 Start (DebP-1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "prev_contract_period_end",
+      "name": "Previous Contract Period P-1 End (FinP-1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "prev_active_energy_withdrawn",
+      "name": "Active Energy Drawn Period P-1 (EaP-1_s)",
+      "value": "",
+      "unit": "kWh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 19,
+      "bacnet_unit_type": "UNITS_KILOWATT_HOURS"
+    },
+    {
+      "id": "prev_active_energy_injected",
+      "name": "Active Energy Injected Period P-1 (EaP-1_i)",
+      "value": "",
+      "unit": "kWh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 19,
+      "bacnet_unit_type": "UNITS_KILOWATT_HOURS"
+    },
+    {
+      "id": "prev_reactive_pos_energy",
+      "name": "Positive Reactive Energy Period P-1 (ER+P-1_s)",
+      "value": "",
+      "unit": "kvarh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "prev_reactive_neg_energy",
+      "name": "Negative Reactive Energy Period P-1 (ER-P-1_s)",
+      "value": "",
+      "unit": "kvarh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "subscribed_power",
+      "name": "Subscribed Power of Current Tariff Period (PS)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "subscribed_power_unit",
+      "name": "Subscribed Power of Current Tariff Period (PS) - Unit",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "exceedance_state",
+      "name": "Exceedance String DEP",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_active_power_1min",
+      "name": "Active Power 1 Minute (PA1MN)",
+      "value": "",
+      "unit": "kW",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 48,
+      "bacnet_unit_type": "UNITS_KILOWATTS"
+    },
+    {
+      "id": "max_power_withdrawn",
+      "name": "Max Power Drawn Current Period (PMAX_s)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "max_power_withdrawn_unit",
+      "name": "Max Power Drawn Current Period (PMAX_s) - Unit",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "max_power_injected",
+      "name": "Max Power Injected Current Period (PMAX_i)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "max_power_injected_unit",
+      "name": "Max Power Injected Current Period (PMAX_i) - Unit",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "(two spaces)"
+        },
+        {
+          "value": 4,
+          "name": "ACTIF"
+        },
+        {
+          "value": 5,
+          "name": "CONSO"
+        },
+        {
+          "value": 6,
+          "name": "CONTROLE"
+        },
+        {
+          "value": 7,
+          "name": "DEP"
+        },
+        {
+          "value": 8,
+          "name": "INACTIF"
+        },
+        {
+          "value": 9,
+          "name": "PROD"
+        },
+        {
+          "value": 10,
+          "name": "TEST"
+        },
+        {
+          "value": 11,
+          "name": "kVA"
+        },
+        {
+          "value": 12,
+          "name": "kW"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "tangent_phi_withdrawn",
+      "name": "Mean Tangent Phi 10min Drawn (TGPHI_s)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "tangent_phi_injected",
+      "name": "Mean Tangent Phi 10min Injected (TGPHI_i)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "tariff_processing_2",
+      "name": "Tariff Processing Name Calendar 2 (MESURES2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "BT 4 SUP36"
+        },
+        {
+          "value": 4,
+          "name": "BT 5 SUP36"
+        },
+        {
+          "value": 5,
+          "name": "HTA 5"
+        },
+        {
+          "value": 6,
+          "name": "HTA 8"
+        },
+        {
+          "value": 7,
+          "name": "TJ EJP"
+        },
+        {
+          "value": 8,
+          "name": "TJ EJP-HH"
+        },
+        {
+          "value": 9,
+          "name": "TJ EJP-PM"
+        },
+        {
+          "value": 10,
+          "name": "TJ EJP-SD"
+        },
+        {
+          "value": 11,
+          "name": "TJ LU"
+        },
+        {
+          "value": 12,
+          "name": "TJ LU-CH"
+        },
+        {
+          "value": 13,
+          "name": "TJ LU-P"
+        },
+        {
+          "value": 14,
+          "name": "TJ LU-PH"
+        },
+        {
+          "value": 15,
+          "name": "TJ LU-SD"
+        },
+        {
+          "value": 16,
+          "name": "TJ MU"
+        },
+        {
+          "value": 17,
+          "name": "TV A5 BASE"
+        },
+        {
+          "value": 18,
+          "name": "TV A8 BASE"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "current_tarif_period_2",
+      "name": "Current Tariff Period 2 (PTCOUR2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_tarif_period_2",
+      "name": "Current Dynamic Tariff Period 2 (ETATDYN2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "notice_tarif_period_2",
+      "name": "Notified Tariff Period 2 (PREAVIS2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_2_start_date",
+      "name": "Dynamic Period 2 Start (TDYN2CD) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_2_start_tarif",
+      "name": "Dynamic Period 2 Start (TDYN2CD) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_2_end_date",
+      "name": "Dynamic Period 2 End (TDYN2CF) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dynamic_period_2_end_tarif",
+      "name": "Dynamic Period 2 End (TDYN2CF) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_2_start_date",
+      "name": "Next Dynamic Period 2 Start (TDYN2FD) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_2_start_tarif",
+      "name": "Next Dynamic Period 2 Start (TDYN2FD) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_2_end_date",
+      "name": "Next Dynamic Period 2 End (TDYN2FF) - Date",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_dynamic_period_2_end_tarif",
+      "name": "Next Dynamic Period 2 End (TDYN2FF) - Tariff Period",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "contract_period_2_start",
+      "name": "Contract Period P Start for MESURES2 (DebP_2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "active_energy_withdrawn_period_2",
+      "name": "Active Energy Drawn Period P MESURES2 (EaP_s2)",
+      "value": "",
+      "unit": "kWh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 19,
+      "bacnet_unit_type": "UNITS_KILOWATT_HOURS"
+    },
+    {
+      "id": "prev_contract_period_2_start",
+      "name": "Previous Period P-1 Start for MESURES2 (DebP-1_2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "prev_contract_period_2_end",
+      "name": "Previous Period P-1 End for MESURES2 (FinP-1_2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "prev_active_energy_withdrawn_2",
+      "name": "Active Energy Drawn Period P-1 MESURES2 (EaP-1_s2)",
+      "value": "",
+      "unit": "kWh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 19,
+      "bacnet_unit_type": "UNITS_KILOWATT_HOURS"
+    },
+    {
+      "id": "exceedance_duration",
+      "name": "Calculated Exceedance Duration Current Period (_DDMES1_)",
+      "value": "",
+      "unit": "min",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 72,
+      "bacnet_unit_type": "UNITS_MINUTES"
+    },
+    {
+      "id": "tic_data_obsolete",
+      "name": "TIC Data Obsolete Flag",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "current"
+        },
+        {
+          "value": 1,
+          "name": "obsolete"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "shifted_report",
+      "name": "Shifted Report (values before change)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "standard"
+        },
+        {
+          "value": 1,
+          "name": "shifted"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    }
+  ]
+}

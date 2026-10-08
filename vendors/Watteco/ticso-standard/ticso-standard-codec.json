@@ -1,0 +1,1352 @@
+{
+  "version": "1.0.0",
+  "bytes": "110A005600004131000000018010002B31323334353637383930313200004142434445464748494A4B4C4D4E4F50003B9AC9FF3B9AC9FF6363",
+  "object": [
+    {
+      "id": "raw_uplink",
+      "name": "Raw Uplink",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "raw_downlink",
+      "name": "Raw Downlink Payload",
+      "value": "",
+      "unit": "",
+      "access_mode": "W",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "max_length": 242,
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "meter_secondary_address",
+      "name": "Meter Secondary Address (ADSC)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "tic_version",
+      "name": "TIC Protocol Version (VTIC)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "datetime",
+      "name": "Current Datetime, season + JJMMAAHHMMSS (DATE)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "supplier_tariff_grid",
+      "name": "Supplier Tariff Grid Name (NGTF)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": "BT 4 SUP36"
+        },
+        {
+          "value": 4,
+          "name": "BT 5 SUP36"
+        },
+        {
+          "value": 5,
+          "name": "HTA 5"
+        },
+        {
+          "value": 6,
+          "name": "HTA 8"
+        },
+        {
+          "value": 7,
+          "name": "TJ EJP"
+        },
+        {
+          "value": 8,
+          "name": "TJ EJP-HH"
+        },
+        {
+          "value": 9,
+          "name": "TJ EJP-PM"
+        },
+        {
+          "value": 10,
+          "name": "TJ EJP-SD"
+        },
+        {
+          "value": 11,
+          "name": "TJ LU"
+        },
+        {
+          "value": 12,
+          "name": "TJ LU-CH"
+        },
+        {
+          "value": 13,
+          "name": "TJ LU-P"
+        },
+        {
+          "value": 14,
+          "name": "TJ LU-PH"
+        },
+        {
+          "value": 15,
+          "name": "TJ LU-SD"
+        },
+        {
+          "value": 16,
+          "name": "TJ MU"
+        },
+        {
+          "value": 17,
+          "name": "TV A5 BASE"
+        },
+        {
+          "value": 18,
+          "name": "TV A8 BASE"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "current_tarif_label",
+      "name": "Current Supplier Tariff Label (LTARF)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "ENUM",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 3,
+          "name": " ? "
+        },
+        {
+          "value": 4,
+          "name": "000"
+        },
+        {
+          "value": 5,
+          "name": "HC"
+        },
+        {
+          "value": 6,
+          "name": "HCD"
+        },
+        {
+          "value": 7,
+          "name": "HCE"
+        },
+        {
+          "value": 8,
+          "name": "HCH"
+        },
+        {
+          "value": 9,
+          "name": "HH"
+        },
+        {
+          "value": 10,
+          "name": "HH (padded)"
+        },
+        {
+          "value": 11,
+          "name": "HP"
+        },
+        {
+          "value": 12,
+          "name": "HP (padded)"
+        },
+        {
+          "value": 13,
+          "name": "HPD"
+        },
+        {
+          "value": 14,
+          "name": "HPE"
+        },
+        {
+          "value": 15,
+          "name": "HPH"
+        },
+        {
+          "value": 16,
+          "name": "JA"
+        },
+        {
+          "value": 17,
+          "name": "JA (padded)"
+        },
+        {
+          "value": 18,
+          "name": "P"
+        },
+        {
+          "value": 19,
+          "name": "P (padded)"
+        },
+        {
+          "value": 20,
+          "name": "PM"
+        },
+        {
+          "value": 21,
+          "name": "PM (padded)"
+        },
+        {
+          "value": 22,
+          "name": "other"
+        }
+      ],
+      "bacnet_type": "multistate_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "total_active_energy_drawn",
+      "name": "Total Active Energy Drawn (EAST)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_01",
+      "name": "Supplier Active Energy Index 01 (EASF01)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_02",
+      "name": "Supplier Active Energy Index 02 (EASF02)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_03",
+      "name": "Supplier Active Energy Index 03 (EASF03)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_04",
+      "name": "Supplier Active Energy Index 04 (EASF04)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_05",
+      "name": "Supplier Active Energy Index 05 (EASF05)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_06",
+      "name": "Supplier Active Energy Index 06 (EASF06)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_07",
+      "name": "Supplier Active Energy Index 07 (EASF07)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_08",
+      "name": "Supplier Active Energy Index 08 (EASF08)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_09",
+      "name": "Supplier Active Energy Index 09 (EASF09)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "supplier_active_energy_10",
+      "name": "Supplier Active Energy Index 10 (EASF10)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "distributor_active_energy_01",
+      "name": "Distributor Active Energy Index 01 (EASD01)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "distributor_active_energy_02",
+      "name": "Distributor Active Energy Index 02 (EASD02)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "distributor_active_energy_03",
+      "name": "Distributor Active Energy Index 03 (EASD03)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "distributor_active_energy_04",
+      "name": "Distributor Active Energy Index 04 (EASD04)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "total_active_energy_injected",
+      "name": "Total Active Energy Injected (EAIT)",
+      "value": "",
+      "unit": "Wh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 18,
+      "bacnet_unit_type": "UNITS_WATT_HOURS"
+    },
+    {
+      "id": "reactive_energy_q1",
+      "name": "Total Reactive Energy Q1 (ERQ1)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_energy_q2",
+      "name": "Total Reactive Energy Q2 (ERQ2)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_energy_q3",
+      "name": "Total Reactive Energy Q3 (ERQ3)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "reactive_energy_q4",
+      "name": "Total Reactive Energy Q4 (ERQ4)",
+      "value": "",
+      "unit": "varh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 242,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "rms_current_phase1",
+      "name": "RMS Current Phase 1 (IRMS1)",
+      "value": "",
+      "unit": "A",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 3,
+      "bacnet_unit_type": "UNITS_AMPERES"
+    },
+    {
+      "id": "rms_current_phase2",
+      "name": "RMS Current Phase 2 (IRMS2)",
+      "value": "",
+      "unit": "A",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 3,
+      "bacnet_unit_type": "UNITS_AMPERES"
+    },
+    {
+      "id": "rms_current_phase3",
+      "name": "RMS Current Phase 3 (IRMS3)",
+      "value": "",
+      "unit": "A",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 3,
+      "bacnet_unit_type": "UNITS_AMPERES"
+    },
+    {
+      "id": "rms_voltage_phase1",
+      "name": "RMS Voltage Phase 1 (URMS1)",
+      "value": "",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "rms_voltage_phase2",
+      "name": "RMS Voltage Phase 2 (URMS2)",
+      "value": "",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "rms_voltage_phase3",
+      "name": "RMS Voltage Phase 3 (URMS3)",
+      "value": "",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "reference_apparent_power",
+      "name": "Reference Apparent Power (PREF)",
+      "value": "",
+      "unit": "kVA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 9,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERES"
+    },
+    {
+      "id": "cutoff_apparent_power",
+      "name": "Cutoff Apparent Power (PCOUP)",
+      "value": "",
+      "unit": "kVA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 9,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERES"
+    },
+    {
+      "id": "instantaneous_apparent_power",
+      "name": "Instantaneous Apparent Power Drawn (SINSTS)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "instantaneous_apparent_power_phase1",
+      "name": "Instantaneous Apparent Power Drawn Phase 1 (SINSTS1)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "instantaneous_apparent_power_phase2",
+      "name": "Instantaneous Apparent Power Drawn Phase 2 (SINSTS2)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "instantaneous_apparent_power_phase3",
+      "name": "Instantaneous Apparent Power Drawn Phase 3 (SINSTS3)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn",
+      "name": "Max Apparent Power Drawn n (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn_datetime",
+      "name": "Max Apparent Power Drawn n (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxsn1",
+      "name": "Max Apparent Power Drawn n phase 1 (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn1_datetime",
+      "name": "Max Apparent Power Drawn n phase 1 (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxsn2",
+      "name": "Max Apparent Power Drawn n phase 2 (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn2_datetime",
+      "name": "Max Apparent Power Drawn n phase 2 (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxsn3",
+      "name": "Max Apparent Power Drawn n phase 3 (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn3_datetime",
+      "name": "Max Apparent Power Drawn n phase 3 (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxsn_n_minus1",
+      "name": "Max Apparent Power Drawn n-1 (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn_n_minus1_datetime",
+      "name": "Max Apparent Power Drawn n-1 (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxsn1_n_minus1",
+      "name": "Max Apparent Power Drawn n-1 phase 1 (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn1_n_minus1_datetime",
+      "name": "Max Apparent Power Drawn n-1 phase 1 (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxsn2_n_minus1",
+      "name": "Max Apparent Power Drawn n-1 phase 2 (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn2_n_minus1_datetime",
+      "name": "Max Apparent Power Drawn n-1 phase 2 (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxsn3_n_minus1",
+      "name": "Max Apparent Power Drawn n-1 phase 3 (SMAXSN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxsn3_n_minus1_datetime",
+      "name": "Max Apparent Power Drawn n-1 phase 3 (SMAXSN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "instantaneous_apparent_power_injected",
+      "name": "Instantaneous Apparent Power Injected (SINSTI)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxin",
+      "name": "Max Apparent Power Injected n (SMAXIN)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxin_datetime",
+      "name": "Max Apparent Power Injected n (SMAXIN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "smaxin_n_minus1",
+      "name": "Max Apparent Power Injected n-1 (SMAXIN-1)",
+      "value": "",
+      "unit": "VA",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 8,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERES"
+    },
+    {
+      "id": "smaxin_n_minus1_datetime",
+      "name": "Max Apparent Power Injected n-1 (SMAXIN-1) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "load_curve_point_n",
+      "name": "Active Load Curve Point n (CCASN)",
+      "value": "",
+      "unit": "W",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 47,
+      "bacnet_unit_type": "UNITS_WATTS"
+    },
+    {
+      "id": "load_curve_point_n_datetime",
+      "name": "Active Load Curve Point n (CCASN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "load_curve_point_n_minus1",
+      "name": "Active Load Curve Point n-1 (CCASN-1)",
+      "value": "",
+      "unit": "W",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 47,
+      "bacnet_unit_type": "UNITS_WATTS"
+    },
+    {
+      "id": "load_curve_point_n_minus1_datetime",
+      "name": "Active Load Curve Point n-1 (CCASN-1) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "load_curve_point_injected_n",
+      "name": "Injected Load Curve Point n (CCAIN)",
+      "value": "",
+      "unit": "W",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 47,
+      "bacnet_unit_type": "UNITS_WATTS"
+    },
+    {
+      "id": "load_curve_point_injected_n_datetime",
+      "name": "Injected Load Curve Point n (CCAIN) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "load_curve_point_injected_n_minus1",
+      "name": "Injected Load Curve Point n-1 (CCAIN-1)",
+      "value": "",
+      "unit": "W",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 47,
+      "bacnet_unit_type": "UNITS_WATTS"
+    },
+    {
+      "id": "load_curve_point_injected_n_minus1_datetime",
+      "name": "Injected Load Curve Point n-1 (CCAIN-1) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_voltage_phase1",
+      "name": "Mean Voltage Phase 1 (UMOY1)",
+      "value": "",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "mean_voltage_phase1_datetime",
+      "name": "Mean Voltage Phase 1 (UMOY1) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_voltage_phase2",
+      "name": "Mean Voltage Phase 2 (UMOY2)",
+      "value": "",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "mean_voltage_phase2_datetime",
+      "name": "Mean Voltage Phase 2 (UMOY2) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "mean_voltage_phase3",
+      "name": "Mean Voltage Phase 3 (UMOY3)",
+      "value": "",
+      "unit": "V",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT16",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 5,
+      "bacnet_unit_type": "UNITS_VOLTS"
+    },
+    {
+      "id": "mean_voltage_phase3_datetime",
+      "name": "Mean Voltage Phase 3 (UMOY3) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "status_register",
+      "name": "Status Register, hex (STGE)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dpm1",
+      "name": "Mobile Peak Start 1 (DPM1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dpm1_datetime",
+      "name": "Mobile Peak Start 1 (DPM1) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "fpm1",
+      "name": "Mobile Peak End 1 (FPM1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "fpm1_datetime",
+      "name": "Mobile Peak End 1 (FPM1) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dpm2",
+      "name": "Mobile Peak Start 2 (DPM2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dpm2_datetime",
+      "name": "Mobile Peak Start 2 (DPM2) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "fpm2",
+      "name": "Mobile Peak End 2 (FPM2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "fpm2_datetime",
+      "name": "Mobile Peak End 2 (FPM2) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dpm3",
+      "name": "Mobile Peak Start 3 (DPM3)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "dpm3_datetime",
+      "name": "Mobile Peak Start 3 (DPM3) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "fpm3",
+      "name": "Mobile Peak End 3 (FPM3)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "fpm3_datetime",
+      "name": "Mobile Peak End 3 (FPM3) - Datetime",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "short_message",
+      "name": "Short Message (MSG1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "ultra_short_message",
+      "name": "Ultra Short Message (MSG2)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "delivery_point",
+      "name": "Delivery Point Reference (PRM)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "relay_state",
+      "name": "Relay Register (RELAIS)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "current_tarif_index_number",
+      "name": "Current Tariff Index Number (NTARF)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "supplier_calendar_day",
+      "name": "Supplier Calendar Current Day (NJOURF)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_supplier_calendar_day",
+      "name": "Supplier Calendar Next Day (NJOURF+1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT8",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_day_profile",
+      "name": "Next Day Calendar Profile (PJOURF+1)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "next_peak_day_profile",
+      "name": "Next Peak Day Profile (PPOINTE)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "TEXT",
+      "value_type": "STRING",
+      "bacnet_type": "character_string_value_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "tic_data_obsolete",
+      "name": "TIC Data Obsolete Flag",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "current"
+        },
+        {
+          "value": 1,
+          "name": "obsolete"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
+      "id": "shifted_report",
+      "name": "Shifted Report (values before change)",
+      "value": "",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "BOOL",
+      "value_type": "UINT8",
+      "values": [
+        {
+          "value": 0,
+          "name": "standard"
+        },
+        {
+          "value": 1,
+          "name": "shifted"
+        }
+      ],
+      "bacnet_type": "binary_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    }
+  ]
+}
