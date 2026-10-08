@@ -1,0 +1,75 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "co2-sensor",
+            "name": "MClimate - CO2-SENSOR",
+            "description": "CO2 sensor and notifier",
+            "catalog": "co2-sensor",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/co2-sensor/co2-sensor-codec.json",
+            "decoder_script": "vendors/MClimate/co2-sensor/co2-sensor-decoder.js",
+            "encoder_script": "vendors/MClimate/co2-sensor/co2-sensor-encoder.js"
+        },
+        {
+            "id": "flood-sensor",
+            "name": "MClimate - FLOOD-SENSOR",
+            "description": "Flood sensor",
+            "catalog": "flood-sensor",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/flood-sensor/flood-sensor-codec.json",
+            "decoder_script": "vendors/MClimate/flood-sensor/flood-sensor-decoder.js",
+            "encoder_script": "vendors/MClimate/flood-sensor/flood-sensor-encoder.js"
+        },
+        {
+            "id": "ht-sensor",
+            "name": "MClimate - HT-SENSOR",
+            "description": "Temperature/humidity sensor",
+            "catalog": "ht-sensor",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/ht-sensor/ht-sensor-codec.json",
+            "decoder_script": "vendors/MClimate/ht-sensor/ht-sensor-decoder.js",
+            "encoder_script": "vendors/MClimate/ht-sensor/ht-sensor-encoder.js"
+        },
+        {
+            "id": "t-valve",
+            "name": "MClimate - T-VALVE",
+            "description": "Water shut-off valve",
+            "catalog": "t-valve",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/t-valve/t-valve-codec.json",
+            "decoder_script": "vendors/MClimate/t-valve/t-valve-decoder.js",
+            "encoder_script": "vendors/MClimate/t-valve/t-valve-encoder.js"
+        },
+        {
+            "id": "vicki",
+            "name": "MClimate - VICKI",
+            "description": "Smart radiator thermostat",
+            "catalog": "vicki",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/MClimate/vicki/vicki-codec.json",
+            "decoder_script": "vendors/MClimate/vicki/vicki-decoder.js",
+            "encoder_script": "vendors/MClimate/vicki/vicki-encoder.js"
+        }
+    ]
+}

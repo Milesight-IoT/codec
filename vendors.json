@@ -161,6 +161,24 @@
             "description": "LoRaWAN sensor brand of Gemtek/TrackNet (Tabs sensor family).",
             "oui": "001616",
             "devices": "vendors/Browan/devices.json"
+        },
+        {
+            "id": "elsys",
+            "name": "Elsys",
+            "logo": "",
+            "website": "https://www.elsys.se",
+            "description": "Swedish manufacturer of LoRaWAN sensors for smart buildings.",
+            "oui": "a81758",
+            "devices": "vendors/Elsys/devices.json"
+        },
+        {
+            "id": "mclimate",
+            "name": "MClimate",
+            "logo": "",
+            "website": "https://mclimate.eu",
+            "description": "Bulgarian manufacturer of LoRaWAN HVAC and monitoring devices.",
+            "oui": "70b3d52dd",
+            "devices": "vendors/MClimate/devices.json"
         }
     ]
 }

@@ -1,0 +1,201 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "elt-2",
+            "name": "Elsys - ELT-2",
+            "description": "Multi-probe sensor platform",
+            "catalog": "elt-2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/elt-2/elt-2-codec.json",
+            "decoder_script": "vendors/Elsys/elt-2/elt-2-decoder.js",
+            "encoder_script": "vendors/Elsys/elt-2/elt-2-encoder.js"
+        },
+        {
+            "id": "elt-lite",
+            "name": "Elsys - ELT-LITE",
+            "description": "Lite IoT sensor platform",
+            "catalog": "elt-lite",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/elt-lite/elt-lite-codec.json",
+            "decoder_script": "vendors/Elsys/elt-lite/elt-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/elt-lite/elt-lite-encoder.js"
+        },
+        {
+            "id": "elt-ultrasonic",
+            "name": "Elsys - ELT-ULTRASONIC",
+            "description": "Ultrasonic level sensor",
+            "catalog": "elt-ultrasonic",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/elt-ultrasonic/elt-ultrasonic-codec.json",
+            "decoder_script": "vendors/Elsys/elt-ultrasonic/elt-ultrasonic-decoder.js",
+            "encoder_script": "vendors/Elsys/elt-ultrasonic/elt-ultrasonic-encoder.js"
+        },
+        {
+            "id": "ems",
+            "name": "Elsys - EMS",
+            "description": "Environmental multi-sensor",
+            "catalog": "ems",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems/ems-codec.json",
+            "decoder_script": "vendors/Elsys/ems/ems-decoder.js",
+            "encoder_script": "vendors/Elsys/ems/ems-encoder.js"
+        },
+        {
+            "id": "ems-desk",
+            "name": "Elsys - EMS-DESK",
+            "description": "Desk environmental multi-sensor",
+            "catalog": "ems-desk",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems-desk/ems-desk-codec.json",
+            "decoder_script": "vendors/Elsys/ems-desk/ems-desk-decoder.js",
+            "encoder_script": "vendors/Elsys/ems-desk/ems-desk-encoder.js"
+        },
+        {
+            "id": "ems-door",
+            "name": "Elsys - EMS-DOOR",
+            "description": "Door activity sensor",
+            "catalog": "ems-door",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems-door/ems-door-codec.json",
+            "decoder_script": "vendors/Elsys/ems-door/ems-door-decoder.js",
+            "encoder_script": "vendors/Elsys/ems-door/ems-door-encoder.js"
+        },
+        {
+            "id": "ems-lite",
+            "name": "Elsys - EMS-LITE",
+            "description": "Lite environmental sensor",
+            "catalog": "ems-lite",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ems-lite/ems-lite-codec.json",
+            "decoder_script": "vendors/Elsys/ems-lite/ems-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/ems-lite/ems-lite-encoder.js"
+        },
+        {
+            "id": "ers",
+            "name": "Elsys - ERS",
+            "description": "Temperature/humidity/light/motion sensor",
+            "catalog": "ers",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers/ers-codec.json",
+            "decoder_script": "vendors/Elsys/ers/ers-decoder.js",
+            "encoder_script": "vendors/Elsys/ers/ers-encoder.js"
+        },
+        {
+            "id": "ers-co2",
+            "name": "Elsys - ERS-CO2",
+            "description": "CO2/temperature/humidity sensor",
+            "catalog": "ers-co2",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-co2/ers-co2-codec.json",
+            "decoder_script": "vendors/Elsys/ers-co2/ers-co2-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-co2/ers-co2-encoder.js"
+        },
+        {
+            "id": "ers-co2-lite",
+            "name": "Elsys - ERS-CO2-LITE",
+            "description": "CO2/temperature/humidity sensor (lite)",
+            "catalog": "ers-co2-lite",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-co2-lite/ers-co2-lite-codec.json",
+            "decoder_script": "vendors/Elsys/ers-co2-lite/ers-co2-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-co2-lite/ers-co2-lite-encoder.js"
+        },
+        {
+            "id": "ers-eye",
+            "name": "Elsys - ERS-EYE",
+            "description": "Occupancy sensor (PIR + thermal array)",
+            "catalog": "ers-eye",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-eye/ers-eye-codec.json",
+            "decoder_script": "vendors/Elsys/ers-eye/ers-eye-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-eye/ers-eye-encoder.js"
+        },
+        {
+            "id": "ers-lite",
+            "name": "Elsys - ERS-LITE",
+            "description": "Temperature/humidity sensor",
+            "catalog": "ers-lite",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-lite/ers-lite-codec.json",
+            "decoder_script": "vendors/Elsys/ers-lite/ers-lite-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-lite/ers-lite-encoder.js"
+        },
+        {
+            "id": "ers-sound",
+            "name": "Elsys - ERS-SOUND",
+            "description": "Sound level sensor",
+            "catalog": "ers-sound",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-sound/ers-sound-codec.json",
+            "decoder_script": "vendors/Elsys/ers-sound/ers-sound-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-sound/ers-sound-encoder.js"
+        },
+        {
+            "id": "ers-voc",
+            "name": "Elsys - ERS-VOC",
+            "description": "VOC sensor",
+            "catalog": "ers-voc",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Elsys/ers-voc/ers-voc-codec.json",
+            "decoder_script": "vendors/Elsys/ers-voc/ers-voc-decoder.js",
+            "encoder_script": "vendors/Elsys/ers-voc/ers-voc-encoder.js"
+        }
+    ]
+}
