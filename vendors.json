@@ -215,6 +215,15 @@
             "description": "French LoRaWAN transmitter manufacturer (TX line).",
             "oui": "70b3d54fd",
             "devices": "vendors/Enless/devices.json"
+        },
+        {
+            "id": "decentlab",
+            "name": "Decentlab",
+            "logo": "",
+            "website": "https://www.decentlab.com",
+            "description": "Swiss manufacturer of LoRaWAN sensors for environmental monitoring.",
+            "oui": "70b3d57ba0",
+            "devices": "vendors/Decentlab/devices.json"
         }
     ]
 }
