@@ -1,4 +1,6 @@
-// Source: Enless Wireless official LoRaWAN payload specification (EU868 decoder Excel Rev 10.01, sheet 600-062) - frame types 0x22 (data) / 0x03 (config response) - datasheet: https://enless-wireless.com/wp-content/uploads/2026/04/TX-LIGHT-PIR-TH-600-062-V2.2-EN.pdf
+// Source: Enless Wireless official LoRaWAN payload specification (EU868 decoder Excel Rev 11.02, sheet 600-062) - frame types 0x22 (data) / 0x03 (config response) - datasheet: https://enless-wireless.com/wp-content/uploads/2026/04/TX-LIGHT-PIR-TH-600-062-V2.2-EN.pdf
+// Status word bits (per sheet 600-062 row 22): bit9 RBE enabled/disabled, bit4 Movement Detected,
+// bits 3-2 battery, bit0 message type (Normal/Alarm).
 function _hex(bytes) {
   var s = '';
   for (var i = 0; i < bytes.length; i++) s += ('0' + bytes[i].toString(16)).slice(-2);
@@ -31,6 +33,9 @@ function _decode(bytes, fPort) {
 
     out.alarm_status = _u16(bytes, 26);
     out.status = _u16(bytes, 28);
+    out.msg_type = out.status & 1;
+    out.rbe = (out.status >> 9) & 1;
+    out.movement_detected = (out.status >> 4) & 1;
     out.battery_level = _batteryPct(out.status);
 
     out.alarm_active = out.alarm_status !== 0 ? 1 : 0;

@@ -1,7 +1,9 @@
-// Source: Enless Wireless public payload format tables (EU868_Enless_LoRaWAN_Payload_decoder_Rev_10_01.xlsx, sheet "600-050")
+// Source: Enless Wireless public payload format tables (EU868_Enless_LoRaWAN_Payload_decoder_Rev_11_02.xlsx, sheet "600-050")
 // Product doc: Enless product sheet TX-TH-MINI-600-050-V2.2-EN
 // Uplink frame: transmitter id bytes 0-2, frame type byte 3, sequential counter byte 4,
 // firmware byte 5, then model-specific data, alarm status (2 bytes) and status (2 bytes).
+// Status word bits (per sheet 600-050 row 22): bit9 RBE enabled/disabled, bits 3-2 battery,
+// bit0 message type (Normal/Alarm).
 function _s16(hi, lo) {
   var v = (hi << 8) | lo;
   if (v > 32767) v -= 65536;
@@ -23,6 +25,8 @@ function _decode(bytes, fPort) {
     out.humidity_low_alarm = (alarm >> 3) & 1;
     var status = (bytes[28] << 8) | bytes[29];
     out.alarm = status & 1;
+    out.msg_type = status & 1;
+    out.rbe = (status >> 9) & 1;
     out.battery_level = [100, 75, 50, 25][(status >> 2) & 3];
   }
   return out;

@@ -185,6 +185,50 @@
             "bacnet_unit_type": "UNITS_NO_UNITS"
         },
         {
+            "id": "msg_type",
+            "name": "Message Type",
+            "value": "0",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "ENUM",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "normal"
+                },
+                {
+                    "value": 1,
+                    "name": "alarm"
+                }
+            ],
+            "bacnet_type": "multistate_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
+            "id": "rbe",
+            "name": "Report By Exception",
+            "value": "0",
+            "unit": "",
+            "access_mode": "R",
+            "data_type": "BOOL",
+            "value_type": "UINT8",
+            "values": [
+                {
+                    "value": 0,
+                    "name": "Disabled"
+                },
+                {
+                    "value": 1,
+                    "name": "Enabled"
+                }
+            ],
+            "bacnet_type": "binary_input_object",
+            "bacnet_unit_type_id": 95,
+            "bacnet_unit_type": "UNITS_NO_UNITS"
+        },
+        {
             "id": "battery_level",
             "name": "Battery Level",
             "value": "100",
