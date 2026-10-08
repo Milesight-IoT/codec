@@ -1,0 +1,103 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "tbhh100",
+            "name": "Browan - TBHH100",
+            "description": "Temperature and humidity sensor",
+            "catalog": "tbhh100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbhh100/tbhh100-codec.json",
+            "decoder_script": "vendors/Browan/tbhh100/tbhh100-decoder.js",
+            "encoder_script": "vendors/Browan/tbhh100/tbhh100-encoder.js"
+        },
+        {
+            "id": "tbam100",
+            "name": "Browan - TBAM100",
+            "description": "Ambient light sensor",
+            "catalog": "tbam100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbam100/tbam100-codec.json",
+            "decoder_script": "vendors/Browan/tbam100/tbam100-decoder.js",
+            "encoder_script": "vendors/Browan/tbam100/tbam100-encoder.js"
+        },
+        {
+            "id": "tbdw100",
+            "name": "Browan - TBDW100",
+            "description": "Door/window contact sensor",
+            "catalog": "tbdw100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbdw100/tbdw100-codec.json",
+            "decoder_script": "vendors/Browan/tbdw100/tbdw100-decoder.js",
+            "encoder_script": "vendors/Browan/tbdw100/tbdw100-encoder.js"
+        },
+        {
+            "id": "tbms100",
+            "name": "Browan - TBMS100",
+            "description": "Motion occupancy sensor (PIR)",
+            "catalog": "tbms100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbms100/tbms100-codec.json",
+            "decoder_script": "vendors/Browan/tbms100/tbms100-decoder.js",
+            "encoder_script": "vendors/Browan/tbms100/tbms100-encoder.js"
+        },
+        {
+            "id": "tbsl100",
+            "name": "Browan - TBSL100",
+            "description": "Sound level sensor",
+            "catalog": "tbsl100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbsl100/tbsl100-codec.json",
+            "decoder_script": "vendors/Browan/tbsl100/tbsl100-decoder.js",
+            "encoder_script": "vendors/Browan/tbsl100/tbsl100-encoder.js"
+        },
+        {
+            "id": "tbwl100",
+            "name": "Browan - TBWL100",
+            "description": "Water leak sensor",
+            "catalog": "tbwl100",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbwl100/tbwl100-codec.json",
+            "decoder_script": "vendors/Browan/tbwl100/tbwl100-decoder.js",
+            "encoder_script": "vendors/Browan/tbwl100/tbwl100-encoder.js"
+        },
+        {
+            "id": "tbhv110",
+            "name": "Browan - TBHV110",
+            "description": "Indoor air quality sensor (IAQ)",
+            "catalog": "tbhv110",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Browan/tbhv110/tbhv110-codec.json",
+            "decoder_script": "vendors/Browan/tbhv110/tbhv110-decoder.js",
+            "encoder_script": "vendors/Browan/tbhv110/tbhv110-encoder.js"
+        }
+    ]
+}

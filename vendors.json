@@ -152,6 +152,15 @@
             "description": "Chinese manufacturer of DIN-rail energy meters (SDM series) with Modbus RTU/TCP.",
             "oui": "",
             "devices": "vendors/Eastron/devices.json"
+        },
+        {
+            "id": "browan",
+            "name": "Browan",
+            "logo": "",
+            "website": "https://www.browan.com",
+            "description": "LoRaWAN sensor brand of Gemtek/TrackNet (Tabs sensor family).",
+            "oui": "001616",
+            "devices": "vendors/Browan/devices.json"
         }
     ]
 }
