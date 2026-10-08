@@ -197,6 +197,24 @@
             "description": "Seeed IoT sensor brand SenseCAP LoRaWAN series.",
             "oui": "2cf7f1",
             "devices": "vendors/SenseCAP/devices.json"
+        },
+        {
+            "id": "atim",
+            "name": "ATIM",
+            "logo": "",
+            "website": "https://www.atim.com",
+            "description": "French manufacturer of LoRaWAN and Sigfox industrial sensors.",
+            "oui": "",
+            "devices": "vendors/ATIM/devices.json"
+        },
+        {
+            "id": "enless",
+            "name": "Enless",
+            "logo": "",
+            "website": "https://www.enless.com",
+            "description": "French LoRaWAN transmitter manufacturer (TX line).",
+            "oui": "70b3d54fd",
+            "devices": "vendors/Enless/devices.json"
         }
     ]
 }
