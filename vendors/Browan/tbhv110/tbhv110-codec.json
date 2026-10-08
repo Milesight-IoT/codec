@@ -143,7 +143,7 @@
         {
             "id": "eco2",
             "name": "CO2 Equivalent",
-            "value": "1000",
+            "value": "59395",
             "unit": "ppm",
             "access_mode": "R",
             "data_type": "NUMBER",
@@ -155,7 +155,7 @@
         {
             "id": "voc",
             "name": "Breath VOC Equivalent",
-            "value": "2",
+            "value": "512",
             "unit": "ppm",
             "access_mode": "R",
             "data_type": "NUMBER",
@@ -167,7 +167,7 @@
         {
             "id": "iaq",
             "name": "Indoor Air Quality Index",
-            "value": "100",
+            "value": "25600",
             "unit": "",
             "access_mode": "R",
             "data_type": "NUMBER",

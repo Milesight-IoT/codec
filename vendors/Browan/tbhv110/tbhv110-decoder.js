@@ -22,12 +22,14 @@ function _decodeStatus(bytes) {
   out.board_temperature = (bytes[2] & 0x7f) - 32;
   // Relative humidity: bits[6:0], %
   out.humidity = bytes[3] & 0x7f;
-  // CO2 equivalent estimate: uint16 big-endian, ppm
-  out.eco2 = (bytes[4] << 8) | bytes[5];
-  // Breath VOC concentration estimate: uint16 big-endian, ppm
-  out.voc = (bytes[6] << 8) | bytes[7];
-  // Indoor air quality index: uint16 big-endian, 0-500
-  out.iaq = (bytes[8] << 8) | bytes[9];
+  // CO2 equivalent estimate: uint16 little-endian (bytes4 low, bytes5 high), ppm.
+  // Endianness per Browan Tabs family RM convention (TBDW100 RM 4.1.2 Time/Count,
+  // TBAM100 Lux, TBSL100/TBWL100 intervals all little-endian).
+  out.eco2 = (bytes[5] << 8) | bytes[4];
+  // Breath VOC concentration estimate: uint16 little-endian, ppm (family RM convention)
+  out.voc = (bytes[7] << 8) | bytes[6];
+  // Indoor air quality index: uint16 little-endian, 0-500 (family RM convention)
+  out.iaq = (bytes[9] << 8) | bytes[8];
   // Environment temperature from digital sensor: bits[6:0], degC = value - 32
   out.temperature = (bytes[10] & 0x7f) - 32;
   return out;

@@ -2,7 +2,7 @@
 //         DOC ver: BQW_02_0004.002, Section 4.1.2 "Payload" and Appendix "Configuration downlink Command".
 // Uplink status message: port 100, 8 bytes:
 //   byte 0      Status: 1 = open, 0 = closed
-//   byte 1      Battery: bit 0 RFU; bits [7:1] unsigned level 1-14, voltage V = (25 + level) / 10
+//   byte 1      Battery: bits [3:0] unsigned level 1-14, voltage V = (25 + level) / 10; bits [7:4] RFU
 //   byte 2      Temp (PCB): bit 7 RFU; bits [6:0] unsigned 0-127, temp C = value - 32 (-32..95 C)
 //   bytes 3-4   Time: unsigned minutes since last event-triggered message, little-endian
 //   bytes 5-7   Count: unsigned total event-triggered count, little-endian, not persistent
@@ -23,7 +23,7 @@ function _decode(bytes, fPort) {
     out.raw_uplink = _hex(bytes);
     if (fPort === 100 && bytes.length >= 8) {
         out.door_window_status = bytes[0] & 0x01;
-        var level = (bytes[1] >> 1) & 0x7F;
+        var level = bytes[1] & 0x0F; // Battery: byte1 bits [3:0]; bits [7:4] RFU
         out.battery_level = level;
         out.battery_voltage = (25 + level) / 10;
         out.temperature = (bytes[2] & 0x7F) - 32;

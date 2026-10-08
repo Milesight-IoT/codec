@@ -47,7 +47,7 @@
         {
             "id": "battery_level",
             "name": "Battery Level",
-            "value": "14",
+            "value": "12",
             "unit": "",
             "access_mode": "R",
             "data_type": "NUMBER",
@@ -59,7 +59,7 @@
         {
             "id": "battery_voltage",
             "name": "Battery Voltage",
-            "value": "3.9",
+            "value": "3.7",
             "unit": "V",
             "access_mode": "R",
             "data_type": "NUMBER",
