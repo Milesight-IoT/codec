@@ -18,8 +18,8 @@ var SENSOR_BLOCKS = [
     { key: "tilt_x", convert: function (x) { return (x - 32768) / 10; } },
     { key: "tilt_y", convert: function (x) { return (x - 32768) / 10; } },
     { key: "precipitation_electrical_conductivity", convert: function (x) { return x - 32768; } },
-    { key: "cumulative_precipitation_lsb", convert: function (x) { return x / 1000; } },
-    { key: "cumulative_precipitation_msb", convert: function (x) { return x / 1000; } },
+    { key: "cumulative_precipitation_lsb", convert: function (x) { return x / 1000; }, rawKey: "cpr_lsb" },
+    { key: "cumulative_precipitation_msb", convert: function (x) { return x / 1000; }, rawKey: "cpr_msb" },
   ],
   [
     { key: "battery_voltage", convert: function (x) { return x / 1000; } },
@@ -39,6 +39,7 @@ function _decode(bytes, fPort) {
   out.device_id = (bytes[1] << 8) | bytes[2];
   var flags = (bytes[3] << 8) | bytes[4];
   var offset = 5;
+  var raws = {};
   for (var s = 0; s < SENSOR_BLOCKS.length; s++) {
     if ((flags & (1 << s)) === 0) continue;
     var values = [];
@@ -47,11 +48,14 @@ function _decode(bytes, fPort) {
       offset += 2;
     }
     for (var k = 0; k < values.length; k++) {
-      out[SENSOR_BLOCKS[s][k].key] = SENSOR_BLOCKS[s][k].convert(values[k]);
+      var def = SENSOR_BLOCKS[s][k];
+      out[def.key] = def.convert(values[k]);
+      if (def.rawKey) raws[def.rawKey] = values[k];
     }
   }
-  if (out.cumulative_precipitation_lsb !== undefined && out.cumulative_precipitation_msb !== undefined) {
-    out.total_cumulative_precipitation = out.cumulative_precipitation_lsb + out.cumulative_precipitation_msb * 65536;
+  // datasheet: total cumulative precipitation T = ALSB + (AMSB × 65536) [mm]
+  if (raws.cpr_lsb !== undefined && raws.cpr_msb !== undefined) {
+    out.cumulative_precipitation = (raws.cpr_lsb + raws.cpr_msb * 65536) / 1000;
   }
   return out;
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "bytes": "020032000300640C60",
+  "bytes": "020032000300640258271000000C9B",
   "object": [
     {
       "id": "raw_uplink",
@@ -41,9 +41,33 @@
       "bacnet_unit_type": "UNITS_NO_UNITS"
     },
     {
+      "id": "pulse_interval",
+      "name": "Pulse Interval",
+      "value": "600",
+      "unit": "s",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 73,
+      "bacnet_unit_type": "UNITS_SECONDS"
+    },
+    {
+      "id": "cumulative_pulse_count",
+      "name": "Cumulative Pulse Count",
+      "value": "10000",
+      "unit": "",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "FLOAT",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 95,
+      "bacnet_unit_type": "UNITS_NO_UNITS"
+    },
+    {
       "id": "battery_voltage",
       "name": "Battery Voltage",
-      "value": "3.168",
+      "value": "3.227",
       "unit": "V",
       "access_mode": "R",
       "data_type": "NUMBER",

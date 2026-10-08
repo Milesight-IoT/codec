@@ -1,12 +1,17 @@
-// Source: Decentlab DL-DLR2-002 datasheet
-// Payload format: protocol_version(1B=2) + device_id(2B) + flags(2B) + sensor blocks.
-// flags bit n set -> sensor n block present; block contents per sensor table below. Big endian.
+// Source: Decentlab DL-DLR2 datasheet (DLR2-002 = pulse counter dry contact configuration).
+// DLR2 frame contents depend on the sensor configuration (datasheet DETAILS defers to config).
+// DLR2-002: sensor 0 block = pulse count since last upload (u16) / pulse interval [s] (u16) /
+// cumulative pulse count since reset (u32, low word + high word·65536);
+// battery voltage is its own block (Decentlab platform convention).
+// Payload format: protocol_version(1B=2) + device_id(2B) + flags(2B) + sensor blocks. Big endian.
 var SENSOR_BLOCKS = [
   [
-    { key: "pulse_counter", convert: function (x) { return x; } },
+    { key: "pulse_counter", words: 1, convert: function (x) { return x; } },
+    { key: "pulse_interval", words: 1, convert: function (x) { return x; } },
+    { key: "cumulative_pulse_count", words: 2, convert: function (lo, hi) { return lo + hi * 65536; } },
   ],
   [
-    { key: "battery_voltage", convert: function (x) { return x / 1000; } },
+    { key: "battery_voltage", words: 1, convert: function (x) { return x / 1000; } },
   ],
 ];
 
@@ -25,13 +30,14 @@ function _decode(bytes, fPort) {
   var offset = 5;
   for (var s = 0; s < SENSOR_BLOCKS.length; s++) {
     if ((flags & (1 << s)) === 0) continue;
-    var values = [];
-    for (var v = 0; v < SENSOR_BLOCKS[s].length && offset + 2 <= bytes.length; v++) {
-      values.push((bytes[offset] << 8) | bytes[offset + 1]);
-      offset += 2;
-    }
-    for (var k = 0; k < values.length; k++) {
-      out[SENSOR_BLOCKS[s][k].key] = SENSOR_BLOCKS[s][k].convert(values[k]);
+    for (var k = 0; k < SENSOR_BLOCKS[s].length && offset + SENSOR_BLOCKS[s][k].words * 2 <= bytes.length; k++) {
+      var def = SENSOR_BLOCKS[s][k];
+      var raws = [];
+      for (var r = 0; r < def.words; r++) {
+        raws.push((bytes[offset] << 8) | bytes[offset + 1]);
+        offset += 2;
+      }
+      out[def.key] = def.convert.apply(null, raws);
     }
   }
   return out;
