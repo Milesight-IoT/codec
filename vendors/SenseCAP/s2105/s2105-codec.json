@@ -56,7 +56,7 @@
             "id": "soil_ec",
             "name": "Soil EC",
             "value": "0.18",
-            "unit": "dS/m",
+            "unit": "",
             "access_mode": "R",
             "data_type": "NUMBER",
             "value_type": "FLOAT",

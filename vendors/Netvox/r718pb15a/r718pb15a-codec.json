@@ -119,7 +119,7 @@
             "id": "soil_ec",
             "name": "Soil Electrical Conductivity",
             "value": "3.679",
-            "unit": "dS/m",
+            "unit": "",
             "access_mode": "R",
             "data_type": "NUMBER",
             "value_type": "FLOAT",
