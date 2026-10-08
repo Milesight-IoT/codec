@@ -31,11 +31,12 @@
     {
       "id": "meter_secondary_address",
       "name": "Meter Secondary Address (ADSC)",
-      "value": "",
+      "value": "123456789012",
       "unit": "",
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -43,7 +44,7 @@
     {
       "id": "tic_version",
       "name": "TIC Protocol Version (VTIC)",
-      "value": "",
+      "value": "0",
       "unit": "",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -60,6 +61,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -67,7 +69,7 @@
     {
       "id": "supplier_tariff_grid",
       "name": "Supplier Tariff Grid Name (NGTF)",
-      "value": "",
+      "value": "ABCDEFGHIJKLMNOP",
       "unit": "",
       "access_mode": "R",
       "data_type": "ENUM",
@@ -239,7 +241,7 @@
     {
       "id": "total_active_energy_drawn",
       "name": "Total Active Energy Drawn (EAST)",
-      "value": "",
+      "value": "999999999",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -419,7 +421,7 @@
     {
       "id": "total_active_energy_injected",
       "name": "Total Active Energy Injected (EAIT)",
-      "value": "",
+      "value": "999999999",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -432,7 +434,7 @@
       "id": "reactive_energy_q1",
       "name": "Total Reactive Energy Q1 (ERQ1)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -444,7 +446,7 @@
       "id": "reactive_energy_q2",
       "name": "Total Reactive Energy Q2 (ERQ2)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -456,7 +458,7 @@
       "id": "reactive_energy_q3",
       "name": "Total Reactive Energy Q3 (ERQ3)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -468,7 +470,7 @@
       "id": "reactive_energy_q4",
       "name": "Total Reactive Energy Q4 (ERQ4)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -551,7 +553,7 @@
     {
       "id": "reference_apparent_power",
       "name": "Reference Apparent Power (PREF)",
-      "value": "",
+      "value": "99",
       "unit": "kVA",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -563,7 +565,7 @@
     {
       "id": "cutoff_apparent_power",
       "name": "Cutoff Apparent Power (PCOUP)",
-      "value": "",
+      "value": "99",
       "unit": "kVA",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -640,6 +642,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -664,6 +667,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -688,6 +692,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -712,6 +717,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -736,6 +742,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -760,6 +767,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -784,6 +792,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -808,6 +817,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -844,6 +854,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -868,6 +879,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -892,6 +904,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -916,6 +929,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -940,6 +954,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -964,6 +979,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -988,6 +1004,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1012,6 +1029,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1036,6 +1054,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1048,6 +1067,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1072,6 +1092,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1096,6 +1117,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1120,6 +1142,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1144,6 +1167,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1168,6 +1192,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1192,6 +1217,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1204,6 +1230,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1216,6 +1243,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1228,6 +1256,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1288,6 +1317,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1300,6 +1330,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"

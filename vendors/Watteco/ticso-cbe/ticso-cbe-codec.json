@@ -72,6 +72,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -84,6 +85,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -163,7 +165,7 @@
     {
       "id": "index_tempo_blue_offpeak",
       "name": "Tempo Blue Offpeak Index (BBRHCJB)",
-      "value": "",
+      "value": "123456789",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -175,7 +177,7 @@
     {
       "id": "index_tempo_blue_peak",
       "name": "Tempo Blue Peak Index (BBRHPJB)",
-      "value": "",
+      "value": "999999999",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -187,7 +189,7 @@
     {
       "id": "index_tempo_white_offpeak",
       "name": "Tempo White Offpeak Index (BBRHCJW)",
-      "value": "",
+      "value": "999999999",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -199,7 +201,7 @@
     {
       "id": "index_tempo_white_peak",
       "name": "Tempo White Peak Index (BBRHPJW)",
-      "value": "",
+      "value": "999999999",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -211,7 +213,7 @@
     {
       "id": "index_tempo_red_offpeak",
       "name": "Tempo Red Offpeak Index (BBRHCJR)",
-      "value": "",
+      "value": "999999999",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -223,7 +225,7 @@
     {
       "id": "index_tempo_red_peak",
       "name": "Tempo Red Peak Index (BBRHPJR)",
-      "value": "",
+      "value": "999999999",
       "unit": "Wh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -276,6 +278,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -288,6 +291,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -432,6 +436,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -444,6 +449,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -456,6 +462,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"

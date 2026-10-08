@@ -102,13 +102,18 @@ function _cstr(b, o, end) {
   while (o < end && b[o] !== 0x00) { s += String.fromCharCode(b[o]); o++; }
   return { s: s, o: o + 1 };
 }
-function _enumField(b, o, end) {
+function _enumField(b, o, end, maxVal) {
   var h = b[o];
   if (h & 0x80) {
     var n = h & 0x7f;
     var s = '';
     for (var k = 1; k <= n && o + k < end; k++) s += String.fromCharCode(b[o + k]);
     return { v: s, o: o + 1 + n };
+  }
+  if (maxVal !== undefined && h > maxVal) {
+    // value outside the enum table: raw NUL-terminated string (ALD 1.2 sect. 5.2.1 fallback)
+    var c = _cstr(b, o, end);
+    return { v: c.s, o: c.o };
   }
   return { v: h, o: o + 1 };
 }
@@ -173,16 +178,17 @@ function _field(f, b, o, end, out) {
     case 'XBE': out[f.id] = _hexn(b, o, 4); return o + 4;
     case 'P11': out[f.id] = _hexn(b, o, 44); return o + 44;
     case 'HEX': var n = b[o]; out[f.id] = _hexn(b, o + 1, n); return o + 1 + n;
-    case 'EPT': case 'ECO': case 'EDI':
-      var e = _enumField(b, o, end); out[f.id] = e.v; return e.o;
+    case 'EPT': var e1 = _enumField(b, o, end, 22); out[f.id] = e1.v; return e1.o;
+    case 'ECO': var e2 = _enumField(b, o, end, 18); out[f.id] = e2.v; return e2.o;
+    case 'EDI': var e3 = _enumField(b, o, end, 12); out[f.id] = e3.v; return e3.o;
     case 'U24E':
       if (o + 4 > end) return end;
       out[f.id] = _u24(b, o);
-      var u = _enumField(b, o + 3, end); out[f.id + '_unit'] = u.v; return u.o;
+      var u = _enumField(b, o + 3, end, 12); out[f.id + '_unit'] = u.v; return u.o;
     case 'TSE':
       if (o + 5 > end) return end;
       out[f.id + '_date'] = _tsIso(_u32(b, o));
-      var e2 = _enumField(b, o + 4, end); out[f.id + '_tarif'] = e2.v; return e2.o;
+      var e4 = _enumField(b, o + 4, end, 22); out[f.id + '_tarif'] = e4.v; return e4.o;
     case 'SU8': case 'SU16': case 'SU24':
       if (o + 7 > end) return end;
       out[f.id + '_datetime'] = _sdmy(b, o);

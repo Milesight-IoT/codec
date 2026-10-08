@@ -233,6 +233,15 @@
             "description": "Taiwanese manufacturer of LoRaWAN sensors and actuators.",
             "oui": "00137a",
             "devices": "vendors/Netvox/devices.json"
+        },
+        {
+            "id": "watteco",
+            "name": "Watteco",
+            "logo": "",
+            "website": "https://www.watteco.com",
+            "description": "French manufacturer of LoRaWAN sensors (NKE Watteco).",
+            "oui": "70b3d5e750",
+            "devices": "vendors/Watteco/devices.json"
         }
     ]
 }

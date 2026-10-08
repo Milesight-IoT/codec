@@ -85,11 +85,12 @@
     {
       "id": "meter_id",
       "name": "Meter Identifier, hex (ADS)",
-      "value": "",
+      "value": "031436227996",
       "unit": "",
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -97,7 +98,7 @@
     {
       "id": "tariff_processing_1",
       "name": "Tariff Processing Name Calendar 1 (MESURES1)",
-      "value": "",
+      "value": "16",
       "unit": "",
       "access_mode": "R",
       "data_type": "ENUM",
@@ -180,6 +181,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -200,7 +202,7 @@
       "id": "reactive_pos_energy_primary",
       "name": "Positive Reactive Energy Primary Since Pulse (ER+_s)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -212,7 +214,7 @@
       "id": "reactive_neg_energy_primary",
       "name": "Negative Reactive Energy Primary Since Pulse (ER-_s)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -229,8 +231,8 @@
       "data_type": "NUMBER",
       "value_type": "UINT32",
       "bacnet_type": "analog_input_object",
-      "bacnet_unit_type_id": 95,
-      "bacnet_unit_type": "UNITS_NO_UNITS"
+      "bacnet_unit_type_id": 239,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS"
     },
     {
       "id": "active_energy_injected_primary",
@@ -248,7 +250,7 @@
       "id": "reactive_pos_energy_injected_primary",
       "name": "Positive Reactive Energy Injected Primary (ER+_i)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -260,7 +262,7 @@
       "id": "reactive_neg_energy_injected_primary",
       "name": "Negative Reactive Energy Injected Primary (ER-_i)",
       "value": "",
-      "unit": "varh",
+      "unit": "VArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -277,13 +279,13 @@
       "data_type": "NUMBER",
       "value_type": "UINT32",
       "bacnet_type": "analog_input_object",
-      "bacnet_unit_type_id": 95,
-      "bacnet_unit_type": "UNITS_NO_UNITS"
+      "bacnet_unit_type_id": 239,
+      "bacnet_unit_type": "UNITS_VOLT_AMPERE_HOURS"
     },
     {
       "id": "current_tarif_period_1",
       "name": "Current Tariff Period 1 (PTCOUR1)",
-      "value": "",
+      "value": "7",
       "unit": "",
       "access_mode": "R",
       "data_type": "ENUM",
@@ -624,6 +626,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -730,6 +733,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -836,6 +840,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -942,6 +947,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1156,6 +1162,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1192,6 +1199,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1228,6 +1236,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1264,6 +1273,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1300,6 +1310,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1336,6 +1347,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1372,6 +1384,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1379,7 +1392,7 @@
     {
       "id": "active_energy_withdrawn_period",
       "name": "Active Energy Drawn Period P (EAP_s)",
-      "value": "",
+      "value": "117",
       "unit": "kWh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -1391,7 +1404,7 @@
     {
       "id": "active_energy_injected_period",
       "name": "Active Energy Injected Period P (EAP_i)",
-      "value": "",
+      "value": "117",
       "unit": "kWh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -1404,7 +1417,7 @@
       "id": "reactive_pos_energy_withdrawn_period",
       "name": "Positive Reactive Energy Drawn Period P (ER+P_s)",
       "value": "",
-      "unit": "kvarh",
+      "unit": "kVArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -1416,7 +1429,7 @@
       "id": "reactive_neg_energy_withdrawn_period",
       "name": "Negative Reactive Energy Drawn Period P (ER-P_s)",
       "value": "",
-      "unit": "kvarh",
+      "unit": "kVArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -1428,7 +1441,7 @@
       "id": "reactive_pos_energy_injected_period",
       "name": "Positive Reactive Energy Injected Period P (ER+P_i)",
       "value": "",
-      "unit": "kvarh",
+      "unit": "kVArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -1440,7 +1453,7 @@
       "id": "reactive_neg_energy_injected_period",
       "name": "Negative Reactive Energy Injected Period P (ER-P_i)",
       "value": "",
-      "unit": "kvarh",
+      "unit": "kVArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -1456,6 +1469,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1468,6 +1482,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -1498,9 +1513,9 @@
     },
     {
       "id": "prev_reactive_pos_energy",
-      "name": "Positive Reactive Energy Period P-1 (ER+P-1_s)",
+      "name": "Positive Reactive Energy Drawn Period P-1 (ER+P-1_s)",
       "value": "",
-      "unit": "kvarh",
+      "unit": "kVArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -1510,9 +1525,33 @@
     },
     {
       "id": "prev_reactive_neg_energy",
-      "name": "Negative Reactive Energy Period P-1 (ER-P-1_s)",
+      "name": "Negative Reactive Energy Drawn Period P-1 (ER-P-1_s)",
       "value": "",
-      "unit": "kvarh",
+      "unit": "kVArh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "prev_reactive_pos_energy_injected",
+      "name": "Positive Reactive Energy Injected Period P-1 (ER+P-1_i)",
+      "value": "",
+      "unit": "kVArh",
+      "access_mode": "R",
+      "data_type": "NUMBER",
+      "value_type": "UINT32",
+      "bacnet_type": "analog_input_object",
+      "bacnet_unit_type_id": 243,
+      "bacnet_unit_type": "UNITS_KILOVOLT_AMPERE_HOURS_REACTIVE"
+    },
+    {
+      "id": "prev_reactive_neg_energy_injected",
+      "name": "Negative Reactive Energy Injected Period P-1 (ER-P-1_i)",
+      "value": "",
+      "unit": "kVArh",
       "access_mode": "R",
       "data_type": "NUMBER",
       "value_type": "UINT32",
@@ -1523,7 +1562,7 @@
     {
       "id": "subscribed_power",
       "name": "Subscribed Power of Current Tariff Period (PS)",
-      "value": "",
+      "value": "138",
       "unit": "",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -1535,7 +1574,7 @@
     {
       "id": "subscribed_power_unit",
       "name": "Subscribed Power of Current Tariff Period (PS) - Unit",
-      "value": "",
+      "value": "11",
       "unit": "",
       "access_mode": "R",
       "data_type": "ENUM",
@@ -2176,6 +2215,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -2282,6 +2322,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -2388,6 +2429,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -2494,6 +2536,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -2600,6 +2643,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -2624,6 +2668,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -2636,6 +2681,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -2689,7 +2735,7 @@
     {
       "id": "shifted_report",
       "name": "Shifted Report (values before change)",
-      "value": "",
+      "value": "true",
       "unit": "",
       "access_mode": "R",
       "data_type": "BOOL",

@@ -31,11 +31,12 @@
     {
       "id": "header_datetime",
       "name": "Yellow Frame Header Datetime hh:mm:dd:mm (JAUNE)",
-      "value": "",
+      "value": "17:15:11:04",
       "unit": "",
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -43,11 +44,12 @@
     {
       "id": "tarif_position",
       "name": "Tariff Position (pt)",
-      "value": "",
+      "value": "11",
       "unit": "",
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -55,11 +57,12 @@
     {
       "id": "exceedance_notice",
       "name": "Exceedance Notice (dp)",
-      "value": "",
+      "value": "  ",
       "unit": "",
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -67,7 +70,7 @@
     {
       "id": "current_apparent_power",
       "name": "Current Apparent Power",
-      "value": "",
+      "value": "245.8",
       "unit": "VA",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -79,7 +82,7 @@
     {
       "id": "notice_coefficient",
       "name": "Exceedance Notice Coefficient (kp)",
-      "value": "",
+      "value": "0",
       "unit": "%",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -91,7 +94,7 @@
     {
       "id": "energy_tariff1",
       "name": "Energy HPH or PM",
-      "value": "",
+      "value": "506588",
       "unit": "kWh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -103,7 +106,7 @@
     {
       "id": "energy_tariff2",
       "name": "Energy HCH or HH",
-      "value": "",
+      "value": "204650",
       "unit": "kWh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -115,7 +118,7 @@
     {
       "id": "energy_hpe",
       "name": "Energy HPE",
-      "value": "",
+      "value": "673884",
       "unit": "kWh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -127,7 +130,7 @@
     {
       "id": "energy_hce",
       "name": "Energy HCE",
-      "value": "",
+      "value": "280225",
       "unit": "kWh",
       "access_mode": "R",
       "data_type": "NUMBER",
@@ -168,6 +171,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -288,6 +292,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
@@ -456,6 +461,7 @@
       "access_mode": "R",
       "data_type": "TEXT",
       "value_type": "STRING",
+      "max_length": 32,
       "bacnet_type": "character_string_value_object",
       "bacnet_unit_type_id": 95,
       "bacnet_unit_type": "UNITS_NO_UNITS"
