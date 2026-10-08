@@ -1,0 +1,131 @@
+{
+    "version": "1.0.0",
+    "devices": [
+        {
+            "id": "r718nl3",
+            "name": "Netvox - R718NL3",
+            "description": "Netvox R718NL3 LoRaWAN device",
+            "catalog": "r718nl3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl3/r718nl3-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl3/r718nl3-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl3/r718nl3-encoder.js"
+        },
+        {
+            "id": "r718nl315",
+            "name": "Netvox - R718NL315",
+            "description": "Netvox R718NL315 LoRaWAN device",
+            "catalog": "r718nl315",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl315/r718nl315-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl315/r718nl315-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl315/r718nl315-encoder.js"
+        },
+        {
+            "id": "r718nl325",
+            "name": "Netvox - R718NL325",
+            "description": "Netvox R718NL325 LoRaWAN device",
+            "catalog": "r718nl325",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl325/r718nl325-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl325/r718nl325-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl325/r718nl325-encoder.js"
+        },
+        {
+            "id": "r718nl363",
+            "name": "Netvox - R718NL363",
+            "description": "Netvox R718NL363 LoRaWAN device",
+            "catalog": "r718nl363",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl363/r718nl363-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl363/r718nl363-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl363/r718nl363-encoder.js"
+        },
+        {
+            "id": "r718nl37",
+            "name": "Netvox - R718NL37",
+            "description": "Netvox R718NL37 LoRaWAN device",
+            "catalog": "r718nl37",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718nl37/r718nl37-codec.json",
+            "decoder_script": "vendors/Netvox/r718nl37/r718nl37-decoder.js",
+            "encoder_script": "vendors/Netvox/r718nl37/r718nl37-encoder.js"
+        },
+        {
+            "id": "r718pa12",
+            "name": "Netvox - R718PA12",
+            "description": "Netvox R718PA12 LoRaWAN device",
+            "catalog": "r718pa12",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa12/r718pa12-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa12/r718pa12-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa12/r718pa12-encoder.js"
+        },
+        {
+            "id": "r718pa14",
+            "name": "Netvox - R718PA14",
+            "description": "Netvox R718PA14 LoRaWAN device",
+            "catalog": "r718pa14",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa14/r718pa14-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa14/r718pa14-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa14/r718pa14-encoder.js"
+        },
+        {
+            "id": "r718pa4",
+            "name": "Netvox - R718PA4",
+            "description": "Netvox R718PA4 LoRaWAN device",
+            "catalog": "r718pa4",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa4/r718pa4-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa4/r718pa4-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa4/r718pa4-encoder.js"
+        },
+        {
+            "id": "r718pa5",
+            "name": "Netvox - R718PA5",
+            "description": "Netvox R718PA5 LoRaWAN device",
+            "catalog": "r718pa5",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Netvox/r718pa5/r718pa5-codec.json",
+            "decoder_script": "vendors/Netvox/r718pa5/r718pa5-decoder.js",
+            "encoder_script": "vendors/Netvox/r718pa5/r718pa5-encoder.js"
+        }
+    ]
+}

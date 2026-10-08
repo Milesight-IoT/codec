@@ -224,6 +224,15 @@
             "description": "Swiss manufacturer of LoRaWAN sensors for environmental monitoring.",
             "oui": "70b3d57ba0",
             "devices": "vendors/Decentlab/devices.json"
+        },
+        {
+            "id": "netvox",
+            "name": "Netvox",
+            "logo": "",
+            "website": "http://www.netvox.com.tw",
+            "description": "Taiwanese manufacturer of LoRaWAN sensors and actuators.",
+            "oui": "00137a",
+            "devices": "vendors/Netvox/devices.json"
         }
     ]
 }
