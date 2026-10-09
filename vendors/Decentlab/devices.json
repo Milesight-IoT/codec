@@ -2,6 +2,34 @@
     "version": "1.0.0",
     "devices": [
         {
+            "id": "dl-10hs",
+            "name": "Decentlab - DL-10HS",
+            "description": "Decentlab DL-10HS LoRaWAN sensor",
+            "catalog": "dl-10hs",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-10hs/dl-10hs-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-10hs/dl-10hs-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-10hs/dl-10hs-encoder.js"
+        },
+        {
+            "id": "dl-5te",
+            "name": "Decentlab - DL-5TE",
+            "description": "Decentlab DL-5TE LoRaWAN sensor",
+            "catalog": "dl-5te",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-5te/dl-5te-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-5te/dl-5te-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-5te/dl-5te-encoder.js"
+        },
+        {
             "id": "dl-5tm",
             "name": "Decentlab - DL-5TM",
             "description": "Decentlab DL-5TM LoRaWAN sensor",
@@ -14,6 +42,20 @@
             "codec": "vendors/Decentlab/dl-5tm/dl-5tm-codec.json",
             "decoder_script": "vendors/Decentlab/dl-5tm/dl-5tm-decoder.js",
             "encoder_script": "vendors/Decentlab/dl-5tm/dl-5tm-encoder.js"
+        },
+        {
+            "id": "dl-alb",
+            "name": "Decentlab - DL-ALB",
+            "description": "Decentlab DL-ALB LoRaWAN sensor",
+            "catalog": "dl-alb",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-alb/dl-alb-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-alb/dl-alb-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-alb/dl-alb-encoder.js"
         },
         {
             "id": "dl-atm22",
@@ -156,6 +198,76 @@
             "encoder_script": "vendors/Decentlab/dl-dlr2-003/dl-dlr2-003-encoder.js"
         },
         {
+            "id": "dl-dlr2-005",
+            "name": "Decentlab - DL-DLR2-005",
+            "description": "Decentlab DL-DLR2-005 LoRaWAN sensor",
+            "catalog": "dl-dlr2-005",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-005/dl-dlr2-005-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-005/dl-dlr2-005-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-005/dl-dlr2-005-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-006",
+            "name": "Decentlab - DL-DLR2-006",
+            "description": "Decentlab DL-DLR2-006 LoRaWAN sensor",
+            "catalog": "dl-dlr2-006",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-006/dl-dlr2-006-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-006/dl-dlr2-006-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-006/dl-dlr2-006-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-010",
+            "name": "Decentlab - DL-DLR2-010",
+            "description": "Decentlab DL-DLR2-010 LoRaWAN sensor",
+            "catalog": "dl-dlr2-010",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-010/dl-dlr2-010-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-010/dl-dlr2-010-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-010/dl-dlr2-010-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-011",
+            "name": "Decentlab - DL-DLR2-011",
+            "description": "Decentlab DL-DLR2-011 LoRaWAN sensor",
+            "catalog": "dl-dlr2-011",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-011/dl-dlr2-011-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-011/dl-dlr2-011-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-011/dl-dlr2-011-encoder.js"
+        },
+        {
+            "id": "dl-dlr2-012",
+            "name": "Decentlab - DL-DLR2-012",
+            "description": "Decentlab DL-DLR2-012 LoRaWAN sensor",
+            "catalog": "dl-dlr2-012",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-dlr2-012/dl-dlr2-012-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-dlr2-012/dl-dlr2-012-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-dlr2-012/dl-dlr2-012-encoder.js"
+        },
+        {
             "id": "dl-ds18",
             "name": "Decentlab - DL-DS18",
             "description": "Decentlab DL-DS18 LoRaWAN sensor",
@@ -170,6 +282,76 @@
             "encoder_script": "vendors/Decentlab/dl-ds18/dl-ds18-encoder.js"
         },
         {
+            "id": "dl-ds182",
+            "name": "Decentlab - DL-DS182",
+            "description": "Decentlab DL-DS182 LoRaWAN sensor",
+            "catalog": "dl-ds182",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ds182/dl-ds182-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ds182/dl-ds182-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ds182/dl-ds182-encoder.js"
+        },
+        {
+            "id": "dl-epar",
+            "name": "Decentlab - DL-EPAR",
+            "description": "Decentlab DL-EPAR LoRaWAN sensor",
+            "catalog": "dl-epar",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-epar/dl-epar-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-epar/dl-epar-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-epar/dl-epar-encoder.js"
+        },
+        {
+            "id": "dl-fspar",
+            "name": "Decentlab - DL-FSPAR",
+            "description": "Decentlab DL-FSPAR LoRaWAN sensor",
+            "catalog": "dl-fspar",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-fspar/dl-fspar-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-fspar/dl-fspar-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-fspar/dl-fspar-encoder.js"
+        },
+        {
+            "id": "dl-gmm",
+            "name": "Decentlab - DL-GMM",
+            "description": "Decentlab DL-GMM LoRaWAN sensor",
+            "catalog": "dl-gmm",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-gmm/dl-gmm-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-gmm/dl-gmm-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-gmm/dl-gmm-encoder.js"
+        },
+        {
+            "id": "dl-gs3",
+            "name": "Decentlab - DL-GS3",
+            "description": "Decentlab DL-GS3 LoRaWAN sensor",
+            "catalog": "dl-gs3",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-gs3/dl-gs3-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-gs3/dl-gs3-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-gs3/dl-gs3-encoder.js"
+        },
+        {
             "id": "dl-iam",
             "name": "Decentlab - DL-IAM",
             "description": "Decentlab DL-IAM LoRaWAN sensor",
@@ -182,6 +364,62 @@
             "codec": "vendors/Decentlab/dl-iam/dl-iam-codec.json",
             "decoder_script": "vendors/Decentlab/dl-iam/dl-iam-decoder.js",
             "encoder_script": "vendors/Decentlab/dl-iam/dl-iam-encoder.js"
+        },
+        {
+            "id": "dl-ifd",
+            "name": "Decentlab - DL-IFD",
+            "description": "Decentlab DL-IFD LoRaWAN sensor",
+            "catalog": "dl-ifd",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ifd/dl-ifd-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ifd/dl-ifd-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ifd/dl-ifd-encoder.js"
+        },
+        {
+            "id": "dl-ilt",
+            "name": "Decentlab - DL-ILT",
+            "description": "Decentlab DL-ILT LoRaWAN sensor",
+            "catalog": "dl-ilt",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-ilt/dl-ilt-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-ilt/dl-ilt-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-ilt/dl-ilt-encoder.js"
+        },
+        {
+            "id": "dl-isd",
+            "name": "Decentlab - DL-ISD",
+            "description": "Decentlab DL-ISD LoRaWAN sensor",
+            "catalog": "dl-isd",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-isd/dl-isd-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-isd/dl-isd-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-isd/dl-isd-encoder.js"
+        },
+        {
+            "id": "dl-isf",
+            "name": "Decentlab - DL-ISF",
+            "description": "Decentlab DL-ISF LoRaWAN sensor",
+            "catalog": "dl-isf",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-isf/dl-isf-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-isf/dl-isf-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-isf/dl-isf-encoder.js"
         },
         {
             "id": "dl-itst",
@@ -238,6 +476,20 @@
             "codec": "vendors/Decentlab/dl-lp8p/dl-lp8p-codec.json",
             "decoder_script": "vendors/Decentlab/dl-lp8p/dl-lp8p-decoder.js",
             "encoder_script": "vendors/Decentlab/dl-lp8p/dl-lp8p-encoder.js"
+        },
+        {
+            "id": "dl-lpw",
+            "name": "Decentlab - DL-LPW",
+            "description": "Decentlab DL-LPW LoRaWAN sensor",
+            "catalog": "dl-lpw",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-lpw/dl-lpw-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-lpw/dl-lpw-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-lpw/dl-lpw-encoder.js"
         },
         {
             "id": "dl-lws",
@@ -352,6 +604,20 @@
             "encoder_script": "vendors/Decentlab/dl-pyr/dl-pyr-encoder.js"
         },
         {
+            "id": "dl-rad",
+            "name": "Decentlab - DL-RAD",
+            "description": "Decentlab DL-RAD LoRaWAN sensor",
+            "catalog": "dl-rad",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-rad/dl-rad-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-rad/dl-rad-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-rad/dl-rad-encoder.js"
+        },
+        {
             "id": "dl-rhc",
             "name": "Decentlab - DL-RHC",
             "description": "Decentlab DL-RHC LoRaWAN sensor",
@@ -380,6 +646,20 @@
             "encoder_script": "vendors/Decentlab/dl-sdd/dl-sdd-encoder.js"
         },
         {
+            "id": "dl-sht21",
+            "name": "Decentlab - DL-SHT21",
+            "description": "Decentlab DL-SHT21 LoRaWAN sensor",
+            "catalog": "dl-sht21",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-sht21/dl-sht21-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-sht21/dl-sht21-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-sht21/dl-sht21-encoder.js"
+        },
+        {
             "id": "dl-sht35",
             "name": "Decentlab - DL-SHT35",
             "description": "Decentlab DL-SHT35 LoRaWAN sensor",
@@ -406,6 +686,20 @@
             "codec": "vendors/Decentlab/dl-smtp/dl-smtp-codec.json",
             "decoder_script": "vendors/Decentlab/dl-smtp/dl-smtp-decoder.js",
             "encoder_script": "vendors/Decentlab/dl-smtp/dl-smtp-encoder.js"
+        },
+        {
+            "id": "dl-tp",
+            "name": "Decentlab - DL-TP",
+            "description": "Decentlab DL-TP LoRaWAN sensor",
+            "catalog": "dl-tp",
+            "sn": "",
+            "deveui": "",
+            "device_profile": [
+                "ClassA-OTAA"
+            ],
+            "codec": "vendors/Decentlab/dl-tp/dl-tp-codec.json",
+            "decoder_script": "vendors/Decentlab/dl-tp/dl-tp-decoder.js",
+            "encoder_script": "vendors/Decentlab/dl-tp/dl-tp-encoder.js"
         },
         {
             "id": "dl-trs11",
