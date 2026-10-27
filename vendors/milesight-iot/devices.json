@@ -1957,6 +1957,34 @@
             "decoder_script": "vendors/milesight-iot/cth-series/cth01/cth01-decoder.js",
             "encoder_script": "vendors/milesight-iot/cth-series/cth01/cth01-encoder.js",
             "ipso_version": "v2"
+        },
+        {
+            "id": "uc701",
+            "name": "UC701",
+            "description": "Split Air Conditioner Controller",
+            "catalog": "uc",
+            "sn": "6556",
+            "pn": ["000"],
+            "deveui": "24e124556",
+            "device_profile": ["ClassC-OTAA", "ClassB-OTAA"],
+            "codec": "vendors/milesight-iot/uc-series/uc701/uc701-codec.json",
+            "decoder_script": "vendors/milesight-iot/uc-series/uc701/uc701-decoder.js",
+            "encoder_script": "vendors/milesight-iot/uc-series/uc701/uc701-encoder.js",
+            "ipso_version": "v2"
+        },
+        {
+            "id": "uc701_cn",
+            "name": "UC701-CN",
+            "description": "Split Air Conditioner Controller",
+            "catalog": "uc",
+            "sn": "6555",
+            "pn": ["000"],
+            "deveui": "24e124555",
+            "device_profile": ["ClassC-OTAA", "ClassB-OTAA"],
+            "codec": "vendors/milesight-iot/uc-series/uc701/uc701-codec.json",
+            "decoder_script": "vendors/milesight-iot/uc-series/uc701/uc701-decoder.js",
+            "encoder_script": "vendors/milesight-iot/uc-series/uc701/uc701-encoder.js",
+            "ipso_version": "v2"
         }
     ]
 }
