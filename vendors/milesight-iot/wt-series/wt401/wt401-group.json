@@ -1,0 +1,1041 @@
+{
+    "version": "1.0.0",
+    "tag_definitions": {
+        "recommend": {
+            "description": ""
+        }
+    },
+    "groups": {
+        "Sensor Data": {
+            "Data Source": {
+                "objects": [
+                    {
+                        "codec_id": "data_sync_timeout",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "data_sync_to_peer",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Temperature": {
+                "objects": [
+                    {
+                        "codec_id": "celsius_temperature",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "fahrenheit_temperature",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "External Temperature & Humidity": {
+                "objects": [
+                    {
+                        "codec_id": "origin_humidity",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "origin_temperature",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Humidity": {
+                "objects": [
+                    {
+                        "codec_id": "humidity",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            }
+        },
+        "Temperature Control": {
+            "Target Temperature": {
+                "objects": [
+                    {
+                        "codec_id": "celsius_target_temperature1",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "celsius_target_temperature2",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "fahrenheit_target_temperature1",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "fahrenheit_target_temperature2",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Target Temperature Mode": {
+                "objects": [
+                    {
+                        "codec_id": "target_temperature_mode",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Target Temperature Settings": {
+                "objects": [
+                    {
+                        "codec_id": "target_temperature_settings.celsius_auto",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.celsius_auto_cool"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.celsius_auto_heat"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.celsius_cool",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.celsius_dehumidify"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.celsius_em_heat"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.celsius_heat",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.celsius_ventilation"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_auto",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_auto_cool"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_auto_heat"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_cool",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_dehumidify"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_em_heat"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_heat",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.fahrenheit_ventilation"
+                    },
+                    {
+                        "codec_id": "target_temperature_settings.temperature_control_mode",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Target Temperature Range": {
+                "objects": [
+                    {
+                        "codec_id": "target_temperature_range.auto.celsius_max",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.cool.celsius_max",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.dehumidify.celsius_max"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.em_heat.celsius_max"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.heat.celsius_max",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.ventilation.celsius_max"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.auto.celsius_min",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.cool.celsius_min",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.dehumidify.celsius_min"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.em_heat.celsius_min"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.heat.celsius_min",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.ventilation.celsius_min"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.auto.fahrenheit_max",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.cool.fahrenheit_max",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.dehumidify.fahrenheit_max"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.em_heat.fahrenheit_max"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.heat.fahrenheit_max",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.ventilation.fahrenheit_max"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.auto.fahrenheit_min",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.cool.fahrenheit_min",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.dehumidify.fahrenheit_min"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.em_heat.fahrenheit_min"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.heat.fahrenheit_min",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_range.ventilation.fahrenheit_min"
+                    },
+                    {
+                        "codec_id": "target_temperature_range.id"
+                    }
+                ]
+            },
+            "Resolution & Deadband": {
+                "objects": [
+                    {
+                        "codec_id": "celsius_minimum_dead_zone",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "fahrenheit_minimum_dead_zone",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "target_temperature_resolution",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Mode & Status": {
+                "objects": [
+                    {
+                        "codec_id": "temperature_control_mode.plan_mode_enable"
+                    },
+                    {
+                        "codec_id": "temperature_control_mode.subcmd"
+                    },
+                    {
+                        "codec_id": "temperature_mode"
+                    }
+                ]
+            },
+            "Units": {
+                "objects": [
+                    {
+                        "codec_id": "temperature_unit",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            }
+        },
+        "System Control": {
+            "objects": [
+                {
+                    "codec_id": "system_status_control.temperature2"
+                },
+                {
+                    "codec_id": "system_status_control.temperature1"
+                },
+                {
+                    "codec_id": "system_status",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "system_status_control.on_off"
+                },
+                {
+                    "codec_id": "system_status_control.mode"
+                }
+            ]
+        },
+        "Fan Control": {
+            "objects": [
+                {
+                    "codec_id": "fan_enable.auto",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_enable.circul",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_control_mode",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_mode",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_enable.high",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_enable.low",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_enable.medium",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_enable.on",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "fan_enable.reserved"
+                },
+                {
+                    "codec_id": "screen_fan_mode_enable"
+                }
+            ]
+        },
+        "Occupancy Detection": {
+            "objects": [
+                {
+                    "codec_id": "pir_common.cmd",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_common.mode",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_common.check.period",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_common.enable",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_status",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_common.release_time",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_common.check.rate",
+                    "tags": [
+                        "recommend"
+                    ]
+                }
+            ]
+        },
+        "Energy Saving Settings": {
+            "objects": [
+                {
+                    "codec_id": "pir_energy.cmd",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_energy.enable",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_energy.plan.occupied",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_energy.plan.unoccupied",
+                    "tags": [
+                        "recommend"
+                    ]
+                }
+            ]
+        },
+        "Night Occupancy": {
+            "objects": [
+                {
+                    "codec_id": "pir_night.check.period",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_night.cmd",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_night.mode",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_night.enable",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_night.occupied",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_night.night_time.start",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_night.night_time.stop",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "pir_night.check.rate",
+                    "tags": [
+                        "recommend"
+                    ]
+                }
+            ]
+        },
+        "Schedules": {
+            "objects": [
+                {
+                    "codec_id": "delete_task_plan.type"
+                },
+                {
+                    "codec_id": "insert_temporary_plan.id"
+                },
+                {
+                    "codec_id": "execution_plan_id"
+                }
+            ]
+        },
+        "Alarms": {
+            "Temperature & Humidity Alarms": {
+                "objects": [
+                    {
+                        "codec_id": "humidity_alarm.type",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "temperature_alarm.type",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Maintenance Reminders": {
+                "objects": [
+                    {
+                        "codec_id": "fan_error_alarm.mode"
+                    },
+                    {
+                        "codec_id": "filter_clean_alarm.mode"
+                    }
+                ]
+            },
+            "Battery Events": {
+                "objects": [
+                    {
+                        "codec_id": "battery_event.type",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            }
+        },
+        "Calibration": {
+            "objects": [
+                {
+                    "codec_id": "humidity_calibration_settings.calibration_value"
+                },
+                {
+                    "codec_id": "temperature_calibration_settings.celsius_calibration_value"
+                },
+                {
+                    "codec_id": "temperature_calibration_settings.fahrenheit_calibration_value"
+                },
+                {
+                    "codec_id": "humidity_calibration_settings.enable"
+                },
+                {
+                    "codec_id": "temperature_calibration_settings.enable"
+                }
+            ]
+        },
+        "Display Settings": {
+            "objects": [
+                {
+                    "codec_id": "screen_display_settings.ambient_humi"
+                },
+                {
+                    "codec_id": "screen_display_settings.ambient_temp"
+                },
+                {
+                    "codec_id": "backlight_enable"
+                },
+                {
+                    "codec_id": "screen_display_settings.reserved"
+                },
+                {
+                    "codec_id": "screen_display_settings.plan_name"
+                },
+                {
+                    "codec_id": "screen_temp_mode_enable"
+                },
+                {
+                    "codec_id": "intelligent_display_enable"
+                },
+                {
+                    "codec_id": "screen_display_settings.target_temp"
+                }
+            ]
+        },
+        "Display & Lock": {
+            "Child Lock": {
+                "objects": [
+                    {
+                        "codec_id": "children_lock_settings.button1_event"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.button2_event"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.button3_event"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.cancel_pair"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.enable"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.fan_mode"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.filter_clean_alarm_release"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.power_on_off"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.reboot_reset"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.reserved"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.plan_switch"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.status_report"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.system_on_off"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.temp_up"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.temp_down"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.temperature_control_mode"
+                    },
+                    {
+                        "codec_id": "children_lock_settings.temperature_unit_switch"
+                    }
+                ]
+            },
+            "Temporary Unlock": {
+                "objects": [
+                    {
+                        "codec_id": "unlock_combination_button_settings.button1"
+                    },
+                    {
+                        "codec_id": "unlock_combination_button_settings.button2"
+                    },
+                    {
+                        "codec_id": "unlock_combination_button_settings.button3"
+                    },
+                    {
+                        "codec_id": "unlock_combination_button_settings.button4"
+                    },
+                    {
+                        "codec_id": "unlock_combination_button_settings.button5"
+                    },
+                    {
+                        "codec_id": "unlock_combination_button_settings.reserved"
+                    },
+                    {
+                        "codec_id": "unlock_button.enable"
+                    },
+                    {
+                        "codec_id": "unlock_button.timeout"
+                    }
+                ]
+            },
+            "Button Events": {
+                "objects": [
+                    {
+                        "codec_id": "key_event.type"
+                    }
+                ]
+            }
+        },
+        "Bluetooth": {
+            "objects": [
+                {
+                    "codec_id": "ble_configuration_settings.local_id.type"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.pair_info.type"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.command"
+                },
+                {
+                    "codec_id": "ble_enable"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.enable"
+                },
+                {
+                    "codec_id": "ble_event.type"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.local_id.address"
+                },
+                {
+                    "codec_id": "ble_name"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.pair_info.name"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.pair_info.mac"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.local_name_first"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.local_name_last"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.pair_info.addr"
+                },
+                {
+                    "codec_id": "ble_configuration_settings.pair_info.name_length"
+                },
+                {
+                    "codec_id": "reset_ble_name"
+                }
+            ]
+        },
+        "Time Settings": {
+            "objects": [
+                {
+                    "codec_id": "daylight_saving_time.daylight_saving_time_offset"
+                },
+                {
+                    "codec_id": "daylight_saving_time.enable"
+                },
+                {
+                    "codec_id": "daylight_saving_time.start_month"
+                },
+                {
+                    "codec_id": "daylight_saving_time.end_month"
+                },
+                {
+                    "codec_id": "daylight_saving_time.end_week_num"
+                },
+                {
+                    "codec_id": "daylight_saving_time.start_week_num"
+                },
+                {
+                    "codec_id": "time_zone",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "daylight_saving_time.end_hour_min"
+                },
+                {
+                    "codec_id": "daylight_saving_time.start_hour_min"
+                },
+                {
+                    "codec_id": "daylight_saving_time.start_week_day"
+                },
+                {
+                    "codec_id": "daylight_saving_time.end_week_day"
+                }
+            ]
+        },
+        "Communication Settings": {
+            "LoRaWAN": {
+                "objects": [
+                    {
+                        "codec_id": "lorawan_configuration_settings.mode"
+                    }
+                ]
+            },
+            "Reporting Interval": {
+                "objects": [
+                    {
+                        "codec_id": "reporting_interval.type"
+                    },
+                    {
+                        "codec_id": "reporting_interval.ble.unit"
+                    },
+                    {
+                        "codec_id": "reporting_interval.ble_lora.unit"
+                    },
+                    {
+                        "codec_id": "reporting_interval.lora.unit"
+                    },
+                    {
+                        "codec_id": "reporting_interval.power_lora.unit"
+                    },
+                    {
+                        "codec_id": "reporting_interval.ble.minutes_of_time",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "reporting_interval.ble.seconds_of_time"
+                    },
+                    {
+                        "codec_id": "reporting_interval.ble_lora.minutes_of_time"
+                    },
+                    {
+                        "codec_id": "reporting_interval.ble_lora.seconds_of_time"
+                    },
+                    {
+                        "codec_id": "reporting_interval.lora.minutes_of_time",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "reporting_interval.lora.seconds_of_time"
+                    },
+                    {
+                        "codec_id": "reporting_interval.power_lora.minutes_of_time"
+                    },
+                    {
+                        "codec_id": "reporting_interval.power_lora.seconds_of_time"
+                    }
+                ]
+            },
+            "Collection Interval": {
+                "objects": [
+                    {
+                        "codec_id": "collection_interval.unit"
+                    },
+                    {
+                        "codec_id": "collection_interval.minutes_of_time"
+                    },
+                    {
+                        "codec_id": "collection_interval.seconds_of_time"
+                    }
+                ]
+            },
+            "Communication Interval": {
+                "objects": [
+                    {
+                        "codec_id": "communicate_interval.ble.unit"
+                    },
+                    {
+                        "codec_id": "communicate_interval.ble.minutes_of_time",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "communicate_interval.ble.seconds_of_time"
+                    },
+                    {
+                        "codec_id": "communicate_interval.ble_lora.unit"
+                    },
+                    {
+                        "codec_id": "communicate_interval.ble_lora.minutes_of_time",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "communicate_interval.ble_lora.seconds_of_time"
+                    },
+                    {
+                        "codec_id": "communicate_interval.id"
+                    },
+                    {
+                        "codec_id": "communicate_interval.lora.unit"
+                    },
+                    {
+                        "codec_id": "communicate_interval.lora.minutes_of_time"
+                    },
+                    {
+                        "codec_id": "communicate_interval.lora.seconds_of_time"
+                    },
+                    {
+                        "codec_id": "communicate_interval.power_bus.unit"
+                    },
+                    {
+                        "codec_id": "communicate_interval.power_bus.seconds_of_time"
+                    },
+                    {
+                        "codec_id": "communicate_interval.power_bus.minutes_of_time"
+                    }
+                ]
+            },
+            "Network Recovery": {
+                "objects": [
+                    {
+                        "codec_id": "reconnect",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            }
+        },
+        "Device Maintenance": {
+            "objects": [
+                {
+                    "codec_id": "oem_id",
+                    "tags": [
+                        "recommend"
+                    ]
+                },
+                {
+                    "codec_id": "reboot",
+                    "tags": [
+                        "recommend"
+                    ]
+                }
+            ]
+        },
+        "Device Basics": {
+            "Device Info": {
+                "objects": [
+                    {
+                        "codec_id": "device_status",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Battery": {
+                "objects": [
+                    {
+                        "codec_id": "battery",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Identification": {
+                "objects": [
+                    {
+                        "codec_id": "product_sn",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Version": {
+                "objects": [
+                    {
+                        "codec_id": "version.firmware_version",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "version.hardware_version",
+                        "tags": [
+                            "recommend"
+                        ]
+                    },
+                    {
+                        "codec_id": "tsl_version",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            },
+            "Events": {
+                "objects": [
+                    {
+                        "codec_id": "power_bus_event.type",
+                        "tags": [
+                            "recommend"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

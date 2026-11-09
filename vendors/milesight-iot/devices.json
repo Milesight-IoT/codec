@@ -1928,6 +1928,7 @@
             "codec": "vendors/milesight-iot/wt-series/wt401/wt401-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-decoder.js",
             "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js",
+            "group": "vendors/milesight-iot/wt-series/wt401/wt401-group.json",
             "ipso_version": "v2"
         },
         {
@@ -1942,6 +1943,7 @@
             "codec": "vendors/milesight-iot/wt-series/wt401/wt401-codec.json",
             "decoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-decoder.js",
             "encoder_script": "vendors/milesight-iot/wt-series/wt401/wt401-encoder.js",
+            "group": "vendors/milesight-iot/wt-series/wt401/wt401-group.json",
             "ipso_version": "v2"
         },
         {
