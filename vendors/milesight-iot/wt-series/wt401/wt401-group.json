@@ -126,9 +126,6 @@
                         ]
                     },
                     {
-                        "codec_id": "target_temperature_settings.celsius_dehumidify"
-                    },
-                    {
                         "codec_id": "target_temperature_settings.celsius_em_heat"
                     },
                     {
@@ -136,9 +133,6 @@
                         "tags": [
                             "recommend"
                         ]
-                    },
-                    {
-                        "codec_id": "target_temperature_settings.celsius_ventilation"
                     },
                     {
                         "codec_id": "target_temperature_settings.fahrenheit_auto",
@@ -159,9 +153,6 @@
                         ]
                     },
                     {
-                        "codec_id": "target_temperature_settings.fahrenheit_dehumidify"
-                    },
-                    {
                         "codec_id": "target_temperature_settings.fahrenheit_em_heat"
                     },
                     {
@@ -169,9 +160,6 @@
                         "tags": [
                             "recommend"
                         ]
-                    },
-                    {
-                        "codec_id": "target_temperature_settings.fahrenheit_ventilation"
                     },
                     {
                         "codec_id": "target_temperature_settings.temperature_control_mode",
