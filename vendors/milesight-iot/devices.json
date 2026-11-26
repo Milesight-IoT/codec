@@ -826,18 +826,6 @@
             "ipso_version": "v1"
         },
         {
-            "id": "gs524n",
-            "name": "GS524N",
-            "description": "Gas Detector",
-            "catalog": "gs",
-            "sn": "6794",
-            "deveui": "004A77012E4B0141",
-            "device_profile": ["ClassA-OTAA"],
-            "decoder_script": "vendors/milesight-iot/gs-series/gs524n/gs524n-decoder.js",
-            "encoder_script":"",
-            "ipso_version": "v1"
-        },
-        {
             "id": "gs601",
             "name": "GS601",
             "description": "Vape Detector",
